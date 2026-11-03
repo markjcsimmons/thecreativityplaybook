@@ -1,5 +1,5 @@
 path,page_type,phase,primary_keyword,primary_volume,primary_kd,proposed_secondary_keywords,proposed_cluster_volume,brief_cluster_volume,book_source,status,notes
-/,home,1,creativity playbook,,,creative playbook (20),20,0,All,proposed,"PROPOSED CHANGE: brief had ""the business playground"" (0 volume). Needs Mark approval."
+/,home,1,creativity playbook,,,creative playbook (20),20,0,All,proposed,"Mark confirmed ""creativity playbook"" as the home primary keyword on 2026-11-02 (the brief had ""the business playground"", 0 volume)."
 /authors,about,1,dave stewart eurythmics,1900,54,,1900,1900,All,proposed,"Entity SEO (Person schema, sameAs). Will not rank early."
 /book,book,1,dave stewart book,20,,,20,20,All,proposed,
 /books/best-books-on-creativity,book-list,1,best books on creativity,210,21,books on lateral thinking (0),210,210,Book CTA,proposed,

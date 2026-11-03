@@ -1,3 +1,16 @@
 {
-  "_readme": "Hand-maintained internal link graph (BRIEF §10.4). Keys are page paths from docs/keyword-map.csv. hub = parent hub page, siblings = 2-4 related pages, tools = tools to link, technique = technique pages the page is built on (and the reverse). RelatedLinks renders from this file; anchor text is the target page's primary keyword. scripts/check-content.ts fails on any path that is not in the keyword map."
+  "_readme": "Hand-maintained internal link graph (BRIEF §10.4). Keys are page paths from docs/keyword-map.csv. hub = parent hub page, siblings = 2-4 related pages, tools = tools to link, technique = technique pages the page is built on (and the reverse). RelatedLinks renders from this file; anchor text is the target page's primary keyword. scripts/check-content.ts fails on any path that is not in the keyword map.",
+  "/tools/": {
+    "siblings": [],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/tools/random-idea-generator/": {
+    "hub": "/tools/",
+    "siblings": [],
+    "tools": [],
+    "technique": []
+  }
 }

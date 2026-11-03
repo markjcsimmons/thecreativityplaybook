@@ -20,3 +20,9 @@ Choices made with Mark that differ from, or add to, docs/BRIEF.md. Newest last.
 - **Shoe Swapper board.** It labels real, named people (some living). The web version uses roles and archetypes only, so the labels need replacing.
 - **Fonts in the art.** The boards use American Typewriter (licensed). Text on the site is rebuilt in our own fonts.
 - **Styleguide approved (2026-11-02, Mark).** Phase 0 is closed. Next is Phase 1 Batch 1, pending Mark's go-ahead on its plan.
+- **Home keyword confirmed (2026-11-02, Mark).** `creativity playbook` is the primary keyword for `/`. The rest of the map is still `proposed`.
+- **Generator words come from the book (2026-11-02, Mark).** `src/data/idea-words.json` holds only words found in the 2010 text or the V2 comp, so the lists are about 240 items in total, not the brief's 300 per list. `npm run check` flags any word it cannot find in `source/`. Add more only with Mark's say-so.
+- **Phase 1 Batch 1 scope.** Built: `/tools/random-idea-generator/` (Connect, Twist, Spaghetti) and the `/tools/` hub, both `status: review`. Left out on purpose: Chapter Dice (the keyword map puts it in Phase 2) and the legal pages (they need Mark's decisions on the email service, analytics, contact address and jurisdiction).
+- **Soft prompt wording.** After 5 rolls the tool says "Enjoying this? Get the launch-day alert for the book." The brief's wording promised to email the user's list, which nothing does yet.
+- **Spaghetti target.** The 50-idea target is ours. The book says to set a high benchmark but gives no number.
+

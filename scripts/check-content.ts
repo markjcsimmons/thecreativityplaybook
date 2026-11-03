@@ -13,7 +13,7 @@ import { join, relative } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { BANNED_PHRASES } from '../src/lib/banned-phrases';
 import { loadKeywordMap, normalizePath } from '../src/lib/keyword-map';
-import { linksSchema, pageSchema, puzzleSchema, quoteSchema, type PageData } from '../src/lib/schemas';
+import { ideaWordsSchema, linksSchema, pageSchema, puzzleSchema, quoteSchema, type PageData } from '../src/lib/schemas';
 import { z } from 'astro/zod';
 
 const root = process.cwd();
@@ -135,6 +135,39 @@ function checkData<T extends z.ZodType>(file: string, schema: T) {
 }
 checkData('quotes.json', quoteSchema); // every quote needs a source
 checkData('puzzles.json', puzzleSchema);
+
+// Idea generator vocabulary: shape, duplicates, and (when source/ exists) provenance.
+{
+  const file = 'src/data/idea-words.json';
+  const p = join(root, file);
+  if (existsSync(p)) {
+    const parsed = ideaWordsSchema.safeParse(JSON.parse(readFileSync(p, 'utf8')));
+    if (!parsed.success) for (const i of parsed.error.issues) err(file, `[${i.path.join('.')}] ${i.message}`);
+    else {
+      const w = parsed.data;
+      const lists: [string, string[]][] = [
+        ['objects', w.objects], ['places', w.places], ['technologies', w.technologies], ['industries', w.industries],
+        ['audiences', w.audiences], ['materials', w.materials], ['verbs', w.verbs], ['eras', w.eras],
+      ];
+      for (const [name, list] of lists) {
+        const dupes = list.filter((x, i) => list.indexOf(x) !== i);
+        if (dupes.length) err(file, `${name} has duplicates: ${[...new Set(dupes)].join(', ')}`);
+      }
+      const sources = ['business-playground-2010.txt', 'creativity-playbook-v2-comp-2025.txt']
+        .map((f) => join(root, 'source', f))
+        .filter(existsSync);
+      if (sources.length) {
+        const book = sources.map((f) => readFileSync(f, 'utf8')).join(' ').toLowerCase().replace(/\s+/g, ' ');
+        const inBook = (word: string) => {
+          const base = word.replace(/^the /, '').toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp(`\\b${base}(s|es|ed|ing)?\\b`).test(book) || (base.endsWith('y') && new RegExp(`\\b${base.slice(0, -1)}ies\\b`).test(book));
+        };
+        for (const [name, list] of lists) for (const x of list) if (!inBook(x)) warn(file, `${name}: "${x}" was not found in the book text`);
+        for (const c of w.constraints) if (!inBook(c.word)) warn(file, `constraints: "${c.word}" was not found in the book text`);
+      }
+    }
+  }
+}
 
 const linksRaw = JSON.parse(readFileSync(join(root, 'src/data/links.json'), 'utf8')) as Record<string, unknown>;
 const graph = linksSchema.safeParse(Object.fromEntries(Object.entries(linksRaw).filter(([k]) => !k.startsWith('_'))));

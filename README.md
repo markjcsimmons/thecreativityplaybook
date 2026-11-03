@@ -37,6 +37,10 @@ Waiting on Mark:
 - Connect the GitHub repo to Cloudflare Pages for preview deploys (needs Mark's accounts).
 - Privacy, cookie, affiliate, terms and contact pages (BRIEF §14) still need writing and review.
 
+## Phase 1 status
+
+Batch 1 (both `status: review`, visible only with `PREVIEW=true`): `/tools/random-idea-generator/` and `/tools/`. To add a tool island: put it in `src/islands/<Name>/`, import it in `src/components/ToolIsland.astro`, and set `island: <Name>` in the page frontmatter.
+
 ## Version notes
 
 Stack versions are newer than the brief assumed: Astro 7, Preact 11, Tailwind 4, zod 4. TypeScript is pinned to 6.0.3 because `@astrojs/check` does not support TypeScript 7 yet.

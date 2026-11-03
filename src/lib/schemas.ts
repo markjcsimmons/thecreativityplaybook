@@ -107,3 +107,24 @@ export const linksSchema = z.record(
   }),
 );
 export type LinkGraph = z.infer<typeof linksSchema>;
+
+/**
+ * src/data/idea-words.json: prompt words for the idea generators. Every word comes
+ * from the book's text (Mark's direction, 2026-11-02). scripts/check-content.ts also
+ * confirms each word still appears in source/ when that folder exists.
+ */
+const wordList = z.array(z.string().min(1)).min(1);
+export const ideaWordsSchema = z.object({
+  _readme: z.string(),
+  objects: wordList,
+  places: wordList,
+  technologies: wordList,
+  industries: wordList,
+  audiences: wordList,
+  materials: wordList,
+  verbs: wordList,
+  eras: wordList,
+  constraints: z.array(z.object({ text: z.string().min(1), word: z.string().min(1) })).min(1),
+  mass: wordList,
+});
+export type IdeaWords = z.infer<typeof ideaWordsSchema>;

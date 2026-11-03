@@ -1,0 +1,32 @@
+---
+import chapters from '../data/chapters.json';
+import { chapterIdFor, getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  /** Hub path, e.g. "/tools/". Lists every page in this build under it. */
+  hub: string;
+}
+const { hub } = Astro.props;
+const prefix = normalizePath(hub);
+
+// Only pages that exist in this build, so the grid can never link to a 404.
+const pages = (await getAllPages())
+  .filter((p) => normalizePath(p.data.path).startsWith(prefix) && normalizePath(p.data.path) !== prefix)
+  .sort((a, b) => a.data.path.localeCompare(b.data.path));
+const color = (bookChapter: string) => chapters.find((c) => c.id === chapterIdFor(bookChapter))?.color;
+---
+
+<ul class="not-prose m-0 grid list-none gap-4 p-0 sm:grid-cols-2">
+  {
+    pages.map((p) => (
+      <li class="sticker overflow-hidden" style={color(p.data.bookChapter) ? `--accent: ${color(p.data.bookChapter)}` : undefined}>
+        <div class="fill px-4 py-2"><span class="eyebrow">{p.data.bookChapter}</span></div>
+        <div class="grid gap-2 p-4">
+          <a href={p.data.path} class="font-display text-2xl uppercase leading-tight">{p.data.h1 ?? p.data.title}</a>
+          <p class="m-0">{p.data.intro ?? p.data.description}</p>
+        </div>
+      </li>
+    ))
+  }
+</ul>

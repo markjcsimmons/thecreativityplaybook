@@ -1,0 +1,13 @@
+---
+import IdeaGenerator from '../islands/IdeaGenerator/index.tsx';
+
+interface Props {
+  /** Value of the page's `island` frontmatter. Each new tool adds one line below. */
+  name: string;
+}
+const { name } = Astro.props;
+---
+
+<!-- Static imports keep Astro's hydration working. The island renders on the server
+     too, so the page already shows a real example without JavaScript (BRIEF §8.0). -->
+{name === 'IdeaGenerator' && <IdeaGenerator client:load />}
