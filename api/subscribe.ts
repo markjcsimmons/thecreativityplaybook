@@ -1,6 +1,6 @@
 // Vercel Function: POST /api/subscribe
 // Keeps ESP keys server-side (BRIEF §4). The ESP adapter lives in src/lib/email.ts.
-import { getEmailProvider, isValidEmail } from '../src/lib/email';
+import { getEmailProvider, isValidEmail } from '../src/lib/email.js';
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
