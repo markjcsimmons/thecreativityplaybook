@@ -24,7 +24,8 @@ interface Props {
 const { title, description, path, jsonLd = [], noindex = false, ogImage, accent } = Astro.props;
 const site = Astro.site!;
 const canonical = canonicalUrl(path, site);
-const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN as string | undefined;
+// Vercel Web Analytics: only in builds made on Vercel, so local builds and Lighthouse runs never request the script.
+const vercelAnalytics = import.meta.env.PROD && process.env.VERCEL === '1';
 
 // Only link to pages that exist in this build, so navigation can never 404.
 const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
@@ -55,7 +56,14 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {[antonUrl, dmSansUrl, zillaUrl].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
     {jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
-    {plausibleDomain && <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.tagged-events.js" />}
+    {
+      vercelAnalytics && (
+        <>
+          <script is:inline set:html={'window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };'} />
+          <script is:inline defer src="/_vercel/insights/script.js" />
+        </>
+      )
+    }
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
