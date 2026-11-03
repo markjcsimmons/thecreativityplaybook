@@ -1,13 +1,11 @@
-// Cloudflare Pages Function: POST /api/subscribe
+// Vercel Function: POST /api/subscribe
 // Keeps ESP keys server-side (BRIEF §4). The ESP adapter lives in src/lib/email.ts.
-import { getEmailProvider, isValidEmail } from '../../src/lib/email';
-
-type Ctx = { request: Request; env: Record<string, string | undefined> };
+import { getEmailProvider, isValidEmail } from '../src/lib/email';
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
 
-export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> => {
+export async function POST(request: Request): Promise<Response> {
   let body: Record<string, unknown>;
   try {
     body = (await request.json()) as Record<string, unknown>;
@@ -24,6 +22,6 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
   const magnet = typeof body.magnet === 'string' ? body.magnet.slice(0, 60) : 'launch-alert';
   if (!isValidEmail(email)) return json({ ok: false, error: 'invalid-email' }, 422);
 
-  const result = await getEmailProvider(env).subscribe({ email, firstName, source, magnet });
+  const result = await getEmailProvider(process.env).subscribe({ email, firstName, source, magnet });
   return result.ok ? json({ ok: true }) : json({ ok: false, error: result.error }, 502);
-};
+}

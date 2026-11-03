@@ -119,7 +119,7 @@ Before installing anything, check that the current stable version of each librar
 - **Styling:** Tailwind CSS (latest), with design tokens in CSS custom properties.
 - **OG images:** generated at build time per page, e.g. with satori via an Astro integration.
 - **Site search (optional, Phase 2):** Pagefind.
-- **Hosting:** Cloudflare Pages, deployed from GitHub, with a preview deployment for every branch. Pages Functions handle email sign-up so ESP keys stay server-side.
+- **Hosting:** Vercel (changed from Cloudflare Pages by Mark, 2026-11-03), deployed from GitHub, with a preview deployment for every branch. A Vercel Function handles email sign-up so ESP keys stay server-side.
 - **Email service (ESP):** to be decided by Mark (§16). Put it behind a small `src/lib/email.ts` adapter so the provider can change. Use double opt-in. Tag every sign-up with its source, e.g. `tool:random-idea-generator`.
 - **PDF templates:** write each template as an HTML page and render it to PDF with a Playwright script in `/scripts`. Commit the PDFs to `public/downloads/`.
 - **Analytics:** GA4 with Consent Mode, or Plausible (§12, decision in §16). Google Search Console verification goes through DNS.
@@ -327,7 +327,7 @@ Each page type has one layout. Every page also gets:
 - Roll two animated dice to pick a chapter and get a 10-minute exercise from it. This recreates the book's "roll the dice to pick a chapter" device and is a brand toy and link magnet. Respect reduced-motion settings.
 
 ### 8.9 Phase 3 (optional): "Expand with AI"
-- A Pages Function calls an LLM API to turn a generated idea into a short concept. It needs server-side keys, per-IP rate limiting, a daily budget cap, moderation and a clear label. Build it only if Mark approves.
+- A Vercel Function calls an LLM API to turn a generated idea into a short concept. It needs server-side keys, per-IP rate limiting, a daily budget cap, moderation and a clear label. Build it only if Mark approves.
 
 ---
 
@@ -495,7 +495,7 @@ Take the direction from the book's own look, but make an original version of it 
 ## 15. Phases and acceptance criteria
 
 ### Phase 0: Foundations
-Repo, stack, design tokens and `/styleguide`, layouts, core components, `seo.ts` with JSON-LD, `check-content.ts`, analytics wrapper, email adapter with a stub, Cloudflare Pages preview deploy.
+Repo, stack, design tokens and `/styleguide`, layouts, core components, `seo.ts` with JSON-LD, `check-content.ts`, analytics wrapper, email adapter with a stub, Vercel preview deploy.
 **Done when:** Mark approves the styleguide, CI runs `check` + build + Lighthouse CI, and the preview URL works.
 
 ### Phase 1: Launch set (16 pages + `/tools` hub)

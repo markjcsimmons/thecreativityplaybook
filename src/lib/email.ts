@@ -1,6 +1,6 @@
 /**
  * Email service adapter (BRIEF §4). The ESP is not chosen yet (§16.3), so only a
- * stub exists. Pages Functions call `getEmailProvider()`; API keys stay in
+ * stub exists. The sign-up function calls `getEmailProvider()`; API keys stay in
  * server-side env vars and never reach the browser. Double opt-in is the ESP's
  * job: `subscribe` must create a *pending* subscriber and trigger the
  * confirmation email.

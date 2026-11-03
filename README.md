@@ -22,7 +22,7 @@ Requires Node 22.23.4 or later.
 - `src/data/`: `book.json` (prelaunch/live switch), `chapters.json`, `links.json` (internal link graph), `people.json`, `rights.json`. `quotes.json` and `puzzles.json` arrive with their pages.
 - `src/layouts/`, `src/components/`: Base, Article, Tool, BookList and the shared components. `/styleguide/` shows them (noindex).
 - `src/islands/`: Preact tools. `DiceDemo` is a smoke test, replaced by Chapter Dice later.
-- `functions/api/subscribe.ts`: Cloudflare Pages Function for email sign-up. `src/lib/email.ts` is a stub until an ESP is chosen.
+- `api/subscribe.ts`: Vercel Function for email sign-up. `src/lib/email.ts` is a stub until an ESP is chosen.
 - `source/`: book PDFs and extracted text. Gitignored.
 
 ## Phase 0 status
@@ -34,7 +34,7 @@ Done and verified locally: scaffold, pinned stack, content schemas, keyword map 
 Waiting on Mark:
 - Domain, ESP, analytics choice (Plausible is wired as the default), Amazon Associates tag, Dave's sign-off.
 - Confirm or edit `docs/keyword-map.csv` (the home page keyword is a proposed change from the brief).
-- Connect the GitHub repo to Cloudflare Pages for preview deploys (needs Mark's accounts).
+- Import the GitHub repo into Vercel (see docs/DECISIONS.md for the settings and env vars).
 - Privacy, cookie, affiliate, terms and contact pages (BRIEF §14) still need writing and review.
 
 ## Phase 1 status
