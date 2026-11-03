@@ -8,6 +8,8 @@ interface Props {
   heading?: string;
   blurb?: string;
   id?: string;
+  /** Show the form even while `book.waitlistOpen` is false (styleguide only). */
+  force?: boolean;
 }
 const {
   source,
@@ -15,28 +17,33 @@ const {
   heading = 'Get the launch-day alert',
   blurb = `The Creativity Playbook is coming in ${book.launchYear}. Leave your email and we'll tell you the day it's out.`,
   id = 'waitlist',
+  force = false,
 } = Astro.props;
 const fieldId = `${id}-email`;
 ---
 
-<section {id} class="sticker fill my-10 p-5 sm:p-7" aria-labelledby={`${id}-h`}>
-  <h2 id={`${id}-h`} class="!mt-0 !text-3xl">{heading}</h2>
-  <p class="mt-0 max-w-prose">{blurb}</p>
-  <form method="post" action="/api/subscribe" class="email-capture grid gap-3 sm:grid-cols-[1fr_auto]" data-source={source} data-magnet={magnet}>
-    <input type="hidden" name="source" value={source} />
-    <input type="hidden" name="magnet" value={magnet} />
-    <div class="visually-hidden" aria-hidden="true">
-      <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
-    </div>
-    <div class="grid gap-1">
-      <label for={fieldId} class="font-bold">Email</label>
-      <input id={fieldId} class="field" type="email" name="email" required autocomplete="email" inputmode="email" />
-    </div>
-    <button class="btn btn-ghost self-end" type="submit">Tell me</button>
-    <p class="email-capture-status m-0 sm:col-span-2" role="status" aria-live="polite"></p>
-  </form>
-  <p class="mb-0 mt-3 text-sm">We use your email only for this. You'll confirm it first, and you can leave any time.</p>
-</section>
+{
+  (book.waitlistOpen || force) && (
+    <section {id} class="sticker fill my-10 p-5 sm:p-7" aria-labelledby={`${id}-h`}>
+      <h2 id={`${id}-h`} class="!mt-0 !text-3xl">{heading}</h2>
+      <p class="mt-0 max-w-prose">{blurb}</p>
+      <form method="post" action="/api/subscribe" class="email-capture grid gap-3 sm:grid-cols-[1fr_auto]" data-source={source} data-magnet={magnet}>
+        <input type="hidden" name="source" value={source} />
+        <input type="hidden" name="magnet" value={magnet} />
+        <div class="visually-hidden" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+        </div>
+        <div class="grid gap-1">
+          <label for={fieldId} class="font-bold">Email</label>
+          <input id={fieldId} class="field" type="email" name="email" required autocomplete="email" inputmode="email" />
+        </div>
+        <button class="btn btn-ghost self-end" type="submit">Tell me</button>
+        <p class="email-capture-status m-0 sm:col-span-2" role="status" aria-live="polite"></p>
+      </form>
+      <p class="mb-0 mt-3 text-sm">We use your email only for this. You'll confirm it first, and you can leave any time.</p>
+    </section>
+  )
+}
 
 <script>
   import { track } from '../lib/analytics';

@@ -27,7 +27,11 @@ const live = book.status === 'live';
           </a>
         ))
     ) : (
-      <a class="btn" href="#waitlist">Get the launch-day alert</a>
+      book.waitlistOpen ? (
+        <a class="btn" href="#waitlist">Get the launch-day alert</a>
+      ) : (
+        <p class="m-0 font-slab text-xl font-bold">Coming in {book.launchYear}</p>
+      )
     )
   }
 </div>

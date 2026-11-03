@@ -18,5 +18,6 @@
   "retailers": {
     "amazon": { "us": null, "uk": null, "ca": null, "au": null }
   },
+  "waitlistOpen": false,
   "waitlistMagnet": "launch-alert"
 }

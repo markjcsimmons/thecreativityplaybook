@@ -52,7 +52,7 @@ const download = (name: string, type: string, body: string) => {
 };
 const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 
-export default function IdeaGenerator() {
+export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?: boolean }) {
   const [mode, setMode] = useState<Mode>('connect');
   const [seeds, setSeeds] = useState<string[]>(DEFAULT_SEEDS);
   const [locks, setLocks] = useState<boolean[]>([false, false]);
@@ -363,7 +363,7 @@ export default function IdeaGenerator() {
         </>
       )}
 
-      {showSoftPrompt && (
+      {showSoftPrompt && waitlistOpen && (
         <p class="no-print m-0 border-l-8 border-ink pl-4">
           Enjoying this? <a href="#waitlist">Get the launch-day alert for the book.</a>
         </p>
