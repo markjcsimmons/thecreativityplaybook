@@ -61,3 +61,4 @@ path,page_type,phase,primary_keyword,primary_volume,primary_kd,proposed_secondar
 /techniques/scamper,technique,3,scamper technique,590,46,scamper examples (110) | scamper questions (20) | scamper worksheet (20),740,740,Ch10 Connected,proposed,
 /templates/empathy-map,template,3,empathy map,2900,55,,2900,2900,Ch9 Shoe Swapper,proposed,
 /templates/mind-map-template,template,3,mind map template,2900,57,,2900,2900,Ch6 Brain Flash,proposed,
+/privacy/,legal,1,privacy policy,,,,,,All,proposed,"Legal page the brief requires (BRIEF section 14). Not a search target; the keyword is only the page name."

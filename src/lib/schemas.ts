@@ -2,7 +2,7 @@ import { z } from 'astro/zod';
 
 /**
  * BRIEF §9.2 plus three additions the page inventory needs:
- * 'hub-guide', 'home' and 'product' page types, and an explicit `path`
+ * 'hub-guide', 'home', 'product' and 'legal' page types, and an explicit `path`
  * (the canonical URL, which must match docs/keyword-map.csv).
  */
 export const PAGE_TYPES = [
@@ -21,10 +21,11 @@ export const PAGE_TYPES = [
   'about',
   'home',
   'product',
+  'legal',
 ] as const;
 
 /** Page types whose Book DNA comes from quote sources or the book CTA, not chapters. */
-export const BOOK_SOURCES_EXEMPT = ['book-list', 'quotes'] as const;
+export const BOOK_SOURCES_EXEMPT = ['book-list', 'quotes', 'legal'] as const;
 
 export const AUTHORS = ['team', 'mark', 'dave', 'dave-and-mark'] as const;
 

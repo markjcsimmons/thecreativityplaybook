@@ -1,5 +1,9 @@
 ---
 import book from '../data/book.json';
+import { getAllPages } from '../lib/content';
+
+// Footer links only to legal pages that exist in this build, so it can never point at a 404.
+const legal = (await getAllPages()).filter((p) => p.data.pageType === 'legal');
 ---
 
 <footer class="mt-24 border-t-[3px] border-ink bg-paper-2 py-10">
@@ -8,6 +12,15 @@ import book from '../data/book.json';
     <p class="m-0 max-w-prose text-muted">
       By Dave Stewart and Mark Simmons. A revised edition of <em>{book.earlierEdition.title}</em> ({book.earlierEdition.year}), coming {book.launchYear}.
     </p>
+    {
+      legal.length > 0 && (
+        <ul class="m-0 flex list-none flex-wrap gap-x-5 gap-y-1 p-0 text-sm">
+          {legal.map((p) => (
+            <li><a href={p.data.path}>{p.data.h1 ?? p.data.title}</a></li>
+          ))}
+        </ul>
+      )
+    }
     <p class="m-0 text-sm text-muted">&copy; {new Date().getFullYear()} Dave Stewart and Mark Simmons.</p>
   </div>
 </footer>

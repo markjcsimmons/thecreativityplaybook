@@ -121,6 +121,7 @@ for (const file of files) {
   // Banned phrases and risky terms, in frontmatter text and body.
   const prose = [page.title, page.description, page.h1, page.intro, body].filter(Boolean).join('\n');
   for (const b of BANNED_PHRASES) if (b.pattern.test(prose)) err(rel, `banned phrase: ${b.label}`);
+  if (page.status === 'published' && /\[\[[^\]]*\]\]/.test(prose)) err(rel, 'published page still has a [[placeholder]]');
   for (const t of config.warnTerms) if (prose.includes(t)) warn(rel, `mentions "${t}" (not cleared for reuse, see src/data/rights.json)`);
 
   if (typeof page.intro === 'string' && (page.intro.match(/[.!?](\s|$)/g) ?? []).length > 2) err(rel, 'intro is longer than two sentences');

@@ -1,0 +1,66 @@
+---
+path: /
+title: "The Creativity Playbook: A Guide to Ideas and Innovation"
+description: "The Creativity Playbook by Dave Stewart and Mark Simmons is a hands-on guide to ideas and innovation, coming in 2027. Try the free brainstorming tools now."
+h1: The Creativity Playbook
+intro: "A hands-on guide to ideas and innovation by Dave Stewart and Mark Simmons, coming in 2027. The brainstorming tools from the book are free to use now."
+primaryKeyword: creativity playbook
+secondaryKeywords:
+  - creative playbook
+pageType: home
+phase: 1
+bookChapter: All
+bookSources:
+  - chapter: Introduction
+    note: "The case for creativity as a competitive edge, the 'Biggerer and Biggerer' world, and A.I. as a new instrument in the creative signal chain. From the June 2025 draft; the wording may change before publication."
+  - chapter: All chapters
+    note: "The chapter list and one-line takeaways come from the book's chapters (see src/data/chapters.json)."
+serpNotes: "Brand page. 'creativity playbook' has almost no search volume; the home page mainly serves people who already know the book and as the hub for the tools."
+status: review
+author: team
+updated: 2026-11-03
+---
+
+import Character from '../../components/Character.astro';
+import QuoteCard from '../../components/QuoteCard.astro';
+import chapters from '../../data/chapters.json';
+import quotes from '../../data/quotes.json';
+
+<div class="not-prose flex flex-wrap items-end gap-4" aria-hidden="true">
+  <Character id="pink-thumbs-1" height={130} decorative />
+  <Character id="green-punk" height={130} decorative />
+  <Character id="blue-robot" height={130} decorative />
+  <Character id="lightning-bolt" height={110} decorative />
+</div>
+
+## Think like an artist
+
+*The Business Playground* came out in 2010 with a simple message: think like an artist and you bring more meaning and connection to your work. Artists and musicians seem to have creativity in their DNA, and businesses have a lot to learn from how they think and make things.
+
+*The Creativity Playbook* is the revised edition. It keeps the hands-on tools and adds a world that has changed: fewer, bigger companies, more decisions made by data, and a new kind of instrument in the creative signal chain, artificial intelligence.
+
+<QuoteCard quote={quotes.find((q) => q.text.startsWith('Without creativity'))} accent="var(--ch-8)" />
+
+## Try a tool
+
+The Random Idea Generator turns the book's Connected and Idea Spaghetti chapters into something you can use in a minute. It is free, runs in your browser and needs no account.
+
+<p><a class="btn" href="/tools/random-idea-generator/">Open the Random Idea Generator</a></p>
+
+More free tools are on the way, and they are all collected on the [brainstorming tools](/tools/) page.
+
+## What's inside
+
+Twelve chapters, each built around one way of getting ideas moving.
+
+<ol class="not-prose m-0 grid list-none gap-3 p-0 sm:grid-cols-2">
+  {chapters
+    .filter((c) => c.number > 0 && !('placeholder' in c))
+    .map((c) => (
+      <li class="sticker fill p-4" style={`--accent: ${c.color}`}>
+        <p class="eyebrow m-0">Chapter {c.number}</p>
+        <p class="m-0 font-display text-2xl uppercase leading-tight">{c.title}</p>
+        <p class="m-0 mt-1">{c.takeaway}</p>
+      </li>
+    ))}
+</ol>
