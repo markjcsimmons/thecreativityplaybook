@@ -11,6 +11,7 @@ import {
   type Mode,
 } from '../../lib/idea-words';
 import { newSeed } from '../../lib/prng';
+import { clock, csvCell, download, readList, writeList } from '../../lib/tool-client';
 
 const TOOL = 'random-idea-generator';
 const SAVED_KEY = 'cp:random-idea-generator:saved';
@@ -23,34 +24,6 @@ const MODE_BLURB: Record<Mode, string> = {
 
 /** Fixed seeds so the server renders a real example and the browser hydrates to the same markup. */
 const DEFAULT_SEEDS = ['start', 'begin'];
-
-// localStorage can be missing or throw (private windows, blocked storage). The tool works without it.
-const readSaved = (): string[] => {
-  try {
-    const raw = JSON.parse(localStorage.getItem(SAVED_KEY) ?? '[]');
-    return Array.isArray(raw) ? raw.filter((x): x is string => typeof x === 'string') : [];
-  } catch {
-    return [];
-  }
-};
-const writeSaved = (items: string[]) => {
-  try {
-    localStorage.setItem(SAVED_KEY, JSON.stringify(items));
-  } catch {
-    /* keep going without storage */
-  }
-};
-
-const csvCell = (s: string) => `"${s.replaceAll('"', '""')}"`;
-const download = (name: string, type: string, body: string) => {
-  const url = URL.createObjectURL(new Blob([body], { type }));
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = name;
-  a.click();
-  URL.revokeObjectURL(url);
-};
-const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 
 export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?: boolean }) {
   const [mode, setMode] = useState<Mode>('connect');
@@ -79,7 +52,7 @@ export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?:
     if (s && s.length === 2 && s.every((x) => /^[a-z0-9]{1,12}$/.test(x))) setSeeds(s);
     const lock = q.get('lock')?.split(',') ?? [];
     setLocks([lock.includes('0'), lock.includes('1')]);
-    setSaved(readSaved());
+    setSaved(readList(SAVED_KEY));
   }, []);
 
   const writeUrl = (nextMode: Mode, nextSeeds: string[], nextLocks: boolean[]) => {
@@ -141,7 +114,7 @@ export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?:
     if (saved.includes(result)) return setAnnounce('Already saved.');
     const next = [...saved, result];
     setSaved(next);
-    writeSaved(next);
+    writeList(SAVED_KEY, next);
     track('tool_save', { tool: TOOL });
     setAnnounce(`Saved. ${next.length} in your list.`);
   };
@@ -270,7 +243,7 @@ export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?:
                   class="btn btn-ghost"
                   onClick={() => {
                     setSaved([]);
-                    writeSaved([]);
+                    writeList(SAVED_KEY, []);
                   }}
                 >
                   Clear saved

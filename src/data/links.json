@@ -1,5 +1,5 @@
 {
-  "_readme": "Hand-maintained internal link graph (BRIEF §10.4). Keys are page paths from docs/keyword-map.csv. hub = parent hub page, siblings = 2-4 related pages, tools = tools to link, technique = technique pages the page is built on (and the reverse). RelatedLinks renders from this file; anchor text is the target page's primary keyword. scripts/check-content.ts fails on any path that is not in the keyword map.",
+  "_readme": "Hand-maintained internal link graph (BRIEF \u00a710.4). Keys are page paths from docs/keyword-map.csv. hub = parent hub page, siblings = 2-4 related pages, tools = tools to link, technique = technique pages the page is built on (and the reverse). RelatedLinks renders from this file; anchor text is the target page's primary keyword. scripts/check-content.ts fails on any path that is not in the keyword map.",
   "/": {
     "siblings": [],
     "tools": [
@@ -10,14 +10,55 @@
   "/tools/": {
     "siblings": [],
     "tools": [
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/tools/business-idea-generator/",
+      "/tools/invention-idea-generator/",
+      "/tools/creativity-test/"
     ],
     "technique": []
   },
   "/tools/random-idea-generator/": {
     "hub": "/tools/",
-    "siblings": [],
-    "tools": [],
+    "siblings": [
+      "/tools/business-idea-generator/",
+      "/tools/invention-idea-generator/"
+    ],
+    "tools": [
+      "/tools/creativity-test/"
+    ],
+    "technique": []
+  },
+  "/tools/business-idea-generator/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/tools/invention-idea-generator/",
+      "/tools/random-idea-generator/"
+    ],
+    "tools": [
+      "/tools/creativity-test/"
+    ],
+    "technique": []
+  },
+  "/tools/invention-idea-generator/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/tools/business-idea-generator/",
+      "/tools/random-idea-generator/"
+    ],
+    "tools": [
+      "/tools/creativity-test/"
+    ],
+    "technique": []
+  },
+  "/tools/creativity-test/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/tools/random-idea-generator/"
+    ],
+    "tools": [
+      "/tools/business-idea-generator/",
+      "/tools/invention-idea-generator/"
+    ],
     "technique": []
   }
 }

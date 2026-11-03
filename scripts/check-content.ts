@@ -13,7 +13,7 @@ import { join, relative } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { BANNED_PHRASES } from '../src/lib/banned-phrases';
 import { loadKeywordMap, normalizePath } from '../src/lib/keyword-map';
-import { ideaWordsSchema, linksSchema, pageSchema, puzzleSchema, quoteSchema, type PageData } from '../src/lib/schemas';
+import { autDataSchema, businessWordsSchema, creativityStylesSchema, ideaWordsSchema, linksSchema, pageSchema, puzzleSchema, quoteSchema, type PageData } from '../src/lib/schemas';
 import { z } from 'astro/zod';
 
 const root = process.cwd();
@@ -136,6 +136,41 @@ function checkData<T extends z.ZodType>(file: string, schema: T) {
 }
 checkData('quotes.json', quoteSchema); // every quote needs a source
 checkData('puzzles.json', puzzleSchema);
+
+// Scoring data for the Creativity Test (written by us, so shape checks only).
+for (const [file, schema] of [['aut-categories.json', autDataSchema], ['creativity-styles.json', creativityStylesSchema]] as const) {
+  const p = join(root, 'src/data', file);
+  if (!existsSync(p)) continue;
+  const parsed = schema.safeParse(JSON.parse(readFileSync(p, 'utf8')));
+  if (!parsed.success) for (const i of parsed.error.issues) err(`src/data/${file}`, `[${i.path.join('.')}] ${i.message}`);
+}
+
+// Business Idea Generator vocabulary: shape, duplicates, and (when source/ exists) provenance.
+{
+  const file = 'src/data/business-words.json';
+  const p = join(root, file);
+  if (existsSync(p)) {
+    const parsed = businessWordsSchema.safeParse(JSON.parse(readFileSync(p, 'utf8')));
+    if (!parsed.success) for (const i of parsed.error.issues) err(file, `[${i.path.join('.')}] ${i.message}`);
+    else {
+      const w = parsed.data;
+      const lists: [string, string[]][] = [['problems', w.problems], ['models', w.models.map((m) => m.text)], ['mechanisms', w.mechanisms.map((m) => m.text)]];
+      for (const [name, list] of lists) {
+        const dupes = list.filter((x, i) => list.indexOf(x) !== i);
+        if (dupes.length) err(file, `${name} has duplicates: ${[...new Set(dupes)].join(', ')}`);
+      }
+      const sources = ['business-playground-2010.txt', 'creativity-playbook-v2-comp-2025.txt'].map((f) => join(root, 'source', f)).filter(existsSync);
+      if (sources.length) {
+        const book = sources.map((f) => readFileSync(f, 'utf8')).join(' ').toLowerCase().replace(/\s+/g, ' ');
+        const inBook = (word: string) => {
+          const base = word.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp(`\\b${base}(s|es|ed|ing)?\\b`).test(book) || (base.endsWith('y') && new RegExp(`\\b${base.slice(0, -1)}ies\\b`).test(book));
+        };
+        for (const [name, list] of lists) for (const x of list) if (!inBook(x)) warn(file, `${name}: "${x}" was not found in the book text`);
+      }
+    }
+  }
+}
 
 // Idea generator vocabulary: shape, duplicates, and (when source/ exists) provenance.
 {

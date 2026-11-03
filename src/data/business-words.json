@@ -1,0 +1,359 @@
+{
+  "_readme": "Words for the Business Idea Generator. Every word comes from the book's text (Mark's direction, 2026-11-02); scripts/check-content.ts warns about any word it cannot find in source/. The budget, team and channel tags are our own judgment calls, used only by the filters.",
+  "problems": [
+    "traffic",
+    "queues",
+    "waiting",
+    "waste",
+    "pollution",
+    "noise",
+    "stress",
+    "delays",
+    "rubbish",
+    "mess",
+    "forgetting",
+    "parking",
+    "commuting",
+    "shopping",
+    "cooking",
+    "recycling",
+    "energy",
+    "water",
+    "food",
+    "time",
+    "money",
+    "distraction",
+    "meetings",
+    "email",
+    "weather"
+  ],
+  "models": [
+    {
+      "text": "subscription",
+      "budget": "any",
+      "team": "any"
+    },
+    {
+      "text": "franchise",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "marketplace",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "charity",
+      "budget": "any",
+      "team": "team"
+    },
+    {
+      "text": "shop",
+      "budget": "any",
+      "team": "any"
+    },
+    {
+      "text": "cafe",
+      "budget": "funded",
+      "team": "any"
+    },
+    {
+      "text": "restaurant",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "club",
+      "budget": "shoestring",
+      "team": "any"
+    },
+    {
+      "text": "school",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "service",
+      "budget": "any",
+      "team": "any"
+    },
+    {
+      "text": "magazine",
+      "budget": "any",
+      "team": "any"
+    },
+    {
+      "text": "studio",
+      "budget": "any",
+      "team": "any"
+    },
+    {
+      "text": "agency",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "consultancy",
+      "budget": "shoestring",
+      "team": "solo"
+    },
+    {
+      "text": "workshop",
+      "budget": "shoestring",
+      "team": "any"
+    },
+    {
+      "text": "festival",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "tour",
+      "budget": "shoestring",
+      "team": "any"
+    },
+    {
+      "text": "stall",
+      "budget": "shoestring",
+      "team": "solo"
+    },
+    {
+      "text": "network",
+      "budget": "any",
+      "team": "team"
+    },
+    {
+      "text": "tutorial",
+      "budget": "shoestring",
+      "team": "solo"
+    },
+    {
+      "text": "course",
+      "budget": "shoestring",
+      "team": "any"
+    },
+    {
+      "text": "class",
+      "budget": "shoestring",
+      "team": "any"
+    },
+    {
+      "text": "show",
+      "budget": "any",
+      "team": "team"
+    },
+    {
+      "text": "event",
+      "budget": "any",
+      "team": "team"
+    },
+    {
+      "text": "gallery",
+      "budget": "funded",
+      "team": "any"
+    },
+    {
+      "text": "market",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "platform",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "bank",
+      "budget": "funded",
+      "team": "team"
+    },
+    {
+      "text": "brand",
+      "budget": "any",
+      "team": "any"
+    }
+  ],
+  "mechanisms": [
+    {
+      "text": "app",
+      "channel": "online"
+    },
+    {
+      "text": "website",
+      "channel": "online"
+    },
+    {
+      "text": "game",
+      "channel": "both"
+    },
+    {
+      "text": "video",
+      "channel": "online"
+    },
+    {
+      "text": "robot",
+      "channel": "both"
+    },
+    {
+      "text": "book",
+      "channel": "offline"
+    },
+    {
+      "text": "poster",
+      "channel": "offline"
+    },
+    {
+      "text": "card",
+      "channel": "offline"
+    },
+    {
+      "text": "kit",
+      "channel": "offline"
+    },
+    {
+      "text": "toy",
+      "channel": "offline"
+    },
+    {
+      "text": "music",
+      "channel": "both"
+    },
+    {
+      "text": "text message",
+      "channel": "online"
+    },
+    {
+      "text": "phone",
+      "channel": "online"
+    },
+    {
+      "text": "computer",
+      "channel": "online"
+    },
+    {
+      "text": "software",
+      "channel": "online"
+    },
+    {
+      "text": "television",
+      "channel": "both"
+    },
+    {
+      "text": "radio",
+      "channel": "both"
+    },
+    {
+      "text": "camera",
+      "channel": "both"
+    },
+    {
+      "text": "map",
+      "channel": "offline"
+    },
+    {
+      "text": "machine",
+      "channel": "both"
+    },
+    {
+      "text": "podcast",
+      "channel": "online"
+    },
+    {
+      "text": "blog",
+      "channel": "online"
+    },
+    {
+      "text": "song",
+      "channel": "both"
+    },
+    {
+      "text": "story",
+      "channel": "both"
+    },
+    {
+      "text": "recipe",
+      "channel": "offline"
+    },
+    {
+      "text": "puzzle",
+      "channel": "both"
+    },
+    {
+      "text": "contest",
+      "channel": "both"
+    },
+    {
+      "text": "competition",
+      "channel": "both"
+    },
+    {
+      "text": "notebook",
+      "channel": "offline"
+    },
+    {
+      "text": "bag",
+      "channel": "offline"
+    },
+    {
+      "text": "box",
+      "channel": "offline"
+    },
+    {
+      "text": "device",
+      "channel": "both"
+    },
+    {
+      "text": "gadget",
+      "channel": "both"
+    },
+    {
+      "text": "tool",
+      "channel": "offline"
+    },
+    {
+      "text": "battery",
+      "channel": "offline"
+    },
+    {
+      "text": "mirror",
+      "channel": "offline"
+    },
+    {
+      "text": "screen",
+      "channel": "online"
+    },
+    {
+      "text": "social media",
+      "channel": "online"
+    }
+  ],
+  "mass": [
+    "music",
+    "software",
+    "social media",
+    "waiting",
+    "parking",
+    "commuting",
+    "shopping",
+    "cooking",
+    "recycling",
+    "energy",
+    "water",
+    "food",
+    "time",
+    "money",
+    "email",
+    "weather",
+    "traffic",
+    "waste",
+    "pollution",
+    "noise",
+    "stress",
+    "rubbish",
+    "mess",
+    "forgetting",
+    "distraction",
+    "advertising"
+  ]
+}

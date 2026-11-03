@@ -1,0 +1,237 @@
+{
+ "_readme": "Creative Style questions and the six styles (BRIEF 8.4). The styles come from the book's chapters; the question wording and summaries are ours. Self-report, for fun, not a validated assessment.",
+ "styles": [
+  {
+   "id": "scavenger",
+   "name": "Scavenger",
+   "chapterId": "ch3",
+   "summary": "You notice what other people walk past. For you, ideas are already lying around: in a frustrating queue, an odd workaround, someone else's shop window.",
+   "next": {
+    "path": "/tools/business-idea-generator/",
+    "label": "Business Idea Generator"
+   }
+  },
+  {
+   "id": "connector",
+   "name": "Connector",
+   "chapterId": "ch10",
+   "summary": "You smash unconnected things together and see what falls out. A comparison from a different world is often how you crack a problem.",
+   "next": {
+    "path": "/tools/random-idea-generator/",
+    "label": "Random Idea Generator"
+   }
+  },
+  {
+   "id": "shoe-swapper",
+   "name": "Shoe Swapper",
+   "chapterId": "ch9",
+   "summary": "You think about the person on the other end first. Looking through someone else's eyes is how you find what a problem is really about.",
+   "next": {
+    "path": "/tools/invention-idea-generator/",
+    "label": "Product Idea Generator"
+   }
+  },
+  {
+   "id": "far-out-dreamer",
+   "name": "Far-Out Dreamer",
+   "chapterId": "ch8",
+   "summary": "You think big and tell the story that makes people want to come along. Your risk is staying in the clouds; your gift is making a bold idea feel possible.",
+   "next": {
+    "path": "/tools/random-idea-generator/?mode=twist",
+    "label": "Random Idea Generator, Twist mode"
+   }
+  },
+  {
+   "id": "idea-chef",
+   "name": "Idea Chef",
+   "chapterId": "ch2",
+   "summary": "You throw a lot of ideas at the wall and let quantity do the work. Fast, playful and a little messy, which is exactly how a good spaghetti session should feel.",
+   "next": {
+    "path": "/tools/random-idea-generator/?mode=spaghetti",
+    "label": "Random Idea Generator, Spaghetti mode"
+   }
+  },
+  {
+   "id": "ruthless-editor",
+   "name": "Ruthless Editor",
+   "chapterId": "ch11",
+   "summary": "You can tell quickly which ideas deserve your time and money, and you are not shy about cutting the rest. Pair yourself with someone who makes plenty of raw material.",
+   "next": {
+    "path": "/tools/random-idea-generator/?mode=spaghetti",
+    "label": "Random Idea Generator, Spaghetti mode"
+   }
+  }
+ ],
+ "questions": [
+  {
+   "prompt": "When I get stuck on a problem, I usually\u2026",
+   "options": [
+    {
+     "text": "go out and look at how the problem shows up in everyday life.",
+     "style": "scavenger"
+    },
+    {
+     "text": "ask what two unrelated things I could mash together.",
+     "style": "connector"
+    },
+    {
+     "text": "imagine how someone completely different would handle it.",
+     "style": "shoe-swapper"
+    }
+   ]
+  },
+  {
+   "prompt": "At the start of a project, my first move is to\u2026",
+   "options": [
+    {
+     "text": "decide what the real goal is and what I am going to ignore.",
+     "style": "ruthless-editor"
+    },
+    {
+     "text": "picture the biggest, boldest version of the finished thing.",
+     "style": "far-out-dreamer"
+    },
+    {
+     "text": "write down as many ideas as I can, good or bad.",
+     "style": "idea-chef"
+    }
+   ]
+  },
+  {
+   "prompt": "In a team meeting, I am the one who\u2026",
+   "options": [
+    {
+     "text": "asks how the person on the other end will feel.",
+     "style": "shoe-swapper"
+    },
+    {
+     "text": "keeps ideas coming and says no idea is a bad idea.",
+     "style": "idea-chef"
+    },
+    {
+     "text": "brings in an example I spotted somewhere else.",
+     "style": "scavenger"
+    }
+   ]
+  },
+  {
+   "prompt": "The best part of a creative session is\u2026",
+   "options": [
+    {
+     "text": "when the idea gets big enough to excite people.",
+     "style": "far-out-dreamer"
+    },
+    {
+     "text": "when we finally cut the list down to the few that matter.",
+     "style": "ruthless-editor"
+    },
+    {
+     "text": "when two odd ideas suddenly fit together.",
+     "style": "connector"
+    }
+   ]
+  },
+  {
+   "prompt": "People who know me would say I\u2026",
+   "options": [
+    {
+     "text": "can tell quickly which ideas will not work.",
+     "style": "ruthless-editor"
+    },
+    {
+     "text": "always have a note, a photo or a clipping of something interesting.",
+     "style": "scavenger"
+    },
+    {
+     "text": "find links between things other people never connect.",
+     "style": "connector"
+    }
+   ]
+  },
+  {
+   "prompt": "When someone brings me a new idea, I\u2026",
+   "options": [
+    {
+     "text": "add three more ideas on top of it.",
+     "style": "idea-chef"
+    },
+    {
+     "text": "try to see it from the point of view of the people it is for.",
+     "style": "shoe-swapper"
+    },
+    {
+     "text": "ask how far it could go if there were no limits.",
+     "style": "far-out-dreamer"
+    }
+   ]
+  },
+  {
+   "prompt": "My ideal free afternoon is\u2026",
+   "options": [
+    {
+     "text": "daydreaming about something I would love to build one day.",
+     "style": "far-out-dreamer"
+    },
+    {
+     "text": "sorting out a messy plan until it makes sense.",
+     "style": "ruthless-editor"
+    },
+    {
+     "text": "wandering somewhere new and seeing what I notice.",
+     "style": "scavenger"
+    }
+   ]
+  },
+  {
+   "prompt": "When I explain an idea, I tend to\u2026",
+   "options": [
+    {
+     "text": "start with who it helps and why they would care.",
+     "style": "shoe-swapper"
+    },
+    {
+     "text": "show a pile of options and let people react.",
+     "style": "idea-chef"
+    },
+    {
+     "text": "compare it to something from a completely different world.",
+     "style": "connector"
+    }
+   ]
+  },
+  {
+   "prompt": "If a project is going badly, I\u2026",
+   "options": [
+    {
+     "text": "look for a surprising idea from another field.",
+     "style": "connector"
+    },
+    {
+     "text": "generate a fresh batch of ideas right away.",
+     "style": "idea-chef"
+    },
+    {
+     "text": "go back out and look for what I have been missing.",
+     "style": "scavenger"
+    }
+   ]
+  },
+  {
+   "prompt": "When it is time to choose between ideas, I\u2026",
+   "options": [
+    {
+     "text": "score them against the goal and drop the weakest.",
+     "style": "ruthless-editor"
+    },
+    {
+     "text": "choose the one that would matter most to the people using it.",
+     "style": "shoe-swapper"
+    },
+    {
+     "text": "choose the one that makes me want to tell the story.",
+     "style": "far-out-dreamer"
+    }
+   ]
+  }
+ ]
+}

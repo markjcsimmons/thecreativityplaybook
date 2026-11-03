@@ -1,0 +1,566 @@
+{
+ "_readme": "Scoring data for the Creativity Test's Alternative Uses part (BRIEF 8.4). Written by us, not taken from the book; Mark reviews it. Flexibility counts the distinct categories an answer's words match (a keyword matches a word that starts with it, a keyword with a space matches as a phrase). Originality is the share of answers that match none of the 'common' phrases. This is a rough, transparent scoring rule, not a validated measure.",
+ "rounds": [
+  {
+   "id": "brick",
+   "object": "brick",
+   "categories": [
+    {
+     "id": "build",
+     "label": "Building",
+     "keywords": [
+      "build",
+      "wall",
+      "house",
+      "construct",
+      "cement",
+      "mortar",
+      "pave",
+      "path",
+      "patio",
+      "barbecue",
+      "bbq",
+      "foundation",
+      "oven",
+      "stack"
+     ]
+    },
+    {
+     "id": "weight",
+     "label": "Weight and support",
+     "keywords": [
+      "weight",
+      "paperweight",
+      "doorstop",
+      "prop",
+      "hold down",
+      "press",
+      "anchor",
+      "ballast",
+      "bookend",
+      "wedge",
+      "level",
+      "counterweight",
+      "hold open",
+      "steady"
+     ]
+    },
+    {
+     "id": "force",
+     "label": "Force",
+     "keywords": [
+      "throw",
+      "smash",
+      "break",
+      "hit",
+      "hammer",
+      "weapon",
+      "crush",
+      "knock",
+      "defen",
+      "strike",
+      "bash",
+      "pound"
+     ]
+    },
+    {
+     "id": "heat",
+     "label": "Heat",
+     "keywords": [
+      "heat",
+      "warm",
+      "hot",
+      "fire",
+      "cook",
+      "grill",
+      "bake",
+      "insulat",
+      "hand warmer",
+      "bed warmer"
+     ]
+    },
+    {
+     "id": "art",
+     "label": "Art and craft",
+     "keywords": [
+      "art",
+      "paint",
+      "sculpt",
+      "carve",
+      "draw",
+      "chalk",
+      "stamp",
+      "decorat",
+      "mosaic",
+      "pigment",
+      "crayon",
+      "engrav"
+     ]
+    },
+    {
+     "id": "play",
+     "label": "Play and sport",
+     "keywords": [
+      "game",
+      "toy",
+      "play",
+      "hopscotch",
+      "tower",
+      "domino",
+      "sport",
+      "goal",
+      "marker",
+      "skittle",
+      "balance",
+      "limbo",
+      "ring toss"
+     ]
+    },
+    {
+     "id": "garden",
+     "label": "Garden and nature",
+     "keywords": [
+      "plant",
+      "pot",
+      "garden",
+      "edging",
+      "border",
+      "flower",
+      "bird",
+      "feeder",
+      "pond",
+      "compost",
+      "slug",
+      "raised bed",
+      "frog"
+     ]
+    },
+    {
+     "id": "furniture",
+     "label": "Furniture",
+     "keywords": [
+      "table",
+      "seat",
+      "stool",
+      "shelf",
+      "bench",
+      "stand",
+      "desk",
+      "bookshelf",
+      "leg",
+      "chair",
+      "step"
+     ]
+    },
+    {
+     "id": "tool",
+     "label": "Tools and materials",
+     "keywords": [
+      "sharpen",
+      "grind",
+      "polish",
+      "scrub",
+      "pumice",
+      "powder",
+      "dust",
+      "whetstone",
+      "rub",
+      "scrape",
+      "file"
+     ]
+    },
+    {
+     "id": "hide",
+     "label": "Storage and hiding",
+     "keywords": [
+      "hide",
+      "secret",
+      "safe",
+      "container",
+      "hollow",
+      "key",
+      "storage",
+      "stash",
+      "box",
+      "compartment"
+     ]
+    }
+   ],
+   "common": [
+    "build a wall",
+    "build a house",
+    "build a building",
+    "doorstop",
+    "door stop",
+    "paperweight",
+    "paper weight",
+    "weapon",
+    "throw it",
+    "throw at",
+    "break a window",
+    "break window",
+    "hold a door",
+    "hold the door",
+    "bookend",
+    "book end",
+    "hammer",
+    "stand on",
+    "weigh down",
+    "hit someone",
+    "hit a"
+   ]
+  },
+  {
+   "id": "paperclip",
+   "object": "paperclip",
+   "categories": [
+    {
+     "id": "hold",
+     "label": "Holding and fastening",
+     "keywords": [
+      "hold",
+      "clip",
+      "attach",
+      "bind",
+      "bookmark",
+      "fasten",
+      "papers",
+      "bundle",
+      "hang",
+      "hook",
+      "secure",
+      "fix",
+      "connect",
+      "join",
+      "staple",
+      "pin"
+     ]
+    },
+    {
+     "id": "pick",
+     "label": "Poking and picking",
+     "keywords": [
+      "pick",
+      "lock",
+      "unlock",
+      "reset",
+      "poke",
+      "button",
+      "sim",
+      "tweezers",
+      "scrape",
+      "clean",
+      "dig",
+      "prod",
+      "remove",
+      "eject"
+     ]
+    },
+    {
+     "id": "jewelry",
+     "label": "Jewelry and craft",
+     "keywords": [
+      "jewel",
+      "earring",
+      "necklace",
+      "ring",
+      "bracelet",
+      "chain",
+      "charm",
+      "craft",
+      "decorat",
+      "zipper",
+      "pull",
+      "tag",
+      "sculpt",
+      "art",
+      "bead"
+     ]
+    },
+    {
+     "id": "shape",
+     "label": "Bending and shaping",
+     "keywords": [
+      "bend",
+      "wire",
+      "straighten",
+      "spring",
+      "shape",
+      "coil",
+      "stand",
+      "stencil",
+      "frame",
+      "hanger",
+      "stylus",
+      "antenna",
+      "sculpt"
+     ]
+    },
+    {
+     "id": "game",
+     "label": "Games and toys",
+     "keywords": [
+      "game",
+      "toy",
+      "play",
+      "magnet",
+      "sling",
+      "bridge",
+      "trade",
+      "float",
+      "race",
+      "puzzle",
+      "fish",
+      "boat",
+      "dart"
+     ]
+    },
+    {
+     "id": "repair",
+     "label": "Repair",
+     "keywords": [
+      "repair",
+      "patch",
+      "mend",
+      "glasses",
+      "handle",
+      "temporary",
+      "lace",
+      "stitch",
+      "button",
+      "replac",
+      "hinge"
+     ]
+    },
+    {
+     "id": "electric",
+     "label": "Electric",
+     "keywords": [
+      "conduct",
+      "circuit",
+      "electric",
+      "battery",
+      "short",
+      "charge",
+      "jump",
+      "switch",
+      "current"
+     ]
+    },
+    {
+     "id": "reminder",
+     "label": "Marking and reminding",
+     "keywords": [
+      "marker",
+      "reminder",
+      "label",
+      "mark",
+      "place",
+      "bookmark",
+      "tab",
+      "flag",
+      "index",
+      "note"
+     ]
+    },
+    {
+     "id": "tool",
+     "label": "Small tools",
+     "keywords": [
+      "tool",
+      "screw",
+      "cut",
+      "carve",
+      "tweak",
+      "scratch",
+      "engrave",
+      "stir",
+      "tool",
+      "nail"
+     ]
+    }
+   ],
+   "common": [
+    "hold paper",
+    "hold papers",
+    "hold pages",
+    "hold documents",
+    "bookmark",
+    "fasten paper",
+    "clip paper",
+    "clip papers",
+    "pick a lock",
+    "pick lock",
+    "jewelry",
+    "necklace",
+    "earring",
+    "bend it",
+    "poke",
+    "reset button"
+   ]
+  },
+  {
+   "id": "shoe",
+   "object": "shoe",
+   "categories": [
+    {
+     "id": "wear",
+     "label": "Wearing",
+     "keywords": [
+      "wear",
+      "walk",
+      "run",
+      "foot",
+      "sandal",
+      "dance",
+      "hike",
+      "step",
+      "stride",
+      "costume"
+     ]
+    },
+    {
+     "id": "container",
+     "label": "Containers",
+     "keywords": [
+      "planter",
+      "pot",
+      "vase",
+      "bowl",
+      "bag",
+      "basket",
+      "holder",
+      "storage",
+      "pencil",
+      "flower",
+      "cup",
+      "bucket",
+      "organiz",
+      "store"
+     ]
+    },
+    {
+     "id": "tool",
+     "label": "Tools and weapons",
+     "keywords": [
+      "hammer",
+      "swat",
+      "fly",
+      "doorstop",
+      "weapon",
+      "throw",
+      "club",
+      "prop",
+      "scrape",
+      "whack",
+      "hit",
+      "kick"
+     ]
+    },
+    {
+     "id": "decor",
+     "label": "Decoration and art",
+     "keywords": [
+      "art",
+      "decor",
+      "sculpture",
+      "paint",
+      "hang",
+      "wreath",
+      "lamp",
+      "display",
+      "ornament",
+      "mobile",
+      "frame",
+      "trophy"
+     ]
+    },
+    {
+     "id": "play",
+     "label": "Play and games",
+     "keywords": [
+      "game",
+      "toss",
+      "kick",
+      "boat",
+      "toy",
+      "puppet",
+      "phone",
+      "race",
+      "hat",
+      "drum",
+      "ball"
+     ]
+    },
+    {
+     "id": "shelter",
+     "label": "Shelter and homes",
+     "keywords": [
+      "house",
+      "nest",
+      "bird",
+      "home",
+      "boat",
+      "shelter",
+      "bed",
+      "cave",
+      "kennel",
+      "cradle"
+     ]
+    },
+    {
+     "id": "material",
+     "label": "Materials and recycling",
+     "keywords": [
+      "burn",
+      "fuel",
+      "recycle",
+      "compost",
+      "insulation",
+      "rubber",
+      "leather",
+      "sole",
+      "lace",
+      "upcycle",
+      "stuff",
+      "fill",
+      "pad",
+      "sew"
+     ]
+    },
+    {
+     "id": "music",
+     "label": "Music and sound",
+     "keywords": [
+      "instrument",
+      "drum",
+      "tap",
+      "percussion",
+      "clap",
+      "rhythm",
+      "tambourine",
+      "noise",
+      "sound",
+      "music"
+     ]
+    }
+   ],
+   "common": [
+    "wear it",
+    "wear them",
+    "walk in",
+    "walking",
+    "run in",
+    "running",
+    "throw it",
+    "throw at",
+    "planter",
+    "plant pot",
+    "doorstop",
+    "door stop",
+    "hit something",
+    "phone"
+   ]
+  }
+ ]
+}

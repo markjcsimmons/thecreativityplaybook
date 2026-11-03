@@ -1,14 +1,25 @@
 ---
 import IdeaGenerator from '../islands/IdeaGenerator/index.tsx';
+import BusinessGenerator from '../islands/BusinessGenerator/index.tsx';
+import ProductGenerator from '../islands/ProductGenerator/index.tsx';
+import CreativityTest from '../islands/CreativityTest/index.tsx';
 import book from '../data/book.json';
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
 
 interface Props {
   /** Value of the page's `island` frontmatter. Each new tool adds one line below. */
   name: string;
 }
 const { name } = Astro.props;
+
+// Pages that exist in this build, so a tool can link to a tool that is not published yet only when it is.
+const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
 ---
 
 <!-- Static imports keep Astro's hydration working. The island renders on the server
      too, so the page already shows a real example without JavaScript (BRIEF §8.0). -->
 {name === 'IdeaGenerator' && <IdeaGenerator client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'BusinessGenerator' && <BusinessGenerator client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'ProductGenerator' && <ProductGenerator client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}

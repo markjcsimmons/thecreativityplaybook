@@ -129,3 +129,49 @@ export const ideaWordsSchema = z.object({
   mass: wordList,
 });
 export type IdeaWords = z.infer<typeof ideaWordsSchema>;
+
+/**
+ * src/data/business-words.json: words for the Business Idea Generator. Same rule as
+ * idea-words.json (every word comes from the book). The tags only drive the filters.
+ */
+export const businessWordsSchema = z.object({
+  _readme: z.string(),
+  problems: wordList,
+  models: z
+    .array(z.object({ text: z.string().min(1), budget: z.enum(['any', 'shoestring', 'funded']), team: z.enum(['any', 'solo', 'team']) }))
+    .min(1),
+  mechanisms: z.array(z.object({ text: z.string().min(1), channel: z.enum(['online', 'offline', 'both']) })).min(1),
+  mass: wordList,
+});
+export type BusinessWords = z.infer<typeof businessWordsSchema>;
+
+/** src/data/aut-categories.json and creativity-styles.json: scoring data for the Creativity Test (BRIEF §8.4). */
+export const autDataSchema = z.object({
+  _readme: z.string(),
+  rounds: z
+    .array(
+      z.object({
+        id: z.string().min(1),
+        object: z.string().min(1),
+        categories: z.array(z.object({ id: z.string().min(1), label: z.string().min(1), keywords: z.array(z.string().min(3)).min(1) })).min(2),
+        common: z.array(z.string().min(3)).min(1),
+      }),
+    )
+    .length(3),
+});
+export const creativityStylesSchema = z
+  .object({
+    _readme: z.string(),
+    styles: z
+      .array(z.object({ id: z.string().min(1), name: z.string().min(1), chapterId: z.string().min(1), summary: z.string().min(1), next: z.object({ path: z.string().min(1), label: z.string().min(1) }) }))
+      .length(6),
+    questions: z.array(z.object({ prompt: z.string().min(1), options: z.array(z.object({ text: z.string().min(1), style: z.string().min(1) })).length(3) })).length(10),
+  })
+  .superRefine((d, ctx) => {
+    const ids = new Set(d.styles.map((s) => s.id));
+    d.questions.forEach((q, i) =>
+      q.options.forEach((o, j) => {
+        if (!ids.has(o.style)) ctx.addIssue({ code: 'custom', path: ['questions', i, 'options', j, 'style'], message: `unknown style "${o.style}"` });
+      }),
+    );
+  });
