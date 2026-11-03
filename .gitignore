@@ -1,0 +1,27 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment variables
+.env
+.env.production
+.dev.vars
+
+# macOS
+.DS_Store
+
+# jetbrains
+.idea/
+
+# Book PDFs and extracted text stay local: rights for the interior art and
+# the 2010 edition's third-party material are not cleared for redistribution.
+/source/
+
+# Lighthouse CI output
+.lighthouseci/

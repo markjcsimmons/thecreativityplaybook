@@ -1,0 +1,29 @@
+---
+import data from '../data/characters.json';
+
+interface Props {
+  /** Character id from src/data/characters.json, e.g. "green-flower". */
+  id: string;
+  /** Rendered height in CSS pixels. Width follows the artwork's proportions. */
+  height?: number;
+  /** Set true for decoration, so screen readers skip it. */
+  decorative?: boolean;
+  class?: string;
+}
+const { id, height = 160, decorative = false, class: className } = Astro.props;
+const all = [...data.characters, ...data.decor.map((d) => ({ ...d, alt: '' }))];
+const art = all.find((c) => c.id === id);
+if (!art) throw new Error(`Character: unknown id "${id}"`);
+const width = Math.round((art.w / art.h) * height);
+---
+
+<img
+  src={`/art/characters/${art.id}.svg`}
+  {width}
+  {height}
+  alt={decorative ? '' : art.alt}
+  aria-hidden={decorative ? 'true' : undefined}
+  loading="lazy"
+  decoding="async"
+  class={className}
+/>

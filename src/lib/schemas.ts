@@ -1,0 +1,109 @@
+import { z } from 'astro/zod';
+
+/**
+ * BRIEF §9.2 plus three additions the page inventory needs:
+ * 'hub-guide', 'home' and 'product' page types, and an explicit `path`
+ * (the canonical URL, which must match docs/keyword-map.csv).
+ */
+export const PAGE_TYPES = [
+  'tool',
+  'hub',
+  'hub-guide',
+  'pillar-guide',
+  'guide',
+  'technique',
+  'exercises',
+  'puzzle-library',
+  'quotes',
+  'template',
+  'book-list',
+  'book',
+  'about',
+  'home',
+  'product',
+] as const;
+
+/** Page types whose Book DNA comes from quote sources or the book CTA, not chapters. */
+export const BOOK_SOURCES_EXEMPT = ['book-list', 'quotes'] as const;
+
+export const AUTHORS = ['team', 'mark', 'dave', 'dave-and-mark'] as const;
+
+export const pageSchema = z
+  .object({
+    path: z.string().regex(/^\/([a-z0-9-]+(\/[a-z0-9-]+)*\/)?$/, 'lowercase, hyphenated, leading and trailing slash'),
+    title: z.string().min(1).max(60),
+    description: z.string().min(140).max(155),
+    /** H1 text. Defaults to `title`. Must still contain the primary keyword. */
+    h1: z.string().min(1).optional(),
+    /** Answer-first intro, two sentences or fewer (BRIEF §7). Defaults to `description`. */
+    intro: z.string().min(1).optional(),
+    primaryKeyword: z.string().min(1),
+    secondaryKeywords: z.array(z.string()).default([]),
+    pageType: z.enum(PAGE_TYPES),
+    phase: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+    bookChapter: z.string().min(1),
+    bookSources: z
+      .array(z.object({ chapter: z.string().min(1), page: z.number().int().positive().optional(), note: z.string().min(1) }))
+      .default([]),
+    serpNotes: z.string().optional(),
+    status: z.enum(['draft', 'review', 'published']),
+    reviewedBy: z.string().optional(),
+    author: z.enum(AUTHORS),
+    updated: z.coerce.date(),
+    ogImage: z.string().optional(),
+    /** Name of the Preact island in src/islands/ for tool pages. */
+    island: z.string().optional(),
+  })
+  .superRefine((p, ctx) => {
+    if (!(BOOK_SOURCES_EXEMPT as readonly string[]).includes(p.pageType) && p.bookSources.length === 0) {
+      ctx.addIssue({ code: 'custom', path: ['bookSources'], message: 'needs at least one bookSources entry (Book DNA, BRIEF §2.3)' });
+    }
+    if (p.status === 'published' && !p.reviewedBy) {
+      ctx.addIssue({ code: 'custom', path: ['reviewedBy'], message: 'published pages need reviewedBy' });
+    }
+    if (p.author.startsWith('dave') && !p.reviewedBy) {
+      ctx.addIssue({ code: 'custom', path: ['reviewedBy'], message: "author 'dave*' needs reviewedBy (Dave's approval, BRIEF §2.2)" });
+    }
+  });
+
+export type PageData = z.infer<typeof pageSchema>;
+
+/** src/data/quotes.json entries (BRIEF §9.4). Every quote needs a source. */
+export const quoteSchema = z.object({
+  text: z.string().min(1),
+  author: z.string().min(1),
+  role: z.string().optional(),
+  source: z.discriminatedUnion('type', [
+    z.object({ type: z.literal('book'), ref: z.string().min(1) }),
+    z.object({ type: z.literal('url'), ref: z.url() }),
+  ]),
+  theme: z.array(z.string()).min(1),
+  fromBook: z.boolean(),
+});
+export type Quote = z.infer<typeof quoteSchema>;
+
+/** src/data/puzzles.json entries (BRIEF §9.4). Puzzles must be original. */
+export const puzzleSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  setup: z.string().min(1),
+  hints: z.array(z.string().min(1)).min(1),
+  answer: z.string().min(1),
+  thinkingMove: z.string().min(1),
+  techniqueSlug: z.string().min(1),
+  difficulty: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  original: z.literal(true),
+});
+export type Puzzle = z.infer<typeof puzzleSchema>;
+
+/** src/data/links.json: the hand-maintained internal link graph (BRIEF §10.4). */
+export const linksSchema = z.record(
+  z.string(),
+  z.object({
+    hub: z.string().optional(),
+    siblings: z.array(z.string()).default([]),
+    tools: z.array(z.string()).default([]),
+    technique: z.array(z.string()).default([]),
+  }),
+);
+export type LinkGraph = z.infer<typeof linksSchema>;

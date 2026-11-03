@@ -1,0 +1,93 @@
+Keyword,Intent,Volume,Trend,Keyword Difficulty,CPC (USD),SERP Features
+design thinking process,,135000,"0.00,0.13,0.03,0.07,0.20,0.36,1.00,0.44,0.66,0.44,0.00,0.20",15,1.75,"AI Overview, Image, Image pack, Video, People also ask, Discussions and forums, Related searches"
+random word generator,Navigational,90500,"0.81,0.67,0.67,0.81,0.56,0.30,0.67,0.37,0.81,1.00,1.00,0.67",75,0.00,"Sitelinks, Reviews, Video, Related searches"
+eurythmics,"Informational, Transactional",18100,"0.66,0.55,1.00,0.66,0.55,0.66,0.55,0.66,0.66,0.66,0.55,0.66",75,0.90,"Image, Video, Video carousel, People also ask, Knowledge panel"
+five whys,Informational,5400,"1.00,0.67,0.67,0.54,0.81,1.00,0.67,1.00,0.81,0.67,0.81,0.67",50,1.68,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Discussions and forums, Related searches"
+first principles thinking,,4400,"0.67,0.54,0.67,0.36,0.67,0.67,0.54,0.81,0.81,0.81,1.00,0.81",52,0.00,"AI Overview, Reviews, Image pack, Video, Short videos, People also ask, Related searches, Things to know"
+empathy map,Informational,2900,"0.66,1.00,1.00,0.82,0.43,0.66,0.82,0.55,0.55,0.55,0.43,0.55",55,3.69,"AI Overview, Reviews, Image, Image pack, Video, People also ask, Related searches"
+invention ideas,Informational,2900,"0.42,0.53,0.53,0.53,0.42,1.00,0.68,0.68,0.53,0.68,0.37,0.16",29,5.47,"Sitelinks, AI Overview, Image, Image pack, Video, People also ask, Related searches"
+mind map template,Informational,2900,"0.35,1.00,0.53,0.82,0.29,0.53,0.53,0.53,0.44,0.35,0.24,0.24",57,2.46,"Sitelinks, AI Overview, Reviews, Image, Image pack, Video, People also ask, Related searches"
+brainstorming template,Informational,2400,"0.19,0.43,0.28,0.24,0.28,0.15,0.28,0.54,0.24,1.00,0.19,0.15",35,2.81,"Sitelinks, AI Overview, Reviews, Image, Image pack, Video, People also ask, Related searches"
+brand storytelling,Informational,2400,"1.00,0.83,0.83,1.00,0.83,1.00,0.83,0.83,1.00,0.83,0.55,0.55",53,4.09,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+creativity quotes,Informational,2400,"0.66,0.66,0.66,0.52,0.45,1.00,0.79,0.79,0.52,0.66,0.45,0.45",22,0.51,"AI Overview, Image, Image pack, Video, People also ask, Related searches"
+intrapreneurship,Informational,2400,"0.81,1.00,0.65,0.54,0.35,0.43,0.65,0.65,0.65,0.30,0.30,0.54",48,5.08,"AI Overview, Reviews, Image pack, Video, People also ask, Related searches, Things to know"
+lateral thinking puzzles,Informational,2400,"0.66,0.52,0.66,0.66,0.66,0.66,0.66,1.00,0.66,0.80,0.66,0.66",29,0.03,"Sitelinks, AI Overview, Reviews, Image, Video, Related searches"
+perspective taking,Informational,2400,"0.66,1.00,1.00,1.00,0.66,0.66,0.66,0.83,0.83,0.83,0.45,0.45",23,0.00,"AI Overview, Image pack, Video, People also ask"
+problem statement examples,Informational,2400,"0.36,0.82,0.66,0.55,0.30,0.43,0.55,0.55,0.43,0.43,1.00,0.66",35,0.00,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+storytelling techniques,,2400,"0.06,0.06,0.08,0.08,0.06,0.08,0.05,0.05,0.12,1.00,0.03,0.03",39,2.40,"AI Overview, Image pack, Video, Video carousel, People also ask, Related searches"
+Dave Stewart Eurythmics,Informational,1900,"0.67,1.00,0.44,0.35,0.81,0.23,0.12,0.12,0.10,0.16,0.12,0.44",54,0.00,"Image, Video, Video carousel, People also ask, Knowledge panel, Top stories, Discussions and forums, Related searches"
+thinking outside the box,Informational,1900,"0.66,0.55,0.83,0.55,0.45,0.66,1.00,0.66,0.66,0.83,0.55,0.34",45,0.00,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches, Things to know"
+biomimicry examples,Informational,1300,"0.30,0.67,0.67,0.55,0.30,0.55,0.55,0.67,1.00,0.67,0.20,0.12",46,5.80,"AI Overview, Image, Image pack, Video, People also ask, Related searches"
+design sprint,Informational,1300,"1.00,1.00,1.00,0.75,1.00,1.00,0.44,0.56,0.44,0.44,0.36,0.36",59,3.05,"AI Overview, Image, Image pack, Video, Video carousel, People also ask, Discussions and forums, Related searches"
+random prompt generator,Commercial,1300,"0.77,1.00,1.00,1.00,1.00,0.77,1.00,1.00,0.77,1.00,0.68,1.00",30,4.81,"AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+creative block,Informational,1000,"0.24,0.27,0.27,0.24,0.16,0.20,0.27,1.00,0.24,0.20,0.16,0.20",24,0.21,"Sitelinks, AI Overview, Image pack, Video, People also ask, Related searches, Things to know"
+creative thinking examples,Informational,720,"0.55,1.00,0.81,0.62,0.36,0.62,0.36,0.45,0.36,0.36,0.13,0.16",28,4.77,"Sitelinks, AI Overview, Reviews, Image, Video, People also ask, Related searches"
+divergent vs convergent thinking,Commercial,720,"0.24,0.56,0.76,0.76,0.76,0.56,0.56,0.56,0.67,1.00,0.19,0.24",28,0.14,"Sitelinks, AI Overview, Reviews, Image pack, Video, Video carousel, People also ask, Related searches"
+idea journal,"Informational, Commercial",720,"0.37,0.24,0.44,0.19,0.37,1.00,0.04,0.81,0.02,0.44,0.04,0.02",26,0.80,"Sitelinks, AI Overview, Image pack, Video, People also ask, Related searches, Popular products"
+mind map ideas,Informational,720,"0.37,1.00,0.52,0.46,0.25,0.31,0.37,0.37,0.37,0.13,0.13,0.05",48,3.77,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+new product ideas,Informational,720,"0.89,1.00,1.00,0.59,0.74,0.74,0.74,0.59,0.89,0.48,0.59,0.48",24,2.85,"Sitelinks, AI Overview, Reviews, Image, Video, People also ask, Discussions and forums, Related searches"
+creative confidence,Informational,590,"0.67,1.00,0.82,0.54,0.67,1.00,0.54,0.67,0.54,0.45,0.36,0.36",56,0.99,"Sitelinks, AI Overview, Reviews, Video, People also ask, Knowledge panel, Related searches, People also search, Popular products"
+innovation quotes,Informational,590,"1.00,1.00,0.50,0.65,0.65,0.80,0.40,1.00,0.65,1.00,0.35,0.50",13,4.38,"AI Overview, Image, Image pack, Video, People also ask, Related searches"
+creativity test,Informational,480,"0.71,0.59,0.59,0.47,0.47,0.59,0.15,1.00,0.47,0.47,0.24,0.21",38,0.61,"AI Overview, Reviews, Video, People also ask, Related searches, Things to know"
+divergent thinking examples,Informational,480,"0.13,0.39,0.73,1.00,0.73,0.39,0.39,0.48,0.39,0.26,0.08,0.10",41,0.00,"AI Overview, Image, Image pack, Video, Video carousel, People also ask, Related searches"
+idea management,Informational,480,"1.00,0.72,0.07,0.14,0.17,0.88,0.59,0.72,0.11,0.17,0.14,0.59",26,8.33,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+storytelling in marketing,Informational,480,"1.00,0.83,1.00,1.00,1.00,0.83,0.83,0.83,0.83,0.56,0.56,0.56",46,5.58,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+creative thinking activities,Informational,390,"0.32,0.59,0.17,0.59,0.32,1.00,0.32,0.48,0.32,0.26,0.26,0.39",31,1.05,"Sitelinks, AI Overview, Reviews, Image, Image pack, Video, People also ask, Related searches"
+creative thinking exercises,Informational,390,"1.00,1.00,0.82,0.82,0.82,0.82,0.82,0.67,1.00,0.55,0.44,0.55",36,2.05,"Sitelinks, AI Overview, Video, People also ask, Related searches"
+convergent thinking examples,Informational,320,"0.07,0.36,0.54,1.00,0.54,0.29,0.23,0.29,0.23,0.12,0.07,0.07",42,0.00,"Sitelinks, AI Overview, Reviews, Image, Video, Video carousel, People also ask, Discussions and forums, Related searches"
+creativity exercises,Informational,320,"0.81,0.67,0.54,0.36,0.54,0.67,0.81,0.44,1.00,0.15,0.44,0.54",39,2.05,"Sitelinks, AI Overview, Image, Image pack, Video, Video carousel, People also ask, Related searches"
+design thinking examples,Informational,320,"0.66,0.66,0.54,0.54,0.44,1.00,0.54,0.54,0.44,0.44,0.18,0.18",51,2.65,"Sitelinks, AI Overview, Reviews, Image, Image pack, Video, People also ask"
+lateral thinking riddles,"Informational, Commercial",320,"0.82,0.53,0.82,0.66,0.82,0.66,1.00,0.66,1.00,1.00,0.53,0.66",22,0.04,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+gamestorming,"Informational, Navigational",260,"1.00,1.00,0.83,0.54,0.42,0.83,0.67,0.83,0.54,0.54,0.54,0.21",28,4.51,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+innovation games,Informational,260,"0.44,1.00,0.54,0.81,0.19,0.23,0.36,0.11,0.36,0.36,0.54,0.07",24,0.20,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+big hairy audacious goals,Informational,210,"1.00,0.05,0.11,0.05,0.05,0.29,1.00,0.55,0.09,0.05,0.65,0.02",34,4.02,"Sitelinks, AI Overview, Reviews, Video, Video carousel, People also ask, Knowledge panel, Related searches"
+brainstorming worksheet,Informational,210,"0.65,1.00,0.65,0.81,0.53,0.65,0.43,0.53,0.65,0.53,0.34,0.28",18,0.96,"Reviews, Image, Image pack, Video, People also ask, Related searches"
+workplace innovation,Informational,210,"0.26,0.21,0.07,0.05,0.07,0.03,0.11,0.11,0.09,1.00,0.11,0.11",20,3.19,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+creative problem solving examples,Informational,170,"0.52,1.00,0.81,0.65,0.33,0.52,0.52,0.52,0.52,0.43,0.20,0.20",33,0.00,"Sitelinks, AI Overview, Image pack, Video, Video carousel, People also ask, Related searches"
+how to sell an idea,Informational,170,"0.41,1.00,0.64,0.41,0.52,0.80,1.00,0.52,0.52,0.64,0.41,0.34",21,4.15,"AI Overview, Reviews, Video, Video carousel, People also ask, Related searches"
+icebreaker games for meetings,Informational,170,"1.00,0.42,0.83,0.13,0.04,0.04,0.54,0.25,0.54,0.25,0.17,0.54",26,0.31,"Sitelinks, AI Overview, Reviews, Video, Video carousel, People also ask, Discussions and forums, Related searches, Ads top, Ads bottom"
+best business books 2026,Commercial,140,"0.00,0.00,0.00,0.04,0.06,0.54,0.66,0.81,0.66,0.81,1.00,0.81",18,0.87,"Sitelinks, AI Overview, Video, People also ask, Related searches"
+six thinking hats examples,Informational,140,"0.78,1.00,1.00,0.56,0.56,0.44,0.56,0.56,0.56,0.56,0.56,0.22",22,0.00,"Sitelinks, AI Overview, Reviews, Image, Video, Video carousel, People also ask, Related searches"
+creative mindset,Informational,110,"0.82,1.00,0.66,0.43,0.43,0.52,0.52,0.43,0.43,0.52,0.32,0.43",21,0.00,"AI Overview, Reviews, Video, People also ask, Related searches"
+creative office design,Transactional,110,"0.79,1.00,0.79,0.64,0.79,0.79,0.49,0.49,0.64,0.64,0.49,0.49",33,3.22,"Sitelinks, Image, Image pack, Video, Video carousel, Short videos, Local pack, Related searches"
+edward de bono lateral thinking,Informational,110,"0.65,0.65,0.83,1.00,0.53,0.53,0.53,0.53,0.53,0.53,0.41,0.41",37,0.71,"Sitelinks, AI Overview, Reviews, Video, Video carousel, People also ask, Knowledge panel, Related searches, People also search"
+lateral thinking questions,Informational,110,"0.79,0.79,0.79,0.65,0.79,0.79,0.65,0.79,1.00,1.00,0.79,0.79",24,0.02,"AI Overview, Reviews, Image, Video, People also ask, Related searches"
+problem solving activities for adults,Informational,110,"1.00,0.79,1.00,0.79,0.64,0.49,0.64,0.79,0.79,0.64,0.49,0.64",13,1.83,"AI Overview, Reviews, Video, Video carousel, People also ask, Discussions and forums, Related searches"
+product idea generator,Informational,110,"0.43,0.81,0.81,1.00,0.53,0.53,0.33,0.33,0.33,0.33,0.33,0.33",18,4.71,"AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+where do ideas come from,Informational,110,"1.00,0.81,0.81,0.65,0.65,0.65,0.65,0.81,0.65,0.53,0.53,0.65",32,0.00,"AI Overview, Image, Video, Video carousel, People also ask, Related searches"
+alternative uses test,Informational,70,"0.45,0.64,1.00,1.00,0.64,0.64,0.64,0.64,1.00,0.45,0.36,0.45",14,0.00,"AI Overview, Reviews, Video, People also ask, Related searches"
+books on design thinking,"Informational, Commercial",70,"0.29,0.52,0.41,0.41,0.23,0.23,0.23,0.23,0.23,0.29,1.00,0.29",28,1.00,"Sitelinks, AI Overview, Video, People also ask, Related searches, Popular products"
+business storytelling examples,Informational,70,"0.78,0.35,1.00,0.21,0.50,0.50,0.28,0.35,0.35,0.28,0.35,0.35",22,0.00,"AI Overview, Video, Video carousel, People also ask, Related searches"
+gamification at work,Informational,70,"0.81,1.00,0.17,0.81,0.27,0.27,1.00,1.00,0.81,0.44,0.63,0.37",33,33.46,"Sitelinks, AI Overview, Reviews, Video, Video carousel, Short videos, People also ask, Related searches"
+lateral vs vertical thinking,"Informational, Commercial",70,"0.76,0.76,1.00,0.56,0.76,0.76,1.00,0.76,0.76,0.76,0.44,0.21",28,0.00,"Sitelinks, AI Overview, Reviews, Image pack, Video, People also ask, Related searches"
+startup idea generator,Informational,70,"0.11,0.29,0.11,0.11,0.11,0.11,0.11,1.00,0.83,1.00,0.63,0.63",43,5.02,"AI Overview, Reviews, Video, People also ask, Related searches"
+creative habits,,50,"0.12,0.06,0.09,0.06,0.06,0.06,0.09,0.06,0.06,0.06,0.12,1.00",,0.00,
+how to pitch an idea,Informational,50,"1.00,1.00,1.00,0.71,0.71,0.29,0.29,0.29,0.71,0.29,0.29,0.29",36,3.49,"Sitelinks, AI Overview, Video, Video carousel, People also ask, Related searches"
+lateral thinking examples,Informational,50,"0.35,1.00,0.50,0.14,0.35,0.07,0.50,0.28,0.78,0.14,0.28,0.64",21,0.00,"AI Overview, Image, Video, People also ask, Related searches"
+moonshot ideas,Informational,50,"0.64,0.64,0.81,0.45,0.00,0.45,0.17,0.17,1.00,0.36,0.27,0.27",20,0.00,"Sitelinks, AI Overview, Video, Video carousel, People also ask, Related searches"
+play at work,Informational,50,"0.78,1.00,0.55,0.55,0.55,0.55,0.22,0.22,0.44,0.44,0.33,0.22",36,0.00,"AI Overview, Video, Video carousel, People also ask, Discussions and forums, Related searches"
+app idea generator,Informational,40,"0.11,1.00,0.11,0.17,0.11,0.11,0.11,0.41,0.11,0.11,0.29,0.52",0,4.16,"Sitelinks, AI Overview, Reviews, Video, Related searches"
+ideation template,Informational,40,"0.29,0.29,1.00,0.29,0.29,0.29,0.29,1.00,0.29,0.57,0.71,0.43",13,3.04,"AI Overview, Reviews, Image, Image pack, Video, People also ask, Related searches"
+lateral thinking games,Informational,40,"0.18,1.00,0.18,0.18,0.18,0.18,0.18,0.18,1.00,0.18,0.18,0.18",29,0.54,"Sitelinks, AI Overview, Reviews, Video, People also ask, Related searches"
+out of the box thinking examples,Informational,40,"0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,1.00,0.09,0.09,0.09",,0.00,"Sitelinks, AI Overview, Image pack, Video, People also ask, Related searches"
+reverse brainstorming examples,Informational,40,"0.57,0.57,0.29,1.00,0.29,0.43,0.57,0.29,0.43,0.43,0.29,0.29",19,0.00,"Sitelinks, AI Overview, Reviews, Image, Video, Video carousel, People also ask, Related searches"
+random invention generator,,30,"1.00,0.00,0.00,0.50,0.00,1.00,1.00,0.50,0.50,0.50,0.00,0.00",,0.00,
+SCAMPER questions,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+SCAMPER worksheet,,20,"0.67,0.67,0.67,0.67,0.67,0.67,1.00,0.67,0.67,0.67,0.67,0.67",,0.00,
+analogical thinking examples,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+books like Range,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+creative prompt generator,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,3.80,
+creativity activities for adults,,20,"0.57,0.00,1.00,0.71,0.71,0.14,0.00,0.14,0.14,0.14,0.14,0.14",,0.27,
+divergent thinking activities,,20,"0.67,1.00,0.67,0.67,0.67,0.67,0.67,0.67,0.67,0.67,0.67,0.67",,0.00,
+how creative are you quiz,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+how might we examples,,20,"0.67,0.67,1.00,0.67,0.67,0.67,0.67,0.67,0.67,0.67,0.67,0.67",,0.00,
+how to get out of a creative rut,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+how to have more ideas,,20,"1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00",,0.00,
+lateral thinking techniques,,20,"0.47,0.74,0.47,0.47,1.00,0.47,0.47,0.47,0.74,0.47,0.47,0.47",,0.00,
+six thinking hats exercise,,20,"0.33,0.66,1.00,1.00,0.33,0.00,0.66,0.66,0.00,0.33,0.33,0.33",,0.00,
+workshop activities for employees,,20,"0.64,1.00,0.64,0.64,0.64,0.00,0.64,0.64,0.64,0.64,0.64,0.64",,0.00,
+brainstorming generator,,10,"1.00,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.00,1.00",,0.00,
+books like Originals,,0,"0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00",,0.00,
+books on innovation and creativity,,0,"0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.50,0.00,1.00,0.00,0.00",,0.00,
+books on lateral thinking,,0,"0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00",,0.44,
+side hustle idea generator,,0,"0.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00,1.00,0.00",,0.00,

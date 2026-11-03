@@ -1,0 +1,13 @@
+{
+  "_readme": "Close variants allowed when checking that the title and H1 contain a page's primary keyword (BRIEF §10.6). Key = primary keyword exactly as in docs/keyword-map.csv, value = extra phrases that count. Add an entry only when the natural wording differs from the keyword.",
+  "variants": {
+    "creativity playbook": ["The Creativity Playbook"],
+    "scamper technique": ["SCAMPER"],
+    "six thinking hats examples": ["Six Thinking Hats"],
+    "product idea generator": ["Invention Idea Generator"],
+    "ideation workshop": ["Team Workshop Activities"],
+    "dave stewart eurythmics": ["Dave Stewart", "Mark Simmons"],
+    "dave stewart book": ["The Creativity Playbook"]
+  },
+  "warnTerms": ["SENZ", "Weird Rules of Creativity"]
+}

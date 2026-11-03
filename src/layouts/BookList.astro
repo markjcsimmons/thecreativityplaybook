@@ -1,0 +1,23 @@
+---
+import Article from './Article.astro';
+import book from '../data/book.json';
+import type { PageData } from '../lib/schemas';
+
+interface Props {
+  page: PageData;
+  /** Set false on a list with no affiliate links. */
+  affiliate?: boolean;
+}
+const { page, affiliate = true } = Astro.props;
+---
+
+<Article page={page}>
+  <aside slot="before-body" class="sticker fill mb-8 p-4 text-base" aria-label="Disclosure">
+    <p class="m-0">
+      <strong>Disclosure:</strong> we wrote <em>{book.earlierEdition.title}</em>, and its revised edition,
+      <em>{book.title}</em>, is coming in {book.launchYear}. We list it here, labeled as ours, because you should know where we stand.
+      {affiliate && ' Some links on this page are affiliate links. If you buy through them we may earn a commission, at no extra cost to you.'}
+    </p>
+  </aside>
+  <slot />
+</Article>

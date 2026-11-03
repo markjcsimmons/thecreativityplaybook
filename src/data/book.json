@@ -1,0 +1,22 @@
+{
+  "status": "prelaunch",
+  "title": "The Creativity Playbook",
+  "subtitle": "A Practical Guide to Ideas and Innovation",
+  "workingTitleNote": "Title comes from the May 2025 V2 comp. Final title, subtitle, ISBN, price and launch date are still open (BRIEF §16.6).",
+  "authors": ["Dave Stewart", "Mark Simmons"],
+  "foreword": "Sir Richard Branson",
+  "earlierEdition": {
+    "title": "The Business Playground: Where Creativity and Commerce Collide",
+    "year": 2010,
+    "publisher": "Pearson / New Riders",
+    "note": "Out of print as a new book. Used copies circulate on Amazon. Mention it as the earlier edition only; never send visitors there."
+  },
+  "launchYear": 2027,
+  "isbn": null,
+  "price": null,
+  "formats": [],
+  "retailers": {
+    "amazon": { "us": null, "uk": null, "ca": null, "au": null }
+  },
+  "waitlistMagnet": "launch-alert"
+}

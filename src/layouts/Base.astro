@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import antonUrl from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
+import dmSansUrl from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import zillaUrl from '@fontsource/zilla-slab/files/zilla-slab-latin-600-normal.woff2?url';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_NAME, canonicalUrl } from '../lib/seo';
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Canonical path. Tool query variants pass the base path (BRIEF §10.1). */
+  path: string;
+  jsonLd?: object[];
+  noindex?: boolean;
+  ogImage?: string;
+  /** CSS colour for this page's accent, e.g. "var(--ch-9)". */
+  accent?: string;
+}
+
+const { title, description, path, jsonLd = [], noindex = false, ogImage, accent } = Astro.props;
+const site = Astro.site!;
+const canonical = canonicalUrl(path, site);
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN as string | undefined;
+
+// Only link to pages that exist in this build, so navigation can never 404.
+const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
+const nav = [
+  { label: 'Tools', path: '/tools/' },
+  { label: 'Techniques', path: '/techniques/' },
+  { label: 'Lateral thinking', path: '/lateral-thinking/' },
+  { label: 'The book', path: '/book/' },
+].filter((l) => live.has(l.path));
+---
+
+<!doctype html>
+<html lang="en-US" style={accent ? `--accent: ${accent}` : undefined}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={new URL(ogImage, site).href} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {[antonUrl, dmSansUrl, zillaUrl].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
+    {jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
+    {plausibleDomain && <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.tagged-events.js" />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header nav={nav} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide/
+
+Sitemap: https://creativityplaybook.example/sitemap-index.xml

@@ -1,0 +1,24 @@
+---
+import type { Quote } from '../lib/schemas';
+
+interface Props {
+  quote: Quote;
+  /** CSS colour, e.g. "var(--ch-8)". */
+  accent?: string;
+}
+const { quote, accent } = Astro.props;
+---
+
+<figure class="sticker bigquote fill m-0 p-5 sm:p-6" style={accent ? `--accent: ${accent}` : undefined}>
+  <blockquote class="m-0 font-slab text-2xl font-bold leading-snug">{quote.text}</blockquote>
+  <figcaption class="mt-3 text-base">
+    <strong>{quote.author}</strong>{quote.role && <span>, {quote.role}</span>}
+    {
+      quote.source.type === 'url' ? (
+        <a class="ml-2 text-sm" href={quote.source.ref} rel="noopener">source</a>
+      ) : (
+        <span class="ml-2 text-sm">({quote.source.ref})</span>
+      )
+    }
+  </figcaption>
+</figure>

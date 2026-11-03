@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Character from '../components/Character.astro';
+---
+
+<Base
+  title="Page not found | The Creativity Playbook"
+  description="That page isn't here. It may have moved, or it may not exist yet. Head back to the home page."
+  path="/404/"
+  noindex
+>
+  <div class="wrap-narrow pt-12 text-center">
+    <div class="flex justify-center"><Character id="green-flower" height={200} /></div>
+    <h1 class="mt-6">Page not found</h1>
+    <p class="font-slab text-2xl">Wrong turn. This page doesn't exist, or it hasn't been built yet.</p>
+    <p><a class="btn" href="/">Back to the start</a></p>
+  </div>
+</Base>

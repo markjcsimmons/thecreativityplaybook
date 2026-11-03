@@ -1,0 +1,33 @@
+---
+import book from '../data/book.json';
+import { AFFILIATE_REL } from '../lib/amazon';
+
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+
+const stores = [
+  { country: 'us', label: 'Amazon US' },
+  { country: 'uk', label: 'Amazon UK' },
+  { country: 'ca', label: 'Amazon CA' },
+  { country: 'au', label: 'Amazon AU' },
+] as const;
+const live = book.status === 'live';
+---
+
+<div class={`flex flex-wrap gap-3 ${className}`}>
+  {
+    live ? (
+      stores
+        .filter((s) => book.retailers.amazon[s.country])
+        .map((s) => (
+          <a class="btn" href={book.retailers.amazon[s.country]!} rel={AFFILIATE_REL} data-buy-country={s.country}>
+            {s.label}
+          </a>
+        ))
+    ) : (
+      <a class="btn" href="#waitlist">Get the launch-day alert</a>
+    )
+  }
+</div>

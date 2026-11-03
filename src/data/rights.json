@@ -1,0 +1,69 @@
+{
+  "_readme": "One entry per third-party asset or text. Status: 'owned' = the authors own it, usable on the site; 'cleared' = used only in the context the book used it (BRIEF §2.1); 'blocked' = never use; 'on-hold' = do not use until ownership is confirmed; 'not-owned' = we do not hold the rights. evidence is still empty for every entry: add the paperwork reference when Mark has it.",
+  "assets": [
+    {
+      "id": "dylan-forever-young-lyrics",
+      "description": "Bob Dylan, 'Forever Young' lyrics, as quoted in the book",
+      "status": "cleared",
+      "scope": "Only in the context the book used them. Not as decoration, not implying endorsement.",
+      "grantedBy": "TO CONFIRM (Mark)",
+      "evidence": "Mark confirmed clearance in the project brief; paperwork reference needed"
+    },
+    {
+      "id": "rolling-stones-tongue-logo",
+      "description": "Rolling Stones tongue-and-lips logo, as used in the book",
+      "status": "cleared",
+      "scope": "Only as part of the Mick Jagger / branding story. Never in navigation or as decoration, never implying Stones endorsement.",
+      "grantedBy": "TO CONFIRM (Mark)",
+      "evidence": "Mark confirmed clearance in the project brief; paperwork reference needed"
+    },
+    {
+      "id": "hbr-weird-rules-of-creativity",
+      "description": "Harvard Business Review excerpt, 'The Weird Rules of Creativity'",
+      "status": "blocked",
+      "scope": "Cleared by Pearson for the 2010 edition only. Do not reproduce on the site. Also appears in the V2 comp, so it needs clearing or removing before the 2027 book.",
+      "grantedBy": "Pearson (2010 edition only)",
+      "evidence": null
+    },
+    {
+      "id": "senz-umbrella-photo",
+      "description": "SENZ umbrella photo",
+      "status": "blocked",
+      "scope": "Cleared by Pearson for the 2010 edition only. Do not show on the site. The V2 comp still discusses SENZ. Mark confirmed on 2026-11-02 that it stays blocked and is not covered by "all photos".",
+      "grantedBy": "Pearson (2010 edition only)",
+      "evidence": null
+    },
+    {
+      "id": "bird-design-characters",
+      "description": "Illustrated blob characters (Bird Design)",
+      "status": "owned",
+      "scope": "Owned by the authors (confirmed by Mark in chat, 2026-11-02). May be used on the site. We still need the original source files; the PDF only has print-resolution copies.",
+      "grantedBy": "Mark Simmons (confirmed in chat)",
+      "evidence": null
+    },
+    {
+      "id": "board-game-artwork",
+      "description": "Board-game artwork (Sy-Jenq Cheng)",
+      "status": "owned",
+      "scope": "Owned by the authors (confirmed by Mark in chat, 2026-11-02). May be used on the site, including as the basis for the digital games. We still need the original source files.",
+      "grantedBy": "Mark Simmons (confirmed in chat)",
+      "evidence": null
+    },
+    {
+      "id": "author-photographs",
+      "description": "Author photographs (Kori Bundi)",
+      "status": "owned",
+      "scope": "Owned by the authors (confirmed by Mark in chat, 2026-11-02: \"all photos\"). Does not cover the SENZ umbrella photo, which stays blocked below until Mark says otherwise.",
+      "grantedBy": "Mark Simmons (confirmed in chat)",
+      "evidence": null
+    },
+    {
+      "id": "interior-design",
+      "description": "Book interior layout and design (Design Deluxe)",
+      "status": "not-owned",
+      "scope": "Not owned by the authors. Do not copy the 2010 interior layout or page designs. The same colors and typefaces may be used. If the actual typefaces are used (the 2010 book was set in Swiss 721 BT), check that a web font license exists, because a print license does not cover web use.",
+      "grantedBy": null,
+      "evidence": null
+    }
+  ]
+}

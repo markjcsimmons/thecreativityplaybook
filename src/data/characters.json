@@ -1,0 +1,102 @@
+{
+  "_readme": "Real characters, drawn by Bird Design and owned by the authors (src/data/rights.json). SVGs in public/art/characters/ were split from the artist's character sheets by scripts/ (see docs/DECISIONS.md). Ids are descriptive, not the characters' official names; rename when Mark supplies names. w and h are the SVG viewBox size, used to prevent layout shift.",
+  "characters": [
+    {
+      "id": "blue-flame",
+      "w": 125,
+      "h": 199,
+      "alt": "Blue character with flame-shaped hair, grinning and waving"
+    },
+    {
+      "id": "orange-flame",
+      "w": 131,
+      "h": 199,
+      "alt": "Orange character with flame-shaped hair, grinning and pointing a finger up"
+    },
+    {
+      "id": "green-punk",
+      "w": 230,
+      "h": 210,
+      "alt": "Green punk singer with a blue mohawk, belting into a microphone beside two music notes"
+    },
+    {
+      "id": "pink-sunburst",
+      "w": 161,
+      "h": 208,
+      "alt": "Pink character with a yellow sunburst of hair, winking and giving a thumbs-up"
+    },
+    {
+      "id": "magenta-spiky",
+      "w": 167,
+      "h": 220,
+      "alt": "Magenta character with spiky hair and a sleepy smile"
+    },
+    {
+      "id": "orange-spotted",
+      "w": 128,
+      "h": 210,
+      "alt": "Orange character with a spotted head and a wide smile"
+    },
+    {
+      "id": "sky-blue-big",
+      "w": 246,
+      "h": 256,
+      "alt": "Big light-blue round-headed character making an OK sign"
+    },
+    {
+      "id": "pink-pointy",
+      "w": 144,
+      "h": 245,
+      "alt": "Pink pointy-headed character with a toothy grin and a yellow lightning bolt"
+    },
+    {
+      "id": "orange-mushroom",
+      "w": 148,
+      "h": 147,
+      "alt": "Small orange mushroom character with a yellow starburst and a toothy grin"
+    },
+    {
+      "id": "green-flower",
+      "w": 192,
+      "h": 242,
+      "alt": "Green character with a pink flower for a head, looking up, puzzled, beside a question mark"
+    },
+    {
+      "id": "blue-robot",
+      "w": 187,
+      "h": 185,
+      "alt": "Light-blue robot with yellow curly hair, making a peace sign"
+    },
+    {
+      "id": "green-robot",
+      "w": 243,
+      "h": 241,
+      "alt": "Green square-headed robot with orange spikes and starry eyes"
+    },
+    {
+      "id": "green-teardrop",
+      "w": 126,
+      "h": 196,
+      "alt": "Green teardrop-shaped character smiling with both hands in peace signs"
+    },
+    {
+      "id": "pink-thumbs-1",
+      "w": 298,
+      "h": 391,
+      "alt": "Pink character with a yellow sunburst of hair giving a thumbs-up"
+    },
+    {
+      "id": "pink-thumbs-2",
+      "w": 303,
+      "h": 391,
+      "alt": "Pink character with a yellow sunburst of hair giving a thumbs-up"
+    }
+  ],
+  "decor": [
+    {
+      "id": "lightning-bolt",
+      "w": 224,
+      "h": 531
+    }
+  ]
+}

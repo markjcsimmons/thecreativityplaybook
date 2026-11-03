@@ -1,0 +1,56 @@
+---
+import { getAllPages, keywordRows, linkGraph } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  /** Canonical path of the current page. */
+  path: string;
+}
+const { path } = Astro.props;
+
+const node = linkGraph()[normalizePath(path)];
+const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
+const rows = keywordRows();
+
+// Anchor text is the target's primary keyword (BRIEF §10.4). Targets that are not
+// in this build are skipped, so a draft can never produce a broken link.
+const toLink = (p: string) => {
+  const target = normalizePath(p);
+  const row = rows.get(target);
+  return row && live.has(target) ? { path: target, text: row.primaryKeyword } : null;
+};
+const group = (label: string, paths: string[] = []) => ({
+  label,
+  links: paths.map(toLink).filter((l): l is { path: string; text: string } => l !== null),
+});
+const groups = node
+  ? [
+      group('Part of', node.hub ? [node.hub] : []),
+      group('Try this next', node.tools),
+      group('The technique behind it', node.technique),
+      group('Keep reading', node.siblings),
+    ].filter((g) => g.links.length > 0)
+  : [];
+---
+
+{
+  groups.length > 0 && (
+    <nav aria-labelledby="related-h" class="my-10">
+      <h2 id="related-h" class="!text-3xl">Related</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        {groups.map((g) => (
+          <div>
+            <h3 class="!mt-0 !text-lg">{g.label}</h3>
+            <ul class="m-0 list-none p-0">
+              {g.links.map((l) => (
+                <li class="my-1">
+                  <a href={l.path} class="capitalize">{l.text}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </nav>
+  )
+}

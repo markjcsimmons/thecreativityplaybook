@@ -1,0 +1,16 @@
+[
+  { "id": "intro", "number": 0, "title": "Introduction", "short": "Why business needs creativity", "takeaway": "Creativity is a competitive edge, not a luxury.", "color": "var(--ch-intro)" },
+  { "id": "ch1", "number": 1, "title": "How to Play", "short": "How to Play", "takeaway": "Play is how you unleash your natural creative potential.", "color": "var(--ch-1)" },
+  { "id": "ch2", "number": 2, "title": "Idea Spaghetti", "short": "Idea Spaghetti", "takeaway": "The more ideas you throw at the wall, the better the odds that one sticks.", "color": "var(--ch-2)" },
+  { "id": "ch3", "number": 3, "title": "Scavengers", "short": "Scavengers", "takeaway": "Great ideas are lying around. You have to be hunting for them.", "color": "var(--ch-3)" },
+  { "id": "ch4", "number": 4, "title": "The Answer Is in the Question", "short": "The Answer Is in the Question", "takeaway": "Better questions get you better answers.", "color": "var(--ch-4)" },
+  { "id": "ch5", "number": 5, "title": "Left Brain, Meet Mr Right", "short": "Left Brain, Meet Mr Right", "takeaway": "Logic and imagination work best as a team. Treat left and right brain as a metaphor, not anatomy.", "color": "var(--ch-5)" },
+  { "id": "ch6", "number": 6, "title": "Brain Flash", "short": "Brain Flash", "takeaway": "Draw it, picture it, and the solution shows up.", "color": "var(--ch-6)" },
+  { "id": "ch7", "number": 7, "title": "The Idea Commune", "short": "The Idea Commune", "takeaway": "Ideas get bigger when people build on each other.", "color": "var(--ch-7)" },
+  { "id": "ch8", "number": 8, "title": "Far Out", "short": "Far Out", "takeaway": "Think big, then tell a story that makes people want to come along.", "color": "var(--ch-8)" },
+  { "id": "ch9", "number": 9, "title": "Shoe Swapper", "short": "Shoe Swapper", "takeaway": "Walk in someone else's shoes and the problem looks different.", "color": "var(--ch-9)" },
+  { "id": "ch10", "number": 10, "title": "Connected", "short": "Connected", "takeaway": "Smash two unconnected things together and make something new.", "color": "var(--ch-10)" },
+  { "id": "ch11", "number": 11, "title": "Kill the Idea", "short": "Kill the Idea", "takeaway": "Choosing which ideas get your time and money is half the job.", "color": "var(--ch-11)" },
+  { "id": "ch12", "number": 12, "title": "Blast Off!", "short": "Blast Off!", "takeaway": "The right environment launches ideas. The wrong one grounds them.", "color": "var(--ch-12)" },
+  { "id": "ch13", "number": 13, "title": "AI chapter (title to be decided)", "short": "The new AI chapter", "takeaway": "Placeholder until the new edition's AI chapter is written and titled.", "color": "var(--ch-13)", "placeholder": true }
+]

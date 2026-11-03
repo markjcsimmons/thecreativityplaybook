@@ -1,0 +1,31 @@
+---
+import chapters from '../data/chapters.json';
+import book from '../data/book.json';
+import BuyButtons from './BuyButtons.astro';
+
+interface Props {
+  /** Chapter id from src/data/chapters.json, e.g. "ch9". Omit for the generic callout. */
+  chapter?: string;
+  /** Overrides the chapter's default one-line takeaway. */
+  takeaway?: string;
+}
+const { chapter, takeaway } = Astro.props;
+const ch = chapter ? chapters.find((c) => c.id === chapter) : undefined;
+if (chapter && !ch) throw new Error(`BookCallout: unknown chapter "${chapter}"`);
+
+const heading = !ch ? 'From the book' : ch.number === 0 ? `From the Introduction: ${ch.short}` : `From Chapter ${ch.number}: ${ch.short}`;
+const line = takeaway ?? ch?.takeaway ?? `${book.subtitle}, by ${book.authors.join(' and ')}.`;
+---
+
+<aside class="sticker my-10 overflow-hidden" aria-label="From the book" style={ch ? `--accent: ${ch.color}` : undefined}>
+  <div class="fill px-5 py-3">
+    <p class="eyebrow m-0">{heading}</p>
+  </div>
+  <div class="grid gap-4 p-5">
+    <p class="m-0 font-slab text-xl font-bold leading-snug">{line}</p>
+    <p class="m-0 text-base text-muted">
+      {ch ? 'This idea is from' : 'Read more in'} <em>{book.title}</em>, the revised edition of <em>{book.earlierEdition.title}</em>, coming {book.launchYear}.
+    </p>
+    <BuyButtons />
+  </div>
+</aside>

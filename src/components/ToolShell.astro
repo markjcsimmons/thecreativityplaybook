@@ -1,0 +1,21 @@
+---
+interface Props {
+  /** Short tool name for the region label, e.g. "Random idea generator". */
+  name: string;
+}
+const { name } = Astro.props;
+---
+
+<!-- Tool islands render in the default slot. The `fallback` slot is server-rendered
+     example output so the page has real content without JavaScript (BRIEF §8.0). -->
+<section class="sticker my-8 overflow-hidden" aria-label={name}>
+  <div class="fill px-5 py-2"><p class="eyebrow m-0">{name}</p></div>
+  <div class="p-5">
+    <slot />
+    <noscript>
+      <p class="m-0 font-bold">This tool needs JavaScript. Here is an example of what it makes:</p>
+    </noscript>
+    <div class="mt-4"><slot name="fallback" /></div>
+    <p class="visually-hidden" role="status" aria-live="polite" id="tool-live"></p>
+  </div>
+</section>

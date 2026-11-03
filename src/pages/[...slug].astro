@@ -1,0 +1,23 @@
+---
+import { render } from 'astro:content';
+import Article from '../layouts/Article.astro';
+import BookList from '../layouts/BookList.astro';
+import Tool from '../layouts/Tool.astro';
+import { getAllPages } from '../lib/content';
+
+export async function getStaticPaths() {
+  const pages = await getAllPages();
+  return pages.map((entry) => ({
+    params: { slug: entry.data.path === '/' ? undefined : entry.data.path.replace(/^\/|\/$/g, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const Layout = entry.data.pageType === 'tool' ? Tool : entry.data.pageType === 'book-list' ? BookList : Article;
+---
+
+<Layout page={entry.data}>
+  <Content />
+</Layout>

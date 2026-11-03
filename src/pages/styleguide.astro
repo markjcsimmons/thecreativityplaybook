@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import Character from '../components/Character.astro';
+import BookCallout from '../components/BookCallout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Dice from '../components/Dice.astro';
+import EmailCapture from '../components/EmailCapture.astro';
+import PuzzleCard from '../components/PuzzleCard.astro';
+import QuoteCard from '../components/QuoteCard.astro';
+import ToolShell from '../components/ToolShell.astro';
+import DiceDemo from '../islands/DiceDemo/index';
+import chapters from '../data/chapters.json';
+import characterData from '../data/characters.json';
+
+// Layout samples only. The quote and puzzle below are placeholders, not real content.
+const sampleQuote = {
+  text: 'Sample quote text sits here, set big and slab.',
+  author: 'Sample Author',
+  role: 'layout sample, not a real quote',
+  source: { type: 'book' as const, ref: 'styleguide' },
+  theme: ['sample'],
+  fromBook: false,
+};
+const samplePuzzle = {
+  id: 'styleguide-sample',
+  title: 'Sample puzzle card',
+  setup: 'A setup goes here. The reader gets one hint at a time and the answer stays hidden until they ask.',
+  hints: ['The first hint nudges.', 'The second hint nudges harder.'],
+  answer: 'The answer appears only after the reader opens it.',
+  thinkingMove: 'Name the assumption the setup quietly makes.',
+  techniqueSlug: 'lateral-thinking',
+  difficulty: 1 as const,
+  original: true as const,
+};
+---
+
+<Base
+  title="Styleguide | The Creativity Playbook"
+  description="Design tokens and components for The Creativity Playbook site. Internal page for review, not indexed."
+  path="/styleguide/"
+  noindex
+>
+  <div class="wrap pt-8">
+    <Breadcrumbs crumbs={[{ name: 'Home', path: '/' }, { name: 'Styleguide', path: '/styleguide/' }]} />
+    <h1 class="mt-4">Styleguide</h1>
+    <p class="max-w-prose font-slab text-2xl">One page to approve the look: colour, type, buttons, cards, motifs and the core components.</p>
+
+    <h2>Chapter colours</h2>
+    <p class="max-w-prose">Every chapter gets a flat, saturated colour. Text on a chapter colour is always near-black. The lowest contrast is 4.56:1 (chapter 5), above the 4.5:1 AA bar. Eight of the thirteen chapter colors come from the book artwork.</p>
+    <ul class="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:grid-cols-3 lg:grid-cols-5">
+      {
+        chapters.map((c) => (
+          <li class="sticker fill p-3" style={`--accent: ${c.color}`}>
+            <p class="eyebrow m-0">{c.number === 0 ? 'Intro' : `Chapter ${c.number}`}</p>
+            <p class="m-0 font-display text-xl uppercase leading-tight">{c.short}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Type</h2>
+    <div class="sticker p-5">
+      <p class="eyebrow m-0">Headlines: Anton, uppercase</p>
+      <p class="m-0 font-display text-5xl uppercase leading-none">Play your way to better ideas</p>
+      <p class="eyebrow mt-6">Subheads: Zilla Slab 700</p>
+      <p class="m-0 font-slab text-3xl font-bold">Roll the dice and pick a chapter</p>
+      <p class="eyebrow mt-6">Body: DM Sans</p>
+      <p class="m-0 max-w-prose">The more ideas you make, the more likely one is great. So make a lot. Short sentences. Concrete examples. Something to do at the end.</p>
+    </div>
+
+    <h2>Buttons and fields</h2>
+    <div class="flex flex-wrap items-center gap-4">
+      <a class="btn" href="#buttons">Primary button</a>
+      <a class="btn btn-ghost" href="#buttons">Ghost button</a>
+      <input class="field" type="text" placeholder="A text field" aria-label="Sample text field" />
+    </div>
+
+    <h2>Characters</h2>
+    <p class="max-w-prose">The book's own blob characters, drawn by Bird Design and owned by the authors. They are vector, so they stay sharp at any size. The names below are working labels, not official names.</p>
+    <ul class="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:grid-cols-3 lg:grid-cols-5">
+      {
+        characterData.characters.map((c) => (
+          <li class="sticker flex flex-col items-center gap-2 p-3">
+            <div class="flex h-44 items-end"><Character id={c.id} height={170} /></div>
+            <code class="text-xs text-muted">{c.id}</code>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Motifs</h2>
+    <p class="max-w-prose">Characters on a chapter color, the lightning bolt, and dice.</p>
+    <div class="flex flex-wrap items-end gap-6">
+      <div class="sticker fill p-4" style="--accent: var(--ch-5)"><Character id="blue-robot" height={140} /></div>
+      <div class="sticker fill p-4" style="--accent: var(--ch-3)"><Character id="pink-thumbs-1" height={140} /></div>
+      <div class="sticker fill p-4" style="--accent: var(--ch-12)"><Character id="green-punk" height={140} /></div>
+      <Character id="lightning-bolt" height={120} decorative />
+      <Dice value={3} color="var(--ch-1)" />
+      <Dice value={5} color="var(--ch-4)" />
+    </div>
+
+    <h2>Quote card</h2>
+    <QuoteCard quote={sampleQuote} accent="var(--ch-8)" />
+
+    <h2>Book callout</h2>
+    <BookCallout chapter="ch9" />
+    <BookCallout />
+
+    <h2>Email capture</h2>
+    <EmailCapture source="page:/styleguide/" />
+
+    <h2>Tool shell with a Preact island</h2>
+    <ToolShell name="Dice demo">
+      <DiceDemo client:load />
+      <p slot="fallback" class="m-0 text-muted">Without JavaScript the page shows server-rendered example output here.</p>
+    </ToolShell>
+
+    <h2>Puzzle card</h2>
+    <PuzzleCard puzzle={samplePuzzle} />
+  </div>
+</Base>

@@ -1,0 +1,72 @@
+---
+import book from '../data/book.json';
+
+interface Props {
+  /** Where the form sits: "tool:random-idea-generator", "page:/book/". Tagged on every sign-up. */
+  source: string;
+  magnet?: string;
+  heading?: string;
+  blurb?: string;
+  id?: string;
+}
+const {
+  source,
+  magnet = book.waitlistMagnet,
+  heading = 'Get the launch-day alert',
+  blurb = `The Creativity Playbook is coming in ${book.launchYear}. Leave your email and we'll tell you the day it's out.`,
+  id = 'waitlist',
+} = Astro.props;
+const fieldId = `${id}-email`;
+---
+
+<section {id} class="sticker fill my-10 p-5 sm:p-7" aria-labelledby={`${id}-h`}>
+  <h2 id={`${id}-h`} class="!mt-0 !text-3xl">{heading}</h2>
+  <p class="mt-0 max-w-prose">{blurb}</p>
+  <form method="post" action="/api/subscribe" class="email-capture grid gap-3 sm:grid-cols-[1fr_auto]" data-source={source} data-magnet={magnet}>
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="magnet" value={magnet} />
+    <div class="visually-hidden" aria-hidden="true">
+      <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+    </div>
+    <div class="grid gap-1">
+      <label for={fieldId} class="font-bold">Email</label>
+      <input id={fieldId} class="field" type="email" name="email" required autocomplete="email" inputmode="email" />
+    </div>
+    <button class="btn btn-ghost self-end" type="submit">Tell me</button>
+    <p class="email-capture-status m-0 sm:col-span-2" role="status" aria-live="polite"></p>
+  </form>
+  <p class="mb-0 mt-3 text-sm">We use your email only for this. You'll confirm it first, and you can leave any time.</p>
+</section>
+
+<script>
+  import { track } from '../lib/analytics';
+
+  document.querySelectorAll<HTMLFormElement>('form.email-capture').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = form.querySelector<HTMLElement>('.email-capture-status')!;
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        });
+        const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
+        if (res.ok && data.ok) {
+          status.textContent = 'Nearly there. Check your inbox and confirm your email.';
+          track('email_signup', { source: form.dataset.source ?? '', magnet: form.dataset.magnet ?? '' });
+          form.reset();
+        } else {
+          status.textContent = "That didn't work. Check the address and try again.";
+        }
+      } catch {
+        status.textContent = "That didn't work. Check your connection and try again.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+</script>

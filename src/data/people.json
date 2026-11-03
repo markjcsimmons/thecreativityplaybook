@@ -1,0 +1,13 @@
+{
+  "_readme": "Person schema inputs. sameAs links must be verified before they are added; none are filled in yet so nothing unverified ships.",
+  "dave-stewart": {
+    "name": "Dave Stewart",
+    "jobTitle": "Musician, producer and co-founder of Eurythmics",
+    "sameAs": []
+  },
+  "mark-simmons": {
+    "name": "Mark Simmons",
+    "jobTitle": "Author of Punk Marketing",
+    "sameAs": []
+  }
+}

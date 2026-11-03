@@ -1,0 +1,20 @@
+---
+import Article from './Article.astro';
+import ToolShell from '../components/ToolShell.astro';
+import type { PageData } from '../lib/schemas';
+
+interface Props {
+  page: PageData;
+}
+const { page } = Astro.props;
+---
+
+<!-- Tool above the fold, then the supporting copy (BRIEF §7). The copy is plain
+     HTML from MDX, so the page ranks without JavaScript. -->
+<Article page={page}>
+  <ToolShell slot="before-body" name={page.h1 ?? page.title}>
+    <slot name="tool" />
+    <slot name="fallback" slot="fallback" />
+  </ToolShell>
+  <slot />
+</Article>

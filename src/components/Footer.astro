@@ -1,0 +1,13 @@
+---
+import book from '../data/book.json';
+---
+
+<footer class="mt-24 border-t-[3px] border-ink bg-paper-2 py-10">
+  <div class="wrap grid gap-4 text-base">
+    <p class="m-0 font-display text-2xl uppercase">The Creativity Playbook</p>
+    <p class="m-0 max-w-prose text-muted">
+      By Dave Stewart and Mark Simmons. A revised edition of <em>{book.earlierEdition.title}</em> ({book.earlierEdition.year}), coming {book.launchYear}.
+    </p>
+    <p class="m-0 text-sm text-muted">&copy; {new Date().getFullYear()} Dave Stewart and Mark Simmons.</p>
+  </div>
+</footer>
