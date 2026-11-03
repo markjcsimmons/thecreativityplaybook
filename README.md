@@ -27,10 +27,11 @@ Requires Node 22.23.4 or later.
 
 ## Phase 0 status
 
+Styleguide approved 2026-11-02.
+
 Done and verified locally: scaffold, pinned stack, content schemas, keyword map draft, tokens, fonts, `/styleguide`, layouts, components, `seo.ts`, analytics wrapper, email adapter stub, `check-content`, CI workflow, Lighthouse (styleguide: LCP 1.7 s, CLS 0.005).
 
 Waiting on Mark:
-- Approve `/styleguide`.
 - Domain, ESP, analytics choice (Plausible is wired as the default), Amazon Associates tag, Dave's sign-off.
 - Confirm or edit `docs/keyword-map.csv` (the home page keyword is a proposed change from the brief).
 - Connect the GitHub repo to Cloudflare Pages for preview deploys (needs Mark's accounts).
