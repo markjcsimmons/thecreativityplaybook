@@ -1,0 +1,72 @@
+[
+  {
+    "text": "Creativity isn't just about standing out; it's about reaching deeper.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Creativity Playbook",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (draft of June 2025; the wording may change before publication)"
+    },
+    "theme": [
+      "creativity",
+      "human connection"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "In an age of Biggerer and Biggerer, plain efficiency won't cut it.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Creativity Playbook",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (draft of June 2025; the wording may change before publication)"
+    },
+    "theme": [
+      "efficiency",
+      "business"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "Plug A.I. into your creative signal chain and you're not replacing the guitarist; you're cranking the amp, bending the note, and shaking the rafters in ways no one's heard before.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Creativity Playbook",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (draft of June 2025; the wording may change before publication)"
+    },
+    "theme": [
+      "ai",
+      "creativity"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "Without creativity, we're just another cog in the machine.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Creativity Playbook",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (draft of June 2025; the wording may change before publication)"
+    },
+    "theme": [
+      "creativity",
+      "business"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "The playground just got bigger; the swings are still ours to pump.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Creativity Playbook",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (draft of June 2025; the wording may change before publication)"
+    },
+    "theme": [
+      "ai",
+      "play"
+    ],
+    "fromBook": true
+  }
+]

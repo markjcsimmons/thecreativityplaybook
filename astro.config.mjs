@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // The domain is not decided yet (BRIEF §16.1). `.example` is a reserved TLD,
 // so the placeholder can never collide with a real site.
-const site = process.env.SITE_URL ?? 'https://creativityplaybook.example';
+const site = process.env.SITE_URL ?? 'https://thecreativityplaybook.com';
 
 export default defineConfig({
   site,
