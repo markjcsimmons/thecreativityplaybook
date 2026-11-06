@@ -65,7 +65,8 @@
   },
   "/lateral-thinking/": {
     "siblings": [
-      "/lateral-thinking/puzzles/"
+      "/lateral-thinking/puzzles/",
+      "/guides/how-to-be-more-creative/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -79,6 +80,17 @@
     "tools": [
       "/tools/creativity-test/",
       "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/guides/how-to-be-more-creative/": {
+    "siblings": [
+      "/lateral-thinking/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/",
+      "/tools/business-idea-generator/",
+      "/tools/creativity-test/"
     ],
     "technique": []
   }

@@ -1,0 +1,19 @@
+---
+interface Props {
+  items: string[];
+}
+const { items } = Astro.props;
+---
+
+<!-- A plain printable list with an empty box beside each item. Real checkboxes would need
+     labels and would not survive printing, so the box is decoration. -->
+<ul class="not-prose m-0 grid list-none gap-3 p-0">
+  {
+    items.map((item) => (
+      <li class="flex items-start gap-3">
+        <span class="mt-1 inline-block h-5 w-5 shrink-0 rounded border-[3px] border-ink" aria-hidden="true"></span>
+        <span>{item}</span>
+      </li>
+    ))
+  }
+</ul>

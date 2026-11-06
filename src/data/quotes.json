@@ -68,5 +68,34 @@
       "play"
     ],
     "fromBook": true
+  },
+  {
+    "text": "At grade school my parents were told by my teachers I would come up with the right answers but the wrong way. Even if I knew the answer I didn't want to get to it the way they wanted me to get to it.",
+    "author": "Evan Williams",
+    "role": "co-founder of Twitter",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 1, How to Play (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "school",
+      "unlearning"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "I definitely think people can learn how to be creative, but I think for the most part people unlearn how to do it.",
+    "author": "Evan Williams",
+    "role": "co-founder of Twitter",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 1, How to Play (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "unlearning"
+    ],
+    "fromBook": true
   }
 ]
