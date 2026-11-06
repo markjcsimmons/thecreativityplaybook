@@ -1,5 +1,6 @@
 import book from '../data/book.json';
 import people from '../data/people.json';
+import puzzles from '../data/puzzles.json';
 import type { PageData } from './schemas';
 
 export const SITE_NAME = 'The Creativity Playbook';
@@ -131,6 +132,9 @@ export function jsonLdForPage(page: PageData, site: URL | string, crumbs: Crumb[
       break;
     case 'tool':
       out.push(webApplicationLd(page, site));
+      break;
+    case 'puzzle-library':
+      out.push(itemListLd(puzzles.map((p) => ({ name: p.title, path: `${page.path}#p-${p.id}` })), site));
       break;
     case 'guide':
     case 'pillar-guide':

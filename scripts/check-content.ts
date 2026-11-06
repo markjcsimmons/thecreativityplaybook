@@ -136,6 +136,21 @@ function checkData<T extends z.ZodType>(file: string, schema: T) {
 }
 checkData('quotes.json', quoteSchema); // every quote needs a source
 checkData('puzzles.json', puzzleSchema);
+{
+  // Puzzles: unique ids, and an answer that the setup does not already give away.
+  const p = join(root, 'src/data/puzzles.json');
+  if (existsSync(p)) {
+    const list = JSON.parse(readFileSync(p, 'utf8')) as { id: string; setup: string; answer: string; hints: string[] }[];
+    const seen = new Set<string>();
+    for (const x of list) {
+      if (seen.has(x.id)) err('src/data/puzzles.json', `duplicate puzzle id "${x.id}"`);
+      seen.add(x.id);
+      const words = x.answer.toLowerCase().split(/\s+/).slice(0, 6).join(' ');
+      if (x.setup.toLowerCase().includes(words)) err('src/data/puzzles.json', `${x.id}: the setup repeats the start of the answer`);
+      for (const h of x.hints) if (h.toLowerCase().includes(words)) err('src/data/puzzles.json', `${x.id}: a hint repeats the start of the answer`);
+    }
+  }
+}
 
 // Scoring data for the Creativity Test (written by us, so shape checks only).
 for (const [file, schema] of [['aut-categories.json', autDataSchema], ['creativity-styles.json', creativityStylesSchema]] as const) {

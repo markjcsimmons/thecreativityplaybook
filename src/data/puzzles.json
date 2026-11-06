@@ -1,0 +1,422 @@
+[
+ {
+  "id": "dry-swimmer",
+  "title": "The Dry Swimmer",
+  "setup": "Sam spends a full hour inside a swimming pool in his everyday clothes, then walks out without a single wet thread. The pool is working normally and nothing is wrong with Sam. How?",
+  "hints": [
+   "Think about the pool, not about Sam.",
+   "What would have to be missing from the pool?"
+  ],
+  "answer": "The pool was empty. Sam was inside it painting the bottom, or repairing the tiles.",
+  "thinkingMove": "Spot the assumption you did not know you were making: here, that a swimming pool has water in it.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "silent-show",
+  "title": "The Silent Show",
+  "setup": "Two hundred people pay full price to sit in a theatre and watch a performer who does not make a single sound for the whole show. Nobody asks for a refund. Why not?",
+  "hints": [
+   "Sound is not the only way to tell a story.",
+   "Think of a performer who uses only the body and the face."
+  ],
+  "answer": "It was a mime show. The performer tells the story with movement and expression, so the silence is part of the act.",
+  "thinkingMove": "Separate what a thing really needs (a story, told well) from what you assumed it needs (sound).",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "early-bird",
+  "title": "The Early Bird",
+  "setup": "Every morning Tomás is the first person at the bakery door, long before it opens. He never buys anything, yet the baker always hands him a bag. Why?",
+  "hints": [
+   "Is Tomás a customer?",
+   "What does a bakery make that other people need brought to them?"
+  ],
+  "answer": "Tomás delivers the bread. The bag holds the order for the cafes and shops on his round.",
+  "thinkingMove": "Ask what role a person is playing, not just what they seem to be doing.",
+  "techniqueSlug": "perspective-taking",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "slow-race",
+  "title": "The Slow Race",
+  "setup": "At a school sports day, the fastest runner in the final crosses the line last, and she is thrilled to win. How?",
+  "hints": [
+   "Check the rules of the race.",
+   "What if the aim was the opposite of speed?"
+  ],
+  "answer": "It was a slow race, where the last person across the line wins. Being fast was a disadvantage.",
+  "thinkingMove": "Flip the goal. When a result looks wrong, check whether you have the rules backwards.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "cold-soup",
+  "title": "The Cold Soup",
+  "setup": "A diner sends back a bowl of soup because it is cold. The chef refuses to heat it, and when the diner learns why, they apologise. What happened?",
+  "hints": [
+   "Is cold always a fault?",
+   "Look at what was on the menu."
+  ],
+  "answer": "It was a soup meant to be served cold, such as gazpacho. The diner had assumed all soup is hot.",
+  "thinkingMove": "Before you call something broken, check what normal means in that situation.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "heavy-balloon",
+  "title": "The Heavy Balloon",
+  "setup": "At a party, Ivo lets go of a balloon on a string. Instead of floating up, it drifts down and settles on the floor. The balloon has no leak and nothing is tied to it. Why?",
+  "hints": [
+   "What are balloons filled with?",
+   "Think about the air around the balloon."
+  ],
+  "answer": "It was filled with ordinary air, perhaps from someone's breath, not helium. Ordinary air makes the balloon slightly heavier than the air around it, so it sinks.",
+  "thinkingMove": "Notice the detail everyone assumes without checking: here, what is inside the balloon.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "long-bridge",
+  "title": "The Long Bridge",
+  "setup": "A town builds a footbridge that is much longer than the river is wide. On purpose. Residents praise it. Why?",
+  "hints": [
+   "Think about who needs to cross, not just how far.",
+   "What does a wheelchair, a pram or a bike need that a walker does not?"
+  ],
+  "answer": "The extra length is a long, gentle ramp at each end, so wheelchairs, prams and bikes can cross as easily as anyone else.",
+  "thinkingMove": "Swap shoes. Design for the person with the hardest job, and the answer changes.",
+  "techniqueSlug": "perspective-taking",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "fair-cake",
+  "title": "The Fair Cake",
+  "setup": "Two children have to share one cake. Neither trusts the other to cut it evenly, and there is no ruler or scale. How can they split it so both are happy?",
+  "hints": [
+   "Who does the cutting, and who does the choosing?",
+   "What makes the cutter careful?"
+  ],
+  "answer": "One child cuts, and the other chooses the first piece. The cutter will make the pieces as even as possible, because the chooser takes the bigger one.",
+  "thinkingMove": "Use the incentives in the situation instead of fighting them.",
+  "techniqueSlug": "reframing",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "same-sheet",
+  "title": "The Same Sheet",
+  "setup": "A teacher hands out thirty identical sheets of paper. When they are handed in, no two answers could ever be the same. How is that possible?",
+  "hints": [
+   "Look at the question on the sheet.",
+   "What question has a different answer for every person?"
+  ],
+  "answer": "The sheet asked for something personal, such as “Draw the view from your bedroom window” or “Write what you had for breakfast.” Identical sheets can have unique answers.",
+  "thinkingMove": "A question can be the same for everyone and the answers still different. Ask better questions.",
+  "techniqueSlug": "reframing",
+  "difficulty": 1,
+  "original": true
+ },
+ {
+  "id": "quiet-alarm",
+  "title": "The Quiet Alarm",
+  "setup": "A hotel needs to wake a deaf guest at 6 a.m. without disturbing anyone else in the building. What could it use?",
+  "hints": [
+   "Sound is not the only thing a body notices.",
+   "What can you feel while you are asleep?"
+  ],
+  "answer": "One good answer: a small vibrating pad under the pillow or mattress, which shakes at the set time. A flashing light also works. There are others.",
+  "thinkingMove": "Start from the person, not the tool. What does this guest notice?",
+  "techniqueSlug": "perspective-taking",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "high-shelf",
+  "title": "The High Shelf",
+  "setup": "A short librarian has to put books on a shelf above her reach. There is no stool, ladder or chair, and nothing in the room can move except the books. How does she do it?",
+  "hints": [
+   "What is in the room that she can move?",
+   "Books are heavy and stack neatly."
+  ],
+  "answer": "She stacks the heaviest, flattest books into a step and stands on it carefully. The thing she is shelving becomes the tool.",
+  "thinkingMove": "Look at what you already have and ask what else it could be. The problem often contains the answer.",
+  "techniqueSlug": "random-connections",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "standing-meeting",
+  "title": "The Missing Chairs",
+  "setup": "A manager removes every chair from the weekly meeting room. Meetings drop from an hour to ten minutes, and nobody complains about the decisions made. Why?",
+  "hints": [
+   "What does sitting make easier?",
+   "What does standing make people want to do?"
+  ],
+  "answer": "Standing is tiring, so people say what matters and stop. The missing chairs act as a constraint that keeps meetings short.",
+  "thinkingMove": "Add a constraint on purpose. It often makes things better.",
+  "techniqueSlug": "adding-constraints",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "odd-club",
+  "title": "The Odd Club",
+  "setup": "A club lets in kayak, level, radar, civic and noon, but turns away canoe, taxi, bicycle and morning. What is the rule?",
+  "hints": [
+   "It is not about what the words mean.",
+   "Look at how they are spelled, and read them from both ends."
+  ],
+  "answer": "The club admits words that read the same backwards as forwards: palindromes.",
+  "thinkingMove": "When the content does not explain the pattern, look at the form.",
+  "techniqueSlug": "reframing",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "queue-feel",
+  "title": "The Long Queue",
+  "setup": "A cafe has a long queue every morning. The owner cannot add staff or make coffee any faster. What cheap change would make the wait feel shorter?",
+  "hints": [
+   "The real wait stays the same. What can change?",
+   "Waiting feels longest when nothing is happening."
+  ],
+  "answer": "One good answer: take orders while people wait, or hand out the menu in the queue, so the wait feels like progress. Others work too, such as something to look at or a free sample.",
+  "thinkingMove": "Change how it feels, not how long it takes. Sometimes perception is the problem.",
+  "techniqueSlug": "reframing",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "stuck-ring",
+  "title": "The Stuck Ring",
+  "setup": "A ring is stuck on a swollen finger. You have a length of thin string and some soap. Without cutting the ring, how can you get it off?",
+  "hints": [
+   "What would make the finger smaller for a moment?",
+   "Think about winding the string."
+  ],
+  "answer": "Slide one end of the string under the ring, then wind the string tightly around the finger from the ring up to the fingertip. Hold the end by the ring and unwind from that end: each turn pushes the ring a little over the knuckle. A little soap helps. If the finger is badly swollen, painful or discoloured, get medical help rather than forcing the ring.",
+  "thinkingMove": "Use an ordinary thing in an unusual way. Here string becomes a gentle press.",
+  "techniqueSlug": "random-connections",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "loud-room",
+  "title": "The Loud Room",
+  "setup": "At a noisy party, the host needs everyone's attention. She cannot shout, tap a glass, bang anything or use a microphone. What works?",
+  "hints": [
+   "Sound is crowded. What else do people notice?",
+   "What do people react to when it changes suddenly?"
+  ],
+  "answer": "One good answer: flick the lights off and on, or dim them for a moment. People look up, and a calm voice can take over. Raising a hand and waiting also works.",
+  "thinkingMove": "When a channel is crowded, use a different one.",
+  "techniqueSlug": "reframing",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "paper-bridge",
+  "title": "The Paper Bridge",
+  "setup": "Two stacks of books stand a hand's width apart. How can a single sheet of paper hold up a small, light object across the gap?",
+  "hints": [
+   "Flat paper sags. What can you do to the paper?",
+   "Think of corrugated cardboard."
+  ],
+  "answer": "Fold the sheet like an accordion, in narrow pleats. The folds make it much stiffer, so it can carry a small, light object across the gap.",
+  "thinkingMove": "Change the shape, not the material. A constraint can be a clue.",
+  "techniqueSlug": "adding-constraints",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "menu-board",
+  "title": "The Windy Menu",
+  "setup": "A restaurant's outdoor menu board keeps blowing over in the wind. It cannot be weighed down, bolted to the ground or taken in. What could they change on the board itself?",
+  "hints": [
+   "Why does the wind knock it over?",
+   "What if the wind did not have so much to push against?"
+  ],
+  "answer": "Cut holes in the board, so wind passes through instead of pushing it over. Fences and signs use the same trick.",
+  "thinkingMove": "Instead of resisting the problem, let it pass through.",
+  "techniqueSlug": "reframing",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "midnight-question",
+  "title": "The Midnight Question",
+  "setup": "Someone asks Mia the same simple question twice, one minute apart. She gives two different answers and both are honest and correct. What was the question?",
+  "hints": [
+   "What can change in a single minute?",
+   "It has something to do with the calendar, not with Mia."
+  ],
+  "answer": "“What day is it?” Asked just before midnight and again just after, the correct answer changes.",
+  "thinkingMove": "Notice what is fixed and what is moving. The question did not change; the world did.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "time-zones",
+  "title": "The Earlier Landing",
+  "setup": "A flight leaves at 10:00 and lands at 09:00 the same morning, by the clocks at each airport. No one cheated and no clock is broken. How?",
+  "hints": [
+   "Clocks do not all show the same time.",
+   "Think about flying a very long way west."
+  ],
+  "answer": "Time zones. On a long flight west, the local time at the destination can be behind the departure time by more than the flight takes, so it lands, by local time, before it took off.",
+  "thinkingMove": "Check whether two things are measured the same way before you compare them.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "handbell-tune",
+  "title": "The One-Note Players",
+  "setup": "Eight musicians play a tune, but each of them plays only one note or two in the whole piece. The audience hears a complete melody. How?",
+  "hints": [
+   "They are not all playing at once.",
+   "Each person is responsible for a part of the tune, not the tune."
+  ],
+  "answer": "It is a handbell choir. Each ringer holds one or two bells and rings them when their note comes up, so the melody is shared between the players.",
+  "thinkingMove": "Break a big job into small parts and share it. The whole can be more than any one part.",
+  "techniqueSlug": "random-connections",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "piano-move",
+  "title": "The Third-Floor Piano",
+  "setup": "A piano has to reach a third-floor flat. The stairs are too narrow, there is no lift, and the piano cannot be taken apart. How does it get there?",
+  "hints": [
+   "If it cannot go through the stairs, where else is there a gap?",
+   "Think about the outside of the building."
+  ],
+  "answer": "Lift it in through a window or a balcony door, using a hoist or crane on the outside of the building.",
+  "thinkingMove": "If the obvious route is blocked, check every other way in.",
+  "techniqueSlug": "reframing",
+  "difficulty": 2,
+  "original": true
+ },
+ {
+  "id": "noon-no-shadow",
+  "title": "The Missing Shadow",
+  "setup": "At noon, on a bright cloudless day, a tall tree and a stick pushed into the ground both cast no shadow at all. Nothing is wrong with the sun or the objects. Where could they be?",
+  "hints": [
+   "Think about the angle of the sun.",
+   "Where on Earth can the sun be directly overhead?"
+  ],
+  "answer": "In the tropics, on a day when the noon sun is directly overhead. The sun is straight above, so objects cast no shadow beneath them.",
+  "thinkingMove": "Change where you stand. A fact can be true in one place and false in another.",
+  "techniqueSlug": "challenge-assumptions",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "silent-letters",
+  "title": "The Silent Gate",
+  "setup": "A gate opens for knife, castle, hour and gnome, but stays shut for pencil, table, music and window. Reading the words gives no clue. What is the rule?",
+  "hints": [
+   "Do not look at the meaning. Listen to how the words are said.",
+   "Each word that opens the gate has a letter you do not pronounce."
+  ],
+  "answer": "Every word that opens the gate has a silent letter: the k in knife, the t in castle, the h in hour and the g in gnome.",
+  "thinkingMove": "The pattern may not be in what you are looking at. Try a different sense.",
+  "techniqueSlug": "reframing",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "rainy-launch",
+  "title": "The Rainy Launch",
+  "setup": "A band is booked for an outdoor concert on a night that is very likely to rain. The venue cannot be changed and the show cannot be cancelled. What could save the night?",
+  "hints": [
+   "You cannot stop the rain. Can you use it?",
+   "Think about what the audience could bring or wear, and what the weather could become."
+  ],
+  "answer": "One good answer: make the rain part of the show. Hand out clear ponchos or umbrellas at the gate, light the rain, and have the band play about it. Others work too.",
+  "thinkingMove": "When you cannot change a constraint, make it the theme.",
+  "techniqueSlug": "adding-constraints",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "last-seat",
+  "title": "The Last Seat",
+  "setup": "A bus has one empty seat and ten tired people standing. The driver wants to give it to someone without anyone feeling cheated. What could the driver do?",
+  "hints": [
+   "Think about a rule everyone can see.",
+   "Fair does not have to mean random. What does fair depend on?"
+  ],
+  "answer": "One good answer: use a simple, visible rule the driver announces, such as offering the seat to whoever needs it most, or marking one seat as a priority seat. People accept a rule more easily than a decision.",
+  "thinkingMove": "Design the rule, not the individual choice. A system can be fairer than a judgment.",
+  "techniqueSlug": "perspective-taking",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "crowded-lift",
+  "title": "The Crowded Lift",
+  "setup": "An office block has a long wait for the lifts at nine every morning. The building cannot add lifts, move any workers or change any working hours. What could it change?",
+  "hints": [
+   "It is not the lifts or the workers. What about how the lifts are used?",
+   "Does every lift need to stop at every floor?"
+  ],
+  "answer": "One good answer: split the lifts so each serves a group of floors during the morning rush, so they make fewer stops. Another is to make the stairs more pleasant.",
+  "thinkingMove": "If the parts are fixed, change the pattern between them.",
+  "techniqueSlug": "reframing",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "slow-road",
+  "title": "The Slow Road",
+  "setup": "A town wants drivers to slow down on one street. It cannot use signs, speed bumps, cameras or fines. What could it do?",
+  "hints": [
+   "A driver slows down when the road seems to call for it.",
+   "What can paint and layout do to the way a road looks?"
+  ],
+  "answer": "One good answer: change how the road looks. Narrow the lanes with paint or planters, or paint a pattern that looks like a raised barrier. Drivers slow down because the road seems to ask for it.",
+  "thinkingMove": "Change the environment, not the person. Often it is the cheapest move.",
+  "techniqueSlug": "adding-constraints",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "empty-shop",
+  "title": "The Empty Shop",
+  "setup": "A small shop is quiet every afternoon. The owner cannot hire extra people or run a sale. How could the shop look busier from the street?",
+  "hints": [
+   "People are drawn to what other people are doing.",
+   "Where do passers-by look?"
+  ],
+  "answer": "One good answer: move the seating, a work table or a demonstration to the window, so that people passing by see activity. A busy-looking shop draws people in.",
+  "thinkingMove": "Move the proof to where it can be seen. People follow people.",
+  "techniqueSlug": "perspective-taking",
+  "difficulty": 3,
+  "original": true
+ },
+ {
+  "id": "quiet-ward",
+  "title": "The Quiet Ward",
+  "setup": "A hospital ward wants patients to sleep better at night. It cannot change the medicine, the beds or the building. What could it change?",
+  "hints": [
+   "Think about what wakes people up.",
+   "What happens on a ward in the night that does not need to?"
+  ],
+  "answer": "One good answer: reduce the disturbances, such as dimming lights, cutting alarms and announcements, soft-close bins and quiet hours for routine checks. Sleep needs fewer interruptions, not new equipment.",
+  "thinkingMove": "Ask what to remove, not only what to add.",
+  "techniqueSlug": "reframing",
+  "difficulty": 3,
+  "original": true
+ }
+]

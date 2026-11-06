@@ -1,0 +1,82 @@
+---
+import PuzzleCard from './PuzzleCard.astro';
+import puzzles from '../data/puzzles.json';
+import { puzzleSchema } from '../lib/schemas';
+
+const all = puzzles.map((p) => puzzleSchema.parse(p));
+const LEVELS = { 1: 'Easy', 2: 'Medium', 3: 'Hard' } as const;
+---
+
+<section class="sticker fill my-8 grid gap-3 p-5" aria-labelledby="daily-h">
+  <h2 id="daily-h" class="!mt-0 !text-3xl">Puzzle of the day</h2>
+  <p class="m-0">A new one each day, chosen from the list below. Try it before you open a hint.</p>
+  <div id="daily-puzzle">
+    <PuzzleCard puzzle={all[0]!} />
+  </div>
+</section>
+
+<div id="puzzle-filter" role="group" aria-label="Difficulty" class="no-print mb-4 flex flex-wrap gap-2" hidden>
+  {
+    [['all', 'All'], ['1', 'Easy'], ['2', 'Medium'], ['3', 'Hard']].map(([value, label]) => (
+      <button type="button" class="btn !min-h-0 !px-3 !py-2 !text-base" data-level={value} aria-pressed={value === 'all' ? 'true' : 'false'}>
+        {label}
+      </button>
+    ))
+  }
+</div>
+<p id="puzzle-count" class="visually-hidden" role="status" aria-live="polite"></p>
+
+<ol class="not-prose m-0 grid list-none gap-4 p-0" id="puzzle-list">
+  {
+    all.map((p) => (
+      <li id={`p-${p.id}`} data-difficulty={p.difficulty} class="grid gap-1">
+        <span class="eyebrow">{LEVELS[p.difficulty]}</span>
+        <PuzzleCard puzzle={p} />
+      </li>
+    ))
+  }
+</ol>
+
+<script>
+  import { track } from '../lib/analytics';
+
+  const list = document.getElementById('puzzle-list')!;
+  const items = [...list.querySelectorAll<HTMLElement>(':scope > li')];
+
+  // Puzzle of the day: one per local calendar day, picked from the list in the browser.
+  const box = document.getElementById('daily-puzzle');
+  if (box) {
+    const now = new Date();
+    const day = Math.floor((now.getTime() - now.getTimezoneOffset() * 60000) / 86400000);
+    const card = items[day % items.length]?.querySelector('article');
+    if (card) {
+      const copy = card.cloneNode(true) as HTMLElement;
+      box.replaceChildren(copy);
+      copy.querySelectorAll<HTMLDetailsElement>('details[data-reveal]').forEach((d) => {
+        d.addEventListener('toggle', () => {
+          if (d.open) track('puzzle_reveal', { puzzle_id: copy.dataset.puzzleId ?? '', hint_or_answer: d.dataset.reveal === 'hint' ? 'hint' : 'answer' });
+        });
+      });
+    }
+  }
+
+  // Difficulty filter. Hidden until this script runs, because it does nothing without JavaScript.
+  const filter = document.getElementById('puzzle-filter');
+  const count = document.getElementById('puzzle-count');
+  if (filter) {
+    filter.hidden = false;
+    filter.addEventListener('click', (e) => {
+      const button = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-level]');
+      if (!button) return;
+      const level = button.dataset.level!;
+      filter.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      let shown = 0;
+      for (const li of items) {
+        const show = level === 'all' || li.dataset.difficulty === level;
+        li.hidden = !show;
+        if (show) shown++;
+      }
+      if (count) count.textContent = `${shown} puzzles shown.`;
+    });
+  }
+</script>

@@ -41,7 +41,9 @@ Waiting on Mark:
 
 Batch 1 (published 2026-11-03): `/tools/random-idea-generator/` and `/tools/`. The home page and `/privacy/` are published too.
 
-Batch 2 (`status: review`, visible only with `PREVIEW=true`): `/tools/business-idea-generator/`, `/tools/invention-idea-generator/` and `/tools/creativity-test/`.
+Batch 2 (published 2026-11-05): `/tools/business-idea-generator/`, `/tools/invention-idea-generator/` and `/tools/creativity-test/`.
+
+Batch 3 (`status: review`, visible only with `PREVIEW=true`): `/lateral-thinking/` and `/lateral-thinking/puzzles/`.
 
 To add a tool island: put it in `src/islands/<Name>/`, import it in `src/components/ToolIsland.astro`, and set `island: <Name>` in the page frontmatter. A generator with locked slots can reuse `src/islands/shared/SlotTool.tsx` (see `BusinessGenerator`).
 

@@ -3,7 +3,9 @@
   "/": {
     "siblings": [],
     "tools": [
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/tools/business-idea-generator/",
+      "/tools/creativity-test/"
     ],
     "technique": []
   },
@@ -58,6 +60,25 @@
     "tools": [
       "/tools/business-idea-generator/",
       "/tools/invention-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/lateral-thinking/": {
+    "siblings": [
+      "/lateral-thinking/puzzles/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/",
+      "/tools/creativity-test/"
+    ],
+    "technique": []
+  },
+  "/lateral-thinking/puzzles/": {
+    "hub": "/lateral-thinking/",
+    "siblings": [],
+    "tools": [
+      "/tools/creativity-test/",
+      "/tools/random-idea-generator/"
     ],
     "technique": []
   }
