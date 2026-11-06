@@ -45,7 +45,7 @@ Batch 2 (published 2026-11-05): `/tools/business-idea-generator/`, `/tools/inven
 
 Batch 3 (published 2026-11-05): `/lateral-thinking/` and `/lateral-thinking/puzzles/`.
 
-Batch 4 (`status: review`, visible only with `PREVIEW=true`): `/guides/how-to-be-more-creative/`.
+Batch 4 (published 2026-11-05): `/guides/how-to-be-more-creative/`.
 
 To add a tool island: put it in `src/islands/<Name>/`, import it in `src/components/ToolIsland.astro`, and set `island: <Name>` in the page frontmatter. A generator with locked slots can reuse `src/islands/shared/SlotTool.tsx` (see `BusinessGenerator`).
 
