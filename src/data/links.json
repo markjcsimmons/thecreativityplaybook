@@ -164,5 +164,53 @@
       "/tools/attribute-listing/"
     ],
     "technique": []
+  },
+  "/games/whats-your-problem/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/kill-the-idea/",
+      "/games/wheel-of-distraction/",
+      "/games/shoe-swapper/"
+    ],
+    "tools": [
+      "/tools/business-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/idea-spaghetti/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/far-out/",
+      "/games/inspiral/",
+      "/games/scavengers/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/far-out/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/idea-spaghetti/",
+      "/games/inspiral/",
+      "/games/shoe-swapper/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/shoe-swapper/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/whats-your-problem/",
+      "/games/far-out/",
+      "/games/wheel-of-distraction/"
+    ],
+    "tools": [
+      "/tools/invention-idea-generator/"
+    ],
+    "technique": []
   }
 }

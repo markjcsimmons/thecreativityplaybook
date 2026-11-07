@@ -1,0 +1,53 @@
+{
+  "_readme": "The 36 pairs of shoes on the Shoe Swapper board (Ch9), as roles. The book's board names real people, living and dead, and well-known fictional characters; the project rule is that perspective content uses roles and archetypes only, never living people, so each named person is replaced here by the role they stand for. The board's own roles (a Martian, the Almighty, your grandma, a young child, your mother, a mad scientist, a cartoon character, a visitor from the future, a dictator, a fitness fanatic, an explorer) are kept. Each row below is one row of the board, top to bottom, and the six roles run left to right as columns 1 to 6. The first die gives the column and the second the row, as in the book's example (a 6 and a 2 gives the celebrity). Replacing the people is our change, made on 2026-11-07 for Mark to review.",
+  "roles": [
+    [
+      "An environmental campaigner",
+      "A Martian",
+      "A great scientist",
+      "The Almighty",
+      "A miser",
+      "A candy maker"
+    ],
+    [
+      "A saint",
+      "A civil rights campaigner",
+      "Your grandma",
+      "An escape artist",
+      "A superhero",
+      "A celebrity"
+    ],
+    [
+      "A business tycoon",
+      "Your best friend at school",
+      "An artist",
+      "A president",
+      "A psychologist",
+      "A Renaissance inventor"
+    ],
+    [
+      "A wizard",
+      "A motivational speaker",
+      "A young child",
+      "Your mother",
+      "A mad scientist",
+      "A tough detective"
+    ],
+    [
+      "A cartoon character",
+      "A pop star",
+      "A visitor from the future",
+      "A couch potato",
+      "A surrealist painter",
+      "A tech billionaire"
+    ],
+    [
+      "A dictator",
+      "A peaceful protester",
+      "A fitness fanatic",
+      "A philosopher",
+      "A peacemaker",
+      "An explorer"
+    ]
+  ]
+}

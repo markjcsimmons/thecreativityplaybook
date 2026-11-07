@@ -7,6 +7,10 @@ import KillTheIdea from '../islands/Games/KillTheIdea/index.tsx';
 import Inspiral from '../islands/Games/Inspiral/index.tsx';
 import WheelOfDistraction from '../islands/Games/WheelOfDistraction/index.tsx';
 import Scavengers from '../islands/Games/Scavengers/index.tsx';
+import WhatsYourProblem from '../islands/Games/WhatsYourProblem/index.tsx';
+import IdeaSpaghetti from '../islands/Games/IdeaSpaghetti/index.tsx';
+import FarOut from '../islands/Games/FarOut/index.tsx';
+import ShoeSwapper from '../islands/Games/ShoeSwapper/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
 import book from '../data/book.json';
 import { getAllPages } from '../lib/content';
@@ -32,4 +36,8 @@ const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
 {name === 'Inspiral' && <Inspiral client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'WheelOfDistraction' && <WheelOfDistraction client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'Scavengers' && <Scavengers client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'WhatsYourProblem' && <WhatsYourProblem client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'IdeaSpaghetti' && <IdeaSpaghetti client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'FarOut' && <FarOut client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'ShoeSwapper' && <ShoeSwapper client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}
