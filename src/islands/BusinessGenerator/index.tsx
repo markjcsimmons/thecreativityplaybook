@@ -1,5 +1,5 @@
 import SlotTool, { type SlotToolConfig } from '../shared/SlotTool';
-import { PRESETS, SEED_COUNT, rollPitch, type Filters } from '../../lib/business-ideas';
+import { PRESETS, SEED_COUNT, WORKED_EXAMPLE, rollPitch, type Filters } from '../../lib/business-ideas';
 
 const config: SlotToolConfig = {
   tool: 'business-idea-generator',
@@ -13,6 +13,8 @@ const config: SlotToolConfig = {
     { key: 'team', label: 'Who', choices: [{ value: 'any', label: 'Any' }, { value: 'solo', label: 'Solo' }, { value: 'team', label: 'Team' }] },
   ],
   extraLabel: 'Scavenger prompt',
+  composePitch: false,
+  example: WORKED_EXAMPLE,
   build: (seeds, options) => {
     const pitch = rollPitch(seeds, options as unknown as Filters);
     return { slots: pitch.slots, text: pitch.text, extra: pitch.prompt };

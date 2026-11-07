@@ -69,3 +69,22 @@ export function rollPitch(seeds: string[], f: Filters): Pitch {
     prompt: scavengerPrompt(seeds[4]!),
   };
 }
+
+/**
+ * The worked example shown above the tool. Chosen on purpose (not rolled), and every part
+ * is a word the generator can deal. Mark reviews this copy.
+ */
+export const WORKED_EXAMPLE = {
+  title: 'A worked example',
+  slots: [
+    { label: SLOT_LABELS[0]!, value: 'commuters' },
+    { label: SLOT_LABELS[1]!, value: 'waiting' },
+    { label: SLOT_LABELS[2]!, value: 'podcast' },
+    { label: SLOT_LABELS[3]!, value: 'subscription' },
+  ],
+  reaction: [
+    'Here is how one person might react to those four parts. Commuters spend part of every week stuck on a delayed train with nothing to do, so waiting is a real problem for them. A podcast made for one train line, with episodes about as long as a typical delay, might be worth a few dollars a month to the regulars.',
+    'Why would they pick it over what they do today? They scroll their phones now, and this would be made for exactly those stuck minutes. It could fall apart because nobody can predict how long a delay will last. That weak spot is the part to think about next.',
+  ],
+  note: 'Notice that the four parts did not give the idea. The reaction did. Now roll your own and write yours.',
+};
