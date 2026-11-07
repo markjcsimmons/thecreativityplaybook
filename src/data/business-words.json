@@ -1,5 +1,5 @@
 {
-  "_readme": "Words for the Business Idea Generator. Every word comes from the book's text (Mark's direction, 2026-11-02); scripts/check-content.ts warns about any word it cannot find in source/. The budget, team and channel tags are our own judgment calls, used only by the filters.",
+  "_readme": "Words for the Business Idea Generator. Every word comes from the book's text (Mark's direction, 2026-11-02); scripts/check-content.ts warns about any word it cannot find in source/. The budget, team and channel tags are our own judgment calls, used only by the filters. `hints` holds one short line for each problem and each business model, shown under the word on the card so a reader knows what it means; written for this site at Mark's direction (2026-11-07), and Mark reviews them. scripts/check-content.ts fails if a problem or model has no hint.",
   "problems": [
     "traffic",
     "queues",
@@ -325,5 +325,59 @@
     "forgetting",
     "distraction",
     "advertising"
-  ]
+  ],
+  "hints": {
+    "problems": {
+      "traffic": "Getting stuck on crowded roads",
+      "queues": "Standing in line for too long",
+      "waiting": "Time lost waiting around",
+      "waste": "Throwing away things that were still useful",
+      "pollution": "Dirty air, water or streets",
+      "noise": "Too much noise to think or sleep",
+      "stress": "Feeling overloaded and on edge",
+      "delays": "Things running late",
+      "rubbish": "Litter and trash piling up",
+      "mess": "Clutter that takes time to clear up",
+      "forgetting": "Forgetting things that matter",
+      "parking": "Finding somewhere to park",
+      "commuting": "The daily trip to work or school",
+      "shopping": "Finding, comparing and carrying things home",
+      "cooking": "Deciding what to cook and getting it done",
+      "recycling": "Not knowing what to recycle, or where",
+      "energy": "Bills that are too high",
+      "water": "Wasted or unsafe water",
+      "food": "Getting good food easily",
+      "time": "Never having enough of it",
+      "money": "Money running short",
+      "distraction": "Finding it hard to focus",
+      "meetings": "Too many meetings that go nowhere",
+      "email": "An inbox that never empties",
+      "weather": "Weather that spoils plans"
+    },
+    "models": {
+      "subscription": "Customers pay a regular fee for ongoing access",
+      "franchise": "Others pay to run it under your name",
+      "marketplace": "Takes a cut when buyers meet sellers",
+      "charity": "Donations and grants pay for it",
+      "shop": "Sells goods directly to customers",
+      "club": "Members pay dues to belong",
+      "service": "Customers pay for work done for them",
+      "magazine": "Readers and advertisers pay for the content",
+      "studio": "A creative space people hire or pay to use",
+      "agency": "Clients pay for expert work done for them",
+      "consultancy": "Clients pay for advice",
+      "workshop": "People pay to learn by doing",
+      "tour": "Customers pay for a guided trip",
+      "stall": "A small stand selling directly to passers-by",
+      "network": "Members pay to connect with each other",
+      "tutorial": "People pay for step-by-step lessons",
+      "course": "People pay to follow a program of lessons",
+      "class": "People pay to learn live with others",
+      "show": "Tickets to see a performance",
+      "event": "Tickets to a one-off gathering",
+      "market": "Sellers pay to trade in one place",
+      "platform": "Charges a fee when two sides use it to meet",
+      "brand": "Charges for a name people trust"
+    }
+  }
 }

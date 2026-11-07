@@ -174,6 +174,14 @@ for (const [file, schema] of [['aut-categories.json', autDataSchema], ['creativi
         const dupes = list.filter((x, i) => list.indexOf(x) !== i);
         if (dupes.length) err(file, `${name} has duplicates: ${[...new Set(dupes)].join(', ')}`);
       }
+      // Every problem and model needs its one-line hint, and no hint may be left over.
+      for (const [name, list] of [['problems', w.problems], ['models', w.models.map((m) => m.text)]] as const) {
+        const hints = Object.keys(w.hints[name]);
+        const missing = list.filter((x) => !hints.includes(x));
+        const extra = hints.filter((x) => !list.includes(x));
+        if (missing.length) err(file, `hints.${name} is missing: ${missing.join(', ')}`);
+        if (extra.length) err(file, `hints.${name} has entries with no matching word: ${extra.join(', ')}`);
+      }
       const sources = ['business-playground-2010.txt', 'creativity-playbook-v2-comp-2025.txt'].map((f) => join(root, 'source', f)).filter(existsSync);
       if (sources.length) {
         const book = sources.map((f) => readFileSync(f, 'utf8')).join(' ').toLowerCase().replace(/\s+/g, ' ');

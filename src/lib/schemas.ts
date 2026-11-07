@@ -142,6 +142,8 @@ export const businessWordsSchema = z.object({
     .min(1),
   mechanisms: z.array(z.object({ text: z.string().min(1), channel: z.enum(['online', 'offline', 'both']) })).min(1),
   mass: wordList,
+  /** One short line per problem and per model, shown under the word on the card. */
+  hints: z.object({ problems: z.record(z.string(), z.string().min(1)), models: z.record(z.string(), z.string().min(1)) }),
 });
 export type BusinessWords = z.infer<typeof businessWordsSchema>;
 

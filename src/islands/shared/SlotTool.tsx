@@ -11,11 +11,11 @@ import { csvCell, download, readList, writeList } from '../../lib/tool-client';
  * With `composePitch: false` the tool deals only the parts. It starts blank, shows no
  * sentence of its own, and the user writes the pitch (Save, Copy and Export use their text).
  */
-export type Built = { slots: { label: string; value: string }[]; text: string; extra?: string };
+export type Built = { slots: { label: string; value: string; hint?: string }[]; text: string; extra?: string };
 export type OptionGroup = { key: string; label: string; choices: { value: string; label: string }[] };
 export type Mode = { value: string; label: string; set: Record<string, string> };
 /** A worked example shown above the tool, rendered on the server so it works without JavaScript. */
-export type WorkedExample = { title: string; slots: { label: string; value: string }[]; reaction: string[]; note?: string };
+export type WorkedExample = { title: string; slots: { label: string; value: string; hint?: string }[]; reaction: string[]; note?: string };
 
 export type SlotToolConfig = {
   tool: string;
@@ -177,6 +177,7 @@ export default function SlotTool({ config }: { config: SlotToolConfig }) {
               <li class="grid content-start gap-1 border-2 border-ink p-2">
                 <span class="eyebrow">{slot.label}</span>
                 <span class="break-words font-display text-xl uppercase leading-tight">{slot.value}</span>
+                {slot.hint && <span class="text-sm leading-snug">{slot.hint}</span>}
               </li>
             ))}
           </ul>
@@ -218,6 +219,7 @@ export default function SlotTool({ config }: { config: SlotToolConfig }) {
           <li class="sticker grid content-start gap-2 p-3 sm:p-4">
             <span class="eyebrow">{slot.label}</span>
             <span class="break-words font-display text-2xl uppercase leading-tight sm:text-3xl">{started ? slot.value : '?'}</span>
+            {started && slot.hint && <span class="leading-snug">{slot.hint}</span>}
             <button type="button" class="btn btn-ghost w-fit !min-h-0 !py-1 !text-base" aria-pressed={locks[i]} disabled={!started} onClick={() => toggleLock(i)}>
               {locks[i] ? 'Locked' : 'Lock'}
               <span class="visually-hidden"> {slot.label}</span>
