@@ -14,6 +14,7 @@
     "tools": [
       "/tools/random-idea-generator/",
       "/tools/business-idea-generator/",
+      "/tools/attribute-listing/",
       "/tools/invention-idea-generator/",
       "/tools/creativity-test/"
     ],
@@ -33,6 +34,7 @@
   "/tools/business-idea-generator/": {
     "hub": "/tools/",
     "siblings": [
+      "/tools/attribute-listing/",
       "/tools/invention-idea-generator/",
       "/tools/random-idea-generator/"
     ],
@@ -90,6 +92,18 @@
     "tools": [
       "/tools/random-idea-generator/",
       "/tools/business-idea-generator/",
+      "/tools/creativity-test/"
+    ],
+    "technique": []
+  },
+  "/tools/attribute-listing/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/tools/business-idea-generator/",
+      "/tools/invention-idea-generator/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/",
       "/tools/creativity-test/"
     ],
     "technique": []

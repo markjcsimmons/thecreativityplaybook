@@ -62,3 +62,4 @@ path,page_type,phase,primary_keyword,primary_volume,primary_kd,proposed_secondar
 /templates/empathy-map,template,3,empathy map,2900,55,,2900,2900,Ch9 Shoe Swapper,proposed,
 /templates/mind-map-template,template,3,mind map template,2900,57,,2900,2900,Ch6 Brain Flash,proposed,
 /privacy/,legal,1,privacy policy,,,,,,All,proposed,"Legal page the brief requires (BRIEF section 14). Not a search target; the keyword is only the page name."
+/tools/attribute-listing,tool,1,attribute listing,,,attribute listing technique | morphological analysis,,,Ch3 Scavengers,proposed,"Added 2026-11-07 at Mark's direction (the book's own attribute-listing technique as a tool). Volume and KD not yet pulled from Semrush; the secondary keywords are proposals."

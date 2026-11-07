@@ -1,0 +1,63 @@
+{
+  "_readme": "Charts for the Attribute Listing tool (Scavengers chapter). Each chart is a thing, its attributes, and the options for each attribute, as in the book's restaurant chart. `source` says where a chart comes from: 'book' means the headings and options are the book's (restaurant: the book's chart plus one added option; pen: the book names the attributes, the options are ours), 'new' means written for this site at Mark's direction (2026-11-07) and needs his review. `start` is the index of the ordinary option in each attribute, so the tool opens on the plain version of the thing. Keep 4 to 6 attributes and 5 to 7 options each, with at least one odd option per attribute.",
+  "charts": [
+    {
+      "id": "restaurant",
+      "name": "Restaurant",
+      "source": "book",
+      "attributes": [
+        { "name": "Food type", "start": 1, "options": ["French", "Italian", "Chinese", "Indian", "English", "Latvian"] },
+        { "name": "Price range", "start": 2, "options": ["Cheap", "Low", "Mid", "Expensive", "Boy, that's pricey!"] },
+        { "name": "Style", "start": 1, "options": ["Formal", "Casual", "Family", "Business", "Trendy"] },
+        { "name": "Delivery", "start": 0, "options": ["Waiter at the table", "Skateboarding waiters", "Roman-style", "Take-away", "Home delivery", "Catapulted"] }
+      ]
+    },
+    {
+      "id": "pen",
+      "name": "Pen",
+      "source": "book",
+      "attributes": [
+        { "name": "Look", "start": 0, "options": ["Plain", "Sleek", "Chunky", "Retro", "See-through", "Neon"] },
+        { "name": "Feel", "start": 0, "options": ["Smooth", "Grippy", "Heavy", "Featherlight", "Squishy", "Bumpy"] },
+        { "name": "Material", "start": 0, "options": ["Plastic", "Metal", "Wood", "Bamboo", "Glass", "Recycled paper"] },
+        { "name": "Type of ink", "start": 0, "options": ["Blue", "Black", "Erasable", "Invisible", "Glow-in-the-dark", "Scented"] },
+        { "name": "How the ink is released", "start": 0, "options": ["Click", "Twist", "Cap off", "Press down", "Shake", "Slide"] }
+      ]
+    },
+    {
+      "id": "hotel",
+      "name": "Hotel",
+      "source": "new",
+      "attributes": [
+        { "name": "Where", "start": 1, "options": ["Beach", "City center", "Mountain", "Airport", "Countryside", "Next to a highway"] },
+        { "name": "Rooms", "start": 0, "options": ["Standard rooms", "Tiny sleeping pods", "Treehouses", "Shipping containers", "Caravans", "Boats"] },
+        { "name": "Who it is for", "start": 0, "options": ["Business travelers", "Families", "Couples", "Backpackers", "Dogs and their owners", "Night-shift workers"] },
+        { "name": "Food", "start": 0, "options": ["Breakfast buffet", "Room service", "Cook it yourself", "Food trucks outside", "Set dinner for everyone", "None"] },
+        { "name": "Price", "start": 1, "options": ["Budget", "Mid-range", "Luxury", "Pay what you like", "Pay by the hour"] }
+      ]
+    },
+    {
+      "id": "bookshop",
+      "name": "Bookshop",
+      "source": "new",
+      "attributes": [
+        { "name": "Stock", "start": 0, "options": ["New bestsellers", "Second-hand", "Comics", "Cookbooks", "Children's books", "Local authors only"] },
+        { "name": "Setting", "start": 0, "options": ["Main street", "Train station", "A van", "Inside a cafe", "Online only", "Pop-up for a weekend"] },
+        { "name": "Extra", "start": 0, "options": ["Coffee", "Author readings", "Book club", "Swap your old books", "Quiet room", "Nothing"] },
+        { "name": "How you pay", "start": 0, "options": ["Full price", "Discount", "By weight", "Pay what you like", "Monthly subscription", "Borrow and return"] }
+      ]
+    },
+    {
+      "id": "gym",
+      "name": "Gym",
+      "source": "new",
+      "attributes": [
+        { "name": "Activity", "start": 0, "options": ["Weights", "Yoga", "Boxing", "Dance", "Climbing", "Swimming"] },
+        { "name": "Setting", "start": 0, "options": ["Indoors", "In the park", "On a roof", "In a barn", "At your home", "On a boat"] },
+        { "name": "Hours", "start": 0, "options": ["Normal hours", "24 hours", "Mornings only", "Lunchtime only", "Late at night", "Weekends only"] },
+        { "name": "Coaching", "start": 3, "options": ["Personal trainer", "Group class", "Online video", "Self-guided", "A buddy matched to you"] },
+        { "name": "Price", "start": 0, "options": ["Monthly membership", "Pay per visit", "Free for beginners", "Pay when you hit a goal", "Bring a friend free"] }
+      ]
+    }
+  ]
+}

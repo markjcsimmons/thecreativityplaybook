@@ -54,24 +54,9 @@
       "team": "any"
     },
     {
-      "text": "cafe",
-      "budget": "funded",
-      "team": "any"
-    },
-    {
-      "text": "restaurant",
-      "budget": "funded",
-      "team": "team"
-    },
-    {
       "text": "club",
       "budget": "shoestring",
       "team": "any"
-    },
-    {
-      "text": "school",
-      "budget": "funded",
-      "team": "team"
     },
     {
       "text": "service",
@@ -102,11 +87,6 @@
       "text": "workshop",
       "budget": "shoestring",
       "team": "any"
-    },
-    {
-      "text": "festival",
-      "budget": "funded",
-      "team": "team"
     },
     {
       "text": "tour",
@@ -149,22 +129,12 @@
       "team": "team"
     },
     {
-      "text": "gallery",
-      "budget": "funded",
-      "team": "any"
-    },
-    {
       "text": "market",
       "budget": "funded",
       "team": "team"
     },
     {
       "text": "platform",
-      "budget": "funded",
-      "team": "team"
-    },
-    {
-      "text": "bank",
       "budget": "funded",
       "team": "team"
     },
