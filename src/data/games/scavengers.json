@@ -1,0 +1,227 @@
+{
+  "_readme": "The Scavenger Game from the Scavengers chapter: twelve questions, each moving a marker clockwise or anticlockwise round a dial of ten points, starting at point 1. Questions, options and moves are from the book (pages 61 and 62); the answers and the treasure's grid reference are from the book's answer page (page 234). The ending checks out: the right answers finish on point 8, which the book says leads to the X at grid reference I, 9. Mark reviews.",
+  "start": 1,
+  "points": 10,
+  "treasurePoint": 8,
+  "treasureRef": "I, 9",
+  "questions": [
+    {
+      "n": 1,
+      "text": "How many times does the letter F appear in the sentence below? \"When I visited Phil, finches of Japan were flying around the flourishing bonsai placed on the left of the lounge's entry.\"",
+      "options": [
+        {
+          "label": "5",
+          "steps": 2,
+          "dir": "cw"
+        },
+        {
+          "label": "6",
+          "steps": 2,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "6",
+      "why": "There are six Fs."
+    },
+    {
+      "n": 2,
+      "text": "On a standard traffic light, is the green light at the top or the bottom?",
+      "options": [
+        {
+          "label": "Top",
+          "steps": 4,
+          "dir": "cw"
+        },
+        {
+          "label": "Bottom",
+          "steps": 4,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Bottom",
+      "why": "The green light is at the bottom."
+    },
+    {
+      "n": 3,
+      "text": "How many curves are there on a paper clip?",
+      "options": [
+        {
+          "label": "3 curves",
+          "steps": 1,
+          "dir": "cw"
+        },
+        {
+          "label": "4 curves",
+          "steps": 1,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "3 curves",
+      "why": "A paper clip has three curves."
+    },
+    {
+      "n": 4,
+      "text": "In which hand is the Statue of Liberty's torch?",
+      "options": [
+        {
+          "label": "Right hand",
+          "steps": 5,
+          "dir": "cw"
+        },
+        {
+          "label": "Left hand",
+          "steps": 5,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Right hand",
+      "why": "The torch is in her right hand."
+    },
+    {
+      "n": 5,
+      "text": "Which way do fans rotate?",
+      "options": [
+        {
+          "label": "Clockwise",
+          "steps": 8,
+          "dir": "cw"
+        },
+        {
+          "label": "Anticlockwise",
+          "steps": 8,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Clockwise",
+      "why": "Fans rotate clockwise."
+    },
+    {
+      "n": 6,
+      "text": "How many sides are there on a standard pencil?",
+      "options": [
+        {
+          "label": "6 sides",
+          "steps": 3,
+          "dir": "cw"
+        },
+        {
+          "label": "8 sides",
+          "steps": 3,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "6 sides",
+      "why": "A standard pencil has six sides."
+    },
+    {
+      "n": 7,
+      "text": "Do books have even-numbered pages on the right or the left side?",
+      "options": [
+        {
+          "label": "Left side",
+          "steps": 7,
+          "dir": "cw"
+        },
+        {
+          "label": "Right side",
+          "steps": 7,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Left side",
+      "why": "Even-numbered pages are on the left-hand side."
+    },
+    {
+      "n": 8,
+      "text": "On the American flag, is the top stripe red or white?",
+      "options": [
+        {
+          "label": "White",
+          "steps": 3,
+          "dir": "cw"
+        },
+        {
+          "label": "Red",
+          "steps": 3,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Red",
+      "why": "The top stripe is red."
+    },
+    {
+      "n": 9,
+      "text": "On a typical phone keypad, which of these number keys has no letters on it?",
+      "options": [
+        {
+          "label": "1",
+          "steps": 2,
+          "dir": "cw"
+        },
+        {
+          "label": "9",
+          "steps": 2,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "1",
+      "why": "There are no letters on the 1."
+    },
+    {
+      "n": 10,
+      "text": "When you walk, does your right arm swing with your right leg or your left leg?",
+      "options": [
+        {
+          "label": "Left",
+          "steps": 1,
+          "dir": "cw"
+        },
+        {
+          "label": "Right",
+          "steps": 1,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Left",
+      "why": "Your right arm swings with your left leg."
+    },
+    {
+      "n": 11,
+      "text": "Which card in a pack of playing cards carries the manufacturer's trademark?",
+      "options": [
+        {
+          "label": "Joker",
+          "steps": 2,
+          "dir": "cw"
+        },
+        {
+          "label": "Ace of spades",
+          "steps": 2,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "Ace of spades",
+      "why": "The ace of spades carries the trademark."
+    },
+    {
+      "n": 12,
+      "text": "How many differences are there between these two pictures?",
+      "options": [
+        {
+          "label": "4",
+          "steps": 9,
+          "dir": "cw"
+        },
+        {
+          "label": "5",
+          "steps": 9,
+          "dir": "ccw"
+        }
+      ],
+      "correct": "5",
+      "why": "There are five differences.",
+      "image": "/games/scavengers-differences.png",
+      "imageAlt": "Two pictures of the same cartoon character that differ in five places."
+    }
+  ]
+}

@@ -107,5 +107,62 @@
       "/tools/creativity-test/"
     ],
     "technique": []
+  },
+  "/games/": {
+    "siblings": [],
+    "tools": [
+      "/tools/random-idea-generator/",
+      "/tools/attribute-listing/",
+      "/tools/business-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/kill-the-idea/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/inspiral/",
+      "/games/wheel-of-distraction/",
+      "/games/scavengers/"
+    ],
+    "tools": [
+      "/tools/business-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/inspiral/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/kill-the-idea/",
+      "/games/wheel-of-distraction/",
+      "/games/scavengers/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/wheel-of-distraction/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/kill-the-idea/",
+      "/games/inspiral/",
+      "/games/scavengers/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/scavengers/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/kill-the-idea/",
+      "/games/inspiral/",
+      "/games/wheel-of-distraction/"
+    ],
+    "tools": [
+      "/tools/attribute-listing/"
+    ],
+    "technique": []
   }
 }

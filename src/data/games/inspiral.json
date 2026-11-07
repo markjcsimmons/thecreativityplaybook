@@ -1,0 +1,53 @@
+{
+  "_readme": "The 36 themes on the Inspiral board in the Connected chapter, read from the book's artwork (source/artwork/INSPIRAL A:W.ai) on 2026-11-07. Six rings of six: each row below is one ring, outermost first, and the six themes in a row run clockwise from the start. A pair of dice gives (around, in): the first die counts around the ring and the second counts in towards the centre, as the book's rules say. Counting around clockwise from the start is our reading of the artwork. Mark reviews, including whether to keep every theme.",
+  "rings": [
+    [
+      "transport",
+      "romance",
+      "gardening",
+      "learning",
+      "adventure",
+      "shopping"
+    ],
+    [
+      "kids",
+      "holidays",
+      "fitness",
+      "websites",
+      "poverty",
+      "animals"
+    ],
+    [
+      "drinks",
+      "escape",
+      "parties",
+      "health",
+      "travel",
+      "peace"
+    ],
+    [
+      "hunger",
+      "phones",
+      "fashion",
+      "entertainment",
+      "power",
+      "nature"
+    ],
+    [
+      "friends",
+      "games",
+      "space",
+      "candy",
+      "sport",
+      "heroes"
+    ],
+    [
+      "extreme",
+      "love",
+      "sleep",
+      "office",
+      "sex",
+      "food"
+    ]
+  ]
+}

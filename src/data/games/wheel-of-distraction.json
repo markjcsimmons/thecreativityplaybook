@@ -1,0 +1,57 @@
+{
+  "_readme": "The distractions on the Wheel of Distraction board in the Left Brain, Meet Mr Right chapter, with the board's own wording, read from the book's artwork (source/artwork/DISTRACTION A:W.ai) on 2026-11-07. The board has 16 spaces. Three are left out on purpose for a workplace site: the vodka martini, looking at yourself naked in the mirror, and the sexy phone conversation. The building-blocks space says 'LEGO' on the board; the brand is dropped here. Mark reviews, including whether to put any of these back.",
+  "distractions": [
+    {
+      "title": "Do a crossword puzzle",
+      "aside": "It could also be Sudoku, bless you!"
+    },
+    {
+      "title": "Mend something around the house",
+      "aside": "You know, that wobbly chair or that faulty trepanning drill."
+    },
+    {
+      "title": "Visit an art gallery",
+      "aside": "Walk around and ponder the exhibits while rubbing your, or somebody else's, chin thoughtfully."
+    },
+    {
+      "title": "Do some high energy exercise",
+      "aside": "Up to you what, but please bring a towel."
+    },
+    {
+      "title": "Go on a bus ride",
+      "aside": "The number 142 is always a pleasant trip."
+    },
+    {
+      "title": "Play a game of chess or checkers",
+      "aside": "Your move."
+    },
+    {
+      "title": "Build something out of building blocks",
+      "aside": "Or bits of rubbish."
+    },
+    {
+      "title": "Do some cooking",
+      "aside": "We'll be around at about seven."
+    },
+    {
+      "title": "Go for a gentle bike ride or walk",
+      "aside": "Either way, wear a helmet."
+    },
+    {
+      "title": "Take a bath",
+      "aside": "Or if you're trying to save some water or time, take a shower. Don't forget to wash behind the ears."
+    },
+    {
+      "title": "Wash the dog",
+      "aside": "Or cat or squirrel."
+    },
+    {
+      "title": "Do some yoga or meditate",
+      "aside": "Ommm."
+    },
+    {
+      "title": "Listen, really listen, to some classical music or jazz",
+      "aside": "Headphones on, eyes shut."
+    }
+  ]
+}

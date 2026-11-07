@@ -3,6 +3,10 @@ import IdeaGenerator from '../islands/IdeaGenerator/index.tsx';
 import BusinessGenerator from '../islands/BusinessGenerator/index.tsx';
 import ProductGenerator from '../islands/ProductGenerator/index.tsx';
 import AttributeListing from '../islands/AttributeListing/index.tsx';
+import KillTheIdea from '../islands/Games/KillTheIdea/index.tsx';
+import Inspiral from '../islands/Games/Inspiral/index.tsx';
+import WheelOfDistraction from '../islands/Games/WheelOfDistraction/index.tsx';
+import Scavengers from '../islands/Games/Scavengers/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
 import book from '../data/book.json';
 import { getAllPages } from '../lib/content';
@@ -24,4 +28,8 @@ const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
 {name === 'BusinessGenerator' && <BusinessGenerator client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'ProductGenerator' && <ProductGenerator client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'AttributeListing' && <AttributeListing client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'KillTheIdea' && <KillTheIdea client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'Inspiral' && <Inspiral client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'WheelOfDistraction' && <WheelOfDistraction client:load waitlistOpen={book.waitlistOpen} />}
+{name === 'Scavengers' && <Scavengers client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}
