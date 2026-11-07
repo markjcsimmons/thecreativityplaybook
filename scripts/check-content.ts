@@ -169,7 +169,7 @@ for (const [file, schema] of [['aut-categories.json', autDataSchema], ['creativi
     if (!parsed.success) for (const i of parsed.error.issues) err(file, `[${i.path.join('.')}] ${i.message}`);
     else {
       const w = parsed.data;
-      const lists: [string, string[]][] = [['problems', w.problems], ['models', w.models.map((m) => m.text)], ['mechanisms', w.mechanisms.map((m) => m.text)]];
+      const lists: [string, string[]][] = [['problems', w.problems], ['audiences', w.audiences], ['models', w.models.map((m) => m.text)], ['mechanisms', w.mechanisms.map((m) => m.text)]];
       for (const [name, list] of lists) {
         const dupes = list.filter((x, i) => list.indexOf(x) !== i);
         if (dupes.length) err(file, `${name} has duplicates: ${[...new Set(dupes)].join(', ')}`);

@@ -58,7 +58,7 @@ export const problemHint = (problem: string): string | undefined => (biz.hints.p
 export const modelHint = (model: string): string | undefined => (biz.hints.models as Record<string, string>)[model];
 
 export function rollPitch(seeds: string[], f: Filters): Pitch {
-  const audience = draw(seeds[0]!, 'a', words.audiences);
+  const audience = draw(seeds[0]!, 'a', biz.audiences);
   const problem = draw(seeds[1]!, 'p', biz.problems);
   const mechanism = draw(seeds[2]!, 'm', mechanismsFor(f));
   const model = draw(seeds[3]!, 'b', modelsFor(f));

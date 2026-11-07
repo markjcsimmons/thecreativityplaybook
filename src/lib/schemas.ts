@@ -137,6 +137,7 @@ export type IdeaWords = z.infer<typeof ideaWordsSchema>;
 export const businessWordsSchema = z.object({
   _readme: z.string(),
   problems: wordList,
+  audiences: wordList,
   models: z
     .array(z.object({ text: z.string().min(1), budget: z.enum(['any', 'shoestring', 'funded']), team: z.enum(['any', 'solo', 'team']) }))
     .min(1),

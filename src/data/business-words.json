@@ -1,5 +1,5 @@
 {
-  "_readme": "Words for the Business Idea Generator. Every word comes from the book's text (Mark's direction, 2026-11-02); scripts/check-content.ts warns about any word it cannot find in source/. The budget, team and channel tags are our own judgment calls, used only by the filters. `hints` holds one short line for each problem and each business model, shown under the word on the card so a reader knows what it means; written for this site at Mark's direction (2026-11-07), and Mark reviews them. scripts/check-content.ts fails if a problem or model has no hint.",
+  "_readme": "Words for the Business Idea Generator. Every word comes from the book's text (Mark's direction, 2026-11-02). `audiences` is this generator's own short list, cut down from the shared one in idea-words.json on 2026-11-07 at Mark's direction (no entrepreneurs, founders or customers, who are the tool's own users or too generic; no near-duplicate pairs, so kids and bosses are left out); scripts/check-content.ts warns about any word it cannot find in source/. The budget, team and channel tags are our own judgment calls, used only by the filters. `hints` holds one short line for each problem and each business model, shown under the word on the card so a reader knows what it means; written for this site at Mark's direction (2026-11-07), and Mark reviews them. scripts/check-content.ts fails if a problem or model has no hint.",
   "problems": [
     "traffic",
     "queues",
@@ -26,6 +26,29 @@
     "meetings",
     "email",
     "weather"
+  ],
+  "audiences": [
+    "children",
+    "students",
+    "teachers",
+    "parents",
+    "commuters",
+    "drivers",
+    "musicians",
+    "artists",
+    "writers",
+    "designers",
+    "engineers",
+    "scientists",
+    "chefs",
+    "farmers",
+    "employees",
+    "players",
+    "fans",
+    "teams",
+    "actors",
+    "families",
+    "managers"
   ],
   "models": [
     {
