@@ -5,6 +5,7 @@ import {
   QUESTION,
   SPAGHETTI_SECONDS,
   SPAGHETTI_TARGET,
+  WORKED_EXAMPLE,
   dealPrompt,
   rollSlots,
   sentence,
@@ -12,6 +13,7 @@ import {
 } from '../../lib/idea-words';
 import { newSeed } from '../../lib/prng';
 import { clock, csvCell, download, readList, writeList } from '../../lib/tool-client';
+import WorkedExampleView from '../shared/WorkedExample';
 
 const TOOL = 'random-idea-generator';
 const SAVED_KEY = 'cp:random-idea-generator:saved';
@@ -181,6 +183,7 @@ export default function IdeaGenerator({ waitlistOpen = false }: { waitlistOpen?:
 
   return (
     <div class="grid gap-5">
+      <WorkedExampleView example={WORKED_EXAMPLE} />
       <div role="group" aria-label="Mode" class="flex flex-wrap gap-2">
         {MODES.map((m) => (
           <button type="button" class={`btn !min-h-0 !px-3 !py-2 !text-base ${mode === m ? '' : 'btn-ghost'}`} aria-pressed={mode === m} onClick={() => changeMode(m)}>
