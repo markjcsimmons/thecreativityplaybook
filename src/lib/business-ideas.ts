@@ -78,19 +78,46 @@ export function rollPitch(seeds: string[], f: Filters): Pitch {
  * The worked example shown above the tool. It retells an exercise from the Connected chapter
  * (traffic congestion in Los Angeles, forced to connect with the random word "donation") and maps
  * the authors' bus-pass idea onto the four parts. Chosen on purpose, not rolled; every part is a
- * word the generator can deal. The mapping and the closing question are ours. Mark reviews this copy.
+ * word the generator can deal. The five ideas in step 3 paraphrase the book's list; the mapping in step 4 and the closing question are ours. Mark reviews this copy.
  */
 export const WORKED_EXAMPLE = {
   title: 'A worked example from the book',
+  steps: [
+    {
+      heading: 'Start with a problem.',
+      text: 'The authors chose traffic congestion in Los Angeles. They picked it because it is hard and many people have tried to fix it.',
+    },
+    {
+      heading: 'Get a nudge from something unrelated.',
+      text: 'They flicked through a dictionary and put a finger on a page. The word was "donation". It has nothing to do with traffic, and that is the point: a random word pushes you to look at the problem from a direction you would not choose.',
+    },
+    {
+      heading: 'Force a connection.',
+      text: 'Their first reaction was that "donation" was a hard one and they should pick again. Then they decided that would be cheating, so they made themselves come up with traffic ideas that relate to donating. A couple of minutes later they had these:',
+      list: [
+        'Drivers could be made to donate to charity every time they drive.',
+        'People could be asked to donate their cars to charity and use other means of transport.',
+        'There could be a donation drive to build a better form of transport.',
+        'Companies could be encouraged to sponsor free bus passes for commuters.',
+        'Employers could be asked to donate one day a week of employees\u2019 time to work that does not require them to travel.',
+      ],
+    },
+    {
+      heading: 'Sort one idea into four parts.',
+      text: 'This is what the generator below does. Take the bus pass idea. Commuters are who it is for. Traffic is the problem. A card is the thing they hold. Charity is how it gets paid for: sponsors give the money, so riders do not pay. The word "donation" ended up as the fourth part.',
+      cards: true,
+    },
+    {
+      heading: 'Leave the hard question open.',
+      text: 'Why would a company sponsor this instead of spending the money on something else? The book does not answer that, and a real idea would need an answer. The authors also say that none of these ideas is amazing. The random word got them past the first barrier of having no obvious connection, and that is all it is for.',
+    },
+  ],
   slots: [
     { label: SLOT_LABELS[0]!, value: 'commuters' },
     { label: SLOT_LABELS[1]!, value: 'traffic', hint: problemHint('traffic') },
     { label: SLOT_LABELS[2]!, value: 'card' },
     { label: SLOT_LABELS[3]!, value: 'charity', hint: modelHint('charity') },
   ],
-  reaction: [
-    'The book tries something like this on a real problem: traffic congestion in Los Angeles, with the random word "donation". The authors thought it was a hard one and almost picked again, then decided that would be cheating and stuck with it. A few minutes later they had a list of ideas, including companies sponsoring free bus passes for commuters.',
-    'Put into the four parts above, that idea is a bus pass (a card) for commuters, paid for by sponsors instead of riders, aimed at traffic. Who would pay? The sponsoring companies. Why would they pick it over what they do today? The book leaves that open, and so do we. It is the question to answer when you try your own.',
-  ],
-  note: 'Not every idea from a prompt is good, and the authors say so. The prompt got them past the first barrier. Now roll your own and write yours.',
+  bridge:
+    'The generator does the same thing in a different way. The book gives you one random word. The tool gives you four random parts, so you start with something instead of a blank page and have to ask the same question: what could these have to do with each other? Roll your own below, then write your pitch.',
 };

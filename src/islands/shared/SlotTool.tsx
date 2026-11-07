@@ -15,7 +15,12 @@ export type Built = { slots: { label: string; value: string; hint?: string }[]; 
 export type OptionGroup = { key: string; label: string; choices: { value: string; label: string }[] };
 export type Mode = { value: string; label: string; set: Record<string, string> };
 /** A worked example shown above the tool, rendered on the server so it works without JavaScript. */
-export type WorkedExample = { title: string; slots: { label: string; value: string; hint?: string }[]; reaction: string[]; note?: string };
+export type WorkedExample = {
+  title: string;
+  steps: { heading: string; text: string; list?: string[]; cards?: boolean }[];
+  slots: { label: string; value: string; hint?: string }[];
+  bridge?: string;
+};
 
 export type SlotToolConfig = {
   tool: string;
@@ -172,19 +177,37 @@ export default function SlotTool({ config }: { config: SlotToolConfig }) {
       {example && (
         <section class="grid gap-3 border-b-4 border-ink pb-5" aria-label={example.title}>
           <span class="eyebrow">{example.title}</span>
-          <ul class="m-0 grid list-none grid-cols-2 gap-2 p-0 sm:grid-cols-4">
-            {example.slots.map((slot) => (
-              <li class="grid content-start gap-1 border-2 border-ink p-2">
-                <span class="eyebrow">{slot.label}</span>
-                <span class="break-words font-display text-xl uppercase leading-tight">{slot.value}</span>
-                {slot.hint && <span class="text-sm leading-snug">{slot.hint}</span>}
+          <ol class="m-0 grid list-none gap-4 p-0">
+            {example.steps.map((step, n) => (
+              <li class="grid gap-2">
+                <p class="m-0">
+                  <strong>
+                    {n + 1}. {step.heading}
+                  </strong>{' '}
+                  {step.text}
+                </p>
+                {step.list && (
+                  <ul class="m-0 grid list-disc gap-1 pl-6">
+                    {step.list.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {step.cards && (
+                  <ul class="m-0 grid list-none grid-cols-2 gap-2 p-0 sm:grid-cols-4">
+                    {example.slots.map((slot) => (
+                      <li class="grid content-start gap-1 border-2 border-ink p-2">
+                        <span class="eyebrow">{slot.label}</span>
+                        <span class="break-words font-display text-xl uppercase leading-tight">{slot.value}</span>
+                        {slot.hint && <span class="text-sm leading-snug">{slot.hint}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
-          </ul>
-          {example.reaction.map((para) => (
-            <p class="m-0">{para}</p>
-          ))}
-          {example.note && <p class="m-0 font-bold">{example.note}</p>}
+          </ol>
+          {example.bridge && <p class="m-0 font-bold">{example.bridge}</p>}
         </section>
       )}
       {modes.length > 0 && (
