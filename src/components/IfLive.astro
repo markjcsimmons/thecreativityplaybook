@@ -1,0 +1,15 @@
+---
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  /** A page path such as "/games/". Its content shows only when that page exists in this build. */
+  path: string;
+}
+const { path } = Astro.props;
+
+// Pages in review are left out of production builds, so a link to one must not ship until it does.
+const live = (await getAllPages()).some((p) => normalizePath(p.data.path) === normalizePath(path));
+---
+
+{live && <slot />}

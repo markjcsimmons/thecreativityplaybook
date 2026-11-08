@@ -20,10 +20,11 @@ bookSources:
 status: published
 reviewedBy: Mark
 author: team
-updated: 2026-11-03
+updated: 2026-11-07
 ---
 
 import SpokeGrid from '../../components/SpokeGrid.astro';
+import IfLive from '../../components/IfLive.astro';
 
 Every tool here is free, runs in your browser and needs no account.
 
@@ -36,3 +37,9 @@ The book is blunt about brainstorms. Groups tend to avoid conflict and slide tow
 <SpokeGrid hub="/tools/" />
 
 More tools are on the way, each tied to a chapter of the book.
+
+<IfLive path="/games/">
+
+Looking for something to play instead? The [creativity games](/games/) are the book's chapter board games, one for each chapter.
+
+</IfLive>

@@ -31,6 +31,7 @@ const vercelAnalytics = import.meta.env.PROD && process.env.VERCEL === '1';
 const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
 const nav = [
   { label: 'Tools', path: '/tools/' },
+  { label: 'Games', path: '/games/' },
   { label: 'Techniques', path: '/techniques/' },
   { label: 'Lateral thinking', path: '/lateral-thinking/' },
   { label: 'The book', path: '/book/' },

@@ -19,11 +19,12 @@ serpNotes: "Brand page. 'creativity playbook' has almost no search volume; the h
 status: published
 reviewedBy: Mark
 author: team
-updated: 2026-11-03
+updated: 2026-11-07
 ---
 
 import Character from '../../components/Character.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
+import IfLive from '../../components/IfLive.astro';
 import chapters from '../../data/chapters.json';
 import quotes from '../../data/quotes.json';
 
@@ -49,6 +50,16 @@ The Random Idea Generator turns the book's Connected and Idea Spaghetti chapters
 <p><a class="btn" href="/tools/random-idea-generator/">Open the Random Idea Generator</a></p>
 
 More free tools are on the way, and they are all collected on the [brainstorming tools](/tools/) page.
+
+<IfLive path="/games/">
+
+## Play a game
+
+Every chapter of the book ends with a board game. They are playable here, each with its rules explained and an example from the book.
+
+<p><a class="btn" href="/games/">See the games</a></p>
+
+</IfLive>
 
 ## What's inside
 
