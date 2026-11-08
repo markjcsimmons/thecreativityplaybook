@@ -212,5 +212,53 @@
       "/tools/invention-idea-generator/"
     ],
     "technique": []
+  },
+  "/games/how-to-play/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/blast-off/",
+      "/games/kill-the-idea/",
+      "/games/whats-your-problem/"
+    ],
+    "tools": [
+      "/tools/business-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/brain-flash/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/inspiral/",
+      "/games/wheel-of-distraction/",
+      "/games/shoe-swapper/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/all-together-now/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/idea-spaghetti/",
+      "/games/kill-the-idea/",
+      "/games/how-to-play/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/games/blast-off/": {
+    "hub": "/games/",
+    "siblings": [
+      "/games/kill-the-idea/",
+      "/games/how-to-play/",
+      "/games/whats-your-problem/"
+    ],
+    "tools": [
+      "/tools/business-idea-generator/"
+    ],
+    "technique": []
   }
 }

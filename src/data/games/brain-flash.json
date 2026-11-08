@@ -1,0 +1,209 @@
+{
+  "_readme": "The pictures on the Brain Flash board (Ch6), cropped from the book's board artwork (source/artwork/BRAIN FLASH GAME A:W.ai) on 2026-11-07. The board is a 6 by 6 grid: the first die gives the number along the bottom (the column) and the second the number up the side (the row), as in the book's example, where a 5 and a 3 land on juggling skittles. The artwork is covered by the 'board-game-artwork' entry in rights.json (owned by the authors). Two of the 36 pictures are left out for a workplace site, a pistol (column 2, row 4) and a bikini (column 2, row 5), so 34 are used; a roll that lands on a missing space is rolled again. The names are ours, for the alt text and captions. Mark reviews, including whether to put the two back.",
+  "cells": [
+    {
+      "column": 1,
+      "row": 1,
+      "name": "a rocket",
+      "image": "/games/brain-flash/1-1.png"
+    },
+    {
+      "column": 2,
+      "row": 1,
+      "name": "a snake",
+      "image": "/games/brain-flash/2-1.png"
+    },
+    {
+      "column": 3,
+      "row": 1,
+      "name": "a pocket knife",
+      "image": "/games/brain-flash/3-1.png"
+    },
+    {
+      "column": 4,
+      "row": 1,
+      "name": "a crescent moon",
+      "image": "/games/brain-flash/4-1.png"
+    },
+    {
+      "column": 5,
+      "row": 1,
+      "name": "a steam train",
+      "image": "/games/brain-flash/5-1.png"
+    },
+    {
+      "column": 6,
+      "row": 1,
+      "name": "a submarine",
+      "image": "/games/brain-flash/6-1.png"
+    },
+    {
+      "column": 1,
+      "row": 2,
+      "name": "a coil of rope",
+      "image": "/games/brain-flash/1-2.png"
+    },
+    {
+      "column": 2,
+      "row": 2,
+      "name": "a hot air balloon",
+      "image": "/games/brain-flash/2-2.png"
+    },
+    {
+      "column": 3,
+      "row": 2,
+      "name": "a penguin",
+      "image": "/games/brain-flash/3-2.png"
+    },
+    {
+      "column": 4,
+      "row": 2,
+      "name": "a birdcage",
+      "image": "/games/brain-flash/4-2.png"
+    },
+    {
+      "column": 5,
+      "row": 2,
+      "name": "a kitchen knife",
+      "image": "/games/brain-flash/5-2.png"
+    },
+    {
+      "column": 6,
+      "row": 2,
+      "name": "a barbell",
+      "image": "/games/brain-flash/6-2.png"
+    },
+    {
+      "column": 1,
+      "row": 3,
+      "name": "a waterfall",
+      "image": "/games/brain-flash/1-3.png"
+    },
+    {
+      "column": 2,
+      "row": 3,
+      "name": "a window",
+      "image": "/games/brain-flash/2-3.png"
+    },
+    {
+      "column": 3,
+      "row": 3,
+      "name": "a diamond",
+      "image": "/games/brain-flash/3-3.png"
+    },
+    {
+      "column": 4,
+      "row": 3,
+      "name": "a fir tree",
+      "image": "/games/brain-flash/4-3.png"
+    },
+    {
+      "column": 5,
+      "row": 3,
+      "name": "juggling skittles",
+      "image": "/games/brain-flash/5-3.png"
+    },
+    {
+      "column": 6,
+      "row": 3,
+      "name": "a tiered cake",
+      "image": "/games/brain-flash/6-3.png"
+    },
+    {
+      "column": 1,
+      "row": 4,
+      "name": "a heart",
+      "image": "/games/brain-flash/1-4.png"
+    },
+    {
+      "column": 3,
+      "row": 4,
+      "name": "a tractor and a gate",
+      "image": "/games/brain-flash/3-4.png"
+    },
+    {
+      "column": 4,
+      "row": 4,
+      "name": "a megaphone",
+      "image": "/games/brain-flash/4-4.png"
+    },
+    {
+      "column": 5,
+      "row": 4,
+      "name": "a cactus in the desert",
+      "image": "/games/brain-flash/5-4.png"
+    },
+    {
+      "column": 6,
+      "row": 4,
+      "name": "a dolphin",
+      "image": "/games/brain-flash/6-4.png"
+    },
+    {
+      "column": 1,
+      "row": 5,
+      "name": "a swing set",
+      "image": "/games/brain-flash/1-5.png"
+    },
+    {
+      "column": 3,
+      "row": 5,
+      "name": "a lighthouse",
+      "image": "/games/brain-flash/3-5.png"
+    },
+    {
+      "column": 4,
+      "row": 5,
+      "name": "a river through the mountains",
+      "image": "/games/brain-flash/4-5.png"
+    },
+    {
+      "column": 5,
+      "row": 5,
+      "name": "a cannon",
+      "image": "/games/brain-flash/5-5.png"
+    },
+    {
+      "column": 6,
+      "row": 5,
+      "name": "a book",
+      "image": "/games/brain-flash/6-5.png"
+    },
+    {
+      "column": 1,
+      "row": 6,
+      "name": "a candle",
+      "image": "/games/brain-flash/1-6.png"
+    },
+    {
+      "column": 2,
+      "row": 6,
+      "name": "a rocking chair",
+      "image": "/games/brain-flash/2-6.png"
+    },
+    {
+      "column": 3,
+      "row": 6,
+      "name": "a telescope",
+      "image": "/games/brain-flash/3-6.png"
+    },
+    {
+      "column": 4,
+      "row": 6,
+      "name": "a flower",
+      "image": "/games/brain-flash/4-6.png"
+    },
+    {
+      "column": 5,
+      "row": 6,
+      "name": "a volcano",
+      "image": "/games/brain-flash/5-6.png"
+    },
+    {
+      "column": 6,
+      "row": 6,
+      "name": "a conch shell",
+      "image": "/games/brain-flash/6-6.png"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 export type WorkedExample = {
   title: string;
   steps: { heading: string; text: string; list?: string[]; cards?: boolean; result?: string }[];
-  slots: { label: string; value: string; hint?: string }[];
+  slots: { label: string; value: string; hint?: string; image?: { src: string; alt: string } }[];
   bridge?: string;
 };
 
@@ -34,6 +34,7 @@ export default function WorkedExampleView({ example }: { example: WorkedExample 
                 {example.slots.map((slot) => (
                   <li class="grid content-start gap-1 border-2 border-ink p-2">
                     <span class="eyebrow">{slot.label}</span>
+                    {slot.image && <img src={slot.image.src} alt={slot.image.alt} width="90" height="90" class="h-auto w-20" loading="lazy" />}
                     <span class="break-words font-display text-xl uppercase leading-tight">{slot.value}</span>
                     {slot.hint && <span class="text-sm leading-snug">{slot.hint}</span>}
                   </li>
