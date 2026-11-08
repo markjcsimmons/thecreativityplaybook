@@ -260,5 +260,25 @@
       "/tools/business-idea-generator/"
     ],
     "technique": []
+  },
+  "/guides/elevator-pitch-examples/": {
+    "siblings": [
+      "/guides/how-to-be-more-creative/"
+    ],
+    "tools": [
+      "/games/how-to-play/",
+      "/games/blast-off/"
+    ],
+    "technique": []
+  },
+  "/templates/product-launch-plan-template/": {
+    "siblings": [
+      "/guides/elevator-pitch-examples/"
+    ],
+    "tools": [
+      "/games/blast-off/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": []
   }
 }

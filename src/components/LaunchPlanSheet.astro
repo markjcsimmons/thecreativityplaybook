@@ -1,0 +1,70 @@
+---
+/** The one-page launch plan from the Blast Off exercise. Plain markup, so it prints and works without JavaScript. */
+const lines = (n: number) => Array.from({ length: n }, (_, i) => i);
+---
+
+<section class="print-sheet not-prose border-4 border-ink p-5" aria-label="Product launch plan">
+  <header class="mb-4 flex flex-wrap items-baseline justify-between gap-2 border-b-4 border-ink pb-2">
+    <h2 class="m-0 font-display text-3xl uppercase leading-none">Launch plan</h2>
+    <p class="m-0 text-sm">Date: ______________ &nbsp; Time box: 30 minutes</p>
+  </header>
+
+  <div class="mb-5">
+    <p class="m-0 font-bold">The idea I am launching (one line)</p>
+    {lines(2).map(() => <div class="h-9 border-b-2 border-ink" />)}
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">1. Who am I?</h3>
+    <div class="grid gap-3 sm:grid-cols-2">
+      <div>
+        <p class="m-0 font-bold">Name</p>
+        <div class="h-9 border-b-2 border-ink" />
+        <p class="mb-0 mt-3 font-bold">Who is it aimed at?</p>
+        <div class="h-9 border-b-2 border-ink" />
+        <div class="h-9 border-b-2 border-ink" />
+      </div>
+      <div>
+        <p class="m-0 font-bold">What it looks like (a scrappy sketch is fine)</p>
+        <div class="h-32 border-2 border-ink" />
+      </div>
+    </div>
+    <p class="mb-0 mt-3 font-bold">What will it make them feel?</p>
+    <div class="h-9 border-b-2 border-ink" />
+    <p class="mb-0 mt-3 font-bold">How is it better or different from the competition?</p>
+    <div class="h-9 border-b-2 border-ink" />
+    <div class="h-9 border-b-2 border-ink" />
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">2. What is my mission?</h3>
+    <p class="mb-0 mt-2 font-bold">A punchy headline</p>
+    <div class="h-9 border-b-2 border-ink" />
+    <p class="mb-0 mt-3 font-bold">The story: what it is, what the point is, who it is for</p>
+    {lines(4).map(() => <div class="h-9 border-b-2 border-ink" />)}
+    <p class="mb-0 mt-3 font-bold">The goals and the plan</p>
+    {lines(2).map(() => <div class="h-9 border-b-2 border-ink" />)}
+    <p class="mb-0 mt-3 font-bold">How we will know it has worked (criteria for success)</p>
+    {lines(2).map(() => <div class="h-9 border-b-2 border-ink" />)}
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">3. Who is on the crew?</h3>
+    <div class="grid gap-3 sm:grid-cols-2">
+      <div>
+        <p class="m-0 font-bold">Inside the organization</p>
+        {lines(3).map(() => <div class="h-9 border-b-2 border-ink" />)}
+      </div>
+      <div>
+        <p class="m-0 font-bold">Outside it</p>
+        {lines(3).map(() => <div class="h-9 border-b-2 border-ink" />)}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="m-0 font-display text-2xl uppercase">4. My first three actions</h3>
+    <p class="mb-0 mt-1 text-sm">What I will do, and by when.</p>
+    {lines(3).map((i) => <div class="h-9 border-b-2 border-ink">{i + 1}.</div>)}
+  </div>
+</section>

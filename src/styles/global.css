@@ -351,5 +351,20 @@ h4 {
     color: #000;
     font-size: 12pt;
   }
+  /* A page with a worksheet can print just the sheet (see PrintSheetButton). */
+  html.print-sheet-only body * {
+    visibility: hidden;
+  }
+  html.print-sheet-only .print-sheet,
+  html.print-sheet-only .print-sheet * {
+    visibility: visible;
+  }
+  html.print-sheet-only .print-sheet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-color: #000;
+  }
 }
 }
