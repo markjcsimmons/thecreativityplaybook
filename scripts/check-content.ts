@@ -248,8 +248,23 @@ if (process.argv.includes('--dist')) {
       const p = join(dist, clean);
       return existsSync(p) && (!statSync(p).isDirectory() || existsSync(join(p, 'index.html')));
     };
+    // Every public page needs a markdown twin for AI agents, and llms.txt must list it (scripts/build-markdown.ts).
+    const llms = existsSync(join(dist, 'llms.txt')) ? readFileSync(join(dist, 'llms.txt'), 'utf8') : '';
+    if (!llms) err('dist/llms.txt', 'missing; run the build (it runs scripts/build-markdown.ts)');
+    if (!existsSync(join(dist, 'llms-full.txt'))) err('dist/llms-full.txt', 'missing; run the build');
     for (const file of walk(dist, ['.html'])) {
       const html = readFileSync(file, 'utf8');
+      if (file.endsWith('index.html') && !/<meta[^>]+name="robots"[^>]+noindex/.test(html)) {
+        const md = file.replace(/index\.html$/, 'index.md');
+        const label = relative(root, md);
+        if (!existsSync(md)) err(label, 'public page has no markdown version');
+        else {
+          const text = readFileSync(md, 'utf8');
+          if (!text.startsWith('---\n') || text.length < 200) err(label, 'markdown version is empty or has no front matter');
+          if (!llms.includes(`${relative(dist, md).replace(/\\/g, '/')}`)) err('dist/llms.txt', `does not list ${relative(dist, md)}`);
+        }
+        if (!html.includes('rel="alternate" type="text/markdown"')) err(relative(root, file), 'missing the text/markdown alternate link');
+      }
       for (const m of html.matchAll(/<a\s[^>]*href="(\/[^"#?][^"]*|\/)"/g)) {
         const href = m[1]!;
         if (href.startsWith('//')) continue;

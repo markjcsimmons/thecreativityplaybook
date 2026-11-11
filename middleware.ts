@@ -1,9 +1,14 @@
-// Temporary site password (Vercel Routing Middleware). Runs before every request.
+// Vercel Routing Middleware. Runs before every request, and does two jobs.
+//
+// 1. Markdown for agents: a page address requested with `Accept: text/markdown` returns the
+//    page's markdown twin (dist/<path>/index.md, made by scripts/build-markdown.ts).
+//
+// 2. Temporary site password.
 // Off unless SITE_PASSWORD is set, so local dev, previews and the build are unaffected.
 // Remove the SITE_PASSWORD variable in Vercel (and redeploy) to open the site again.
 //   SITE_PASSWORD  the password people must enter
 //   ALLOWED_IPS    comma-separated IP addresses that skip the password (the owner's)
-import { ipAddress, next } from '@vercel/functions';
+import { ipAddress, next, rewrite } from '@vercel/functions';
 
 const COOKIE = 'cp_gate';
 const MAX_AGE = 60 * 60 * 24 * 30;
@@ -72,7 +77,7 @@ function page(failed: boolean): Response {
   });
 }
 
-export default async function middleware(request: Request): Promise<Response> {
+async function gate(request: Request): Promise<Response> {
   const password = process.env.SITE_PASSWORD;
   if (!password) return next();
 
@@ -108,4 +113,15 @@ export default async function middleware(request: Request): Promise<Response> {
     return page(true);
   }
   return page(false);
+}
+
+export default async function middleware(request: Request): Promise<Response> {
+  const gated = await gate(request);
+  if (gated.headers.get('x-middleware-next') !== '1') return gated; // the password page, or a login redirect
+
+  const url = new URL(request.url);
+  if (request.method === 'GET' && url.pathname.endsWith('/') && /text\/markdown/i.test(request.headers.get('accept') ?? '')) {
+    return rewrite(new URL(`${url.pathname}index.md`, url));
+  }
+  return gated;
 }

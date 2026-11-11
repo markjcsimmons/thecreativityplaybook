@@ -46,6 +46,7 @@ const nav = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {!noindex && <link rel="alternate" type="text/markdown" href={new URL('index.md', canonical).href} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />

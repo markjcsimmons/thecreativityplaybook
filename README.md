@@ -49,6 +49,10 @@ Batch 4 (published 2026-11-05): `/guides/how-to-be-more-creative/`.
 
 To add a tool island: put it in `src/islands/<Name>/`, import it in `src/components/ToolIsland.astro`, and set `island: <Name>` in the page frontmatter. A generator with locked slots can reuse `src/islands/shared/SlotTool.tsx` (see `BusinessGenerator`).
 
+## Markdown for AI agents
+
+`npm run build` also writes a markdown copy of every public page next to its HTML (`dist/tools/index.md`), plus `dist/llms.txt` and `dist/llms-full.txt` (`scripts/build-markdown.ts`). Each page links to its copy with `<link rel="alternate" type="text/markdown">`, and `middleware.ts` serves it when a client sends `Accept: text/markdown`. `npm run check -- --dist` fails if a public page is missing its copy, so new pages are covered automatically.
+
 ## Version notes
 
 Stack versions are newer than the brief assumed: Astro 7, Preact 11, Tailwind 4, zod 4. TypeScript is pinned to 6.0.3 because `@astrojs/check` does not support TypeScript 7 yet.
