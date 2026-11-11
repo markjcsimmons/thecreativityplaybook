@@ -9,6 +9,7 @@
 - Perspective-style content uses roles and archetypes only, never living people.
 - Work in batches of 3-5 pages and stop for review.
 - Before saying a task is done: `npm run check && npm run typecheck && npm run build && npm run check -- --dist`.
+- Every public page has a markdown twin (`<path>index.md`) plus `/llms.txt` and `/llms-full.txt`, made by `scripts/build-markdown.ts` as part of `npm run build` from the finished HTML. Never write them by hand, and a new page needs nothing extra: `npm run check -- --dist` fails if a public page lacks its twin. Keep page content in the server-rendered HTML (not only in client JS), because that is what gets converted. Puzzle hints and answers are written out in full.
 - US English for site copy. Banned phrases live in `src/lib/banned-phrases.ts`.
 - YAML frontmatter: quote any value that contains a colon.
 - Do not put this repo in a folder whose path contains a colon: npm cannot find local binaries there.
