@@ -1,0 +1,39 @@
+---
+import chapters from '../data/chapters.json';
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  /** Chapter id from src/data/chapters.json, e.g. "ch2". */
+  chapter: string;
+}
+const { chapter } = Astro.props;
+const ch = chapters.find((c) => c.id === chapter);
+if (!ch?.game) throw new Error(`ChapterGame: chapter "${chapter}" has no game in src/data/chapters.json`);
+
+// The game's name and one-line rules come from the game page itself, so they cannot drift.
+// Nothing shows unless that page exists in this build.
+const game = (await getAllPages()).find((p) => normalizePath(p.data.path) === normalizePath(ch.game));
+---
+
+{
+  game && (
+    <>
+      <h2>Play the game from this chapter</h2>
+      <div class="not-prose sticker overflow-hidden" style={`--accent: ${ch.color}`}>
+        <div class="fill px-4 py-2">
+          <p class="eyebrow m-0">The game from Chapter {ch.number}</p>
+        </div>
+        <div class="grid gap-3 p-4">
+          <p class="m-0 font-display text-3xl uppercase leading-tight">{game.data.h1 ?? game.data.title}</p>
+          <p class="m-0">{game.data.intro ?? game.data.description}</p>
+          <p class="m-0">
+            <a class="btn" href={game.data.path}>
+              Play {game.data.h1 ?? game.data.title}
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
+  )
+}

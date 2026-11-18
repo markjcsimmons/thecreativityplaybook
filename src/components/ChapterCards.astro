@@ -1,0 +1,70 @@
+---
+import chapters from '../data/chapters.json';
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+// A card links to its chapter overview only when that page exists in this build, so a
+// card can never point at a 404 (pages in review are left out of production builds).
+const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
+const items = chapters
+  .filter((c) => c.number > 0 && !('placeholder' in c))
+  .map((c) => {
+    const path = c.slug ? `/chapters/${c.slug}/` : undefined;
+    return { ...c, href: path && live.has(normalizePath(path)) ? path : undefined };
+  });
+---
+
+<ol class="not-prose m-0 grid list-none gap-3 p-0 sm:grid-cols-2">
+  {
+    items.map((c) => (
+      <li class:list={['sticker fill relative p-4', c.href && 'chapter-card']} style={`--accent: ${c.color}`}>
+        <p class="eyebrow m-0">Chapter {c.number}</p>
+        <p class="m-0 font-display text-2xl uppercase leading-tight">
+          {c.href ? (
+            <a href={c.href} class="chapter-link">
+              {c.title}
+              <span class="cta" aria-hidden="true" />
+            </a>
+          ) : (
+            c.title
+          )}
+        </p>
+        <p class="m-0 mt-1">{c.takeaway}</p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  /* The whole card is the click target: the link's pseudo-element covers it. */
+  .chapter-link {
+    text-decoration: none;
+  }
+  .chapter-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .chapter-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.12em;
+  }
+  .chapter-card:focus-within {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+  }
+  .chapter-link:focus-visible {
+    outline: none;
+  }
+  .cta::after {
+    content: ' \2192';
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .chapter-card {
+      transition: transform 0.12s ease;
+    }
+    .chapter-card:hover {
+      transform: translate(-2px, -2px);
+    }
+  }
+</style>

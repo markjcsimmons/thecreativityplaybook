@@ -291,5 +291,138 @@
       "/tools/creativity-test/"
     ],
     "technique": []
+  },
+  "/chapters/how-to-play/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/idea-spaghetti/"
+    ],
+    "tools": [
+      "/games/how-to-play/"
+    ],
+    "technique": []
+  },
+  "/chapters/idea-spaghetti/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/how-to-play/",
+      "/chapters/scavengers/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/chapters/scavengers/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/idea-spaghetti/",
+      "/chapters/the-answer-is-in-the-question/"
+    ],
+    "tools": [
+      "/games/scavengers/",
+      "/tools/attribute-listing/"
+    ],
+    "technique": []
+  },
+  "/chapters/the-answer-is-in-the-question/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/scavengers/",
+      "/chapters/left-brain-meet-mr-right/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/"
+    ],
+    "technique": []
+  },
+  "/chapters/left-brain-meet-mr-right/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/the-answer-is-in-the-question/",
+      "/chapters/brain-flash/"
+    ],
+    "tools": [
+      "/games/wheel-of-distraction/"
+    ],
+    "technique": []
+  },
+  "/chapters/brain-flash/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/left-brain-meet-mr-right/",
+      "/chapters/the-idea-commune/"
+    ],
+    "tools": [
+      "/games/brain-flash/"
+    ],
+    "technique": []
+  },
+  "/chapters/the-idea-commune/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/brain-flash/",
+      "/chapters/far-out/"
+    ],
+    "tools": [
+      "/games/all-together-now/"
+    ],
+    "technique": []
+  },
+  "/chapters/far-out/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/the-idea-commune/",
+      "/chapters/shoe-swapper/"
+    ],
+    "tools": [
+      "/games/far-out/"
+    ],
+    "technique": []
+  },
+  "/chapters/shoe-swapper/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/far-out/",
+      "/chapters/connected/"
+    ],
+    "tools": [
+      "/games/shoe-swapper/"
+    ],
+    "technique": []
+  },
+  "/chapters/connected/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/shoe-swapper/",
+      "/chapters/kill-the-idea/"
+    ],
+    "tools": [
+      "/games/inspiral/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/chapters/kill-the-idea/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/connected/",
+      "/chapters/blast-off/"
+    ],
+    "tools": [
+      "/games/kill-the-idea/"
+    ],
+    "technique": []
+  },
+  "/chapters/blast-off/": {
+    "hub": "/",
+    "siblings": [
+      "/chapters/kill-the-idea/"
+    ],
+    "tools": [
+      "/games/blast-off/"
+    ],
+    "technique": []
   }
 }

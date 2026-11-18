@@ -19,13 +19,13 @@ serpNotes: "Brand page. 'creativity playbook' has almost no search volume; the h
 status: published
 reviewedBy: Mark
 author: team
-updated: 2026-11-07
+updated: 2026-11-18
 ---
 
 import Character from '../../components/Character.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
 import IfLive from '../../components/IfLive.astro';
-import chapters from '../../data/chapters.json';
+import ChapterCards from '../../components/ChapterCards.astro';
 import quotes from '../../data/quotes.json';
 
 <div class="not-prose flex flex-wrap items-end gap-4" aria-hidden="true">
@@ -63,16 +63,6 @@ Every chapter of the book ends with a board game. They are playable here, each w
 
 ## What's inside
 
-Twelve chapters, each built around one way of getting ideas moving.
+Twelve chapters, each built around one way of getting ideas moving. Open a chapter for an overview and the game that goes with it.
 
-<ol class="not-prose m-0 grid list-none gap-3 p-0 sm:grid-cols-2">
-  {chapters
-    .filter((c) => c.number > 0 && !('placeholder' in c))
-    .map((c) => (
-      <li class="sticker fill p-4" style={`--accent: ${c.color}`}>
-        <p class="eyebrow m-0">Chapter {c.number}</p>
-        <p class="m-0 font-display text-2xl uppercase leading-tight">{c.title}</p>
-        <p class="m-0 mt-1">{c.takeaway}</p>
-      </li>
-    ))}
-</ol>
+<ChapterCards />

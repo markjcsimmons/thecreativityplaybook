@@ -1,0 +1,32 @@
+---
+import chapters from '../data/chapters.json';
+import { getAllPages } from '../lib/content';
+import { normalizePath } from '../lib/keyword-map';
+
+interface Props {
+  /** Chapter id from src/data/chapters.json, e.g. "ch2". */
+  chapter: string;
+}
+const { chapter } = Astro.props;
+const list = chapters.filter((c) => c.number >= 1 && c.slug);
+const i = list.findIndex((c) => c.id === chapter);
+if (i === -1) throw new Error(`ChapterNav: unknown chapter "${chapter}"`);
+
+const live = new Set((await getAllPages()).map((p) => normalizePath(p.data.path)));
+const link = (c: (typeof list)[number] | undefined, label: string) => {
+  if (!c) return null;
+  const path = `/chapters/${c.slug}/`;
+  return live.has(normalizePath(path)) ? { path, text: `${label}: Chapter ${c.number}, ${c.title}` } : null;
+};
+const prev = i === 0 ? (live.has('/introduction/') ? { path: '/introduction/', text: 'Previous: The Introduction' } : null) : link(list[i - 1], 'Previous');
+const next = link(list[i + 1], 'Next');
+---
+
+{
+  (prev || next) && (
+    <nav aria-label="Chapters" class="not-prose mt-10 flex flex-wrap justify-between gap-x-6 gap-y-2 border-t-[3px] border-ink pt-4">
+      {prev ? <a href={prev.path}>{prev.text}</a> : <span />}
+      {next && <a href={next.path}>{next.text}</a>}
+    </nav>
+  )
+}
