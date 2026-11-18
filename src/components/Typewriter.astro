@@ -4,6 +4,7 @@
  * page, so the text is there for search, screen readers, the markdown twin and visitors
  * without JavaScript; src/lib/typewriter.ts only animates how it appears.
  *
+ * It plays once per browser: a return visit shows the plain text.
  * Mark a phrase with <strong data-hl> to have it selected, then bolded, once typed.
  * `slips` are word-level mistakes: the wrong text is typed just before `at`, then erased.
  */
@@ -13,9 +14,11 @@ interface Props {
   seed?: string;
 }
 const { slips = [], seed = 'typewriter' } = Astro.props;
+// One flag per page: the effect plays on a first visit only.
+const seenKey = `cp:typewriter:${Astro.url.pathname}`;
 ---
 
-<div class="typewriter" data-typewriter data-seed={seed} data-slips={JSON.stringify(slips)}>
+<div class="typewriter" data-typewriter data-seed={seed} data-slips={JSON.stringify(slips)} data-seen-key={seenKey}>
   <slot />
 </div>
 <!-- Hides the text for the instant before the script runs (the CSS reveals it after 2.5 s if the script never does). -->
@@ -23,7 +26,11 @@ const { slips = [], seed = 'typewriter' } = Astro.props;
   (function () {
     var s = document.currentScript;
     var root = s && s.previousElementSibling;
-    if (root && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.setAttribute('data-tw', 'on');
+    if (!root) return;
+    try {
+      if (localStorage.getItem(root.getAttribute('data-seen-key')) !== null) return;
+    } catch (e) {}
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.setAttribute('data-tw', 'on');
   })();
 </script>
 <script>

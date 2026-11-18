@@ -9,8 +9,9 @@
  * types the same way), word-level slips, and a selection sweep over marked phrases
  * (`[data-hl]`) before they turn bold.
  *
- * Nothing runs when the visitor prefers reduced motion. Pause and Skip buttons are
- * always offered while it types (WCAG 2.2.2).
+ * Nothing runs when the visitor prefers reduced motion, or on a return visit (the first
+ * visit is remembered in localStorage, in a try/catch, so a blocked store just means the
+ * effect plays again). Pause and Skip buttons are always offered while it types (WCAG 2.2.2).
  */
 import { rngFromSeed } from './prng';
 
@@ -70,7 +71,9 @@ const delayFor = (ch: string, rng: () => number): number => {
   if (ch === '.' || ch === '!' || ch === '?') return 200;
   if (ch === ',' || ch === ';' || ch === ':') return 90;
   if (ch === '—') return 110;
-  return 5 + rng() * 9;
+  // About 33 ms a character, so with the pauses the whole text takes roughly as long as
+  // reading it at a comfortable pace (around 230 words a minute).
+  return 24 + rng() * 18;
 };
 
 function collectUnits(root: HTMLElement): Unit[] {
@@ -200,6 +203,7 @@ async function run(root: HTMLElement): Promise<void> {
     root.querySelectorAll('.tw-sel, .tw-sel-on, .tw-hl-done').forEach((el) => el.classList.remove('tw-sel', 'tw-sel-on', 'tw-hl-done'));
   };
 
+  rememberVisit(root);
   root.dataset.tw = 'live';
   try {
     for (let n = 0; n < units.length && !clock.skipped; n++) {
@@ -230,9 +234,29 @@ async function run(root: HTMLElement): Promise<void> {
   }
 }
 
+/** Return visitors get the plain text: the effect plays once per browser. */
+function seenBefore(root: HTMLElement): boolean {
+  try {
+    return !!root.dataset.seenKey && localStorage.getItem(root.dataset.seenKey) !== null;
+  } catch {
+    return false;
+  }
+}
+function rememberVisit(root: HTMLElement): void {
+  try {
+    if (root.dataset.seenKey) localStorage.setItem(root.dataset.seenKey, '1');
+  } catch {
+    /* storage blocked: the effect simply plays again next time */
+  }
+}
+
 export function startTypewriters(): void {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   document.querySelectorAll<HTMLElement>('[data-typewriter]').forEach((root) => {
+    if (seenBefore(root)) {
+      root.dataset.tw = 'done';
+      return;
+    }
     run(root).catch(() => {
       root.dataset.tw = 'done';
     });

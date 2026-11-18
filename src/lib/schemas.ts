@@ -38,6 +38,9 @@ export const pageSchema = z
     h1: z.string().min(1).optional(),
     /** Answer-first intro, two sentences or fewer (BRIEF §7). Defaults to `description`. */
     intro: z.string().min(1).optional(),
+    /** Hide the answer-first intro line / the Updated date under the H1 (used by /introduction/, at Mark's direction). */
+    hideIntro: z.boolean().optional(),
+    hideUpdated: z.boolean().optional(),
     primaryKeyword: z.string().min(1),
     secondaryKeywords: z.array(z.string()).default([]),
     pageType: z.enum(PAGE_TYPES),
