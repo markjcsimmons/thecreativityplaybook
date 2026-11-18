@@ -20,6 +20,7 @@ updated: 2026-11-18
 ---
 
 import Typewriter from '../../components/Typewriter.astro';
+import IfLive from '../../components/IfLive.astro';
 
 <Typewriter slips={[{ at: 'fewer', wrong: 'less' }, { at: 'its output', wrong: "it's" }]}>
 
@@ -54,3 +55,13 @@ Now more than ever, that's a game worth playing.
 Dave & Mark, 2025
 
 </Typewriter>
+
+<IfLive path="/games/">
+
+## Play the games
+
+Every chapter of the book ends with a board game. They are playable here, each with its rules explained and an example from the book.
+
+<p><a class="btn" href="/games/">See the games</a></p>
+
+</IfLive>
