@@ -1,0 +1,110 @@
+---
+/**
+ * Shows its children as if they were being typed. The children are plain HTML in the
+ * page, so the text is there for search, screen readers, the markdown twin and visitors
+ * without JavaScript; src/lib/typewriter.ts only animates how it appears.
+ *
+ * Mark a phrase with <strong data-hl> to have it selected, then bolded, once typed.
+ * `slips` are word-level mistakes: the wrong text is typed just before `at`, then erased.
+ */
+interface Props {
+  slips?: { at: string; wrong: string }[];
+  /** Same seed, same typos on every visit. */
+  seed?: string;
+}
+const { slips = [], seed = 'typewriter' } = Astro.props;
+---
+
+<div class="typewriter" data-typewriter data-seed={seed} data-slips={JSON.stringify(slips)}>
+  <slot />
+</div>
+<!-- Hides the text for the instant before the script runs (the CSS reveals it after 2.5 s if the script never does). -->
+<script is:inline>
+  (function () {
+    var s = document.currentScript;
+    var root = s && s.previousElementSibling;
+    if (root && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) root.setAttribute('data-tw', 'on');
+  })();
+</script>
+<script>
+  import { startTypewriters } from '../lib/typewriter';
+  startTypewriters();
+</script>
+
+<style is:global>
+  .typewriter {
+    font-family: 'Courier New', Courier, ui-monospace, monospace;
+    line-height: 1.7;
+    --tw-sel: rgba(0, 120, 215, 0.4);
+  }
+  .typewriter > * + * {
+    margin-top: 1.1em;
+  }
+  .typewriter h2 {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.4;
+  }
+
+  /* Before the script has wrapped the text: hidden, with a timed fallback so a failed script never hides it. */
+  .typewriter[data-tw='on'] {
+    visibility: hidden;
+    animation: tw-show 0s 2.5s forwards;
+  }
+  @keyframes tw-show {
+    to {
+      visibility: visible;
+    }
+  }
+  .typewriter[data-tw='live'] {
+    visibility: visible;
+    animation: none;
+  }
+
+  .typewriter .tw-rest {
+    color: transparent;
+  }
+  .typewriter .tw-typo {
+    color: inherit;
+  }
+  .typewriter .tw-caret {
+    border-left: 2px solid currentColor;
+    margin-right: -2px;
+    animation: tw-blink 1s steps(1) infinite;
+  }
+  @keyframes tw-blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Marked phrases are typed at normal weight, selected, then bolded. */
+  .typewriter[data-tw='live'] [data-hl]:not(.tw-hl-done) {
+    font-weight: 400;
+  }
+  .typewriter [data-hl] {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .typewriter [data-hl].tw-sel {
+    background: linear-gradient(var(--tw-sel), var(--tw-sel)) no-repeat right center / 0% 100%;
+    transition: background-size 0.55s ease-out;
+  }
+  .typewriter [data-hl].tw-sel-on {
+    background-size: 100% 100%;
+  }
+
+  .tw-controls {
+    position: sticky;
+    bottom: 12px;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+</style>
