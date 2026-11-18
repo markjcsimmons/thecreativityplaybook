@@ -5,6 +5,7 @@ import { ROUNDS, ROUND_SECONDS, WORKED_EXAMPLE, rollRole, type Roll } from '../.
 import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Shoe Swapper (Ch9). Pick a problem, throw two dice for a pair of shoes (a role), think as that
@@ -207,6 +208,7 @@ export default function ShoeSwapper({ waitlistOpen = false }: { waitlistOpen?: b
           <p class="eyebrow m-0">The idea that best solves the problem</p>
           <p class="m-0 font-slab text-3xl font-bold leading-snug">{winner}</p>
           <div class="no-print flex flex-wrap gap-3">
+            <SaveToNotebook source={TOOL} items={[{ text: winner, note: `Problem: ${problem.trim()}` }]} label="Save idea to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy everything
             </button>

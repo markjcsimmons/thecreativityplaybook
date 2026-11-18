@@ -3,6 +3,7 @@ import { track } from '../../../lib/analytics';
 import { splitLines } from '../../../lib/game-utils';
 import { COMMON, OFF_LIST, ON_LIST, WORKED_EXAMPLE, spaces } from '../../../lib/far-out';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Far Out (Ch8). Write down uses for a paperclip, then check each one against the book's list of
@@ -94,6 +95,7 @@ export default function FarOut({ waitlistOpen = false }: { waitlistOpen?: boolea
             </div>
             <p class="m-0 text-sm">Each link is one space. Filled links are far-out ideas that earned two.</p>
             <div class="no-print flex flex-wrap gap-3">
+              <SaveToNotebook source={TOOL} items={ideas.map((x) => ({ text: x.text, note: x.onList ? 'On the book\'s list of common ideas' : 'Not on the book\'s list: a far-out idea' }))} label="Save ideas to notebook" />
               <button type="button" class="btn" onClick={copy}>
                 Copy result
               </button>

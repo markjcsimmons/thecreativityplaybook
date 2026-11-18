@@ -3,6 +3,7 @@ import { track } from '../../../lib/analytics';
 import { randomBelow } from '../../../lib/game-utils';
 import { DISTRACTIONS, WORKED_EXAMPLE } from '../../../lib/wheel-of-distraction';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Wheel of Distraction (Ch5). The player frames a problem, the wheel picks a distraction at
@@ -121,6 +122,7 @@ export default function WheelOfDistraction({ waitlistOpen = false }: { waitlistO
             <textarea class="field" rows={4} value={thoughts} onInput={(e) => setThoughts((e.target as HTMLTextAreaElement).value)} />
           </label>
           <div class="no-print flex flex-wrap gap-3">
+            <SaveToNotebook source={TOOL} items={thoughts.trim() ? [{ text: thoughts.trim(), note: `Problem: ${problem.trim()}. Did: ${d.title}.` }] : []} label="Save thoughts to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy
             </button>

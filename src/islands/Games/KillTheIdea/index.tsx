@@ -17,6 +17,7 @@ import {
   type Game,
 } from '../../../lib/kill-the-idea';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Kill the Idea (Ch11). The player writes their strongest ideas, a random finger kills one at a
@@ -182,6 +183,7 @@ export default function KillTheIdea({ waitlistOpen = false }: { waitlistOpen?: b
                 <textarea class="field" rows={3} value={why} onInput={(e) => setWhy((e.target as HTMLTextAreaElement).value)} />
               </label>
               <div class="no-print flex flex-wrap gap-3">
+                <SaveToNotebook source={TOOL} items={[{ text: game.ideas[game.winner]!.text, stage: 'shortlisted' as const, note: [problem.trim() && `Problem: ${problem.trim()}`, why.trim() && `Why it matters: ${why.trim()}`].filter(Boolean).join('\n') }]} label="Save idea to notebook" />
                 <button type="button" class="btn" onClick={() => copyResult(game)}>
                   Copy result
                 </button>

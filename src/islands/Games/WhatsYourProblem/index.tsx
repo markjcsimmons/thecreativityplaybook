@@ -3,6 +3,7 @@ import { track } from '../../../lib/analytics';
 import { download } from '../../../lib/tool-client';
 import { STEPS, WORKED_EXAMPLE, questionWord, rollQuestion } from '../../../lib/whats-your-problem';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * What's Your Problem? (Ch4). Write a problem as "How can we ...?", roll a die at each of eight
@@ -165,6 +166,7 @@ export default function WhatsYourProblem({ waitlistOpen = false }: { waitlistOpe
           <p class="eyebrow m-0">Your new version of the problem</p>
           <p class="m-0 font-slab text-3xl font-bold leading-snug">{asProblem(rewrite)}</p>
           <div class="no-print flex flex-wrap gap-3">
+            <SaveToNotebook source={TOOL} items={[{ text: asProblem(rewrite), note: `Started as: ${asProblem(problem)}` }]} label="Save problem to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy everything
             </button>

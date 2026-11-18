@@ -4,6 +4,7 @@ import { ROUNDS, WORKED_EXAMPLE, rollPicture, type Cell } from '../../../lib/bra
 import { splitLines } from '../../../lib/game-utils';
 import { download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Brain Flash (Ch6). Decide on a problem, throw two dice to pick a picture, and let it spark a
@@ -138,6 +139,7 @@ export default function BrainFlash({ waitlistOpen = false }: { waitlistOpen?: bo
             ))}
           </ol>
           <div class="no-print flex flex-wrap gap-3">
+            <SaveToNotebook source={TOOL} items={rounds.filter((r) => r.best).map((r) => ({ text: r.best, note: `Problem: ${problem.trim()}. Picture: ${r.picture.name}.` }))} label="Save best ideas to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy everything
             </button>

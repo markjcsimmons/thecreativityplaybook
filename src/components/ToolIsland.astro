@@ -16,6 +16,7 @@ import BrainFlash from '../islands/Games/BrainFlash/index.tsx';
 import AllTogetherNow from '../islands/Games/AllTogetherNow/index.tsx';
 import BlastOff from '../islands/Games/BlastOff/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
+import Notebook from '../islands/Notebook/index.tsx';
 import book from '../data/book.json';
 import { getAllPages } from '../lib/content';
 import { normalizePath } from '../lib/keyword-map';
@@ -49,3 +50,4 @@ const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
 {name === 'AllTogetherNow' && <AllTogetherNow client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'BlastOff' && <BlastOff client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}
+{name === 'Notebook' && <Notebook client:load />}

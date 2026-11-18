@@ -5,6 +5,7 @@ import { ROUNDS, ROUND_SECONDS, WORKED_EXAMPLE, dealRound, pointsFor, signed } f
 import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Idea Spaghetti (Ch2). Four five-minute rounds. Each round deals a topic and a target; a point
@@ -170,6 +171,7 @@ export default function IdeaSpaghetti({ waitlistOpen = false }: { waitlistOpen?:
                 ))}
               </ol>
               <div class="no-print flex flex-wrap gap-3">
+                <SaveToNotebook source={TOOL} items={results.flatMap((r) => r.ideas.map((text) => ({ text, note: `Idea Spaghetti: ${r.topic}` })))} label="Save ideas to notebook" />
                 <button type="button" class="btn" onClick={exportText}>
                   Export your ideas
                 </button>

@@ -4,6 +4,7 @@ import { MAX_PLAYERS, MIN_PLAYERS, ROUND_SECONDS, WORKED_EXAMPLE, expectedPoints
 import { clock } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * All Together Now (Ch7). The book's game is played on paper by four or more people. This is the
@@ -148,6 +149,7 @@ export default function AllTogetherNow({ waitlistOpen = false }: { waitlistOpen?
               </ol>
               <p class="m-0 font-bold">The player who came up with it wins. Then everyone gets a hug, because the book says in this game love is more important than winning.</p>
               <div class="no-print flex flex-wrap gap-3">
+                <SaveToNotebook source={TOOL} items={order.filter((x) => x.points > 0 && x.text.trim()).map((x) => ({ text: x.text, note: `${x.points} points${challenge.trim() ? `. Challenge: ${challenge.trim()}` : ''}` }))} label="Save voted ideas to notebook" />
                 <button type="button" class="btn btn-ghost" onClick={() => window.print()}>
                   Print
                 </button>

@@ -19,6 +19,7 @@ const here = Astro.url.pathname;
               <li>
                 <a href={l.path} class="text-ink" aria-current={here === l.path ? 'page' : undefined}>
                   {l.label}
+                  {l.path === '/notebook/' && <span class="nb-count" data-notebook-count />}
                 </a>
               </li>
             ))}
@@ -28,3 +29,17 @@ const here = Astro.url.pathname;
     }
   </div>
 </header>
+
+<script>
+  // Shows how many ideas are in the notebook next to its link. Nothing is sent anywhere.
+  import { getNotes, onNotebookChange } from '../lib/notebook';
+  const badge = document.querySelector('[data-notebook-count]');
+  if (badge) {
+    const show = () => {
+      const n = getNotes().length;
+      badge.textContent = n > 0 ? ` (${n})` : '';
+    };
+    show();
+    onNotebookChange(show);
+  }
+</script>

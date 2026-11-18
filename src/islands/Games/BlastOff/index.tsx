@@ -5,6 +5,7 @@ import { LAUNCH_SECONDS, WORKED_EXAMPLE, pickIdea } from '../../../lib/blast-off
 import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Blast Off! (Ch12). Choose one idea quickly, then fill in a launch plan within 30 minutes: a name
@@ -154,6 +155,7 @@ export default function BlastOff({ waitlistOpen = false }: { waitlistOpen?: bool
           <p class="m-0 font-slab text-3xl font-bold leading-snug">{timedOut ? 'Time is up. This is your launch plan.' : 'Blast off! This is your launch plan.'}</p>
           <pre class="m-0 whitespace-pre-wrap break-words border-2 border-ink p-3 font-sans">{plan()}</pre>
           <div class="no-print flex flex-wrap gap-3">
+            <SaveToNotebook source={TOOL} items={[{ text: idea, note: plan(), stage: 'launched' as const }]} label="Save plan to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy plan
             </button>

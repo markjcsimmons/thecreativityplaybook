@@ -3,6 +3,7 @@ import { track } from '../../../lib/analytics';
 import { BOARD_SPACES, TURN_SECONDS, WORKED_EXAMPLE, rollPair, uniqueIdeas, type Roll } from '../../../lib/inspiral';
 import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
+import SaveToNotebook from '../../shared/SaveToNotebook';
 
 /**
  * Inspiral (Ch10 Connected). Roll two themes, spend three minutes on ideas that link them, then
@@ -195,6 +196,7 @@ export default function Inspiral({ waitlistOpen = false }: { waitlistOpen?: bool
                 You reached the centre in {turns.length} {turns.length === 1 ? 'turn' : 'turns'}.
               </p>
               <div class="no-print flex flex-wrap gap-3">
+                <SaveToNotebook source={TOOL} items={turns.flatMap((t) => t.ideas.map((text) => ({ text, note: `Inspiral: ${t.themes.join(' + ')}` })))} label="Save ideas to notebook" />
                 <button type="button" class="btn" onClick={exportAll}>
                   Export all your ideas
                 </button>

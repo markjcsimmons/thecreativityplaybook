@@ -18,7 +18,8 @@
       "/tools/business-idea-generator/",
       "/tools/attribute-listing/",
       "/tools/invention-idea-generator/",
-      "/tools/creativity-test/"
+      "/tools/creativity-test/",
+      "/notebook/"
     ],
     "technique": []
   },
@@ -421,6 +422,19 @@
       "/chapters/kill-the-idea/"
     ],
     "tools": [
+      "/games/blast-off/"
+    ],
+    "technique": []
+  },
+  "/notebook/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/tools/random-idea-generator/",
+      "/tools/business-idea-generator/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/kill-the-idea/",
       "/games/blast-off/"
     ],
     "technique": []
