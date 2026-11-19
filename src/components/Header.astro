@@ -32,14 +32,20 @@ const here = Astro.url.pathname;
 
 <script>
   // Shows how many ideas are in the notebook next to its link. Nothing is sent anywhere.
-  import { getNotes, onNotebookChange } from '../lib/notebook';
+  // It waits until the browser is idle and loads the notebook code then, so it never competes
+  // with the first paint.
   const badge = document.querySelector('[data-notebook-count]');
   if (badge) {
-    const show = () => {
-      const n = getNotes().length;
-      badge.textContent = n > 0 ? ` (${n})` : '';
-    };
-    show();
-    onNotebookChange(show);
+    const start = () =>
+      import('../lib/notebook').then(({ getNotes, onNotebookChange }) => {
+        const show = () => {
+          const n = getNotes().length;
+          badge.textContent = n > 0 ? ` (${n})` : '';
+        };
+        show();
+        onNotebookChange(show);
+      });
+    if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1500 });
+    else setTimeout(start, 300);
   }
 </script>

@@ -48,22 +48,22 @@ const step = (
 
 <!-- Static imports keep Astro's hydration working. The island renders on the server
      too, so the page already shows a real example without JavaScript (BRIEF §8.0). -->
-{(step || name === 'Notebook') && <PipelineStrip client:load current={step} livePaths={livePaths} />}
-{name === 'IdeaGenerator' && <IdeaGenerator client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'BusinessGenerator' && <BusinessGenerator client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'ProductGenerator' && <ProductGenerator client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'AttributeListing' && <AttributeListing client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'KillTheIdea' && <KillTheIdea client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'Inspiral' && <Inspiral client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'WheelOfDistraction' && <WheelOfDistraction client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'Scavengers' && <Scavengers client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'WhatsYourProblem' && <WhatsYourProblem client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'IdeaSpaghetti' && <IdeaSpaghetti client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'FarOut' && <FarOut client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'ShoeSwapper' && <ShoeSwapper client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'HowToPlay' && <HowToPlay client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'BrainFlash' && <BrainFlash client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'AllTogetherNow' && <AllTogetherNow client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'BlastOff' && <BlastOff client:load waitlistOpen={book.waitlistOpen} />}
-{name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}
-{name === 'Notebook' && <Notebook client:load livePaths={livePaths} />}
+{(step || name === 'Notebook') && <PipelineStrip client:idle current={step} livePaths={livePaths} />}
+{name === 'IdeaGenerator' && <IdeaGenerator client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'BusinessGenerator' && <BusinessGenerator client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'ProductGenerator' && <ProductGenerator client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'AttributeListing' && <AttributeListing client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'KillTheIdea' && <KillTheIdea client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'Inspiral' && <Inspiral client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'WheelOfDistraction' && <WheelOfDistraction client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'Scavengers' && <Scavengers client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'WhatsYourProblem' && <WhatsYourProblem client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'IdeaSpaghetti' && <IdeaSpaghetti client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'FarOut' && <FarOut client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'ShoeSwapper' && <ShoeSwapper client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'HowToPlay' && <HowToPlay client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'BrainFlash' && <BrainFlash client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'AllTogetherNow' && <AllTogetherNow client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'BlastOff' && <BlastOff client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'CreativityTest' && <CreativityTest client:idle livePaths={livePaths} />}
+{name === 'Notebook' && <Notebook client:idle livePaths={livePaths} />}
