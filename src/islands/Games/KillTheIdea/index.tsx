@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
 import { track } from '../../../lib/analytics';
-import { splitLines } from '../../../lib/game-utils';
+import { mergeLines, splitLines } from '../../../lib/game-utils';
 import {
   MAX_IDEAS,
   MIN_IDEAS,
@@ -18,6 +18,7 @@ import {
 } from '../../../lib/kill-the-idea';
 import WorkedExampleView from '../../shared/WorkedExample';
 import SaveToNotebook from '../../shared/SaveToNotebook';
+import NotebookPicker from '../../shared/NotebookPicker';
 
 /**
  * Kill the Idea (Ch11). The player writes their strongest ideas, a random finger kills one at a
@@ -77,6 +78,7 @@ export default function KillTheIdea({ waitlistOpen = false }: { waitlistOpen?: b
             </span>
             <textarea class="field" rows={8} value={text} onInput={(e) => setText((e.target as HTMLTextAreaElement).value)} />
           </label>
+          <NotebookPicker handoffGame="kill-the-idea" max={MAX_IDEAS} onPick={(picked) => setText((cur) => mergeLines(cur, picked, MAX_IDEAS))} />
           <p class="m-0" aria-live="polite">
             {lines.length} {lines.length === 1 ? 'idea' : 'ideas'}
             {tooMany ? `. That is too many: keep the strongest ${MAX_IDEAS}.` : lines.length < MIN_IDEAS ? `. Add at least ${MIN_IDEAS}.` : '.'}
@@ -183,7 +185,15 @@ export default function KillTheIdea({ waitlistOpen = false }: { waitlistOpen?: b
                 <textarea class="field" rows={3} value={why} onInput={(e) => setWhy((e.target as HTMLTextAreaElement).value)} />
               </label>
               <div class="no-print flex flex-wrap gap-3">
-                <SaveToNotebook source={TOOL} items={[{ text: game.ideas[game.winner]!.text, stage: 'shortlisted' as const, note: [problem.trim() && `Problem: ${problem.trim()}`, why.trim() && `Why it matters: ${why.trim()}`].filter(Boolean).join('\n') }]} label="Save idea to notebook" />
+                <SaveToNotebook
+                  source={TOOL}
+                  label="Save results to notebook"
+                  items={game.ideas.map((x, i) =>
+                    i === game.winner
+                      ? { text: x.text, stage: 'shortlisted' as const, note: [problem.trim() && `Problem: ${problem.trim()}`, why.trim() && `Why it matters: ${why.trim()}`].filter(Boolean).join('\n') }
+                      : { text: x.text, stage: 'set-aside' as const },
+                  )}
+                />
                 <button type="button" class="btn" onClick={() => copyResult(game)}>
                   Copy result
                 </button>

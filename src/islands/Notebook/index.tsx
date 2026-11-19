@@ -11,11 +11,13 @@ import {
   importJson,
   onNotebookChange,
   removeNote,
+  setHandoff,
   sourceLabel,
   updateNote,
   type Note,
   type Stage,
 } from '../../lib/notebook';
+import { MAX_IDEAS, MIN_IDEAS } from '../../lib/kill-the-idea';
 import { csvCell, download } from '../../lib/tool-client';
 
 /**
@@ -27,7 +29,7 @@ type Sort = 'newest' | 'oldest' | 'alpha';
 
 const when = (iso: string) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-export default function Notebook() {
+export default function Notebook({ livePaths = [] }: { livePaths?: string[] }) {
   const [notes, setNotes] = useState<Note[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [draft, setDraft] = useState('');
@@ -40,6 +42,8 @@ export default function Notebook() {
   const [editNote, setEditNote] = useState('');
   const [confirmClear, setConfirmClear] = useState(false);
   const [announce, setAnnounce] = useState('');
+  const [picking, setPicking] = useState(false);
+  const [picked, setPicked] = useState<string[]>([]);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -118,6 +122,14 @@ export default function Notebook() {
     setAnnounce(`Restored ${r.added} ${r.added === 1 ? 'idea' : 'ideas'}${r.duplicates ? `, ${r.duplicates} already there` : ''}${r.failed ? `, ${r.failed} did not fit` : ''}.`);
   };
 
+  const canSend = (path: string) => livePaths.includes(path);
+  const send = (game: string) => {
+    setHandoff(game, picked);
+    location.href = `/games/${game}/`;
+  };
+  const togglePick = (id: string, on: boolean) => setPicked(on ? [...picked, id] : picked.filter((x) => x !== id));
+  const killOk = picked.length >= MIN_IDEAS && picked.length <= MAX_IDEAS;
+
   const clearAll = () => {
     if (!confirmClear) return setConfirmClear(true);
     clearNotes();
@@ -186,6 +198,45 @@ export default function Notebook() {
             <span class="font-normal"> (the notebook holds up to {MAX_NOTES})</span>
           </p>
 
+          {(canSend('/games/kill-the-idea/') || canSend('/games/blast-off/')) && (
+            <div class="no-print grid gap-2">
+              {!picking ? (
+                <button type="button" class="btn btn-ghost w-fit" onClick={() => setPicking(true)}>
+                  Pick ideas to work on
+                </button>
+              ) : (
+                <div class="sticker grid gap-2 p-3">
+                  <p class="m-0 font-bold" aria-live="polite">
+                    {picked.length} picked. Tick ideas below, then send them to a game.
+                  </p>
+                  <div class="flex flex-wrap gap-3">
+                    {canSend('/games/kill-the-idea/') && (
+                      <button type="button" class="btn" disabled={!killOk} onClick={() => send('kill-the-idea')}>
+                        Choose: send to Kill the Idea
+                      </button>
+                    )}
+                    {canSend('/games/blast-off/') && (
+                      <button type="button" class="btn" disabled={picked.length === 0} onClick={() => send('blast-off')}>
+                        Launch: send to Blast Off
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      class="btn btn-ghost"
+                      onClick={() => {
+                        setPicking(false);
+                        setPicked([]);
+                      }}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                  <p class="m-0 text-sm">Kill the Idea needs {MIN_IDEAS} to {MAX_IDEAS} ideas. Blast Off takes any number and asks you to choose one.</p>
+                </div>
+              )}
+            </div>
+          )}
+
           <ol class="m-0 grid list-none gap-3 p-0">
             {shown.map((n) => (
               <li class="sticker grid gap-2 p-3" key={n.id}>
@@ -210,9 +261,15 @@ export default function Notebook() {
                   </div>
                 ) : (
                   <>
+                    {picking && n.kind !== 'problem' && (
+                      <label class="no-print flex w-fit items-center gap-2 font-bold">
+                        <input type="checkbox" checked={picked.includes(n.id)} onChange={(e) => togglePick(n.id, (e.target as HTMLInputElement).checked)} />
+                        Pick<span class="visually-hidden">: {n.text}</span>
+                      </label>
+                    )}
                     <p class="m-0 break-words font-slab text-xl font-bold leading-snug">{n.text}</p>
                     <p class="m-0 text-sm">
-                      {sourceLabel(n.source)} &middot; {when(n.added)} &middot; {STAGE_LABELS[n.stage]}
+                      {n.kind === 'problem' ? 'Problem \u00b7 ' : ''}{sourceLabel(n.source)} &middot; {when(n.added)} &middot; {STAGE_LABELS[n.stage]}
                     </p>
                     {n.note && (
                       <details>

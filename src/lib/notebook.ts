@@ -17,9 +17,12 @@ export const MAX_NOTES = 500;
 export const MAX_TEXT = 1000;
 export const MAX_NOTE = 4000;
 
-export const STAGES = ['new', 'shortlisted', 'launched'] as const;
+export const STAGES = ['new', 'shortlisted', 'launched', 'set-aside'] as const;
 export type Stage = (typeof STAGES)[number];
-export const STAGE_LABELS: Record<Stage, string> = { new: 'New', shortlisted: 'Shortlisted', launched: 'Launched' };
+export const STAGE_LABELS: Record<Stage, string> = { new: 'New', shortlisted: 'Shortlisted', launched: 'Launched', 'set-aside': 'Set aside' };
+
+/** An entry is an idea unless a tool saved it as a problem (the Problem Reframing game does). */
+export type Kind = 'idea' | 'problem';
 
 export interface Note {
   id: string;
@@ -31,6 +34,8 @@ export interface Note {
   stage: Stage;
   /** Optional extra text, such as a launch plan or the problem the idea answers. */
   note?: string;
+  /** Only present for problems; everything else is an idea. */
+  kind?: 'problem';
 }
 
 /** What a tool passes when it saves an idea. */
@@ -39,6 +44,7 @@ export interface NewNote {
   source: string;
   note?: string;
   stage?: Stage;
+  kind?: Kind;
 }
 
 export const SOURCE_LABELS: Record<string, string> = {
@@ -90,6 +96,7 @@ function parseNotes(raw: unknown): Note[] {
       added,
       stage: isStage(o.stage) ? o.stage : 'new',
       ...(note ? { note } : {}),
+      ...(o.kind === 'problem' ? { kind: 'problem' as const } : {}),
     });
   }
   return out;
@@ -182,7 +189,7 @@ export function addNotes(items: NewNote[]): AddResult {
       continue;
     }
     const note = item.note?.trim() ? item.note.trim().slice(0, MAX_NOTE) : undefined;
-    notes.push({ id: newId(), text, source: item.source, added: now, stage: item.stage ?? 'new', ...(note ? { note } : {}) });
+    notes.push({ id: newId(), text, source: item.source, added: now, stage: item.stage ?? 'new', ...(note ? { note } : {}), ...(item.kind === 'problem' ? { kind: 'problem' as const } : {}) });
     result.added++;
   }
   if (result.added > 0 && !writeRaw(notes)) {
@@ -190,6 +197,58 @@ export function addNotes(items: NewNote[]): AddResult {
     result.added = 0;
   }
   return result;
+}
+
+export interface UpsertResult {
+  added: number;
+  updated: number;
+  unchanged: number;
+  failed: number;
+}
+
+/** A finished tool outranks an earlier one: a launched idea is never moved back to shortlisted. */
+const keepsStage = (current: Stage, next: Stage) => current === 'launched' && next !== 'launched';
+
+/**
+ * Saves a tool's results, updating the notebook entry with the same text (from any tool) instead
+ * of adding a copy: the stage moves on, and a note such as a launch plan is attached. Anything
+ * not in the notebook yet is added.
+ */
+export function upsertNotes(items: NewNote[]): UpsertResult {
+  const notes = getNotes();
+  const r: UpsertResult = { added: 0, updated: 0, unchanged: 0, failed: 0 };
+  const now = new Date().toISOString();
+  for (const item of items) {
+    const text = clean(item.text, MAX_TEXT);
+    if (!text) continue;
+    const problem = item.kind === 'problem';
+    const extra = item.note?.trim();
+    const hit = notes.find((n) => sameText(n.text, text) && (n.kind === 'problem') === problem);
+    if (hit) {
+      let changed = false;
+      if (item.stage && item.stage !== hit.stage && !keepsStage(hit.stage, item.stage)) {
+        hit.stage = item.stage;
+        changed = true;
+      }
+      if (extra && !(hit.note ?? '').includes(extra)) {
+        hit.note = `${hit.note ? hit.note + '\n\n' : ''}${extra}`.slice(0, MAX_NOTE);
+        changed = true;
+      }
+      if (changed) r.updated++;
+      else r.unchanged++;
+    } else if (notes.length >= MAX_NOTES) {
+      r.failed++;
+    } else {
+      notes.push({ id: newId(), text, source: item.source, added: now, stage: item.stage ?? 'new', ...(extra ? { note: extra.slice(0, MAX_NOTE) } : {}), ...(problem ? { kind: 'problem' as const } : {}) });
+      r.added++;
+    }
+  }
+  if (r.added + r.updated > 0 && !writeRaw(notes)) {
+    r.failed += r.added + r.updated;
+    r.added = 0;
+    r.updated = 0;
+  }
+  return r;
 }
 
 export function updateNote(id: string, patch: Partial<Pick<Note, 'text' | 'stage' | 'note'>>): void {
@@ -267,4 +326,32 @@ export function onNotebookChange(fn: () => void): () => void {
     window.removeEventListener(NOTEBOOK_EVENT, fn);
     window.removeEventListener('storage', onStorage);
   };
+}
+
+// --- Hand-off: the notebook page sends picked ideas to a game, which takes them once. ---
+const HANDOFF_KEY = 'cp:handoff:v1';
+const HANDOFF_MAX_AGE_MS = 10 * 60 * 1000;
+
+export function setHandoff(game: string, ids: string[]): void {
+  if (!hasWindow()) return;
+  try {
+    localStorage.setItem(HANDOFF_KEY, JSON.stringify({ game, ids, at: Date.now() }));
+  } catch {
+    /* the player can still pick the ideas by hand in the game */
+  }
+}
+
+/** Returns the notes sent to this game and clears the hand-off, so a reload does not repeat it. */
+export function takeHandoff(game: string): Note[] {
+  if (!hasWindow()) return [];
+  try {
+    const raw = JSON.parse(localStorage.getItem(HANDOFF_KEY) ?? 'null') as { game?: unknown; ids?: unknown; at?: unknown } | null;
+    if (!raw || raw.game !== game) return [];
+    localStorage.removeItem(HANDOFF_KEY);
+    if (!Array.isArray(raw.ids) || typeof raw.at !== 'number' || Date.now() - raw.at > HANDOFF_MAX_AGE_MS) return [];
+    const all = getNotes();
+    return raw.ids.flatMap((id) => all.filter((n) => n.id === id));
+  } catch {
+    return [];
+  }
 }

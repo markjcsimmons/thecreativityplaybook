@@ -5,6 +5,7 @@ import { splitLines } from '../../../lib/game-utils';
 import { download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import SaveToNotebook from '../../shared/SaveToNotebook';
+import NotebookPicker from '../../shared/NotebookPicker';
 
 /**
  * Brain Flash (Ch6). Decide on a problem, throw two dice to pick a picture, and let it spark a
@@ -73,6 +74,7 @@ export default function BrainFlash({ waitlistOpen = false }: { waitlistOpen?: bo
             <span class="font-bold">The problem you want to solve</span>
             <input class="field" type="text" value={problem} onInput={(e) => setProblem((e.target as HTMLInputElement).value)} autocomplete="off" />
           </label>
+          <NotebookPicker kind="problem" single onPick={(picked) => setProblem(picked[0] ?? '')} />
           <button type="button" class="btn w-fit" disabled={!problem.trim()} onClick={() => setPhase('roll')}>
             Start the game
           </button>

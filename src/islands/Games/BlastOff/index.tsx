@@ -1,11 +1,12 @@
 import { useState } from 'preact/hooks';
 import { track } from '../../../lib/analytics';
-import { splitLines } from '../../../lib/game-utils';
+import { mergeLines, splitLines } from '../../../lib/game-utils';
 import { LAUNCH_SECONDS, WORKED_EXAMPLE, pickIdea } from '../../../lib/blast-off';
 import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
 import SaveToNotebook from '../../shared/SaveToNotebook';
+import NotebookPicker from '../../shared/NotebookPicker';
 
 /**
  * Blast Off! (Ch12). Choose one idea quickly, then fill in a launch plan within 30 minutes: a name
@@ -87,6 +88,7 @@ export default function BlastOff({ waitlistOpen = false }: { waitlistOpen?: bool
             <span class="font-bold">Your ideas, one per line. Use ones you have already generated.</span>
             <textarea class="field" rows={6} value={text} onInput={(e) => setText((e.target as HTMLTextAreaElement).value)} />
           </label>
+          <NotebookPicker handoffGame="blast-off" preferStage="shortlisted" max={30} onPick={(picked) => setText((cur) => mergeLines(cur, picked, 30))} />
           {ideas.length > 0 ? (
             <>
               <p class="m-0">Choose one now, on gut instinct. The countdown starts when you do.</p>

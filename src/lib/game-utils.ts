@@ -19,3 +19,13 @@ export const splitLines = (text: string): string[] =>
 
 /** Exact repeats (ignoring case and spacing) do not count as separate ideas. */
 export const normalizeIdea = (s: string): string => s.trim().toLowerCase().replace(/\s+/g, ' ');
+
+/** Adds picked lines to the text in a one-idea-per-line box, skipping repeats and stopping at `max`. */
+export function mergeLines(existing: string, add: string[], max: number): string {
+  const lines = splitLines(existing);
+  for (const x of add) {
+    if (lines.length >= max) break;
+    if (!lines.some((l) => l.toLowerCase() === x.toLowerCase())) lines.push(x);
+  }
+  return lines.join('\n');
+}

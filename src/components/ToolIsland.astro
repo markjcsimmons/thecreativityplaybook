@@ -17,6 +17,7 @@ import AllTogetherNow from '../islands/Games/AllTogetherNow/index.tsx';
 import BlastOff from '../islands/Games/BlastOff/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
 import Notebook from '../islands/Notebook/index.tsx';
+import PipelineStrip from '../islands/shared/PipelineStrip.tsx';
 import book from '../data/book.json';
 import { getAllPages } from '../lib/content';
 import { normalizePath } from '../lib/keyword-map';
@@ -29,10 +30,25 @@ const { name } = Astro.props;
 
 // Pages that exist in this build, so a tool can link to a tool that is not published yet only when it is.
 const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
+
+// Tools that belong to the path from idea to launch show the strip above themselves.
+const step = (
+  {
+    IdeaGenerator: 'generate',
+    BusinessGenerator: 'generate',
+    ProductGenerator: 'generate',
+    AttributeListing: 'generate',
+    IdeaSpaghetti: 'pile',
+    Inspiral: 'pile',
+    KillTheIdea: 'choose',
+    BlastOff: 'launch',
+  } as Record<string, 'generate' | 'pile' | 'choose' | 'launch'>
+)[name];
 ---
 
 <!-- Static imports keep Astro's hydration working. The island renders on the server
      too, so the page already shows a real example without JavaScript (BRIEF §8.0). -->
+{(step || name === 'Notebook') && <PipelineStrip client:load current={step} livePaths={livePaths} />}
 {name === 'IdeaGenerator' && <IdeaGenerator client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'BusinessGenerator' && <BusinessGenerator client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'ProductGenerator' && <ProductGenerator client:load waitlistOpen={book.waitlistOpen} />}
@@ -50,4 +66,4 @@ const livePaths = (await getAllPages()).map((p) => normalizePath(p.data.path));
 {name === 'AllTogetherNow' && <AllTogetherNow client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'BlastOff' && <BlastOff client:load waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' && <CreativityTest client:load livePaths={livePaths} />}
-{name === 'Notebook' && <Notebook client:load />}
+{name === 'Notebook' && <Notebook client:load livePaths={livePaths} />}

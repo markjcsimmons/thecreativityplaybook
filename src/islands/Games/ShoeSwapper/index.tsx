@@ -6,6 +6,7 @@ import { clock, download } from '../../../lib/tool-client';
 import WorkedExampleView from '../../shared/WorkedExample';
 import { useCountdown } from '../../shared/useCountdown';
 import SaveToNotebook from '../../shared/SaveToNotebook';
+import NotebookPicker from '../../shared/NotebookPicker';
 
 /**
  * Shoe Swapper (Ch9). Pick a problem, throw two dice for a pair of shoes (a role), think as that
@@ -98,6 +99,7 @@ export default function ShoeSwapper({ waitlistOpen = false }: { waitlistOpen?: b
             <span class="font-bold">The problem you want to solve</span>
             <textarea class="field" rows={2} value={problem} onInput={(e) => setProblem((e.target as HTMLTextAreaElement).value)} />
           </label>
+          <NotebookPicker kind="problem" single onPick={(picked) => setProblem(picked[0] ?? '')} />
           <button type="button" class="btn w-fit" disabled={!problem.trim()} onClick={() => setPhase('roll')}>
             Start the game
           </button>

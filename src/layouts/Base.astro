@@ -3,6 +3,7 @@ import '../styles/global.css';
 import antonUrl from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
 import dmSansUrl from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
 import zillaUrl from '@fontsource/zilla-slab/files/zilla-slab-latin-600-normal.woff2?url';
+import zilla7Url from '@fontsource/zilla-slab/files/zilla-slab-latin-700-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_NAME, canonicalUrl } from '../lib/seo';
@@ -57,7 +58,7 @@ const nav = [
     {ogImage && <meta property="og:image" content={new URL(ogImage, site).href} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {[antonUrl, dmSansUrl, zillaUrl].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
+    {[antonUrl, dmSansUrl, zillaUrl, zilla7Url].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
     {jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
     {
       vercelAnalytics && (

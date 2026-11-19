@@ -4,6 +4,7 @@ import { randomBelow } from '../../../lib/game-utils';
 import { DISTRACTIONS, WORKED_EXAMPLE } from '../../../lib/wheel-of-distraction';
 import WorkedExampleView from '../../shared/WorkedExample';
 import SaveToNotebook from '../../shared/SaveToNotebook';
+import NotebookPicker from '../../shared/NotebookPicker';
 
 /**
  * Wheel of Distraction (Ch5). The player frames a problem, the wheel picks a distraction at
@@ -78,6 +79,7 @@ export default function WheelOfDistraction({ waitlistOpen = false }: { waitlistO
             <span class="font-bold">What creative problem are you stuck on? Spend a few minutes on it first, then write it here.</span>
             <textarea class="field" rows={3} value={problem} onInput={(e) => setProblem((e.target as HTMLTextAreaElement).value)} />
           </label>
+          <NotebookPicker kind="problem" single onPick={(picked) => setProblem(picked[0] ?? '')} />
           <button type="button" class="btn w-fit" disabled={!problem.trim()} onClick={spin}>
             Spin the wheel
           </button>

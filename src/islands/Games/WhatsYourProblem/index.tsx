@@ -166,7 +166,7 @@ export default function WhatsYourProblem({ waitlistOpen = false }: { waitlistOpe
           <p class="eyebrow m-0">Your new version of the problem</p>
           <p class="m-0 font-slab text-3xl font-bold leading-snug">{asProblem(rewrite)}</p>
           <div class="no-print flex flex-wrap gap-3">
-            <SaveToNotebook source={TOOL} items={[{ text: asProblem(rewrite), note: `Started as: ${asProblem(problem)}` }]} label="Save problem to notebook" />
+            <SaveToNotebook source={TOOL} items={[{ text: asProblem(rewrite), kind: 'problem' as const, note: `Started as: ${asProblem(problem)}` }]} label="Save problem to notebook" />
             <button type="button" class="btn" onClick={copy}>
               Copy everything
             </button>
