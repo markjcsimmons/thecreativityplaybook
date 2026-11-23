@@ -25,3 +25,14 @@ npm-debug.log*
 
 # Lighthouse CI output
 .lighthouseci/
+
+# The Creativity Playbook working folder: only the editing notes and audit are
+# tracked. The 2010 and V2 PDFs, artwork, built PDF/EPUB and the chapter text
+# stay local (same rights reason as /source/, and the repo is public).
+/Creativity Playbook/*
+!/Creativity Playbook/editing/
+!/Creativity Playbook/editing-audit/
+!/Creativity Playbook/image-audit.md
+!/Creativity Playbook/design-sample/
+/Creativity Playbook/design-sample/*
+!/Creativity Playbook/design-sample/README.md

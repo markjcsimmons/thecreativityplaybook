@@ -72,11 +72,11 @@ Pearson cleared the following for its 2010 edition only, so **never** reproduce 
 - The excerpt from Harvard Business Review's "The Weird Rules of Creativity"
 - The SENZ umbrella photo
 
-Other assets are **on hold until Mark confirms ownership**. Use original placeholders until then:
-- The illustrated blob characters (Bird Design)
-- The board-game artwork (Sy-Jenq Cheng)
-- The author photographs (Kori Bundi)
-- The book's interior layout and design (Design Deluxe)
+Other assets were on hold until Mark confirmed ownership. Status now:
+- The illustrated blob characters (Bird Design): owned by the authors (confirmed by Mark, 2026-11-02). Usable once the source files are supplied.
+- The board-game artwork (Sy-Jenq Cheng): same.
+- The author photographs (Kori Bundi): same.
+- The book's interior layout and design (Design Deluxe): cleared (confirmed by Mark, 2026-11-22).
 
 Short quotes from the book's own text and its interviews are fine, with attribution. Keep each excerpt to a few sentences. Don't post whole sections of the book.
 
@@ -432,7 +432,7 @@ Drafts are excluded from production builds, and included only when `PREVIEW=true
 
 - **Book status flag:** `BOOK_STATUS = 'prelaunch' | 'live'` in `src/data/book.json`.
   - `prelaunch`: CTAs say *"Get Chapter 2 free + launch-day alert"* and lead to email capture.
-  - `live`: `BuyButtons` show Kindle and Paperback, with Amazon links localised by country (US/UK/CA/AU via `amazon.ts`), optional Bookshop.org, and Amazon Attribution tags if available.
+  - `live`: `BuyButtons` show Kindle and Paperback, with Amazon links localised by country (US/UK/CA/AU via `amazon.ts`), optional Bookshop.org, and Amazon Attribution tags if available. If the book ends up digital-only, there is no Paperback button: see §11.1.
 - **BookCallout component:** "This technique is from **Chapter 9: Shoe Swapper**." Shows the chapter colour, a one-line takeaway, the cover and a CTA. It appears on every content page, ideally after the first major section.
 - **Lead magnets:**
   1. Free Chapter 2 PDF, after Mark confirms it contains no licensed material.
@@ -446,6 +446,39 @@ Drafts are excluded from production builds, and included only when `PREVIEW=true
 
   **No entry pop-ups, ever.** Never interrupt a tool.
 - **Speaking and bulk orders:** a small "Bring the Business Playground to your team" block on the authors, culture, workshop and creativity-in-business pages, linking to a contact form.
+
+### 11.1 Distribution if the book is digital-only (proposed, not decided)
+
+**Status:** a recommendation from Mark's question on 2026-11-20. It applies only if the original InDesign print files can't be recovered and the new edition goes out as an ebook with no printed version. Until Mark decides (§16, items 9–12), the site keeps the §11 prelaunch behavior, and nothing here changes `src/data/book.json` or any buy link.
+
+**Principle:** wide, digital-first distribution with direct sales from our own site as the anchor, because the email list is the main asset (§1).
+
+| Channel | Role | Notes |
+|---|---|---|
+| Own site (direct) | Anchor | Color PDF + EPUB bundle through a payment tool. We keep most of the revenue and the buyer's email address. Include extras the Kindle edition lacks, such as the printable game boards and templates. |
+| Amazon Kindle | Biggest reach | Non-exclusive at first (no KDP Select). The 70% royalty option now covers list prices of $2.99–$12.99 on Amazon.com (from 2026-07-07). The delivery fee is $0.15/MB (US), so compress images. A large color file can earn more at the 35% option. |
+| Apple Books, Kobo, Google Play | Wide reach | Possibly through a distributor such as Draft2Digital, which can also cover libraries. Check each store's royalty, pre-order and ISBN rules before choosing. |
+| Libraries | Extra audience | Reached through a distributor. |
+| Audiobook | Later | Decide after launch. |
+
+**Sequence**
+1. Now to launch: waitlist and free Chapter 2, as in §11.
+2. Before launch: pre-orders where the stores allow them (to be checked), to lift day-one ranking.
+3. Launch week: email the waitlist and push everyone to one retailer at once. The direct bundle goes in the same email.
+4. After launch: review sales by channel at three months. Decide on exclusivity, an audiobook and a print-on-demand paperback. Print-on-demand has no inventory cost, so digital-only now doesn't rule it out.
+
+**Effects on the site (apply only after Mark decides)**
+- `BuyButtons` show Kindle, Apple, Kobo and the direct bundle. No Paperback button.
+- `Book` schema: `bookFormat: EBook`. No `Book` offers until the book is live.
+- Corporate bulk orders (§11, speaking and bulk orders) become team licenses (multi-seat PDF or EPUB) and workshop packs, not boxes of books.
+- `/books/gifts-for-entrepreneurs` targets gift buyers. An ebook is a weaker gift, so keep our title in the list but don't lead with it as the pick.
+- Don't price the direct bundle below the Kindle edition for the same content. The bundle's extras justify a higher price.
+
+**Not verified.** Store terms other than the KDP royalty and delivery-fee figures above, whether Kindle Unlimited would pay enough for this book to justify exclusivity, and how the color files render on real devices.
+
+**Related work for a digital edition**
+- The V2 comp's text is about 99% the 2010 text. The SENZ umbrella (p.62), the *Being There* excerpt (p.136) and the HBR "Weird Rules" excerpt (p.224) are in it and must be cut or re-cleared (PDF page numbers).
+- An image sort of the comp is in `Creativity Playbook/image-audit.md`. It lists seven images that need a source file or a rights answer.
 
 ---
 
@@ -537,6 +570,10 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 6. New edition title, subtitle, ISBNs, price and launch date (these feed `book.json` and `Book` schema).
 7. The Amazon Associates account and tag (for book lists), and access to Amazon Attribution.
 8. Whether to verify the "design thinking process" volume before Phase 3.
+9. Print or digital-only (depends on whether the original InDesign files can be recovered).
+10. If digital-only: wide distribution or Amazon-only at launch (§11.1).
+11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
+12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
 
 ---
 
