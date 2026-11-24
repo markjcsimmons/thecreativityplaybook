@@ -42,7 +42,7 @@ All nine were approved and applied to the manuscript, the EPUB and the designed 
 | C1-40 | Dementia (FTD) passage rewritten and hedged; pull quote now "intriguing evidence"; new note 16 (Miller et al., 2000). |
 | C1-41 | Late bloomers pull quote rewritten (single peak, shifted for late starters); "left hemispheres ... bully" changed to "the rules ... bully". |
 | C1-42 | Dave's SLY-FI sidebar: "fast internet connections"; "a forerunner of 'Second Life', which arrived a few years later". Dave's text, needs his approval. |
-| C1-43 | Placeholder for Dave. In the PDF it is a yellow review note on the headphones page; in the manuscript and EPUB it is a bracketed line at the end of the sidebar. **Must be replaced or removed before distribution.** |
+| C1-43 | Placeholder for Dave: applied, then removed at Mark's request (2026-11-22). Nothing about it is in the PDF, EPUB or manuscript. Dave's sidebar still ends where the 2010 text did. |
 | C1-44 | "smartphone"; "emails/messages/notifications" (board rules). |
 | C1-45 | Moon and Sixpence paragraph trimmed. |
 
@@ -53,6 +53,6 @@ All nine were approved and applied to the manuscript, the EPUB and the designed 
 - The Moon and Sixpence text splits across pages 8 and 9 at a new point.
 
 ### Still open
-- Dave must approve C1-42 and C1-43 and the earlier Kaya, Villaraigosa and mind-map changes.
+- Dave must approve C1-42 and the earlier Kaya, Villaraigosa and mind-map changes.
 - The AI studies were checked at abstract level only; the Koivisto correction notice (2024) was not read; the Jancy Chang name and quote were not re-checked.
 - Net body-text change this round: +91 words by count, about +690 words in all (13%).

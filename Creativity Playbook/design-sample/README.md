@@ -44,4 +44,10 @@ Mark wants a print edition: Claude builds it and a designer tweaks it. Trim size
 6. **Repetition.** Warchus now reads "told us about his experience at school ... he told us."
 
 ## Round 2 (applied 2026-11-22)
-Nine more Chapter 1 edits (C1-37 to C1-45): an AI paragraph and a Human First exercise on a new page, a Hendrix fix, a rewrite of the dementia passage, the late-bloomers claim, two wording fixes in Dave's SLY-FI sidebar, "smartphone" in the board rules, and a Moon and Sixpence trim. The PDF has a yellow **review note for Dave** on the headphones page (p.17 of the book), which is a placeholder and must be replaced or removed before any distribution. The same placeholder is in the manuscript and EPUB as a bracketed "[DAVE: ...]" line.
+Nine more Chapter 1 edits (C1-37 to C1-45): an AI paragraph and a Human First exercise on a new page, a Hendrix fix, a rewrite of the dementia passage, the late-bloomers claim, two wording fixes in Dave's SLY-FI sidebar, "smartphone" in the board rules, and a Moon and Sixpence trim. The placeholder for Dave (C1-43) was added and then removed at Mark's request, so there is no note in the PDF, EPUB or manuscript.
+
+## Chapter 2 (built 2026-11-23)
+- `The-Creativity-Playbook-Chapter-2.pdf`: 19 pages, 6.75 x 8.25 in, same finish as Chapter 1 (live text, fonts embedded, tagged, bookmarks, page labels 1-19). Local only, git-ignored.
+- `chapter2-sample.epub`, `manuscript/chapter-02.md`, `chapter2-design-sample-preview.png`: as for Chapter 1.
+- `build-ch2/`: scripts. To rebuild: edit `content2.py`, then from `build-ch2`: `python3 build_epub2.py` (then zip the `epub` folder with `mimetype` first), `python3 make_chrome2.py` (only if chrome changes), `python3 pages2.py`, `node render2.cjs`, then `finish_pdf2.py` from `design-sample` (needs pypdf). `chrome/raw41-56.svg` are the V2 pages (via pdftocairo); `pages2.py` flows live text through frames whose positions were read from the V2 glyph positions (`analyze.py`, `frames.py`).
+- Edits and status: `editing/chapter-02/` (brief, CSV, applied log).
