@@ -264,6 +264,19 @@ if (process.argv.includes('--dist')) {
           if (!llms.includes(`${relative(dist, md).replace(/\\/g, '/')}`)) err('dist/llms.txt', `does not list ${relative(dist, md)}`);
         }
         if (!html.includes('rel="alternate" type="text/markdown"')) err(relative(root, file), 'missing the text/markdown alternate link');
+        // Every public page needs a social card: an og:image that exists in dist and is a 1200x630 PNG.
+        const og = /<meta property="og:image" content="([^"]+)"/.exec(html)?.[1];
+        if (!og) err(relative(root, file), 'missing og:image');
+        else {
+          const imgPath = join(dist, decodeURIComponent(new URL(og).pathname));
+          if (!existsSync(imgPath)) err(relative(root, file), `og:image ${og} is not in dist`);
+          else if (imgPath.endsWith('.png')) {
+            const buf = readFileSync(imgPath);
+            const w = buf.readUInt32BE(16);
+            const h = buf.readUInt32BE(20);
+            if (w !== 1200 || h !== 630) err(relative(root, imgPath), `og image is ${w}x${h}, expected 1200x630`);
+          }
+        }
       }
       for (const m of html.matchAll(/<a\s[^>]*href="(\/[^"#?][^"]*|\/)"/g)) {
         const href = m[1]!;

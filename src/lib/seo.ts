@@ -10,6 +10,12 @@ export function canonicalUrl(path: string, site: URL | string): string {
   return new URL(path, site).href;
 }
 
+/** `/tools/random-idea-generator/` -> `/og/tools/random-idea-generator.png`; `/` -> `/og/home.png`. The card is drawn at build time (src/lib/og.ts). */
+export function ogPathFor(path: string): string {
+  const slug = path.replace(/^\/|\/$/g, '');
+  return `/og/${slug || 'home'}.png`;
+}
+
 type Ld = Record<string, unknown>;
 
 export function websiteLd(site: URL | string): Ld {
@@ -84,6 +90,7 @@ export function articleLd(page: PageData, site: URL | string): Ld {
     headline: page.title,
     description: page.description,
     mainEntityOfPage: new URL(page.path, site).href,
+    image: new URL(page.ogImage ?? ogPathFor(page.path), site).href,
     // No dateModified: the "Updated" date is hidden from visitors (Mark, 2026-11-19), and
     // Google asks that structured dates match a date people can see. The sitemap's
     // <lastmod> carries the freshness signal instead (astro.config.mjs).

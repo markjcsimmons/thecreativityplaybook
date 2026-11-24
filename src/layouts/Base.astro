@@ -6,7 +6,7 @@ import zillaUrl from '@fontsource/zilla-slab/files/zilla-slab-latin-600-normal.w
 import zilla7Url from '@fontsource/zilla-slab/files/zilla-slab-latin-700-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_NAME, canonicalUrl } from '../lib/seo';
+import { SITE_NAME, canonicalUrl, ogPathFor } from '../lib/seo';
 import { getAllPages } from '../lib/content';
 import { normalizePath } from '../lib/keyword-map';
 
@@ -27,6 +27,9 @@ interface Props {
 const { title, description, path, jsonLd = [], noindex = false, ogImage, ogType = 'website', accent } = Astro.props;
 const site = Astro.site!;
 const canonical = canonicalUrl(path, site);
+// A page's own ogImage wins; otherwise indexed pages get the card drawn at build time (src/pages/og/).
+// A custom ogImage is assumed to be 1200 x 630.
+const ogUrl = ogImage ? new URL(ogImage, site).href : noindex ? undefined : new URL(ogPathFor(path), site).href;
 // Vercel Web Analytics: only in builds made on Vercel, so local builds and Lighthouse runs never request the script.
 const vercelAnalytics = import.meta.env.PROD && process.env.VERCEL === '1';
 
@@ -57,8 +60,18 @@ const nav = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    {ogImage && <meta property="og:image" content={new URL(ogImage, site).href} />}
-    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    {
+      ogUrl && (
+        <>
+          <meta property="og:image" content={ogUrl} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={title} />
+          <meta name="twitter:image" content={ogUrl} />
+        </>
+      )
+    }
+    <meta name="twitter:card" content={ogUrl ? 'summary_large_image' : 'summary'} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {[antonUrl, dmSansUrl, zillaUrl, zilla7Url].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin="anonymous" />)}
     {jsonLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
