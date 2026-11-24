@@ -28,7 +28,8 @@
     "siblings": [
       "/tools/business-idea-generator/",
       "/tools/invention-idea-generator/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/techniques/random-word-technique/"
     ],
     "tools": [
       "/tools/creativity-test/"
@@ -99,7 +100,8 @@
       "/guides/creative-block/",
       "/guides/invention-ideas/",
       "/guides/creative-problem-solving/",
-      "/exercises/creative-thinking-exercises/"
+      "/exercises/creative-thinking-exercises/",
+      "/guides/creative-thinking-examples/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -168,7 +170,8 @@
       "/games/kill-the-idea/",
       "/games/inspiral/",
       "/games/scavengers/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/guides/whole-brain-thinking/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -377,7 +380,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/the-answer-is-in-the-question/",
-      "/chapters/brain-flash/"
+      "/chapters/brain-flash/",
+      "/guides/whole-brain-thinking/"
     ],
     "tools": [
       "/games/wheel-of-distraction/"
@@ -433,7 +437,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/shoe-swapper/",
-      "/chapters/kill-the-idea/"
+      "/chapters/kill-the-idea/",
+      "/techniques/random-word-technique/"
     ],
     "tools": [
       "/games/inspiral/",
@@ -496,7 +501,8 @@
     "siblings": [
       "/templates/brainstorming-template/",
       "/guides/creative-block/",
-      "/guides/creative-problem-solving/"
+      "/guides/creative-problem-solving/",
+      "/techniques/random-word-technique/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -523,7 +529,8 @@
       "/guides/how-to-be-more-creative/",
       "/guides/invention-ideas/",
       "/techniques/divergent-vs-convergent-thinking/",
-      "/exercises/creative-thinking-exercises/"
+      "/exercises/creative-thinking-exercises/",
+      "/guides/whole-brain-thinking/"
     ],
     "tools": [
       "/games/wheel-of-distraction/",
@@ -588,7 +595,8 @@
       "/exercises/brainstorming-games/",
       "/guides/creative-problem-solving/",
       "/guides/creative-block/",
-      "/templates/brainstorming-template/"
+      "/templates/brainstorming-template/",
+      "/techniques/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -644,5 +652,67 @@
       "/games/blast-off/"
     ],
     "technique": []
+  },
+  "/guides/whole-brain-thinking/": {
+    "siblings": [
+      "/guides/creative-block/",
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/creative-problem-solving/"
+    ],
+    "tools": [
+      "/games/wheel-of-distraction/",
+      "/games/brain-flash/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/techniques/random-word-technique/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/creative-block/",
+      "/guides/creative-thinking-examples/"
+    ],
+    "tools": [
+      "/tools/random-idea-generator/",
+      "/games/inspiral/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": []
+  },
+  "/guides/creative-thinking-examples/": {
+    "siblings": [
+      "/guides/creative-problem-solving/",
+      "/guides/how-to-be-more-creative/",
+      "/guides/problem-statement-examples/",
+      "/guides/storytelling-in-business/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/shoe-swapper/",
+      "/games/whats-your-problem/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/techniques/random-word-technique/"
+    ]
+  },
+  "/techniques/": {
+    "siblings": [
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/brainstorming-games/",
+      "/guides/creative-thinking-examples/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/all-together-now/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/techniques/random-word-technique/"
+    ]
   }
 }
