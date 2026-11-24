@@ -28,6 +28,7 @@ const isHome = page.pageType === 'home';
   description={page.description}
   path={page.path}
   ogImage={page.ogImage}
+  ogType={['guide', 'pillar-guide', 'hub-guide', 'technique'].includes(page.pageType) ? 'article' : 'website'}
   accent={accent}
   noindex={page.status !== 'published'}
   jsonLd={jsonLdForPage(page, Astro.site!, crumbs)}
@@ -40,7 +41,7 @@ const isHome = page.pageType === 'home';
         <p class:list={['m-0 font-slab leading-snug', page.pageType === 'tool' ? 'text-xl' : 'text-2xl']}>{page.intro ?? page.description}</p>
       )
     }
-    {/* The date is not shown to visitors (Mark's call, 2026-11-19); it stays in the page, hidden, so the markdown twin's front matter can read it. JSON-LD dateModified comes from the same field. */}
+    {/* The date is not shown to visitors (Mark's call, 2026-11-19); it stays in the page, hidden, so the markdown twin's front matter can read it. Because it is hidden, it is not repeated as JSON-LD dateModified; the sitemap lastmod uses the same field. */}
     <p hidden><time datetime={page.updated.toISOString().slice(0, 10)}>{updated}</time></p>
     <div class:list={[page.pageType === 'tool' ? 'mb-6' : 'mb-8']}></div>
 

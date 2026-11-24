@@ -18,11 +18,13 @@ interface Props {
   jsonLd?: object[];
   noindex?: boolean;
   ogImage?: string;
+  /** Open Graph type: 'article' for guides and techniques, 'website' for everything else. */
+  ogType?: 'website' | 'article';
   /** CSS colour for this page's accent, e.g. "var(--ch-9)". */
   accent?: string;
 }
 
-const { title, description, path, jsonLd = [], noindex = false, ogImage, accent } = Astro.props;
+const { title, description, path, jsonLd = [], noindex = false, ogImage, ogType = 'website', accent } = Astro.props;
 const site = Astro.site!;
 const canonical = canonicalUrl(path, site);
 // Vercel Web Analytics: only in builds made on Vercel, so local builds and Lighthouse runs never request the script.
@@ -50,7 +52,7 @@ const nav = [
     <link rel="canonical" href={canonical} />
     {!noindex && <link rel="alternate" type="text/markdown" href={new URL('index.md', canonical).href} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

@@ -3,7 +3,12 @@
     "collect": {
       "staticDistDir": "./dist",
       "url": [
-        "/styleguide/index.html"
+        "/styleguide/index.html",
+        "/index.html",
+        "/tools/random-idea-generator/index.html",
+        "/guides/how-to-be-more-creative/index.html",
+        "/lateral-thinking/puzzles/index.html",
+        "/chapters/shoe-swapper/index.html"
       ],
       "numberOfRuns": 3
     },

@@ -84,7 +84,9 @@ export function articleLd(page: PageData, site: URL | string): Ld {
     headline: page.title,
     description: page.description,
     mainEntityOfPage: new URL(page.path, site).href,
-    dateModified: page.updated.toISOString().slice(0, 10),
+    // No dateModified: the "Updated" date is hidden from visitors (Mark, 2026-11-19), and
+    // Google asks that structured dates match a date people can see. The sitemap's
+    // <lastmod> carries the freshness signal instead (astro.config.mjs).
     author,
     publisher: { '@type': 'Organization', name: SITE_NAME },
   };
