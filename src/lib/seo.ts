@@ -149,6 +149,7 @@ export function jsonLdForPage(page: PageData, site: URL | string, crumbs: Crumb[
     case 'pillar-guide':
     case 'hub-guide':
     case 'technique':
+    case 'exercises':
       out.push(articleLd(page, site));
       break;
     default:

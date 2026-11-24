@@ -98,7 +98,8 @@
       "/lateral-thinking/",
       "/guides/creative-block/",
       "/guides/invention-ideas/",
-      "/guides/creative-problem-solving/"
+      "/guides/creative-problem-solving/",
+      "/exercises/creative-thinking-exercises/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -122,7 +123,10 @@
     ]
   },
   "/games/": {
-    "siblings": [],
+    "siblings": [
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/brainstorming-games/"
+    ],
     "tools": [
       "/tools/random-idea-generator/",
       "/tools/attribute-listing/",
@@ -135,7 +139,8 @@
     "siblings": [
       "/games/inspiral/",
       "/games/wheel-of-distraction/",
-      "/games/scavengers/"
+      "/games/scavengers/",
+      "/exercises/team-workshop-activities/"
     ],
     "tools": [
       "/tools/business-idea-generator/"
@@ -149,7 +154,8 @@
     "siblings": [
       "/games/kill-the-idea/",
       "/games/wheel-of-distraction/",
-      "/games/scavengers/"
+      "/games/scavengers/",
+      "/exercises/creative-thinking-exercises/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -202,7 +208,8 @@
       "/games/far-out/",
       "/games/inspiral/",
       "/games/scavengers/",
-      "/templates/brainstorming-template/"
+      "/templates/brainstorming-template/",
+      "/exercises/creative-thinking-exercises/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -230,7 +237,8 @@
       "/games/whats-your-problem/",
       "/games/far-out/",
       "/games/wheel-of-distraction/",
-      "/guides/creative-problem-solving/"
+      "/guides/creative-problem-solving/",
+      "/exercises/brainstorming-games/"
     ],
     "tools": [
       "/tools/invention-idea-generator/"
@@ -266,7 +274,9 @@
     "siblings": [
       "/games/idea-spaghetti/",
       "/games/kill-the-idea/",
-      "/games/how-to-play/"
+      "/games/how-to-play/",
+      "/exercises/brainstorming-games/",
+      "/exercises/team-workshop-activities/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -279,7 +289,8 @@
       "/games/kill-the-idea/",
       "/games/how-to-play/",
       "/games/whats-your-problem/",
-      "/guides/storytelling-in-business/"
+      "/guides/storytelling-in-business/",
+      "/guides/innovation-culture/"
     ],
     "tools": [
       "/tools/business-idea-generator/"
@@ -388,7 +399,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/brain-flash/",
-      "/chapters/far-out/"
+      "/chapters/far-out/",
+      "/exercises/brainstorming-games/"
     ],
     "tools": [
       "/games/all-together-now/"
@@ -443,7 +455,8 @@
   "/chapters/blast-off/": {
     "hub": "/",
     "siblings": [
-      "/chapters/kill-the-idea/"
+      "/chapters/kill-the-idea/",
+      "/guides/innovation-culture/"
     ],
     "tools": [
       "/games/blast-off/"
@@ -454,7 +467,8 @@
     "hub": "/tools/",
     "siblings": [
       "/tools/random-idea-generator/",
-      "/tools/business-idea-generator/"
+      "/tools/business-idea-generator/",
+      "/guides/innovation-culture/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -466,7 +480,8 @@
   "/templates/brainstorming-template/": {
     "siblings": [
       "/templates/product-launch-plan-template/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/exercises/brainstorming-games/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -507,7 +522,8 @@
     "siblings": [
       "/guides/how-to-be-more-creative/",
       "/guides/invention-ideas/",
-      "/techniques/divergent-vs-convergent-thinking/"
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/exercises/creative-thinking-exercises/"
     ],
     "tools": [
       "/games/wheel-of-distraction/",
@@ -562,6 +578,69 @@
     ],
     "tools": [
       "/games/far-out/",
+      "/games/blast-off/"
+    ],
+    "technique": []
+  },
+  "/exercises/creative-thinking-exercises/": {
+    "hub": "/games/",
+    "siblings": [
+      "/exercises/brainstorming-games/",
+      "/guides/creative-problem-solving/",
+      "/guides/creative-block/",
+      "/templates/brainstorming-template/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/shoe-swapper/",
+      "/tools/attribute-listing/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/exercises/brainstorming-games/": {
+    "hub": "/games/",
+    "siblings": [
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/team-workshop-activities/",
+      "/templates/brainstorming-template/"
+    ],
+    "tools": [
+      "/games/all-together-now/",
+      "/games/idea-spaghetti/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/exercises/team-workshop-activities/": {
+    "hub": "/games/",
+    "siblings": [
+      "/exercises/brainstorming-games/",
+      "/exercises/creative-thinking-exercises/",
+      "/guides/innovation-culture/",
+      "/templates/brainstorming-template/"
+    ],
+    "tools": [
+      "/games/all-together-now/",
+      "/games/whats-your-problem/",
+      "/games/blast-off/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/guides/innovation-culture/": {
+    "siblings": [
+      "/exercises/team-workshop-activities/",
+      "/exercises/brainstorming-games/",
+      "/guides/how-to-be-more-creative/",
+      "/guides/creative-block/"
+    ],
+    "tools": [
+      "/notebook/",
       "/games/blast-off/"
     ],
     "technique": []

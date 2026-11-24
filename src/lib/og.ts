@@ -60,6 +60,7 @@ function labelFor(path: string): string | undefined {
   if (path.startsWith('/games/') || path === '/games/') return 'Game';
   if (path.startsWith('/chapters/')) return 'Chapter';
   if (path.startsWith('/guides/')) return 'Guide';
+  if (path.startsWith('/exercises/')) return 'Exercises';
   if (path.startsWith('/lateral-thinking/')) return 'Lateral thinking';
   return undefined;
 }

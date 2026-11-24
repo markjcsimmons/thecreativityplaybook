@@ -5,7 +5,7 @@ import { track } from '../lib/analytics';
  * everything except `.print-sheet`), opens the print dialog, and clears the mark afterwards. The
  * print dialog's "Save as PDF" gives a PDF.
  */
-export default function PrintSheetButton({ template }: { template: string }) {
+export default function PrintSheetButton({ template, label }: { template: string; label?: string }) {
   const print = () => {
     const root = document.documentElement;
     root.classList.add('print-sheet-only');
@@ -19,7 +19,7 @@ export default function PrintSheetButton({ template }: { template: string }) {
   };
   return (
     <button type="button" class="btn no-print" onClick={print}>
-      Print the plan, or save it as a PDF
+      {label ?? 'Print the plan, or save it as a PDF'}
     </button>
   );
 }

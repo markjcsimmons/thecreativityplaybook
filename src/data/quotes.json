@@ -157,5 +157,35 @@
       "storytelling"
     ],
     "fromBook": true
+  },
+  {
+    "text": "For companies it's really a challenge to put together the different types of people, because very often the like-minded people gravitate together. Engineers talk to engineers. Artists will talk to artists. How can we break that mould? How can we force people who think differently together?",
+    "author": "Tero Ojanperä",
+    "role": "then Executive Vice-President at Nokia",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 12, Blast Off! (interview with the authors)"
+    },
+    "theme": [
+      "teams",
+      "diversity",
+      "culture"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "Our Ideas Camp is a step in that direction. We invite really different types of people together with an agenda that gets formed on the spot.",
+    "author": "Tero Ojanperä",
+    "role": "then Executive Vice-President at Nokia",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 12, Blast Off! (interview with the authors)"
+    },
+    "theme": [
+      "teams",
+      "workshops",
+      "culture"
+    ],
+    "fromBook": true
   }
 ]

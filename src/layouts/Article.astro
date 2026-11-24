@@ -28,7 +28,7 @@ const isHome = page.pageType === 'home';
   description={page.description}
   path={page.path}
   ogImage={page.ogImage}
-  ogType={['guide', 'pillar-guide', 'hub-guide', 'technique'].includes(page.pageType) ? 'article' : 'website'}
+  ogType={['guide', 'pillar-guide', 'hub-guide', 'technique', 'exercises'].includes(page.pageType) ? 'article' : 'website'}
   accent={accent}
   noindex={page.status !== 'published'}
   jsonLd={jsonLdForPage(page, Astro.site!, crumbs)}

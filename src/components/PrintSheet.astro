@@ -1,0 +1,19 @@
+---
+/**
+ * Wraps part of a page (a table, an agenda) so the page's print button can print just that part.
+ * It marks the content `.print-sheet`; see PrintSheetButton and the print rules in global.css.
+ */
+interface Props {
+  /** Accessible name for the printable section. */
+  label: string;
+  /** Heading shown on the printed copy only, so a printout says what it is. */
+  printTitle: string;
+}
+const { label, printTitle } = Astro.props;
+---
+
+<section class="print-sheet my-6 border-4 border-ink p-5" aria-label={label}>
+  <p class="m-0 hidden font-display text-2xl uppercase print:block">{printTitle}</p>
+  <slot />
+  <p class="mb-0 mt-3 hidden text-sm print:block">From The Creativity Playbook</p>
+</section>
