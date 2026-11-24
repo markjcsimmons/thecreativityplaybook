@@ -97,5 +97,35 @@
       "unlearning"
     ],
     "fromBook": true
+  },
+  {
+    "text": "All I ask is that if I'm stuck don't help me. If things are going along really well then chip in, say what you want, but if I'm stuck don't say anything, because being stuck comes just before having a really brilliant idea.",
+    "author": "Matthew Warchus",
+    "role": "director",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 5, Left Brain, Meet Mr Right (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "creative block",
+      "stuck"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "I think it's the magic moment creatively when you get a room full of people who are all stuck. I like that, it's a good sign.",
+    "author": "Matthew Warchus",
+    "role": "director",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 5, Left Brain, Meet Mr Right (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "creative block",
+      "stuck"
+    ],
+    "fromBook": true
   }
 ]

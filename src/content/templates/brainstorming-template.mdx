@@ -1,0 +1,91 @@
+---
+path: /templates/brainstorming-template/
+title: "Brainstorming Template: A Free Printable Worksheet"
+description: "A free printable brainstorming template from the book's Idea Spaghetti chapter: set the question, make a ton of ideas, pick three and name the next step."
+h1: Brainstorming Template
+intro: "A one-page brainstorming worksheet you can print or copy: the question, the ground rules, room for 24 ideas, a shortlist of three and a next step. It follows the book's rules for a perfect brainstorm."
+primaryKeyword: brainstorming template
+secondaryKeywords:
+  - brainstorming worksheet
+  - ideation template
+pageType: template
+phase: 1
+bookChapter: Ch2 Idea Spaghetti
+bookSources:
+  - chapter: Ch2 Idea Spaghetti
+    note: "The perfect brainstorm: lets all ideas out without judgment or criticism; the rule 'No idea is a bad idea'; clear parameters, a mix of people from different backgrounds, a bit of healthy competition and high expectations for performance; an informal setting; group rewarded as a whole so people build on one another's ideas. Also the finding, cited in the book to Leigh Thompson (Academy of Management Executive, 2003), that groups are better at convergent thinking and individuals at divergent thinking."
+  - chapter: Ch6 Brain Flash
+    note: "The collaging exercise: split a problem into as many parts as there are people in the brainstorm, 'somewhere between four and eight is usually a good number', and have each person sketch their part. Used here for the group size and the optional variation."
+  - chapter: Ch11 Kill the Idea
+    note: "After the ideas, the analytical side takes over: choosing which ideas get time and money. The sheet's Choose step reflects this."
+serpNotes: "Checked 2026-11-23 (standard web search). The top results are digital whiteboard and project-tool templates (Atlassian, Asana, Miro, Figma, Lucid, ClickUp) and listicles of templates. Our edge is a printable one-page sheet built from the book's rules. The 50-idea suggestion and the time split are ours, not the book's. Not checked in Semrush beyond the keyword map."
+status: published
+reviewedBy: Mark
+author: team
+updated: 2026-11-23
+---
+
+import BrainstormSheet from '../../components/BrainstormSheet.astro';
+import PrintSheetButton from '../../islands/PrintSheetButton.tsx';
+import IfLive from '../../components/IfLive.astro';
+
+## The template
+
+Here is the brainstorming worksheet on one page. You can fill it in on paper, print it with the button below, or copy the headings into a shared document or a whiteboard.
+
+<BrainstormSheet />
+
+<p class="not-prose no-print mt-4"><PrintSheetButton client:idle template="brainstorming-template" /></p>
+
+The button prints only the sheet. In the print dialog you can choose "Save as PDF" if you want a file.
+
+## What's inside
+
+The worksheet has four parts. The first three follow the book's advice on running a perfect brainstorm, and the last is ours.
+
+1. **Set it up.** The book says a good brainstorm has clear parameters: a question, a time limit, a target and the right people. It asks for a mix of people from different backgrounds, because people with similar ideas, interests and beliefs tend to produce similar ideas. It also suggests giving the group a high benchmark, such as the number of ideas another group came up with, to bring out some healthy competition. Finally, it points out that the setting matters, and that a space without too much formality or rigidity helps.
+2. **Make a ton of ideas.** The ground rules on the sheet come from the book: no idea is a bad idea, no heckling, and build on one another's ideas. The point of the rules is to let every idea out and give it a chance to breathe without the judgment and criticism that might otherwise kill it. The sheet has room for 24 ideas. The book calls a big pile of ideas "idea spaghetti", and says the more ideas you make, the more likely it is that one or two will be very good.
+3. **Choose.** The book treats making ideas and judging them as separate jobs. The Kill the Idea chapter says that once you have a lot of ideas, half the job is choosing which deserve your time, money and energy. The sheet asks for your best three and a reason for each.
+4. **What happens next.** This one is ours, not the book's. A brainstorm that ends with a list and no owner usually ends there.
+
+## How to run a 30-minute session
+
+The book gives the rules and the setup, not a minute-by-minute plan. This schedule is our suggestion, built on the book's rules. Change the times to fit your group.
+
+1. **Write the question (5 minutes).** Make it open-ended, so it has many possible answers. The book says asking open-ended questions is a good way to stimulate broad thinking. "How can we get more people to our event?" works better than "Should we advertise on radio?"
+2. **Make ideas alone first (5 minutes).** The book cites evidence that individuals are better at divergent thinking, and that a group tends to produce more clichéd ideas than the same people working alone. So let everyone fill in their own sheet before anyone talks. This step is our inference from that finding, not a rule from the book.
+3. **Share and build (10 minutes).** Go round the room. Read out ideas, post them where everyone can see them, and add to each other's. The book says to take the ego out of the process: if the group is rewarded as a whole for the best idea, people build on each other's ideas instead of trying to make sure theirs wins.
+4. **Choose three (7 minutes).** Now switch from making to judging. The book says groups are better at convergent thinking, which suits this step. Argue for your favorites, and write down the three you pick and why.
+5. **Name the next step (3 minutes).** Put a name and a date next to each action before you leave the room.
+
+If you work alone, skip the sharing step and read your list out loud to someone later.
+
+## A variation from the book: the collage
+
+The Brain Flash chapter has a technique for when the problem is big. Split it into as many pieces as there are people in the group. The book suggests somewhere between four and eight people, and adds that it depends on how many comfortable chairs you have. Each person sketches a solution to their piece. Then everyone shows their sketch, the others add ideas to improve it, with no heckling, and the sketches are put together as a collage that may spark new ideas.
+
+If you try it with this sheet, write each person's piece of the problem in the question box on their own copy.
+
+## Play it first
+
+The [Idea Spaghetti game](/games/idea-spaghetti/) is the same exercise on screen: a topic, a target number of ideas and five minutes. It is a quick way to feel what a high target does to your thinking. The [Random Idea Generator](/tools/random-idea-generator/) can feed a stuck brainstorm with prompts, and the [Kill the Idea game](/games/kill-the-idea/) is a fast way to cut a long list down to a few.
+
+<IfLive path="/techniques/divergent-vs-convergent-thinking/">
+
+If you want to know why the sheet separates making ideas from judging them, read [divergent vs convergent thinking](/techniques/divergent-vs-convergent-thinking/).
+
+</IfLive>
+
+## Where this comes from
+
+This template is based on the book's chapter on idea spaghetti and its advice on the perfect brainstorm, with the group-size suggestion from the Brain Flash chapter. The rules, the mix of people, the high benchmark and the informal setting are the book's. The sheet layout, the 24 lines, the shortlist of three, the next-step section and the 30-minute schedule are ours. The book gives no target number of ideas, so we leave the box blank for you to fill in.
+
+## Questions
+
+**Is this a brainstorming worksheet or a template?** Both. It is a worksheet you fill in, and a template you can copy into any tool you like.
+
+**How many ideas should we aim for?** The book does not give a number. It says to set a high benchmark, because telling people how many ideas another group came up with brings out the competitive spirit. The [Idea Spaghetti game](/games/idea-spaghetti/) gives you a target for each topic if you want to practice with one.
+
+**Does it work for remote teams?** Yes. Copy the four headings into a shared document or a whiteboard. The ground rules and the separate making and choosing steps do the work, not the paper.
+
+**Is my sheet saved anywhere?** The page does not collect anything you write on paper. The print button just opens your browser's print dialog.

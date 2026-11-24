@@ -1,0 +1,64 @@
+---
+/** A one-page brainstorm worksheet. Plain markup, so it prints and works without JavaScript. */
+const lines = (n: number) => Array.from({ length: n }, (_, i) => i);
+---
+
+<section class="print-sheet not-prose border-4 border-ink p-5" aria-label="Brainstorming template">
+  <header class="mb-4 flex flex-wrap items-baseline justify-between gap-2 border-b-4 border-ink pb-2">
+    <h2 class="m-0 font-display text-3xl uppercase leading-none">Brainstorm sheet</h2>
+    <p class="m-0 text-sm">Date: ______________ &nbsp; Time box: ______ minutes</p>
+  </header>
+
+  <div class="mb-5">
+    <p class="m-0 font-bold">The question (open-ended, so it has many possible answers)</p>
+    {lines(2).map(() => <div class="h-9 border-b-2 border-ink" />)}
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">1. Set it up</h3>
+    <div class="grid gap-3 sm:grid-cols-2">
+      <div>
+        <p class="m-0 font-bold">Target number of ideas</p>
+        <div class="h-9 border-b-2 border-ink" />
+        <p class="mb-0 mt-3 font-bold">People in the room (four to eight)</p>
+        <div class="h-9 border-b-2 border-ink" />
+      </div>
+      <div>
+        <p class="m-0 font-bold">Who is in the mix? (different backgrounds)</p>
+        <div class="h-9 border-b-2 border-ink" />
+        <p class="mb-0 mt-3 font-bold">Where we will meet (somewhere informal)</p>
+        <div class="h-9 border-b-2 border-ink" />
+      </div>
+    </div>
+    <p class="mb-0 mt-3 border-2 border-ink p-2 text-sm font-bold">
+      Ground rules: no idea is a bad idea. No heckling. Build on each other's ideas. Quantity first, judging later.
+    </p>
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">2. Make a ton of ideas</h3>
+    <p class="mb-0 mt-1 text-sm">One idea per line. Do not stop to judge.</p>
+    <div class="grid gap-x-6 sm:grid-cols-2">
+      <div>{lines(12).map((i) => <div class="h-8 border-b-2 border-ink text-sm">{i + 1}.</div>)}</div>
+      <div>{lines(12).map((i) => <div class="h-8 border-b-2 border-ink text-sm">{i + 13}.</div>)}</div>
+    </div>
+    <p class="mb-0 mt-1 text-sm">Keep going on the back of the sheet if you run out of lines.</p>
+  </div>
+
+  <div class="mb-5">
+    <h3 class="m-0 font-display text-2xl uppercase">3. Choose</h3>
+    <p class="mb-0 mt-1 text-sm">Now judge. Pick your best three and say why.</p>
+    {lines(3).map((i) => (
+      <div class="grid gap-x-4 sm:grid-cols-2">
+        <div class="h-9 border-b-2 border-ink">{i + 1}. Idea:</div>
+        <div class="h-9 border-b-2 border-ink">Why:</div>
+      </div>
+    ))}
+  </div>
+
+  <div>
+    <h3 class="m-0 font-display text-2xl uppercase">4. What happens next</h3>
+    <p class="mb-0 mt-1 text-sm">Who does what, and by when.</p>
+    {lines(3).map((i) => <div class="h-9 border-b-2 border-ink">{i + 1}.</div>)}
+  </div>
+</section>

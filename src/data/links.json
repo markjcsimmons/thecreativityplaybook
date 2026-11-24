@@ -27,12 +27,15 @@
     "hub": "/tools/",
     "siblings": [
       "/tools/business-idea-generator/",
-      "/tools/invention-idea-generator/"
+      "/tools/invention-idea-generator/",
+      "/guides/creative-block/"
     ],
     "tools": [
       "/tools/creativity-test/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
   },
   "/tools/business-idea-generator/": {
     "hub": "/tools/",
@@ -55,7 +58,9 @@
     "tools": [
       "/tools/creativity-test/"
     ],
-    "technique": []
+    "technique": [
+      "/guides/invention-ideas/"
+    ]
   },
   "/tools/creativity-test/": {
     "hub": "/tools/",
@@ -90,7 +95,9 @@
   },
   "/guides/how-to-be-more-creative/": {
     "siblings": [
-      "/lateral-thinking/"
+      "/lateral-thinking/",
+      "/guides/creative-block/",
+      "/guides/invention-ideas/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -109,7 +116,9 @@
       "/tools/random-idea-generator/",
       "/tools/creativity-test/"
     ],
-    "technique": []
+    "technique": [
+      "/guides/invention-ideas/"
+    ]
   },
   "/games/": {
     "siblings": [],
@@ -130,7 +139,9 @@
     "tools": [
       "/tools/business-idea-generator/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
   },
   "/games/inspiral/": {
     "hub": "/games/",
@@ -149,7 +160,8 @@
     "siblings": [
       "/games/kill-the-idea/",
       "/games/inspiral/",
-      "/games/scavengers/"
+      "/games/scavengers/",
+      "/guides/creative-block/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -161,7 +173,8 @@
     "siblings": [
       "/games/kill-the-idea/",
       "/games/inspiral/",
-      "/games/wheel-of-distraction/"
+      "/games/wheel-of-distraction/",
+      "/guides/invention-ideas/"
     ],
     "tools": [
       "/tools/attribute-listing/"
@@ -185,12 +198,15 @@
     "siblings": [
       "/games/far-out/",
       "/games/inspiral/",
-      "/games/scavengers/"
+      "/games/scavengers/",
+      "/templates/brainstorming-template/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
   },
   "/games/far-out/": {
     "hub": "/games/",
@@ -276,7 +292,8 @@
   },
   "/templates/product-launch-plan-template/": {
     "siblings": [
-      "/guides/elevator-pitch-examples/"
+      "/guides/elevator-pitch-examples/",
+      "/templates/brainstorming-template/"
     ],
     "tools": [
       "/games/blast-off/",
@@ -436,6 +453,58 @@
       "/games/idea-spaghetti/",
       "/games/kill-the-idea/",
       "/games/blast-off/"
+    ],
+    "technique": []
+  },
+  "/templates/brainstorming-template/": {
+    "siblings": [
+      "/templates/product-launch-plan-template/",
+      "/guides/creative-block/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/tools/random-idea-generator/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/techniques/divergent-vs-convergent-thinking/": {
+    "siblings": [
+      "/templates/brainstorming-template/",
+      "/guides/creative-block/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/kill-the-idea/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": [],
+    "hub": "/techniques/"
+  },
+  "/guides/invention-ideas/": {
+    "siblings": [
+      "/guides/how-to-be-more-creative/",
+      "/guides/creative-block/"
+    ],
+    "tools": [
+      "/tools/invention-idea-generator/",
+      "/tools/attribute-listing/",
+      "/games/scavengers/"
+    ],
+    "technique": []
+  },
+  "/guides/creative-block/": {
+    "siblings": [
+      "/guides/how-to-be-more-creative/",
+      "/guides/invention-ideas/",
+      "/techniques/divergent-vs-convergent-thinking/"
+    ],
+    "tools": [
+      "/games/wheel-of-distraction/",
+      "/games/idea-spaghetti/",
+      "/tools/random-idea-generator/"
     ],
     "technique": []
   }
