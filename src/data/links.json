@@ -97,7 +97,8 @@
     "siblings": [
       "/lateral-thinking/",
       "/guides/creative-block/",
-      "/guides/invention-ideas/"
+      "/guides/invention-ideas/",
+      "/guides/creative-problem-solving/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -186,7 +187,9 @@
     "siblings": [
       "/games/kill-the-idea/",
       "/games/wheel-of-distraction/",
-      "/games/shoe-swapper/"
+      "/games/shoe-swapper/",
+      "/guides/problem-statement-examples/",
+      "/guides/asking-better-questions/"
     ],
     "tools": [
       "/tools/business-idea-generator/"
@@ -213,7 +216,8 @@
     "siblings": [
       "/games/idea-spaghetti/",
       "/games/inspiral/",
-      "/games/shoe-swapper/"
+      "/games/shoe-swapper/",
+      "/guides/storytelling-in-business/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -225,7 +229,8 @@
     "siblings": [
       "/games/whats-your-problem/",
       "/games/far-out/",
-      "/games/wheel-of-distraction/"
+      "/games/wheel-of-distraction/",
+      "/guides/creative-problem-solving/"
     ],
     "tools": [
       "/tools/invention-idea-generator/"
@@ -273,7 +278,8 @@
     "siblings": [
       "/games/kill-the-idea/",
       "/games/how-to-play/",
-      "/games/whats-your-problem/"
+      "/games/whats-your-problem/",
+      "/guides/storytelling-in-business/"
     ],
     "tools": [
       "/tools/business-idea-generator/"
@@ -282,7 +288,8 @@
   },
   "/guides/elevator-pitch-examples/": {
     "siblings": [
-      "/guides/how-to-be-more-creative/"
+      "/guides/how-to-be-more-creative/",
+      "/guides/storytelling-in-business/"
     ],
     "tools": [
       "/games/how-to-play/",
@@ -473,7 +480,8 @@
   "/techniques/divergent-vs-convergent-thinking/": {
     "siblings": [
       "/templates/brainstorming-template/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/guides/creative-problem-solving/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -505,6 +513,56 @@
       "/games/wheel-of-distraction/",
       "/games/idea-spaghetti/",
       "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/guides/problem-statement-examples/": {
+    "siblings": [
+      "/guides/creative-problem-solving/",
+      "/guides/asking-better-questions/",
+      "/guides/how-to-be-more-creative/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/",
+      "/games/shoe-swapper/"
+    ],
+    "technique": []
+  },
+  "/guides/creative-problem-solving/": {
+    "siblings": [
+      "/guides/problem-statement-examples/",
+      "/guides/asking-better-questions/",
+      "/guides/creative-block/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/",
+      "/games/shoe-swapper/",
+      "/games/kill-the-idea/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/guides/asking-better-questions/": {
+    "siblings": [
+      "/guides/problem-statement-examples/",
+      "/guides/creative-problem-solving/",
+      "/techniques/divergent-vs-convergent-thinking/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/",
+      "/games/idea-spaghetti/"
+    ],
+    "technique": []
+  },
+  "/guides/storytelling-in-business/": {
+    "siblings": [
+      "/guides/elevator-pitch-examples/",
+      "/guides/how-to-be-more-creative/"
+    ],
+    "tools": [
+      "/games/far-out/",
+      "/games/blast-off/"
     ],
     "technique": []
   }

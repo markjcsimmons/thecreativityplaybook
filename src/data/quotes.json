@@ -127,5 +127,35 @@
       "stuck"
     ],
     "fromBook": true
+  },
+  {
+    "text": "The emotional effect of the story is achieved by patterns, and so only by creating a chart can you start to look at what the patterns are in the story, or what patterns you want to emphasise, or what patterns you want to add to the story.",
+    "author": "Matthew Warchus",
+    "role": "director",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 4, The Answer Is in the Question (interview with the authors)"
+    },
+    "theme": [
+      "storytelling",
+      "patterns",
+      "problem solving"
+    ],
+    "fromBook": true
+  },
+  {
+    "text": "If you don't take the first step, you'll never go anywhere.",
+    "author": "Kyle MacDonald",
+    "role": "creator of the One Red Paperclip project",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 8, Far Out (interview with the authors)"
+    },
+    "theme": [
+      "big thinking",
+      "action",
+      "storytelling"
+    ],
+    "fromBook": true
   }
 ]
