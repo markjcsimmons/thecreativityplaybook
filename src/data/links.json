@@ -19,7 +19,9 @@
       "/tools/attribute-listing/",
       "/tools/invention-idea-generator/",
       "/tools/creativity-test/",
-      "/notebook/"
+      "/notebook/",
+      "/tools/idea-scorer/",
+      "/tools/perspective-cards/"
     ],
     "technique": []
   },
@@ -146,7 +148,8 @@
       "/exercises/team-workshop-activities/"
     ],
     "tools": [
-      "/tools/business-idea-generator/"
+      "/tools/business-idea-generator/",
+      "/tools/idea-scorer/"
     ],
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/"
@@ -248,7 +251,8 @@
       "/guides/perspective-taking/"
     ],
     "tools": [
-      "/tools/invention-idea-generator/"
+      "/tools/invention-idea-generator/",
+      "/tools/perspective-cards/"
     ],
     "technique": []
   },
@@ -269,7 +273,8 @@
     "siblings": [
       "/games/inspiral/",
       "/games/wheel-of-distraction/",
-      "/games/shoe-swapper/"
+      "/games/shoe-swapper/",
+      "/techniques/analogical-thinking/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -399,7 +404,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/left-brain-meet-mr-right/",
-      "/chapters/the-idea-commune/"
+      "/chapters/the-idea-commune/",
+      "/techniques/analogical-thinking/"
     ],
     "tools": [
       "/games/brain-flash/"
@@ -438,7 +444,8 @@
       "/guides/perspective-taking/"
     ],
     "tools": [
-      "/games/shoe-swapper/"
+      "/games/shoe-swapper/",
+      "/tools/perspective-cards/"
     ],
     "technique": []
   },
@@ -462,7 +469,8 @@
       "/chapters/blast-off/"
     ],
     "tools": [
-      "/games/kill-the-idea/"
+      "/games/kill-the-idea/",
+      "/tools/idea-scorer/"
     ],
     "technique": []
   },
@@ -516,7 +524,8 @@
     "tools": [
       "/games/idea-spaghetti/",
       "/games/kill-the-idea/",
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/tools/idea-scorer/"
     ],
     "technique": [],
     "hub": "/techniques/"
@@ -663,7 +672,8 @@
     ],
     "tools": [
       "/notebook/",
-      "/games/blast-off/"
+      "/games/blast-off/",
+      "/tools/idea-scorer/"
     ],
     "technique": []
   },
@@ -688,7 +698,8 @@
       "/techniques/divergent-vs-convergent-thinking/",
       "/guides/creative-block/",
       "/guides/creative-thinking-examples/",
-      "/guides/where-do-ideas-come-from/"
+      "/guides/where-do-ideas-come-from/",
+      "/techniques/analogical-thinking/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -712,7 +723,8 @@
     ],
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/",
-      "/techniques/random-word-technique/"
+      "/techniques/random-word-technique/",
+      "/techniques/analogical-thinking/"
     ]
   },
   "/techniques/": {
@@ -740,7 +752,8 @@
     ],
     "tools": [
       "/games/shoe-swapper/",
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/tools/perspective-cards/"
     ],
     "technique": []
   },
@@ -790,5 +803,46 @@
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/"
     ]
+  },
+  "/techniques/analogical-thinking/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/techniques/random-word-technique/",
+      "/guides/creative-thinking-examples/",
+      "/guides/creative-problem-solving/",
+      "/guides/where-do-ideas-come-from/"
+    ],
+    "tools": [
+      "/games/brain-flash/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/tools/idea-scorer/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/creativity-in-business/",
+      "/guides/invention-ideas/"
+    ],
+    "tools": [
+      "/games/kill-the-idea/",
+      "/games/blast-off/",
+      "/notebook/"
+    ],
+    "technique": []
+  },
+  "/tools/perspective-cards/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/guides/perspective-taking/",
+      "/exercises/brainstorming-games/",
+      "/guides/asking-better-questions/"
+    ],
+    "tools": [
+      "/games/shoe-swapper/",
+      "/notebook/"
+    ],
+    "technique": []
   }
 }

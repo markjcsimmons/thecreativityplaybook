@@ -63,6 +63,8 @@ export const SOURCE_LABELS: Record<string, string> = {
   'all-together-now': 'Brainwriting game',
   'wheel-of-distraction': 'Wheel of Distraction',
   'far-out': 'Paperclip game',
+  'idea-scorer': 'Idea Scorer',
+  'perspective-cards': 'Perspective Cards',
 };
 export const sourceLabel = (source: string) => SOURCE_LABELS[source] ?? source;
 
