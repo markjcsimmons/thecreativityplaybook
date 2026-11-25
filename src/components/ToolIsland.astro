@@ -20,6 +20,7 @@ import PerspectiveCards from '../islands/PerspectiveCards/index.tsx';
 import ReverseBrainstorm from '../islands/ReverseBrainstorm/index.tsx';
 import ChapterDice from '../islands/ChapterDice/index.tsx';
 import EmpathyMap from '../islands/EmpathyMap/index.tsx';
+import MindMap from '../islands/MindMap/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
 import Notebook from '../islands/Notebook/index.tsx';
 import PipelineStrip from '../islands/shared/PipelineStrip.tsx';
@@ -77,5 +78,6 @@ const step = (
 {name === 'ReverseBrainstorm' && <ReverseBrainstorm client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'ChapterDice' && <ChapterDice client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'EmpathyMap' && <EmpathyMap client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'MindMap' && <MindMap client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' &&<CreativityTest client:idle livePaths={livePaths} />}
 {name === 'Notebook' && <Notebook client:idle livePaths={livePaths} />}

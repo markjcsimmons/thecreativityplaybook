@@ -342,6 +342,10 @@ Each page type has one layout. Every page also gets:
 - A template page with an interactive map (`ToolShell` plus `ToolIsland name="EmpathyMap"`). The player writes a problem or idea, chooses whose map it is (a type or a role, never a named person; the Perspective Cards' people-with-a-stake and fresh-eyes roles can be picked or dealt), fills Says, Thinks, Does and Feels, then Pains and Gains, then writes the ideas the map gives. Ideas can be saved to the notebook (source `empathy-map`), copied, exported or printed.
 - Book DNA: the Chapter 12 stakeholder questions supply the Pains and Gains prompts (what is in it for them, what would they see as a negative, does it clash, does it make their life harder), with Chapter 9's Shoe Swapper and Chapter 4's Different Strokes. The empathy map itself is not from the book and the page says so; its origin is hedged to one account (Dave Gray of XPLANE, 2010 book *Gamestorming*) that we did not confirm.
 
+### 8.12 Mind Map: `/templates/mind-map-template` (Phase 3, built in batch 10)
+- A template page with a maker (`ToolShell` plus `ToolIsland name="MindMap"`) and a printable blank sheet (`MindMapBlank.astro` inside `PrintSheet`, printed with `PrintSheetButton`). The player types a center and an outline (one branch per line, two spaces of indent per level, three levels); the tool draws a left and right tree with branch colors and offers an SVG download, print, copy and export as text, and "Save the ideas to notebook" (source `mind-map`, the leaf lines with their path). Starters: the six question words (Chapter 4's game) and a worked example. Logic in `src/lib/mind-map.ts` (parse, layout, SVG string, no overlaps by construction, checked by script); `MindMapExample.astro` draws the example on the server, with the same map as a nested list for the markdown twin.
+- Book DNA: the book shows mind maps in Chapter 6 (a series from a session hosted by John Kao and the mind-map artist Lesley Evans) and Chapter 2 (the FAB25 vision) but gives no method, so the pages say that. The book's images are not reproduced. The example's seven branches are the seven "problemettes" from Chapter 6's collage exercise.
+
 ---
 
 ## 9. Content production
@@ -587,7 +591,7 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 10. If digital-only: wide distribution or Amazon-only at launch (§11.1).
 11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
 12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
-13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (candidates left: mind mapping, first principles). Each would need a Book DNA hook under §2.3.
+13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (mind mapping and first principles were added in batch 10; candidates left: design sprint, brand storytelling, biomimicry). Each would need a Book DNA hook under §2.3.
 14. Whether to add more outside quotes to the two quotes pages. They hold 41 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first.
 
 ---

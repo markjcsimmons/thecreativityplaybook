@@ -1,0 +1,51 @@
+---
+import { EXAMPLE, parseOutline, renderSvg } from '../lib/mind-map';
+
+/**
+ * The worked example map, drawn on the server from the same code the Mind Map tool uses, with the
+ * same map as a nested list beside it. The picture is for people who read it at a glance, and the
+ * list is the text version (screen readers, and the page's markdown twin, which drops pictures).
+ */
+const parsed = parseOutline(EXAMPLE.outline);
+const svg = renderSvg(EXAMPLE.center, parsed.nodes, {
+  fluid: true,
+  label: `A mind map of ${EXAMPLE.center} with the seven parts of the problem as branches and our ideas under them. The same map is written out as a list below.`,
+});
+---
+
+<figure class="not-prose my-6 grid gap-3">
+  <div class="overflow-x-auto border-4 border-ink">
+    <div set:html={svg} />
+  </div>
+  <figcaption class="text-sm">
+    The book's traffic problem as a mind map. The seven branches are the seven parts of the problem from the book's Chapter 6; the ideas under them are ours. If the map is wider than the page, scroll it sideways.
+  </figcaption>
+  <div>
+    <p class="m-0 font-bold">The same map as a list</p>
+    <ul class="m-0 grid list-disc gap-1 pl-6 pt-2">
+      {
+        parsed.nodes.map((b) => (
+          <li>
+            {b.text}
+            {b.children.length > 0 && (
+              <ul class="m-0 list-disc pl-6">
+                {b.children.map((c) => (
+                  <li>
+                    {c.text}
+                    {c.children.length > 0 && (
+                      <ul class="m-0 list-disc pl-6">
+                        {c.children.map((d) => (
+                          <li>{d.text}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</figure>

@@ -1,0 +1,35 @@
+---
+import PrintSheet from './PrintSheet.astro';
+
+/**
+ * A blank mind map sheet to print and fill in by hand: a center and eight branches, each ending in
+ * a line to write on. The picture is plain SVG, so it prints sharp at any size.
+ */
+const branches = [
+  { d: 'M400,175 C400,130 400,90 400,50', line: [330, 50, 470, 50] },
+  { d: 'M502,200 C560,150 600,110 650,96', line: [650, 96, 770, 96] },
+  { d: 'M545,260 C600,260 650,260 690,260', line: [690, 260, 790, 260] },
+  { d: 'M502,320 C560,370 600,410 650,424', line: [650, 424, 770, 424] },
+  { d: 'M400,345 C400,390 400,430 400,470', line: [330, 470, 470, 470] },
+  { d: 'M298,320 C240,370 200,410 150,424', line: [30, 424, 150, 424] },
+  { d: 'M255,260 C200,260 150,260 110,260', line: [10, 260, 110, 260] },
+  { d: 'M298,200 C240,150 200,110 150,96', line: [30, 96, 150, 96] },
+];
+---
+
+<PrintSheet label="A blank mind map sheet" printTitle="Mind map: blank sheet">
+  <svg viewBox="0 0 800 520" class="block h-auto w-full" role="img" aria-label="A blank mind map: an oval in the middle with eight branches, each ending in a line to write on.">
+    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <ellipse cx="400" cy="260" rx="145" ry="85" stroke-width="4"></ellipse>
+      {
+        branches.map((b) => (
+          <>
+            <path d={b.d} />
+            <line x1={b.line[0]} y1={b.line[1]} x2={b.line[2]} y2={b.line[3]} stroke-width="2" />
+          </>
+        ))
+      }
+    </g>
+    <text x="400" y="266" text-anchor="middle" font-size="18" fill="currentColor" font-family="Arial, Helvetica, sans-serif">Your topic here</text>
+  </svg>
+</PrintSheet>

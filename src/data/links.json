@@ -279,7 +279,8 @@
       "/techniques/analogical-thinking/"
     ],
     "tools": [
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/templates/mind-map-template/"
     ],
     "technique": []
   },
@@ -304,7 +305,8 @@
       "/games/how-to-play/",
       "/games/whats-your-problem/",
       "/guides/storytelling-in-business/",
-      "/guides/innovation-culture/"
+      "/guides/innovation-culture/",
+      "/guides/intrapreneurship/"
     ],
     "tools": [
       "/tools/business-idea-generator/"
@@ -383,7 +385,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/scavengers/",
-      "/chapters/left-brain-meet-mr-right/"
+      "/chapters/left-brain-meet-mr-right/",
+      "/guides/first-principles-thinking/"
     ],
     "tools": [
       "/games/whats-your-problem/"
@@ -407,7 +410,8 @@
     "siblings": [
       "/chapters/left-brain-meet-mr-right/",
       "/chapters/the-idea-commune/",
-      "/techniques/analogical-thinking/"
+      "/techniques/analogical-thinking/",
+      "/guides/mind-mapping/"
     ],
     "tools": [
       "/games/brain-flash/"
@@ -480,7 +484,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/kill-the-idea/",
-      "/guides/innovation-culture/"
+      "/guides/innovation-culture/",
+      "/guides/intrapreneurship/"
     ],
     "tools": [
       "/games/blast-off/"
@@ -505,7 +510,8 @@
     "siblings": [
       "/templates/product-launch-plan-template/",
       "/guides/creative-block/",
-      "/exercises/brainstorming-games/"
+      "/exercises/brainstorming-games/",
+      "/templates/mind-map-template/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -586,7 +592,8 @@
       "/games/kill-the-idea/"
     ],
     "technique": [
-      "/techniques/divergent-vs-convergent-thinking/"
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/first-principles-thinking/"
     ]
   },
   "/guides/asking-better-questions/": {
@@ -594,7 +601,8 @@
       "/guides/problem-statement-examples/",
       "/guides/creative-problem-solving/",
       "/techniques/divergent-vs-convergent-thinking/",
-      "/guides/perspective-taking/"
+      "/guides/perspective-taking/",
+      "/guides/first-principles-thinking/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -674,7 +682,8 @@
       "/exercises/brainstorming-games/",
       "/guides/how-to-be-more-creative/",
       "/guides/creative-block/",
-      "/guides/creativity-in-business/"
+      "/guides/creativity-in-business/",
+      "/guides/intrapreneurship/"
     ],
     "tools": [
       "/notebook/",
@@ -705,7 +714,8 @@
       "/guides/creative-block/",
       "/guides/creative-thinking-examples/",
       "/guides/where-do-ideas-come-from/",
-      "/techniques/analogical-thinking/"
+      "/techniques/analogical-thinking/",
+      "/guides/mind-mapping/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -804,7 +814,8 @@
       "/guides/innovation-culture/",
       "/guides/how-to-be-more-creative/",
       "/exercises/team-workshop-activities/",
-      "/guides/where-do-ideas-come-from/"
+      "/guides/where-do-ideas-come-from/",
+      "/guides/intrapreneurship/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -922,7 +933,9 @@
     "tools": [
       "/games/whats-your-problem/"
     ],
-    "technique": []
+    "technique": [
+      "/guides/first-principles-thinking/"
+    ]
   },
   "/techniques/six-thinking-hats/": {
     "hub": "/techniques/",
@@ -982,6 +995,60 @@
       "/games/shoe-swapper/",
       "/games/blast-off/",
       "/notebook/"
+    ],
+    "technique": []
+  },
+  "/templates/mind-map-template/": {
+    "siblings": [
+      "/guides/mind-mapping/",
+      "/templates/brainstorming-template/",
+      "/exercises/creative-thinking-exercises/"
+    ],
+    "tools": [
+      "/games/brain-flash/",
+      "/tools/idea-scorer/",
+      "/notebook/"
+    ],
+    "technique": []
+  },
+  "/guides/mind-mapping/": {
+    "siblings": [
+      "/templates/mind-map-template/",
+      "/guides/how-to-be-more-creative/",
+      "/guides/creative-problem-solving/"
+    ],
+    "tools": [
+      "/games/brain-flash/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": [
+      "/techniques/random-word-technique/"
+    ]
+  },
+  "/guides/first-principles-thinking/": {
+    "siblings": [
+      "/guides/creative-problem-solving/",
+      "/guides/asking-better-questions/",
+      "/guides/problem-statement-examples/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/",
+      "/notebook/"
+    ],
+    "technique": [
+      "/techniques/five-whys/"
+    ]
+  },
+  "/guides/intrapreneurship/": {
+    "siblings": [
+      "/guides/innovation-culture/",
+      "/guides/creativity-in-business/",
+      "/guides/elevator-pitch-examples/"
+    ],
+    "tools": [
+      "/games/blast-off/",
+      "/games/kill-the-idea/",
+      "/templates/product-launch-plan-template/"
     ],
     "technique": []
   }
