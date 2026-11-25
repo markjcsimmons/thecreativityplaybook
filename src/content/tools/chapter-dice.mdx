@@ -1,0 +1,68 @@
+---
+path: /tools/chapter-dice/
+title: "Chapter Dice: Roll for a 10-Minute Creativity Exercise"
+description: "Roll two dice to pick a chapter of the book, then do a 10-minute creativity exercise from it, with a timer. All twelve exercises are listed on the page."
+h1: Chapter Dice
+intro: "Roll two dice and the book picks a chapter for you, then gives you a 10-minute exercise from it. The book itself suggests rolling a pair of dice to choose what to read next."
+primaryKeyword: "(brand)"
+pageType: tool
+phase: 2
+bookChapter: Ch1 How to Play
+bookSources:
+  - chapter: Ch1 How to Play
+    note: "The Contents page: 'Life is a game and so is this book, so let's play!', twelve chapters that 'can be read in order, or not, as the mood strikes you', and the suggestion to try rolling a pair of dice to tell you which chapter to read next. Chapter 1's case for play is the reason for the tool."
+  - chapter: Ch2 Idea Spaghetti
+    note: "The twelve exercises are shortened versions of the board games at the end of each chapter. Each is described on its game page and on the creative thinking exercises page; this page keeps the facts the same and fits each to ten minutes."
+serpNotes: "No search check: this is a brand tool with no keyword target (BRIEF section 8.8). The roll rule and the ten-minute versions of the exercises are ours. A pair of dice gives 36 combinations and the book has 12 chapters, so each chapter gets exactly three combinations and all are equally likely: an odd first die gives the chapter on the second die, and an even first die gives the second die plus six. The book does not say how its dice should map to chapters. Players with real dice can enter them. The roll is held in the URL so it can be shared. Nothing is stored. No statistics are used."
+status: published
+reviewedBy: Mark
+author: team
+updated: 2026-11-25
+island: ChapterDice
+---
+
+import IfLive from '../../components/IfLive.astro';
+import ChapterExerciseList from '../../components/ChapterExerciseList.astro';
+
+## How it works
+
+1. **Roll the dice.** The tool rolls two. If you have real dice, open "Using real dice?" and say what you rolled.
+2. **Read your chapter.** An odd first die gives the chapter shown on the second die, from 1 to 6. An even first die gives the second die plus six, from 7 to 12. A pair of dice has 36 combinations and the book has 12 chapters, so each chapter comes up on three of them and none is more likely than another.
+3. **Do the exercise.** You get a ten-minute version of the chapter's board game, with a timer if you want one.
+4. **Keep what you made.** Most of the exercises end in ideas. Put them in your [notebook](/notebook/) with the tool that fits, or on paper.
+
+## Where this comes from
+
+The book's Contents page says "Life is a game and so is this book, so let's play!" and that the twelve chapters can be read in order, or not, as the mood strikes you. It adds a suggestion: try rolling a pair of dice to tell you which chapter to read next. This tool does that, then goes one step further and gives you something to do.
+
+The book does not say how a pair of dice should point to twelve chapters, so the rule above is ours. The exercises are ours too. Each is a shortened version of the game at the end of its chapter, cut to ten minutes, and each says what the book's own version asks for.
+
+## All twelve exercises
+
+If you would rather choose than roll, or print the list, here are all twelve.
+
+<ChapterExerciseList />
+
+## Questions
+
+**What is Chapter Dice?** A tool that picks one of the book's twelve chapters with two dice and gives you a ten-minute exercise from it.
+
+**Is the dice rule from the book?** The idea of rolling a pair of dice to choose a chapter is the book's. The rule that maps the dice to chapters is ours.
+
+**Are the exercises the book's games?** They are shortened versions of the games, written by us to fit ten minutes. Each one says how the book's own version differs.
+
+**Can I use real dice?** Yes. Open "Using real dice?" under the roll button and choose the two numbers.
+
+**Do I need other people?** Most exercises work alone. Chapter 7's brainwriting game needs four or more people, so roll again if you are on your own.
+
+<IfLive path="/exercises/creative-thinking-exercises/">
+
+For longer versions of these exercises, with the book's rules, see [creative thinking exercises](/exercises/creative-thinking-exercises/).
+
+</IfLive>
+
+<IfLive path="/games/">
+
+To play each chapter's game on screen, see the [creativity games](/games/).
+
+</IfLive>

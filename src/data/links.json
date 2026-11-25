@@ -21,7 +21,8 @@
       "/tools/creativity-test/",
       "/notebook/",
       "/tools/idea-scorer/",
-      "/tools/perspective-cards/"
+      "/tools/perspective-cards/",
+      "/tools/chapter-dice/"
     ],
     "technique": []
   },
@@ -135,7 +136,8 @@
     "tools": [
       "/tools/random-idea-generator/",
       "/tools/attribute-listing/",
-      "/tools/business-idea-generator/"
+      "/tools/business-idea-generator/",
+      "/tools/chapter-dice/"
     ],
     "technique": []
   },
@@ -575,7 +577,8 @@
       "/guides/problem-statement-examples/",
       "/guides/asking-better-questions/",
       "/guides/creative-block/",
-      "/guides/perspective-taking/"
+      "/guides/perspective-taking/",
+      "/exercises/design-thinking-exercises/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -618,12 +621,14 @@
       "/guides/creative-problem-solving/",
       "/guides/creative-block/",
       "/templates/brainstorming-template/",
-      "/techniques/"
+      "/techniques/",
+      "/exercises/design-thinking-exercises/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
       "/games/shoe-swapper/",
-      "/tools/attribute-listing/"
+      "/tools/attribute-listing/",
+      "/tools/chapter-dice/"
     ],
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/"
@@ -651,7 +656,8 @@
       "/exercises/brainstorming-games/",
       "/exercises/creative-thinking-exercises/",
       "/guides/innovation-culture/",
-      "/templates/brainstorming-template/"
+      "/templates/brainstorming-template/",
+      "/exercises/design-thinking-exercises/"
     ],
     "tools": [
       "/games/all-together-now/",
@@ -740,7 +746,8 @@
     ],
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/",
-      "/techniques/random-word-technique/"
+      "/techniques/random-word-technique/",
+      "/techniques/six-thinking-hats/"
     ]
   },
   "/guides/perspective-taking/": {
@@ -748,14 +755,17 @@
       "/guides/creative-problem-solving/",
       "/guides/asking-better-questions/",
       "/guides/where-do-ideas-come-from/",
-      "/exercises/brainstorming-games/"
+      "/exercises/brainstorming-games/",
+      "/templates/empathy-map/"
     ],
     "tools": [
       "/games/shoe-swapper/",
       "/tools/random-idea-generator/",
       "/tools/perspective-cards/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/six-thinking-hats/"
+    ]
   },
   "/guides/moonshot-thinking/": {
     "siblings": [
@@ -837,7 +847,8 @@
     "siblings": [
       "/guides/perspective-taking/",
       "/exercises/brainstorming-games/",
-      "/guides/asking-better-questions/"
+      "/guides/asking-better-questions/",
+      "/templates/empathy-map/"
     ],
     "tools": [
       "/games/shoe-swapper/",
@@ -877,7 +888,8 @@
       "/techniques/analogical-thinking/",
       "/techniques/reverse-brainstorming/",
       "/guides/invention-ideas/",
-      "/techniques/random-word-technique/"
+      "/techniques/random-word-technique/",
+      "/techniques/six-thinking-hats/"
     ],
     "tools": [
       "/tools/invention-idea-generator/",
@@ -909,6 +921,67 @@
     ],
     "tools": [
       "/games/whats-your-problem/"
+    ],
+    "technique": []
+  },
+  "/techniques/six-thinking-hats/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/techniques/scamper/",
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/techniques/reverse-brainstorming/",
+      "/guides/perspective-taking/"
+    ],
+    "tools": [
+      "/tools/perspective-cards/",
+      "/games/kill-the-idea/",
+      "/tools/idea-scorer/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/exercises/design-thinking-exercises/": {
+    "hub": "/games/",
+    "siblings": [
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/team-workshop-activities/",
+      "/guides/creative-problem-solving/",
+      "/templates/empathy-map/"
+    ],
+    "tools": [
+      "/games/shoe-swapper/",
+      "/games/whats-your-problem/",
+      "/games/blast-off/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
+    ]
+  },
+  "/tools/chapter-dice/": {
+    "hub": "/tools/",
+    "siblings": [
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/brainstorming-games/",
+      "/guides/how-to-be-more-creative/"
+    ],
+    "tools": [
+      "/games/",
+      "/notebook/"
+    ],
+    "technique": []
+  },
+  "/templates/empathy-map/": {
+    "siblings": [
+      "/guides/perspective-taking/",
+      "/exercises/design-thinking-exercises/",
+      "/templates/brainstorming-template/"
+    ],
+    "tools": [
+      "/tools/perspective-cards/",
+      "/games/shoe-swapper/",
+      "/games/blast-off/",
+      "/notebook/"
     ],
     "technique": []
   }

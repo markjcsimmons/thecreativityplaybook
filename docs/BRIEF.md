@@ -326,6 +326,7 @@ Each page type has one layout. Every page also gets:
 
 ### 8.8 Chapter Dice — `/tools/chapter-dice` (Phase 2)
 - Roll two animated dice to pick a chapter and get a 10-minute exercise from it. This recreates the book's "roll the dice to pick a chapter" device and is a brand toy and link magnet. Respect reduced-motion settings.
+- As built (batch 9): the book's Contents page says "Try rolling a pair of dice to tell you which chapter to read next" but not how, so the mapping is ours: an odd first die gives the chapter on the second die, an even first die gives the second die plus six. Each chapter gets three of the 36 pairs. The roll is seeded and kept in the URL (`?s=`), and players with real dice can enter them. The twelve 10-minute exercises are ours, shortened from each chapter's game; the page lists all twelve (server-rendered, so the markdown twin has them) and each says how the book's own version differs. Chapter 7's brainwriting needs four or more people.
 
 ### 8.9 Phase 3 (optional): "Expand with AI"
 - A Vercel Function calls an LLM API to turn a generated idea into a short concept. It needs server-side keys, per-IP rate limiting, a daily budget cap, moderation and a clear label. Build it only if Mark approves.
@@ -336,6 +337,10 @@ Each page type has one layout. Every page also gets:
 - Flow: a goal (or one picked from the notebook), a list of ways to make it fail (up to 30, repeats dropped, an optional 3-minute timer and 12 prompts of ours that deal without repeating), then a fix written for each. Fixes are keyed by the bad idea's text, so editing the list does not move a fix to the wrong row.
 - Output: the fixes can be saved to the notebook (source `reverse-brainstorm`), copied, exported as text or printed. It counts as the Generate step in the path strip. Nothing is stored unless the player presses Save.
 - Book DNA: the Kill the Idea chapter (the nearest cousin: it attacks an idea, this attacks a goal) and the Los Angeles traffic example. The method itself is not from the book and the page says so.
+
+### 8.11 Empathy Map: `/templates/empathy-map` (Phase 3, built in batch 9)
+- A template page with an interactive map (`ToolShell` plus `ToolIsland name="EmpathyMap"`). The player writes a problem or idea, chooses whose map it is (a type or a role, never a named person; the Perspective Cards' people-with-a-stake and fresh-eyes roles can be picked or dealt), fills Says, Thinks, Does and Feels, then Pains and Gains, then writes the ideas the map gives. Ideas can be saved to the notebook (source `empathy-map`), copied, exported or printed.
+- Book DNA: the Chapter 12 stakeholder questions supply the Pains and Gains prompts (what is in it for them, what would they see as a negative, does it clash, does it make their life harder), with Chapter 9's Shoe Swapper and Chapter 4's Different Strokes. The empathy map itself is not from the book and the page says so; its origin is hedged to one account (Dave Gray of XPLANE, 2010 book *Gamestorming*) that we did not confirm.
 
 ---
 
@@ -582,7 +587,7 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 10. If digital-only: wide distribution or Amazon-only at launch (§11.1).
 11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
 12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
-13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming and the five whys (candidates: six thinking hats, mind mapping, empathy map, first principles). Each would need a Book DNA hook under §2.3.
+13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (candidates left: mind mapping, first principles). Each would need a Book DNA hook under §2.3.
 14. Whether to add more outside quotes to the two quotes pages. They hold 41 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first.
 
 ---

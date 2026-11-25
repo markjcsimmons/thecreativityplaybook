@@ -66,6 +66,7 @@ export const SOURCE_LABELS: Record<string, string> = {
   'idea-scorer': 'Idea Scorer',
   'perspective-cards': 'Perspective Cards',
   'reverse-brainstorm': 'Reverse Brainstorm',
+  'empathy-map': 'Empathy Map',
 };
 export const sourceLabel = (source: string) => SOURCE_LABELS[source] ?? source;
 

@@ -1,0 +1,23 @@
+---
+import { CHAPTERS, EXERCISES, totalMinutes } from '../lib/chapter-dice';
+---
+
+{
+  CHAPTERS.map((c) => {
+    const ex = EXERCISES[c.number]!;
+    return (
+      <>
+        <h3>{`Chapter ${c.number}: ${c.title}`}</h3>
+        <p>
+          <strong>{ex.name}.</strong> {`${totalMinutes(c.number)} minutes. Who: ${ex.people}.`}
+        </p>
+        <ol>
+          {ex.steps.map((s) => (
+            <li>{`${s.minutes} ${s.minutes === 1 ? 'minute' : 'minutes'}. ${s.text}`}</li>
+          ))}
+        </ol>
+        <p>{ex.fromBook}</p>
+      </>
+    );
+  })
+}
