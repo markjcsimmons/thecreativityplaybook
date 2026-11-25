@@ -1,0 +1,42 @@
+---
+import PrintSheet from './PrintSheet.astro';
+
+/**
+ * A printable "sketch your problem" sheet for the book's before-and-after sketching method
+ * (Chapter 6): how things are now, how you want them to be, the barriers between the two and ideas
+ * to break the barriers down. The headings and prompts are real text, so the page's markdown twin
+ * carries them. The boxes are left empty to draw in.
+ */
+const boxes = [
+  { title: 'How things are now', prompt: 'Sketch the situation as it is. Keep it simple, and add short labels.' },
+  { title: 'How I want things to be', prompt: 'Sketch your vision for success. Make it different from the left, and exaggerate if it helps.' },
+  { title: 'The barriers', prompt: 'In a second color, sketch what stands between the two pictures.' },
+  { title: 'Ideas to break the barriers down', prompt: 'In a third color, sketch or write ways through each barrier.' },
+];
+---
+
+<PrintSheet label="A printable sheet for sketching a problem" printTitle="Sketch your problem">
+  <div class="not-prose grid gap-4">
+    <p class="m-0"><strong>The problem:</strong> <span class="inline-block w-3/4 border-b-2 border-ink align-bottom">&nbsp;</span></p>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        boxes.slice(0, 2).map((b) => (
+          <div class="grid content-start gap-1 border-2 border-ink p-3" style="min-height: 15rem">
+            <p class="m-0 font-display text-xl uppercase leading-tight">{b.title}</p>
+            <p class="m-0 text-sm">{b.prompt}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        boxes.slice(2).map((b) => (
+          <div class="grid content-start gap-1 border-2 border-ink p-3" style="min-height: 9rem">
+            <p class="m-0 font-display text-xl uppercase leading-tight">{b.title}</p>
+            <p class="m-0 text-sm">{b.prompt}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</PrintSheet>

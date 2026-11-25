@@ -591,7 +591,7 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 10. If digital-only: wide distribution or Amazon-only at launch (§11.1).
 11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
 12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
-13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (mind mapping and first principles were added in batch 10; candidates left: design sprint, brand storytelling, biomimicry). Each would need a Book DNA hook under §2.3.
+13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (mind mapping and first principles were added in batch 10, biomimicry in batch 11; candidates left: design sprint, brand storytelling). Each would need a Book DNA hook under §2.3.
 14. Whether to add more outside quotes to the two quotes pages. They hold 41 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first.
 
 ---

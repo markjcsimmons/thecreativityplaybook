@@ -276,7 +276,8 @@
       "/games/inspiral/",
       "/games/wheel-of-distraction/",
       "/games/shoe-swapper/",
-      "/techniques/analogical-thinking/"
+      "/techniques/analogical-thinking/",
+      "/guides/visualization-techniques/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -411,7 +412,8 @@
       "/chapters/left-brain-meet-mr-right/",
       "/chapters/the-idea-commune/",
       "/techniques/analogical-thinking/",
-      "/guides/mind-mapping/"
+      "/guides/mind-mapping/",
+      "/guides/visualization-techniques/"
     ],
     "tools": [
       "/games/brain-flash/"
@@ -511,7 +513,8 @@
       "/templates/product-launch-plan-template/",
       "/guides/creative-block/",
       "/exercises/brainstorming-games/",
-      "/templates/mind-map-template/"
+      "/templates/mind-map-template/",
+      "/guides/visualization-techniques/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -584,7 +587,8 @@
       "/guides/asking-better-questions/",
       "/guides/creative-block/",
       "/guides/perspective-taking/",
-      "/exercises/design-thinking-exercises/"
+      "/exercises/design-thinking-exercises/",
+      "/exercises/problem-solving-activities-for-adults/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -630,7 +634,8 @@
       "/guides/creative-block/",
       "/templates/brainstorming-template/",
       "/techniques/",
-      "/exercises/design-thinking-exercises/"
+      "/exercises/design-thinking-exercises/",
+      "/exercises/problem-solving-activities-for-adults/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -665,7 +670,8 @@
       "/exercises/creative-thinking-exercises/",
       "/guides/innovation-culture/",
       "/templates/brainstorming-template/",
-      "/exercises/design-thinking-exercises/"
+      "/exercises/design-thinking-exercises/",
+      "/exercises/problem-solving-activities-for-adults/"
     ],
     "tools": [
       "/games/all-together-now/",
@@ -730,7 +736,8 @@
       "/guides/how-to-be-more-creative/",
       "/guides/problem-statement-examples/",
       "/guides/storytelling-in-business/",
-      "/guides/where-do-ideas-come-from/"
+      "/guides/where-do-ideas-come-from/",
+      "/guides/biomimicry-examples/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -798,7 +805,8 @@
       "/guides/how-to-be-more-creative/",
       "/guides/creative-thinking-examples/",
       "/guides/perspective-taking/",
-      "/guides/moonshot-thinking/"
+      "/guides/moonshot-thinking/",
+      "/guides/biomimicry-examples/"
     ],
     "tools": [
       "/games/scavengers/",
@@ -831,7 +839,9 @@
       "/techniques/random-word-technique/",
       "/guides/creative-thinking-examples/",
       "/guides/creative-problem-solving/",
-      "/guides/where-do-ideas-come-from/"
+      "/guides/where-do-ideas-come-from/",
+      "/guides/biomimicry-examples/",
+      "/guides/visualization-techniques/"
     ],
     "tools": [
       "/games/brain-flash/",
@@ -1015,7 +1025,8 @@
     "siblings": [
       "/templates/mind-map-template/",
       "/guides/how-to-be-more-creative/",
-      "/guides/creative-problem-solving/"
+      "/guides/creative-problem-solving/",
+      "/guides/visualization-techniques/"
     ],
     "tools": [
       "/games/brain-flash/",
@@ -1049,6 +1060,42 @@
       "/games/blast-off/",
       "/games/kill-the-idea/",
       "/templates/product-launch-plan-template/"
+    ],
+    "technique": []
+  },
+  "/guides/visualization-techniques/": {
+    "siblings": [
+      "/guides/mind-mapping/",
+      "/techniques/analogical-thinking/",
+      "/templates/brainstorming-template/"
+    ],
+    "tools": [
+      "/games/brain-flash/",
+      "/notebook/"
+    ],
+    "technique": []
+  },
+  "/guides/biomimicry-examples/": {
+    "siblings": [
+      "/techniques/analogical-thinking/",
+      "/guides/creative-thinking-examples/",
+      "/guides/where-do-ideas-come-from/"
+    ],
+    "tools": [
+      "/games/brain-flash/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/exercises/problem-solving-activities-for-adults/": {
+    "siblings": [
+      "/guides/creative-problem-solving/",
+      "/exercises/creative-thinking-exercises/",
+      "/exercises/team-workshop-activities/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/",
+      "/games/shoe-swapper/"
     ],
     "technique": []
   }
