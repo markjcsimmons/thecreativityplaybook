@@ -17,6 +17,7 @@ import AllTogetherNow from '../islands/Games/AllTogetherNow/index.tsx';
 import BlastOff from '../islands/Games/BlastOff/index.tsx';
 import IdeaScorer from '../islands/IdeaScorer/index.tsx';
 import PerspectiveCards from '../islands/PerspectiveCards/index.tsx';
+import ReverseBrainstorm from '../islands/ReverseBrainstorm/index.tsx';
 import CreativityTest from '../islands/CreativityTest/index.tsx';
 import Notebook from '../islands/Notebook/index.tsx';
 import PipelineStrip from '../islands/shared/PipelineStrip.tsx';
@@ -44,6 +45,7 @@ const step = (
     Inspiral: 'pile',
     KillTheIdea: 'choose',
     IdeaScorer: 'choose',
+    ReverseBrainstorm: 'generate',
     BlastOff: 'launch',
   } as Record<string, 'generate' | 'pile' | 'choose' | 'launch'>
 )[name];
@@ -70,5 +72,6 @@ const step = (
 {name === 'BlastOff' && <BlastOff client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'IdeaScorer' && <IdeaScorer client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'PerspectiveCards' && <PerspectiveCards client:idle waitlistOpen={book.waitlistOpen} />}
+{name === 'ReverseBrainstorm' && <ReverseBrainstorm client:idle waitlistOpen={book.waitlistOpen} />}
 {name === 'CreativityTest' &&<CreativityTest client:idle livePaths={livePaths} />}
 {name === 'Notebook' && <Notebook client:idle livePaths={livePaths} />}

@@ -91,6 +91,7 @@ Short quotes from the book's own text and its interviews are fine, with attribut
 ### 2.3 Quality bar (Google's helpful-content standard)
 - Every page needs **Book DNA**: at least one thing only this site can offer. That means a story, example or exercise from the book; a quote from the interviews; or an interactive tool. Record it in frontmatter (`bookSources`).
 - No mass-produced pages. Build content in small batches that Mark reviews (§15).
+- **Methods the book does not teach** (SCAMPER, reverse brainstorming and the five whys were the first, in batch 8, 2026-11-24) may have a page only if the page says in its intro that the method is not from the book, hedges the origin to what sources agree on, and has Book DNA from somewhere else: a working tool on the page, a chapter hook that is named in `bookSources`, or both. Our own steps, examples and warnings are labeled as ours. The techniques hub (`/techniques/`) lists these in a separate "From outside the book" section and keeps its main list to the book's own methods.
 - Banned filler phrases: "in today's fast-paced world", "unlock your potential", "delve", "game-changer", "whether you're a … or a …", "look no further", "in conclusion", "the power of". Write short paragraphs and use concrete examples.
 
 ---
@@ -328,6 +329,13 @@ Each page type has one layout. Every page also gets:
 
 ### 8.9 Phase 3 (optional): "Expand with AI"
 - A Vercel Function calls an LLM API to turn a generated idea into a short concept. It needs server-side keys, per-IP rate limiting, a daily budget cap, moderation and a clear label. Build it only if Mark approves.
+
+
+### 8.10 Reverse Brainstorm — built into `/techniques/reverse-brainstorming` (Phase 2, added in batch 8)
+- Not a page of its own: the keyword map has no tools row for it, so the tool sits inside the technique page (`ToolShell` plus `ToolIsland name="ReverseBrainstorm"`, so the worked example is in the server-rendered HTML).
+- Flow: a goal (or one picked from the notebook), a list of ways to make it fail (up to 30, repeats dropped, an optional 3-minute timer and 12 prompts of ours that deal without repeating), then a fix written for each. Fixes are keyed by the bad idea's text, so editing the list does not move a fix to the wrong row.
+- Output: the fixes can be saved to the notebook (source `reverse-brainstorm`), copied, exported as text or printed. It counts as the Generate step in the path strip. Nothing is stored unless the player presses Save.
+- Book DNA: the Kill the Idea chapter (the nearest cousin: it attacks an idea, this attacks a goal) and the Los Angeles traffic example. The method itself is not from the book and the page says so.
 
 ---
 
@@ -574,6 +582,8 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 10. If digital-only: wide distribution or Amazon-only at launch (§11.1).
 11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
 12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
+13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming and the five whys (candidates: six thinking hats, mind mapping, empathy map, first principles). Each would need a Book DNA hook under §2.3.
+14. Whether to add more outside quotes to the two quotes pages. They hold 41 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first.
 
 ---
 

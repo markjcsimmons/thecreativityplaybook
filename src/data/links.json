@@ -870,5 +870,46 @@
       "/tools/idea-scorer/"
     ],
     "technique": []
+  },
+  "/techniques/scamper/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/techniques/analogical-thinking/",
+      "/techniques/reverse-brainstorming/",
+      "/guides/invention-ideas/",
+      "/techniques/random-word-technique/"
+    ],
+    "tools": [
+      "/tools/invention-idea-generator/",
+      "/tools/attribute-listing/"
+    ],
+    "technique": []
+  },
+  "/techniques/reverse-brainstorming/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/techniques/scamper/",
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/creative-block/",
+      "/exercises/brainstorming-games/"
+    ],
+    "tools": [
+      "/games/kill-the-idea/",
+      "/tools/idea-scorer/"
+    ],
+    "technique": []
+  },
+  "/techniques/five-whys/": {
+    "hub": "/techniques/",
+    "siblings": [
+      "/guides/asking-better-questions/",
+      "/guides/problem-statement-examples/",
+      "/guides/creative-problem-solving/",
+      "/techniques/reverse-brainstorming/"
+    ],
+    "tools": [
+      "/games/whats-your-problem/"
+    ],
+    "technique": []
   }
 }

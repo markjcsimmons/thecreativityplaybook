@@ -1,0 +1,123 @@
+---
+path: /techniques/five-whys/
+title: "Five Whys: How to Find the Cause, With Examples"
+description: "The five whys technique: ask why about a problem, then ask why about each answer, until you reach a cause you can fix. Steps, examples and its limits."
+h1: Five Whys
+intro: "The five whys is a way to find the cause of a problem by asking \"why?\" about each answer in turn. It is not in the book, but the book's Chapter 4 game uses the same question for a different job: to reframe a problem."
+primaryKeyword: five whys
+secondaryKeywords:
+  - 5 whys
+  - five whys examples
+pageType: technique
+phase: 3
+bookChapter: Ch4 The Answer Is in the Question
+bookSources:
+  - chapter: Ch4 The Answer Is in the Question
+    note: "The What's Your Problem? game: write a business problem as 'How can we ...?', then roll a die to ask yourself one of six questions about it (how, why, which, when, who, what) and rewrite the problem with what you learn. The music example: 'How can we sell more music?' becomes, after asking WHY people are spending less on buying music (they can get it free online), a problem about making the things you sell better than what people get for free. The five whys itself is not in the book, and the page says so."
+serpNotes: "Checked 2026-11-24 (standard web search for 'five whys'). The results are root-cause-analysis explainers from quality and operations sources (Wikipedia, ASQ, the Lean Enterprise Institute, TechTarget, Adobe, an AWS guide, health-service and government pages). They give the same steps and a manufacturing or software example, and warn that it works best on simple, linear problems and can stop at a symptom. The method is tied to Toyota; sources usually credit Sakichi Toyoda and say Taiichi Ohno described it, and one source disputes that, so the page says it is associated with Toyota and that sources differ on who first used it. The book does not teach the five whys. Its one use of WHY is a single question among six in a reframing game, and the page sets the two side by side. The steps, the examples, the limits and the 'use both' advice are ours. This keyword has high volume and high difficulty (5,400 searches, KD 50), so the page is expected to rank slowly. No statistics are used."
+status: published
+reviewedBy: Mark
+author: team
+updated: 2026-11-24
+---
+
+import IfLive from '../../components/IfLive.astro';
+
+## What the five whys is
+
+You state a problem. You ask why it happened and write down the answer. Then you ask why about that answer, and again, until you reach a cause that you can do something about. Five is a rule of thumb. Sometimes three is enough, and sometimes it takes more.
+
+**It is not a method from the book.** It is associated with Toyota, where it is usually credited to Sakichi Toyoda, founder of Toyota Industries, and described by the engineer Taiichi Ohno. Sources disagree on who first used it, so treat that as the usual account. It was built for finding the cause of something that went wrong, and most guides to it are about quality control and operations.
+
+## How to do it
+
+These steps are ours.
+
+1. **State the problem as a fact.** "The monthly report went out late." Not "We are bad at reports."
+2. **Ask why, and write the answer.** Answer with something you know, not something you assume. If you do not know, find out before you go on.
+3. **Ask why about that answer.** Write it under the first.
+4. **Repeat until you reach something you can fix.** You will know it when the answer is a rule, a habit or a missing step, not a person's mistake.
+5. **Fix that, then check.** Fix the last answer in the chain, and see whether the first problem stops.
+
+### An example
+
+A made-up office problem, all ours.
+
+1. **The monthly report went out late.** Why? The last section arrived two days late.
+2. **Why did the last section arrive late?** The person writing it was waiting for the figures.
+3. **Why were the figures late?** They are only updated on the third of the month.
+4. **Why does the report deadline come before the third?** Nobody asked when the figures would be ready when the deadline was set.
+5. **Why did nobody ask?** The deadline was copied from last year's calendar.
+
+The cause is a missing check when the deadline is set. The first answers blamed the writer, and that would have fixed nothing. The fix is to agree a deadline with whoever owns the figures.
+
+## Where it goes wrong
+
+Limits to know about:
+
+- **It follows one chain.** Many problems have several causes. If you ask why about only the first answer, you miss the others. When an answer has two causes, ask why about both.
+- **It stops at a symptom.** "Because we ran out of time" is not a cause. Ask why you ran out.
+- **It can turn into blame.** If the last answer is a person's name, you have probably stopped too early.
+- **Guessing.** An answer nobody checked is a story, not a cause.
+- **Five is not magic.** Stop when you reach something you can change.
+
+The method is also best for problems that went wrong, such as a late report or a broken process. It tells you less about a problem with no clear failure, such as "how do we get more customers?" For that, reframing the question usually works better.
+
+## Five whys and the book's WHY
+
+The book's Chapter 4 game, What's Your Problem?, uses the question "WHY?" too, but for a different job. You write your problem as "How can we ...?", and then you roll a die to decide which question to ask about it: how, why, which, when, who or what. Each answer gives you a new angle, and you rewrite the problem at the end.
+
+Its example is a band that wants to sell more music. Asked WHY people are spending less on buying music, the answer is that they can get it free online. That points the problem at making the things you sell better than what people get for free. Its WHY is one of the six questions, used to widen the problem.
+
+| | The five whys | The book's game |
+|---|---|---|
+| Asks | The same question again and again | Six different questions |
+| Moves | Down, towards a cause | Sideways, towards a better question |
+| Starts with | Something that went wrong | A goal written as "How can we ...?" |
+| Ends with | A cause to fix | A problem restated in a new way |
+
+You can use both. Use the five whys to find what is really causing the problem, then write the cause as "How can we ...?" and use the book's questions to open it up. The comparison is ours.
+
+<IfLive path="/games/whats-your-problem/">
+
+To try the book's version, play [What's Your Problem?](/games/whats-your-problem/).
+
+</IfLive>
+
+<IfLive path="/guides/asking-better-questions/">
+
+For the full set of question words, read [asking better questions](/guides/asking-better-questions/).
+
+</IfLive>
+
+<IfLive path="/guides/problem-statement-examples/">
+
+To turn a cause into a problem statement, see the [problem statement examples](/guides/problem-statement-examples/) guide.
+
+</IfLive>
+
+<IfLive path="/guides/creative-problem-solving/">
+
+For where this fits in solving a problem, see [creative problem solving](/guides/creative-problem-solving/).
+
+</IfLive>
+
+<IfLive path="/techniques/">
+
+For the methods the book does teach, see the [ideation techniques](/techniques/) hub.
+
+</IfLive>
+
+## Questions
+
+**What is the five whys technique?** A way to find the cause of a problem by asking why about the problem, and then why about each answer, until you reach something you can fix.
+
+**Do you always need five?** No. Five is a rule of thumb. Stop when you reach a cause you can change.
+
+**Is the five whys in the book?** No. The book's What's Your Problem? game asks "why" once, as one of six questions, to reframe a problem.
+
+**Who invented the five whys?** It is associated with Toyota. It is usually credited to Sakichi Toyoda and said to have been described by Taiichi Ohno, but sources disagree on who first used it.
+
+**What is an example of the five whys?** The late monthly report above: the writer was late because the figures were late, which came from a deadline set without asking when the figures would be ready.
+
+**Is it a creativity technique?** It is a way of finding causes more than of making ideas. It helps creative work by making sure you are solving the right problem.
