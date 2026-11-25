@@ -101,7 +101,8 @@
       "/guides/invention-ideas/",
       "/guides/creative-problem-solving/",
       "/exercises/creative-thinking-exercises/",
-      "/guides/creative-thinking-examples/"
+      "/guides/creative-thinking-examples/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -184,7 +185,8 @@
       "/games/kill-the-idea/",
       "/games/inspiral/",
       "/games/wheel-of-distraction/",
-      "/guides/invention-ideas/"
+      "/guides/invention-ideas/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/tools/attribute-listing/"
@@ -227,7 +229,8 @@
       "/games/idea-spaghetti/",
       "/games/inspiral/",
       "/games/shoe-swapper/",
-      "/guides/storytelling-in-business/"
+      "/guides/storytelling-in-business/",
+      "/guides/moonshot-thinking/"
     ],
     "tools": [
       "/tools/random-idea-generator/"
@@ -241,7 +244,8 @@
       "/games/far-out/",
       "/games/wheel-of-distraction/",
       "/guides/creative-problem-solving/",
-      "/exercises/brainstorming-games/"
+      "/exercises/brainstorming-games/",
+      "/guides/perspective-taking/"
     ],
     "tools": [
       "/tools/invention-idea-generator/"
@@ -324,7 +328,9 @@
   },
   "/introduction/": {
     "hub": "/",
-    "siblings": [],
+    "siblings": [
+      "/guides/creativity-in-business/"
+    ],
     "tools": [
       "/tools/random-idea-generator/",
       "/tools/creativity-test/"
@@ -357,7 +363,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/idea-spaghetti/",
-      "/chapters/the-answer-is-in-the-question/"
+      "/chapters/the-answer-is-in-the-question/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/games/scavengers/",
@@ -415,7 +422,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/the-idea-commune/",
-      "/chapters/shoe-swapper/"
+      "/chapters/shoe-swapper/",
+      "/guides/moonshot-thinking/"
     ],
     "tools": [
       "/games/far-out/"
@@ -426,7 +434,8 @@
     "hub": "/",
     "siblings": [
       "/chapters/far-out/",
-      "/chapters/connected/"
+      "/chapters/connected/",
+      "/guides/perspective-taking/"
     ],
     "tools": [
       "/games/shoe-swapper/"
@@ -515,7 +524,8 @@
   "/guides/invention-ideas/": {
     "siblings": [
       "/guides/how-to-be-more-creative/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/tools/invention-idea-generator/",
@@ -555,7 +565,8 @@
     "siblings": [
       "/guides/problem-statement-examples/",
       "/guides/asking-better-questions/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/guides/perspective-taking/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -570,7 +581,8 @@
     "siblings": [
       "/guides/problem-statement-examples/",
       "/guides/creative-problem-solving/",
-      "/techniques/divergent-vs-convergent-thinking/"
+      "/techniques/divergent-vs-convergent-thinking/",
+      "/guides/perspective-taking/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -581,7 +593,8 @@
   "/guides/storytelling-in-business/": {
     "siblings": [
       "/guides/elevator-pitch-examples/",
-      "/guides/how-to-be-more-creative/"
+      "/guides/how-to-be-more-creative/",
+      "/guides/moonshot-thinking/"
     ],
     "tools": [
       "/games/far-out/",
@@ -645,7 +658,8 @@
       "/exercises/team-workshop-activities/",
       "/exercises/brainstorming-games/",
       "/guides/how-to-be-more-creative/",
-      "/guides/creative-block/"
+      "/guides/creative-block/",
+      "/guides/creativity-in-business/"
     ],
     "tools": [
       "/notebook/",
@@ -673,7 +687,8 @@
     "siblings": [
       "/techniques/divergent-vs-convergent-thinking/",
       "/guides/creative-block/",
-      "/guides/creative-thinking-examples/"
+      "/guides/creative-thinking-examples/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -687,7 +702,8 @@
       "/guides/creative-problem-solving/",
       "/guides/how-to-be-more-creative/",
       "/guides/problem-statement-examples/",
-      "/guides/storytelling-in-business/"
+      "/guides/storytelling-in-business/",
+      "/guides/where-do-ideas-come-from/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -713,6 +729,66 @@
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/",
       "/techniques/random-word-technique/"
+    ]
+  },
+  "/guides/perspective-taking/": {
+    "siblings": [
+      "/guides/creative-problem-solving/",
+      "/guides/asking-better-questions/",
+      "/guides/where-do-ideas-come-from/",
+      "/exercises/brainstorming-games/"
+    ],
+    "tools": [
+      "/games/shoe-swapper/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/guides/moonshot-thinking/": {
+    "siblings": [
+      "/guides/storytelling-in-business/",
+      "/guides/where-do-ideas-come-from/",
+      "/guides/creative-problem-solving/",
+      "/guides/how-to-be-more-creative/"
+    ],
+    "tools": [
+      "/games/far-out/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": [
+      "/techniques/random-word-technique/"
+    ]
+  },
+  "/guides/where-do-ideas-come-from/": {
+    "siblings": [
+      "/guides/invention-ideas/",
+      "/guides/how-to-be-more-creative/",
+      "/guides/creative-thinking-examples/",
+      "/guides/perspective-taking/",
+      "/guides/moonshot-thinking/"
+    ],
+    "tools": [
+      "/games/scavengers/",
+      "/tools/attribute-listing/",
+      "/notebook/"
+    ],
+    "technique": [
+      "/techniques/random-word-technique/"
+    ]
+  },
+  "/guides/creativity-in-business/": {
+    "siblings": [
+      "/guides/innovation-culture/",
+      "/guides/how-to-be-more-creative/",
+      "/exercises/team-workshop-activities/",
+      "/guides/where-do-ideas-come-from/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/games/blast-off/"
+    ],
+    "technique": [
+      "/techniques/divergent-vs-convergent-thinking/"
     ]
   }
 }
