@@ -5,20 +5,33 @@ interface Props {
   quote: Quote;
   /** CSS colour, e.g. "var(--ch-8)". */
   accent?: string;
+  /** Adds a Copy button that puts the quote and its credit on the clipboard (see QuoteGallery). */
+  copy?: boolean;
 }
-const { quote, accent } = Astro.props;
+const { quote, accent, copy = false } = Astro.props;
+// Long passages (some interview answers run past 60 words) get a smaller type size so the card stays readable.
+const long = quote.text.length > 160;
+const credit = `${quote.author}${quote.role ? `, ${quote.role}` : ''} (${quote.source.type === 'url' ? (quote.citation ?? quote.source.ref) : quote.source.ref})`;
 ---
 
 <figure class="sticker bigquote fill m-0 p-5 sm:p-6" style={accent ? `--accent: ${accent}` : undefined}>
-  <blockquote class="m-0 font-slab text-2xl font-bold leading-snug">{quote.text}</blockquote>
+  <blockquote class:list={['m-0 font-slab font-bold leading-snug', long ? 'text-xl' : 'text-2xl']}>{quote.text}</blockquote>
   <figcaption class="mt-3 text-base">
     <strong>{quote.author}</strong>{quote.role && <span>, {quote.role}</span>}
+    {quote.citation && <span class="block text-sm">{quote.citation}</span>}
     {
       quote.source.type === 'url' ? (
-        <a class="ml-2 text-sm" href={quote.source.ref} rel="noopener">source</a>
+        <a class="text-sm" href={quote.source.ref} rel="noopener">source</a>
       ) : (
-        <span class="ml-2 text-sm">({quote.source.ref})</span>
+        <Fragment>{' '}<span class="ml-2 text-sm">({quote.source.ref})</span></Fragment>
       )
     }
   </figcaption>
+  {
+    copy && (
+      <button type="button" class="btn btn-ghost no-print mt-3 text-sm" data-copy-quote={`“${quote.text}” ${credit}`}>
+        Copy quote
+      </button>
+    )
+  }
 </figure>

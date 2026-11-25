@@ -80,8 +80,12 @@ export const quoteSchema = z.object({
     z.object({ type: z.literal('book'), ref: z.string().min(1) }),
     z.object({ type: z.literal('url'), ref: z.url() }),
   ]),
+  /** Where and when it was first published, for quotes from outside the book (shown beside the name). */
+  citation: z.string().optional(),
   theme: z.array(z.string()).min(1),
   fromBook: z.boolean(),
+  /** Which quotes pages show it, and under which heading (the group id is set in that page's QuoteGallery). */
+  placements: z.array(z.object({ page: z.string().min(1), group: z.string().min(1) })).default([]),
 });
 export type Quote = z.infer<typeof quoteSchema>;
 

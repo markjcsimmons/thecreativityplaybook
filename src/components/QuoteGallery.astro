@@ -1,0 +1,62 @@
+---
+import QuoteCard from './QuoteCard.astro';
+import quotes from '../data/quotes.json';
+import type { Quote } from '../lib/schemas';
+
+interface Group {
+  id: string;
+  title: string;
+  /** One or two sentences under the heading, in our words. */
+  blurb?: string;
+}
+interface Props {
+  /** The quotes page this gallery belongs to, as written in each quote's `placements`. */
+  page: string;
+  groups: Group[];
+}
+const { page, groups } = Astro.props;
+const all = quotes as Quote[];
+const accents = ['var(--ch-1)', 'var(--ch-3)', 'var(--ch-5)', 'var(--ch-7)', 'var(--ch-9)', 'var(--ch-11)'];
+const shown = groups.map((g, i) => ({
+  ...g,
+  accent: accents[i % accents.length],
+  items: all.filter((q) => q.placements.some((p) => p.page === page && p.group === g.id)),
+}));
+---
+
+{
+  shown
+    .filter((g) => g.items.length > 0)
+    .map((g) => (
+      <section class="mt-10" aria-labelledby={`q-${g.id}`}>
+        <h2 id={`q-${g.id}`}>{g.title}</h2>
+        {g.blurb && <p>{g.blurb}</p>}
+        <div class="grid gap-6">
+          {g.items.map((q) => (
+            <QuoteCard quote={q} accent={g.accent} copy />
+          ))}
+        </div>
+      </section>
+    ))
+}
+
+<p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+
+<script>
+  // Copy button: puts the quote and its credit on the clipboard. Nothing is stored or sent anywhere.
+  const status = document.querySelector<HTMLElement>('[data-copy-status]');
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-quote]').forEach((btn) => {
+    const label = btn.textContent ?? 'Copy quote';
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copyQuote ?? '');
+        btn.textContent = 'Copied';
+        if (status) status.textContent = 'Quote copied.';
+      } catch {
+        btn.textContent = 'Copying is blocked here';
+        if (status) status.textContent = 'Copying is blocked in this browser. Select the text and copy it by hand.';
+      }
+      setTimeout(() => (btn.textContent = label), 2000);
+    });
+  });
+</script>

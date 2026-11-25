@@ -11,7 +11,13 @@
       "creativity",
       "human connection"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "authors"
+      }
+    ]
   },
   {
     "text": "In an age of Biggerer and Biggerer, plain efficiency won't cut it.",
@@ -25,7 +31,13 @@
       "efficiency",
       "business"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
   },
   {
     "text": "Plug A.I. into your creative signal chain and you're not replacing the guitarist; you're cranking the amp, bending the note, and shaking the rafters in ways no one's heard before.",
@@ -39,7 +51,13 @@
       "ai",
       "creativity"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
   },
   {
     "text": "Without creativity, we're just another cog in the machine.",
@@ -53,7 +71,13 @@
       "creativity",
       "business"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "authors"
+      }
+    ]
   },
   {
     "text": "The playground just got bigger; the swings are still ours to pump.",
@@ -67,7 +91,13 @@
       "ai",
       "play"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "authors"
+      }
+    ]
   },
   {
     "text": "At grade school my parents were told by my teachers I would come up with the right answers but the wrong way. Even if I knew the answer I didn't want to get to it the way they wanted me to get to it.",
@@ -82,7 +112,13 @@
       "school",
       "unlearning"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "unlearning"
+      }
+    ]
   },
   {
     "text": "I definitely think people can learn how to be creative, but I think for the most part people unlearn how to do it.",
@@ -96,7 +132,13 @@
       "creativity",
       "unlearning"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "unlearning"
+      }
+    ]
   },
   {
     "text": "All I ask is that if I'm stuck don't help me. If things are going along really well then chip in, say what you want, but if I'm stuck don't say anything, because being stuck comes just before having a really brilliant idea.",
@@ -111,7 +153,13 @@
       "creative block",
       "stuck"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "stuck"
+      }
+    ]
   },
   {
     "text": "I think it's the magic moment creatively when you get a room full of people who are all stuck. I like that, it's a good sign.",
@@ -126,7 +174,13 @@
       "creative block",
       "stuck"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "stuck"
+      }
+    ]
   },
   {
     "text": "The emotional effect of the story is achieved by patterns, and so only by creating a chart can you start to look at what the patterns are in the story, or what patterns you want to emphasise, or what patterns you want to add to the story.",
@@ -141,7 +195,13 @@
       "patterns",
       "problem solving"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
   },
   {
     "text": "If you don't take the first step, you'll never go anywhere.",
@@ -156,7 +216,13 @@
       "action",
       "storytelling"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "action"
+      }
+    ]
   },
   {
     "text": "For companies it's really a challenge to put together the different types of people, because very often the like-minded people gravitate together. Engineers talk to engineers. Artists will talk to artists. How can we break that mould? How can we force people who think differently together?",
@@ -171,7 +237,13 @@
       "diversity",
       "culture"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "teams"
+      }
+    ]
   },
   {
     "text": "Our Ideas Camp is a step in that direction. We invite really different types of people together with an agenda that gets formed on the spot.",
@@ -186,6 +258,590 @@
       "workshops",
       "culture"
     ],
-    "fromBook": true
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "teams"
+      }
+    ]
+  },
+  {
+    "text": "The myth is that you have to wear black turtlenecks and designer spectacles in order for you to be creative. Sure, some people are born with talent they exploit, but everybody to some extent can use creativity techniques to be more productive and have better ideas than they would otherwise.",
+    "author": "Tim Brown",
+    "role": "then CEO of IDEO, a design and innovation consultancy",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "myths",
+      "learning"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "unlearning"
+      }
+    ]
+  },
+  {
+    "text": "Innovation in business offers an alternative to the endless downward spiral of commoditisation that comes if you don't. Once you're over a certain bar in terms of quality or efficiency, there's very little competitive advantage to be had from doing more of that. Everybody else learns just as fast as you do. The only alternative to commoditisation is new choices and alternatives that haven't existed before.",
+    "author": "Tim Brown",
+    "role": "then CEO of IDEO, a design and innovation consultancy",
+    "source": {
+      "type": "book",
+      "ref": "Introduction"
+    },
+    "theme": [
+      "innovation",
+      "competition"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
+  },
+  {
+    "text": "Companies typically always drive for the linear innovation, where they continue to do what they are doing, but just a little bit better. And that helps you to a certain degree, but ultimately there is a point where it produces so little that somebody comes with the non-linear thinking and they bypass you and you are left behind. That's why companies typically fail. They continue with the old trajectory of things.",
+    "author": "Tero Ojanperä",
+    "role": "then Executive Vice-President at Nokia",
+    "source": {
+      "type": "book",
+      "ref": "Introduction (interview with the authors)"
+    },
+    "theme": [
+      "innovation",
+      "change",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
+  },
+  {
+    "text": "Use the brains of every worker. Make sure that it is the person with the best idea who wins. Reward and celebrate new ideas to encourage others to want to contribute as well. Reward those who live the company's values, show \"guts\", and, in doing so, make the numbers.",
+    "author": "Jack Welch",
+    "role": "former CEO of General Electric",
+    "source": {
+      "type": "book",
+      "ref": "Introduction, quoting Robert Slater's Jack Welch & The G.E. Way (1998)"
+    },
+    "theme": [
+      "innovation",
+      "culture",
+      "ideas"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
+  },
+  {
+    "text": "Play is an active process that reshapes our rigid views of the world.",
+    "author": "Stuart Brown",
+    "role": "author who has studied adults' play histories",
+    "source": {
+      "type": "book",
+      "ref": "Introduction, quoting The New York Times, 2 September 2009"
+    },
+    "theme": [
+      "play",
+      "creativity",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "unlearning"
+      }
+    ]
+  },
+  {
+    "text": "Playfulness is a vital ingredient of creativity and one that is often at odds with the serious environment of the business world.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Business Playground (2010)",
+    "source": {
+      "type": "book",
+      "ref": "Introduction"
+    },
+    "theme": [
+      "play",
+      "creativity",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "unlearning"
+      }
+    ]
+  },
+  {
+    "text": "Creativity is about exploring the unknown and so it feels very risky.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Business Playground (2010)",
+    "source": {
+      "type": "book",
+      "ref": "Introduction"
+    },
+    "theme": [
+      "innovation",
+      "risk",
+      "creativity"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
+  },
+  {
+    "text": "If you want some milk you can't just sit in the middle of a field waiting for a cow to come to you, you've got to go and catch it and milk it yourself.",
+    "author": "Richard Branson",
+    "role": "founder of Virgin, quoting his mother",
+    "source": {
+      "type": "book",
+      "ref": "Foreword"
+    },
+    "theme": [
+      "action",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "action"
+      }
+    ]
+  },
+  {
+    "text": "At Virgin, if someone has a good idea, my first response is always 'Screw it. Let's do it.'",
+    "author": "Richard Branson",
+    "role": "founder of Virgin",
+    "source": {
+      "type": "book",
+      "ref": "Foreword"
+    },
+    "theme": [
+      "action",
+      "ideas",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "action"
+      }
+    ]
+  },
+  {
+    "text": "I've often thought that the arts are a great recycling centre for people who've got certain aspects in their personality that might be seen as dysfunctional in other areas.",
+    "author": "Matthew Warchus",
+    "role": "director",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 1, How to Play (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "outsiders",
+      "school"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
+  },
+  {
+    "text": "Someone like me is used to being on the outside and having an overview of things, and is able to see patterns in behaviour and life and the interactions between people. In conversations you see patterns that you wouldn't notice if you were on the inside of the conversation.",
+    "author": "Matthew Warchus",
+    "role": "director",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 1, How to Play (interview with the authors)"
+    },
+    "theme": [
+      "perspective",
+      "patterns",
+      "outsiders"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
+  },
+  {
+    "text": "A lot of it's about bringing the right people together to become the optimal creative team.",
+    "author": "Paul Allen",
+    "role": "co-founder of Microsoft",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 2, Idea Spaghetti (interview with the authors)"
+    },
+    "theme": [
+      "teams",
+      "creativity"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "together"
+      }
+    ]
+  },
+  {
+    "text": "Everybody wants to say something, but you need people who will listen to each other, really listen, and understand where the other person is trying to go.",
+    "author": "Paul Allen",
+    "role": "co-founder of Microsoft",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 2, Idea Spaghetti (interview with the authors)"
+    },
+    "theme": [
+      "teams",
+      "listening"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "together"
+      }
+    ]
+  },
+  {
+    "text": "I was lucky to find an ideal partner in Bill Gates. He was more intrigued by the business side of things, and I wanted to focus on the technology side, so we complemented one another really well.",
+    "author": "Paul Allen",
+    "role": "co-founder of Microsoft",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 2, Idea Spaghetti (interview with the authors)"
+    },
+    "theme": [
+      "partners",
+      "teams"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "together"
+      }
+    ]
+  },
+  {
+    "text": "If the group is rewarded as a whole for the best idea, then the participants will be motivated to build upon one another's ideas rather than do their best to ensure theirs is the one that wins out.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Business Playground (2010)",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 2, Idea Spaghetti"
+    },
+    "theme": [
+      "teams",
+      "culture",
+      "ideas"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "teams"
+      }
+    ]
+  },
+  {
+    "text": "Innovation never stops; it is an ever-spinning wheel.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Business Playground (2010)",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 2, Idea Spaghetti"
+    },
+    "theme": [
+      "innovation",
+      "process"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
+  },
+  {
+    "text": "I guess it started when I was a kid. Both my parents were librarians, so I was always around books.",
+    "author": "Paul Allen",
+    "role": "co-founder of Microsoft",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 3, Scavengers (interview with the authors)"
+    },
+    "theme": [
+      "curiosity",
+      "reading"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "curiosity"
+      }
+    ]
+  },
+  {
+    "text": "We did sponsorship for the first time and got a lot of attacks for it. It was a perfume company and it was a real breakthrough.",
+    "author": "Mick Jagger",
+    "role": "of the Rolling Stones",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 3, Scavengers (interview with the authors)"
+    },
+    "theme": [
+      "innovation",
+      "music business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
+  },
+  {
+    "text": "Throwing something into the mix to add freshness to thinking is always a good idea.",
+    "author": "Dave Stewart and Mark Simmons",
+    "role": "Authors, The Business Playground (2010)",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 10, Connected"
+    },
+    "theme": [
+      "ideas",
+      "connections"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
+  },
+  {
+    "text": "It seems so obvious and then you go, \"Wait a minute, has anybody else figured it out, or are they on the same track?\"",
+    "author": "Paul Allen",
+    "role": "co-founder of Microsoft",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 10, Connected (interview with the authors)"
+    },
+    "theme": [
+      "ideas",
+      "innovation"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
+  },
+  {
+    "text": "You just know it. It's like when somebody plays a song for you and you hear eight bars and you know it's a smash.",
+    "author": "Freddie DeMann",
+    "role": "veteran music producer and manager",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 11, Kill the Idea (interview with the authors)"
+    },
+    "theme": [
+      "gut instinct",
+      "ideas"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "instinct"
+      }
+    ]
+  },
+  {
+    "text": "I'm in this business called show business, but it's the arts that I like and being close to artists and I like being close to the creative process.",
+    "author": "Freddie DeMann",
+    "role": "veteran music producer and manager",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 11, Kill the Idea (interview with the authors)"
+    },
+    "theme": [
+      "creativity",
+      "business"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "instinct"
+      }
+    ]
+  },
+  {
+    "text": "It wasn't at all what our company was planning to do, it was very much just an idea on the side which seemed like a very small idea compared to what we were working on.",
+    "author": "Evan Williams",
+    "role": "co-founder of Twitter",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 11, Kill the Idea (interview with the authors)"
+    },
+    "theme": [
+      "innovation",
+      "side projects"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
+  },
+  {
+    "text": "I just couldn't get rid of the Blogger idea, it kept nagging me.",
+    "author": "Evan Williams",
+    "role": "co-founder of Twitter",
+    "source": {
+      "type": "book",
+      "ref": "Chapter 11, Kill the Idea (interview with the authors)"
+    },
+    "theme": [
+      "gut instinct",
+      "persistence"
+    ],
+    "fromBook": true,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
+  },
+  {
+    "text": "The important thing is not to stop questioning. Curiosity has its own reason for existence.",
+    "author": "Albert Einstein",
+    "role": "physicist",
+    "source": {
+      "type": "url",
+      "ref": "https://quoteinvestigator.com/2024/10/17/curiosity-reason/"
+    },
+    "citation": "Interview reported in LIFE, 2 May 1955",
+    "theme": [
+      "curiosity",
+      "questions"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "curiosity"
+      }
+    ]
+  },
+  {
+    "text": "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.",
+    "author": "Albert Einstein",
+    "role": "physicist",
+    "source": {
+      "type": "url",
+      "ref": "https://quoteinvestigator.com/2013/01/01/einstein-imagination/"
+    },
+    "citation": "Interview with George Sylvester Viereck, The Saturday Evening Post, 26 October 1929",
+    "theme": [
+      "imagination",
+      "knowledge"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "curiosity"
+      }
+    ]
+  },
+  {
+    "text": "I was once asked \"How do you go about having good ideas?\" and my answer was that you have a lot of ideas and throw away the bad ones.",
+    "author": "Linus Pauling",
+    "role": "chemist",
+    "source": {
+      "type": "url",
+      "ref": "https://quoteinvestigator.com/2023/03/24/ideas/"
+    },
+    "citation": "As reported in The Evening Sentinel (Carlisle, Pennsylvania), 28 March 1969",
+    "theme": [
+      "ideas",
+      "quantity"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
+  },
+  {
+    "text": "Genius is one per cent inspiration, ninety-nine per cent perspiration.",
+    "author": "Thomas Edison",
+    "role": "inventor",
+    "source": {
+      "type": "url",
+      "ref": "https://quoteinvestigator.com/2012/12/14/genius-ratio/"
+    },
+    "citation": "As M. A. Rosanoff reported it in Harper's Magazine, September 1932",
+    "theme": [
+      "hard work",
+      "genius"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "action"
+      },
+      {
+        "page": "innovation-quotes",
+        "group": "reality"
+      }
+    ]
   }
 ]

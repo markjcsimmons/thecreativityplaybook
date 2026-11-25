@@ -844,5 +844,31 @@
       "/notebook/"
     ],
     "technique": []
+  },
+  "/quotes/creativity-quotes/": {
+    "siblings": [
+      "/quotes/innovation-quotes/",
+      "/guides/how-to-be-more-creative/",
+      "/guides/creative-block/",
+      "/guides/creative-thinking-examples/"
+    ],
+    "tools": [
+      "/games/idea-spaghetti/",
+      "/tools/random-idea-generator/"
+    ],
+    "technique": []
+  },
+  "/quotes/innovation-quotes/": {
+    "siblings": [
+      "/quotes/creativity-quotes/",
+      "/guides/innovation-culture/",
+      "/guides/creativity-in-business/",
+      "/exercises/team-workshop-activities/"
+    ],
+    "tools": [
+      "/games/blast-off/",
+      "/tools/idea-scorer/"
+    ],
+    "technique": []
   }
 }
