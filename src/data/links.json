@@ -2,7 +2,9 @@
   "_readme": "Hand-maintained internal link graph (BRIEF §10.4). Keys are page paths from docs/keyword-map.csv. hub = parent hub page, siblings = 2-4 related pages, tools = tools to link, technique = technique pages the page is built on (and the reverse). RelatedLinks renders from this file; anchor text is the target page's primary keyword. scripts/check-content.ts fails on any path that is not in the keyword map.",
   "/": {
     "siblings": [
-      "/introduction/"
+      "/introduction/",
+      "/quotes/creativity-quotes/",
+      "/quotes/innovation-quotes/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -69,7 +71,8 @@
   "/tools/creativity-test/": {
     "hub": "/tools/",
     "siblings": [
-      "/tools/random-idea-generator/"
+      "/tools/random-idea-generator/",
+      "/chapters/how-to-play/"
     ],
     "tools": [
       "/tools/business-idea-generator/",
@@ -105,7 +108,9 @@
       "/guides/creative-problem-solving/",
       "/exercises/creative-thinking-exercises/",
       "/guides/creative-thinking-examples/",
-      "/guides/where-do-ideas-come-from/"
+      "/guides/where-do-ideas-come-from/",
+      "/quotes/creativity-quotes/",
+      "/introduction/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -210,7 +215,9 @@
     "tools": [
       "/tools/business-idea-generator/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/five-whys/"
+    ]
   },
   "/games/idea-spaghetti/": {
     "hub": "/games/",
@@ -317,7 +324,8 @@
   "/guides/elevator-pitch-examples/": {
     "siblings": [
       "/guides/how-to-be-more-creative/",
-      "/guides/storytelling-in-business/"
+      "/guides/storytelling-in-business/",
+      "/chapters/how-to-play/"
     ],
     "tools": [
       "/games/how-to-play/",
@@ -560,7 +568,9 @@
       "/guides/invention-ideas/",
       "/techniques/divergent-vs-convergent-thinking/",
       "/exercises/creative-thinking-exercises/",
-      "/guides/whole-brain-thinking/"
+      "/guides/whole-brain-thinking/",
+      "/quotes/creativity-quotes/",
+      "/lateral-thinking/puzzles/"
     ],
     "tools": [
       "/games/wheel-of-distraction/",
@@ -579,7 +589,9 @@
       "/games/whats-your-problem/",
       "/games/shoe-swapper/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/five-whys/"
+    ]
   },
   "/guides/creative-problem-solving/": {
     "siblings": [
@@ -597,7 +609,8 @@
     ],
     "technique": [
       "/techniques/divergent-vs-convergent-thinking/",
-      "/guides/first-principles-thinking/"
+      "/guides/first-principles-thinking/",
+      "/techniques/five-whys/"
     ]
   },
   "/guides/asking-better-questions/": {
@@ -612,7 +625,9 @@
       "/games/whats-your-problem/",
       "/games/idea-spaghetti/"
     ],
-    "technique": []
+    "technique": [
+      "/techniques/five-whys/"
+    ]
   },
   "/guides/storytelling-in-business/": {
     "siblings": [
@@ -671,7 +686,8 @@
       "/guides/innovation-culture/",
       "/templates/brainstorming-template/",
       "/exercises/design-thinking-exercises/",
-      "/exercises/problem-solving-activities-for-adults/"
+      "/exercises/problem-solving-activities-for-adults/",
+      "/lateral-thinking/puzzles/"
     ],
     "tools": [
       "/games/all-together-now/",
@@ -689,7 +705,9 @@
       "/guides/how-to-be-more-creative/",
       "/guides/creative-block/",
       "/guides/creativity-in-business/",
-      "/guides/intrapreneurship/"
+      "/guides/intrapreneurship/",
+      "/chapters/blast-off/",
+      "/quotes/innovation-quotes/"
     ],
     "tools": [
       "/notebook/",
@@ -702,7 +720,8 @@
     "siblings": [
       "/guides/creative-block/",
       "/techniques/divergent-vs-convergent-thinking/",
-      "/guides/creative-problem-solving/"
+      "/guides/creative-problem-solving/",
+      "/chapters/left-brain-meet-mr-right/"
     ],
     "tools": [
       "/games/wheel-of-distraction/",
@@ -721,7 +740,8 @@
       "/guides/creative-thinking-examples/",
       "/guides/where-do-ideas-come-from/",
       "/techniques/analogical-thinking/",
-      "/guides/mind-mapping/"
+      "/guides/mind-mapping/",
+      "/chapters/connected/"
     ],
     "tools": [
       "/tools/random-idea-generator/",
@@ -737,7 +757,8 @@
       "/guides/problem-statement-examples/",
       "/guides/storytelling-in-business/",
       "/guides/where-do-ideas-come-from/",
-      "/guides/biomimicry-examples/"
+      "/guides/biomimicry-examples/",
+      "/quotes/creativity-quotes/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -773,7 +794,8 @@
       "/guides/asking-better-questions/",
       "/guides/where-do-ideas-come-from/",
       "/exercises/brainstorming-games/",
-      "/templates/empathy-map/"
+      "/templates/empathy-map/",
+      "/chapters/shoe-swapper/"
     ],
     "tools": [
       "/games/shoe-swapper/",
@@ -789,7 +811,9 @@
       "/guides/storytelling-in-business/",
       "/guides/where-do-ideas-come-from/",
       "/guides/creative-problem-solving/",
-      "/guides/how-to-be-more-creative/"
+      "/guides/how-to-be-more-creative/",
+      "/chapters/far-out/",
+      "/quotes/innovation-quotes/"
     ],
     "tools": [
       "/games/far-out/",
@@ -806,7 +830,8 @@
       "/guides/creative-thinking-examples/",
       "/guides/perspective-taking/",
       "/guides/moonshot-thinking/",
-      "/guides/biomimicry-examples/"
+      "/guides/biomimicry-examples/",
+      "/chapters/scavengers/"
     ],
     "tools": [
       "/games/scavengers/",
@@ -823,7 +848,8 @@
       "/guides/how-to-be-more-creative/",
       "/exercises/team-workshop-activities/",
       "/guides/where-do-ideas-come-from/",
-      "/guides/intrapreneurship/"
+      "/guides/intrapreneurship/",
+      "/quotes/innovation-quotes/"
     ],
     "tools": [
       "/games/idea-spaghetti/",
@@ -841,7 +867,8 @@
       "/guides/creative-problem-solving/",
       "/guides/where-do-ideas-come-from/",
       "/guides/biomimicry-examples/",
-      "/guides/visualization-techniques/"
+      "/guides/visualization-techniques/",
+      "/chapters/brain-flash/"
     ],
     "tools": [
       "/games/brain-flash/",
@@ -1026,7 +1053,8 @@
       "/templates/mind-map-template/",
       "/guides/how-to-be-more-creative/",
       "/guides/creative-problem-solving/",
-      "/guides/visualization-techniques/"
+      "/guides/visualization-techniques/",
+      "/chapters/brain-flash/"
     ],
     "tools": [
       "/games/brain-flash/",
@@ -1040,7 +1068,8 @@
     "siblings": [
       "/guides/creative-problem-solving/",
       "/guides/asking-better-questions/",
-      "/guides/problem-statement-examples/"
+      "/guides/problem-statement-examples/",
+      "/chapters/the-answer-is-in-the-question/"
     ],
     "tools": [
       "/games/whats-your-problem/",
@@ -1054,7 +1083,9 @@
     "siblings": [
       "/guides/innovation-culture/",
       "/guides/creativity-in-business/",
-      "/guides/elevator-pitch-examples/"
+      "/guides/elevator-pitch-examples/",
+      "/chapters/blast-off/",
+      "/quotes/innovation-quotes/"
     ],
     "tools": [
       "/games/blast-off/",
@@ -1067,7 +1098,8 @@
     "siblings": [
       "/guides/mind-mapping/",
       "/techniques/analogical-thinking/",
-      "/templates/brainstorming-template/"
+      "/templates/brainstorming-template/",
+      "/chapters/brain-flash/"
     ],
     "tools": [
       "/games/brain-flash/",

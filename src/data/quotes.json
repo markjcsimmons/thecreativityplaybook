@@ -843,5 +843,47 @@
         "group": "reality"
       }
     ]
+  },
+  {
+    "text": "In the fields of observation, chance favors only the prepared mind.",
+    "author": "Louis Pasteur",
+    "role": "chemist and microbiologist",
+    "source": {
+      "type": "url",
+      "ref": "https://en.wikiquote.org/wiki/Louis_Pasteur"
+    },
+    "citation": "Lecture at the University of Lille, 7 December 1854, translated from the French",
+    "theme": [
+      "chance",
+      "preparation"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "creativity-quotes",
+        "group": "ideas"
+      }
+    ]
+  },
+  {
+    "text": "This process of Creative Destruction is the essential fact about capitalism.",
+    "author": "Joseph Schumpeter",
+    "role": "economist",
+    "source": {
+      "type": "url",
+      "ref": "https://fee.org/articles/creative-destruction/"
+    },
+    "citation": "Capitalism, Socialism and Democracy, 3rd edition (Harper & Brothers, 1950), p. 83",
+    "theme": [
+      "change",
+      "innovation"
+    ],
+    "fromBook": false,
+    "placements": [
+      {
+        "page": "innovation-quotes",
+        "group": "change"
+      }
+    ]
   }
 ]
