@@ -140,13 +140,13 @@ Before installing anything, check that the current stable version of each librar
   check-content.ts         ← build-time content + SEO checks (§10.6)
   render-pdfs.ts           ← HTML → PDF templates
 /src
-  /components              ← BookCallout, EmailCapture, BuyButtons, ToolShell, QuoteCard, Breadcrumbs, RelatedLinks, PuzzleCard…
-  /islands                 ← Preact tools (one folder per tool)
+  /components              ← BookCallout, EmailCapture, BuyButtons, ToolShell, ToolIsland, QuoteCard, QuoteGallery, Breadcrumbs, RelatedLinks, PuzzleCard, IfLive, PrintSheet, MindMapExample, MindMapBlank, SketchSheet…
+  /islands                 ← Preact tools (one folder per tool; shared helpers in /islands/shared: Die, Countdown, NotebookPicker, SaveToNotebook, WorkedExample)
   /content
     /guides /techniques /exercises /books /quotes /puzzles /templates /tools
   /data                    ← curated JSON for generators, personas, prompts, quotes, puzzles, book metadata
   /layouts                 ← Base, Article, Tool, BookList, Hub, Quote, Puzzle
-  /lib                     ← seo.ts (meta + JSON-LD), prng.ts, email.ts, analytics.ts, amazon.ts
+  /lib                     ← seo.ts (meta + JSON-LD), prng.ts, email.ts, analytics.ts, amazon.ts, notebook.ts (the Idea Notebook), one pure-logic module per tool (e.g. mind-map.ts, chapter-dice.ts, empathy-map.ts)
   /pages
 /public
   /downloads               ← generated PDFs
@@ -158,6 +158,16 @@ Before installing anything, check that the current stable version of each librar
 ## 6. Page inventory
 
 There are 62 pages in three phases. Volumes are US monthly searches from Semrush; KD is keyword difficulty. The "Cluster vol/mo" column is the total for the primary keyword plus all its secondary keywords. See `docs/keyword-map.csv` for the full list of keywords per page and the 10 keywords we deliberately skip.
+
+### As built (2026-11-26)
+
+- **79 content pages are written and published** (`reviewedBy: Mark`), against 93 rows in `docs/keyword-map.csv`. By type: 31 guides, 21 tools and games, 7 techniques, 5 exercise pages, 4 templates, 3 hubs, 2 quotes pages, plus the home page, the About page, the pillar guide, the lateral thinking hub and puzzle library, and the privacy page. The map has grown from the 62 pages first planned: it now includes the twelve chapter overview pages, the chapter games and several outside-the-book pages (each labeled as outside the book, with a Book DNA hook under §2.3).
+- **14 rows are not built, and why:**
+  - Blocked on Mark: `/book`, `/authors`, the five book lists (`/books/*`) and `/products/idea-journal`.
+  - Blocked on the new edition: `/guides/ai-brainstorming`.
+  - Waiting on a decision: `/tools/random-prompt-generator` (§8.5) and `/guides/design-thinking-process` (hold, §16 item 8).
+  - Held back as thin or overlapping: `/guides/how-to-sell-an-idea`, `/guides/brand-storytelling` and `/guides/design-sprint`.
+- The batch-by-batch record of what was built and every point that needed Mark's review is in `docs/DECISIONS.md`.
 
 ### Phase 1
 
@@ -314,15 +324,18 @@ Each page type has one layout. Every page also gets:
 
 ### 8.5 Random Prompt Generator — `/tools/random-prompt-generator` (Phase 2)
 - Before building, look at the current top results to confirm what "random prompt" searchers want (writing, art or AI prompts). Report back to Mark first. Expected categories: writing, drawing, business challenges, "AI prompt starters".
+- Status: **not built.** The results checked in batch 5 were writing, drawing and AI-image prompt tools, not business creativity, so Mark has to decide whether to drop it (§16 item 15).
 
 ### 8.6 Perspective Cards — `/tools/perspective-cards` (Phase 2)
 - A deck of about 60 personas and lenses, e.g. "a 7-year-old", "a Formula 1 pit crew", "your harshest competitor", "someone in 2075", "a touring rock band's road crew". Use roles and archetypes only, never real living people.
 - The user types a challenge, flips a card and answers "How would they solve it?" Optional 2-minute timer, and a "hats" mode that nods to Six Thinking Hats.
+- As built (batch 6): 55 cards, 17 from the book (the Chapter 9 outsiders and the five thinking styles, and the four Chapter 4 Different Strokes roles) and 38 of ours, each marked. Every card is a role, a thinking style or a set of conditions, never a named person, and the five children's names are not used. The "hats" mode was left out because the book does not teach the six thinking hats (that method has its own page). A team round deals four cards from four different groups. The Empathy Map draws its roles from the people-with-a-stake and fresh-eyes groups.
 
 ### 8.7 Idea Scorer — `/tools/idea-scorer` (Phase 2)
 - The user enters ideas (or imports them from other tools through the URL) and weights the criteria: impact, effort, cost, speed, fun, fit.
 - Output: a ranked table and a 2×2 impact/effort chart (SVG). Export as CSV or print.
 - Book DNA: the Kill the Idea chapter.
+- As built (batch 6): the criteria, the 1 to 5 scale, the default weights (impact 3, effort 2, cost 1, speed 1, fun 1, fit 2), the 0 to 100 score and the quadrant names (quick wins, big bets, fill-ins, time sinks) are ours, not the book's, and the page says so. Effort and cost count against an idea. A criterion left blank or at weight 0 is left out, so an idea with nothing scored has no total. The chart has a text table beside it for screen readers, and CSV cells that start with = + - or @ get a leading apostrophe. "Save to notebook" shortlists the top N (default 3).
 
 ### 8.8 Chapter Dice — `/tools/chapter-dice` (Phase 2)
 - Roll two animated dice to pick a chapter and get a 10-minute exercise from it. This recreates the book's "roll the dice to pick a chapter" device and is a brand toy and link magnet. Respect reduced-motion settings.
@@ -392,7 +405,7 @@ Drafts are excluded from production builds, and included only when `PREVIEW=true
 - Every guide ends with something to *do*: an exercise, a tool or a template.
 
 ### 9.4 Quotes and puzzles data
-- `/src/data/quotes.json` fields: `{ text, author, role, source: { type: 'book'|'url', ref }, theme[], fromBook: boolean }`.
+- `/src/data/quotes.json` fields: `{ text, author, role, source: { type: 'book'|'url', ref }, citation?, theme[], fromBook: boolean, placements[{ page, group }] }`. `citation` (where and when it was first published) is required in practice for any quote from outside the book, and `placements` says which quotes page shows it and under which heading, so one quote can sit on two pages. A quote whose original wording cannot be read is left out; the attempts that failed are logged in `docs/DECISIONS.md`.
 - `/src/data/puzzles.json` fields: `{ id, title, setup, hints[], answer, thinkingMove, techniqueSlug, difficulty, original: true }`.
 
 ---
@@ -428,6 +441,8 @@ Drafts are excluded from production builds, and included only when `PREVIEW=true
 - Tools link to the technique page they're built on, and the reverse.
 - Generate `RelatedLinks` from a hand-maintained `src/data/links.json` graph, not by guessing.
 - Use descriptive anchor text that includes the target's primary keyword. Avoid "click here".
+- As built: `RelatedLinks` drops any target that is not in the current build, so a draft can never produce a broken link. Links written into page text to a page that may not be live are wrapped in `IfLive` (it needs an MDX import). When a page is added, add its `links.json` entry and the reverse links (guides to their chapter pages, techniques to the hub, tools to the guides built on them).
+- As audited (2026-11-26): every page has at least three inbound links in the built site, and there are no duplicate titles or descriptions. Chapter overview pages stay short (330 to 430 words) because they paraphrase the book's own summaries.
 
 ### 10.5 Cannibalisation
 - Each primary keyword maps to exactly one page. Secondary keywords appear naturally on their assigned page and nowhere else as a heading.
@@ -550,7 +565,7 @@ Repo, stack, design tokens and `/styleguide`, layouts, core components, `seo.ts`
 
 ### Phase 1: Launch set (16 pages + `/tools` hub)
 Order of work:
-1. `/books/gifts-for-entrepreneurs` and `/books/best-business-books-2026`. **These are time-sensitive. Ship them before Thanksgiving / Black Friday (26–27 Nov 2026) if at all possible.**
+1. `/books/gifts-for-entrepreneurs` and `/books/best-business-books-2026`. **These are time-sensitive. Ship them before Thanksgiving / Black Friday (26–27 Nov 2026) if at all possible.** (Status on 2026-11-26: not built, and that date has arrived. They were not started: they sit among the pages blocked on Mark. See §6 "As built" and §16.)
 2. `/book`, `/authors`, `/`.
 3. Random Idea Generator → Business Idea Generator → Creativity Test → Invention Idea Generator, plus `/tools`.
 4. `/lateral-thinking` and `/lateral-thinking/puzzles` (30+ puzzles).
@@ -570,7 +585,7 @@ Build in batches of 3–5 pages, and wait for Mark's review between batches.
 Techniques hub and spokes, exercises, guides, the remaining tools, the AI brainstorming guide (tied to the new edition), and the other book lists. Same batch-and-review rhythm. Add Pagefind search.
 
 ### Phase 3: Authority (13 pages + extras)
-- Higher-difficulty terms: mind mapping, first principles, five whys, empathy map, SCAMPER, design sprint, brand storytelling.
+- Higher-difficulty terms: mind mapping, first principles, five whys, empathy map, SCAMPER, design sprint, brand storytelling. (Built: all but design sprint and brand storytelling, as outside-the-book pages with a Book DNA hook. Those two are held back as thin.)
 - The idea journal product page (a companion KDP journal).
 - The optional "Expand with AI" feature.
 - Link-building assets, such as an embeddable puzzle widget and a "Creativity Test results by profession" data post, once real aggregate data exists and only if users consent.
@@ -592,7 +607,11 @@ Techniques hub and spokes, exercises, guides, the remaining tools, the AI brains
 11. If digital-only: whether to sell a direct bundle from our own site, and whether an audiobook is in scope.
 12. Whether the Dylan lyrics and Stones logo clearances (§2.1) cover ebooks and the new edition, or only print.
 13. Whether to add more outside-the-book method pages after SCAMPER, reverse brainstorming, the five whys, the six thinking hats and the empathy map (mind mapping and first principles were added in batch 10, biomimicry in batch 11; candidates left: design sprint, brand storytelling). Each would need a Book DNA hook under §2.3.
-14. Whether to add more outside quotes to the two quotes pages. They hold 43 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first.
+14. Whether to add more outside quotes to the two quotes pages. They hold 43 quotes against the 60 to 100 in §6, because each outside quote has to be traced to its original publication first. Eliot and Emerson are worth retrying when Project Gutenberg is back. Whether to keep the Pasteur quote, whose source is a secondary citation.
+15. Whether to drop the Random Prompt Generator (§8.5).
+16. SEO inputs only Mark can supply: verified URLs for the authors' Person `sameAs` links, an Organization logo, and Search Console verification.
+17. Whether the book lists (`/books/*`) and `/book` and `/authors` should be built now, and the approach for the lists (which books, and whether to link to Amazon before launch).
+18. Confirmation of two points in the 2010 paraphrases: that the FAB25 mind map is in Chapter 2, and that Dave is happy with the mind map and photo-method paraphrases (he has not seen them).
 
 ---
 
